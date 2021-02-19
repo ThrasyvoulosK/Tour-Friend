@@ -1,0 +1,209 @@
+Tour-Friend
+
+Brief Description:
+This an accompanying app to a board game that goes by the same name. As such,
+its not exactly a game in itself, but somewhat of a guide for one.
+
+Gameplay:
+Pretty much a series of different screens connected together. 
+The app keeps data, like points between the two teams.
+
+Things to Add:
+
+~Main Menu
+
+Common Screen
+-'back' button
+-description of the screen
+-one or two images
+-'done' button
+
+Select a place to go screen
+(main screen, that the players revisit after each session)
+-many choices for places to choose, as buttons
+-points visible
+-choose button instead of 'done'
+-description and back as before
+
+After Choosing a place (tourist)
+-show video of said action (eg 'i want to go the airport) in sign-language
+-'back' 'done' and description
+-add a tourist icon next to the description
+-place selection choice is visible on the upper right
+(after this, the tourist attempts to imitate the video to the tourfriend)
+
+Correct guessing/ 'what did the tourist ask you?' (tourfriend)
+-two choices: one false and one correct
+--video
+--description
+--number of choice icon
+--'select' button
+--'zoom in' button
+---this magnifies the video along with the rest of the choice's buttons, so that it's more visible
+----'zoom out' button replaces 'zoom in' and goes back to the video choice screen
+(-place icon might be a mistake?)
+
+WIP Point Award Screen
+Depending on the above choice:
+-correct adds two points
+-false doesn't give anything
+
+tourfriend gives directions screen
+tourfrind confirm above (yes/no)
+
+tourist go the the area explained by the tourfriend (yes/no)
+(this is done on the board game; in the app, the tourist clicks whether the instructions got them to the correct place)
+-award points
+
+(the tourist is now on the location chosen before, eg the airport)
+
+tourist asks question (similar to 'what did the tourist ak you')
+tourfriend explains the question to themseleves
+points awarded
+
+tourfriend asks a question (doesn't choose) related to the situation above
+this question includes two objects 
+tourist chooses whatever they were questioned about
+tourist replies to the above question. The two objects might be in conflict.
+-objects coloured in pink
+tourfriend chooses what he was questioned about
+tourfriend gets shown a sign-language video to show the tourist
+(the tourfriend gives a card to the tourist on the board game)
+the tourist answers a two-video choice screen, with accompanying cards visible as well
+after choice, the card gets shown to the tourist, asking a yes/no question whether it was the correct card
+
+return to the place selection screen and repeat
+-the places already visited are ticked off
+
+Tings to Change:
+
+'Image' of screengameobject should rather change to 'Content' Gameobject
+-a more generic form is needed, as it is sometimes more than an image
+--eg two images, a selection screen, a single video, two video choices and so on
+
+also, more buttons than one in screengameobject?
+
+
+
+
+Things to Consider:
+
+View Updated Layouts before starting
+
+Many Languages for the written texts
+& Many (more) Sign Languages for the Videos
+(Including Greek, English, French, Italian, Cypriot and possibly more)
+
+the app could function as a sequence of screens
+
+test 'primitive' form with one image and one button
+-works ok, but...
+
+Updating all screens might be a hassle in the above way
+-prefab variants?
+-or rather, one prefab, but update the descriptions, images etc
+--prefab updating is buggy and dangerous!
+-rather make a database eg excel, holding assosiate data?
+--including description, content(/type?),button(s), type-of-screen?, numbers-of-content-objects/buttons?,next-screen?
+
+keep in mind that there are many more screens than the ones shown
+-eg one can choose different locations to go and different things to say
+
+the top-left icon is a menu button?
+
+selections with raycasts similar to the 'transaction scenes' in Canteen
+
+video phrases choice screen
+-select a phrase to show the corresponding video
+--close the video and return. repeat if necessary
+
+new game explanation to myself:
+(after clicking new game on the menu)
+Phase Zero (no interaction, no points given):
+-welcome screens (a series of screens explaining what to do)
+-choose where to go (select one location of many. Central screen of the game. The player returns frequently to this)
+Phase One:
+-*depending on the choice above* play video screen, show simple screen
+-two video choices (the player selects a video)
+-points award screen (+2 for win +0 for loss)
+Phase Two:
+-choose phrases and show corresponding videos screen
+-video screen, choose continue(go above) or finish(go down)
+-yes or no screen
+-common screen
+-yes or no screen
+-points award
+Phase Three:
+-you're in *location chosen above* common screen
+-choose between two videos
+-confirmation
+-common
+-choose between two videos
+-points award
+Phase Four:
+-common screen with video reply
+-common screen
+-two video choices
+-points award
+Pase Five:
+-reply with two video choices
+-confirmation common screen
+-common screen
+-two video choices
+-award points
+Phase Six:
+-video common screen
+-common screen
+-two video choices
+-yes/no ('is this the correct reply and card')
+-award points
+End of round. Go back to level select, cross out the chosen place and repeat until all places are visited.
+
+all types of screens:
+-common screen (description,image,confirmation button)
+--one image
+---one image, two buttons (yes/no) (either award points, or go to a previous screen)
+--two images
+--video
+---video with two buttons (continue/finish)
+-choose location screen
+-choose two videos 
+-points screen
+--win/lose variants
+-choose phrases (with videos) screen
+note that descriptions are often accompanied by one or two icons, indicating current player (and) a card
+location icon on the top-right/points text on location select
+//-x-or more refined:
+//-x-all screens have (description,content, button(s))
+
+
+make a constructor for each type of the above screens
+-x-make a general constructor
+--make 'specialised' constructors within it
+---they should be able to check the screen type and assign various data to it
+----(keep an 'identity' string on screenobject script to check)
+----a dictionary on screen types should be used
+----string references to the ones already stored on lists and dictionaries can be used for input data
+
+keep account of the number of steps needed to finish a round. 
+ In some cases we need to return to a previous one
+
+keep screens' numbers in a list, so that we can access them
+-keep them as phases?
+
+keep account of the 'content' of all screens
+-this means keeping a list of corresponding descriptions and buttons etc in the same place
+ so that we can have access to them all at the same time
+--eg on a list of of 50 screens, the first has description as ['sample'] and button1 as ['sample2']
+--a list of scriptable objects could do this
+---non used elements for a current screen, such as videos can be ignored
+
+Languages (Sign): English,Greek,Cyptriot,Belgian,French,Italian
+Languages (Written): English, Greek, French, Italian, Belgian(Two Languages?)
+
+Languages can be used in a combintaion of Written-Language AND Sign-Language
+eg 
+See Alexandros' conversation comments for advice on
+
+'next' button generating
+-keep 'next buttons' as prefabs
