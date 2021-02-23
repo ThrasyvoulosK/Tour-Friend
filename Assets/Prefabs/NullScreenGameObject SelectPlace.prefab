@@ -800,6 +800,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1809339195894689063, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809339195894689063, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809339195894689063, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809339195894689063, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809339195894689080, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1809339196396906677, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -100
