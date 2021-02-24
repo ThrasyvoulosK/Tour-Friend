@@ -20,6 +20,7 @@ public class GameMaster : MonoBehaviour
     public Dictionary<string, Sprite> imagehandler = new Dictionary<string, Sprite>();
 
     //list of videos
+    public List<UnityEngine.Video.VideoClip> videos_en = new List<UnityEngine.Video.VideoClip>();
     //list of corresponding words to videos
 
     //Dictionary Creation
@@ -131,7 +132,40 @@ public class GameMaster : MonoBehaviour
 
     }
 
-    public void createOneVideoscreen(GameObject prefab_go, string desc, string img, string button)
+    public void createOneVideoscreen(GameObject prefab_go, string desc, string vid, string button)
+    {
+        //instantiate its prefab version
+        GameObject newgameobject;
+        newgameobject = Instantiate(prefab_go);
+
+        //find the given values
+        //Image image = newgameobject.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>();
+        UnityEngine.Video.VideoClip videoClip= newgameobject.transform.GetChild(0).transform.GetChild(5).transform.GetChild(0).GetComponent<UnityEngine.Video.VideoClip>();
+        Debug.Log("videoclip object should be " + newgameobject.transform.GetChild(0).transform.GetChild(5).transform.GetChild(0).name);
+
+        //add the indicated values
+
+        newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
+
+        //find images and change them to their proper ones, depending on whether they've been used properly
+
+        /*image.sprite = imagehandler[img];*/
+
+        newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
+
+        //find video
+        videoClip = videos_en[0];
+        Debug.Log("video chosen: " + videoClip.name);
+
+        //find next in session to construct a new screen
+        Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
+
+        Debug.Log(current_screen);
+        ConstructorDecider(button1);
+
+    }
+
+    public void createTwoVideosscreen(GameObject prefab_go, string desc, string img, string button)
     {
         //instantiate its prefab version
         GameObject newgameobject;
@@ -147,6 +181,35 @@ public class GameMaster : MonoBehaviour
         //find images and change them to their proper ones, depending on whether they've been used properly
 
         /*image.sprite = imagehandler[img];*/
+
+        newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
+
+        //find next in session to construct a new screen
+        Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
+
+        Debug.Log(current_screen);
+        ConstructorDecider(button1);
+
+    }
+
+    public void createPointsscreen(GameObject prefab_go, string desc, string img, string button)
+    {
+        //instantiate its prefab version
+        GameObject newgameobject;
+        newgameobject = Instantiate(prefab_go);
+
+        //find the given values
+        Image image = newgameobject.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>();
+
+        //add the indicated values
+
+        newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
+
+        Debug.Log("description text is: " + newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text);
+        Debug.Log("image to load" + img);
+        Debug.Log(words_en[0]);
+
+        image.sprite = imagehandler[img];
 
         newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
@@ -178,6 +241,14 @@ public class GameMaster : MonoBehaviour
         else if (sgo[current_screen].name.StartsWith("NullScreenGameObject OneVideo"))
         {
             button.onClick.AddListener(delegate { createOneVideoscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });            
+        }
+        else if (sgo[current_screen].name.StartsWith("NullScreenGameObject TwoVideos"))
+        {
+            button.onClick.AddListener(delegate { createTwoVideosscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
+        }
+        else if (sgo[current_screen].name.StartsWith("NullScreenGameObject Points"))
+        {
+            button.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
         }
         else
             Debug.Log("we don't have a constructor for " + sgo[current_screen].name + " yet!");

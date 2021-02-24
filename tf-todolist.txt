@@ -207,3 +207,5 @@ See Alexandros' conversation comments for advice on
 
 'next' button generating
 -keep 'next buttons' as prefabs
+
+make a script that handles different screen resolutions
