@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7377059967003957641}
   - component: {fileID: 5280846685338140900}
   - component: {fileID: 3081845573320373304}
+  - component: {fileID: 7776622416868962613}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -106,6 +107,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7776622416868962613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689549225285834052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f699e07e44ee54b9e0d2b7950324d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196697551130998893
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +131,7 @@ GameObject:
   - component: {fileID: 8972541057403124768}
   - component: {fileID: 2852315640808727219}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: ImageTaxi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,8 +184,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -193,7 +206,7 @@ GameObject:
   - component: {fileID: 8255159447642251883}
   - component: {fileID: 3620714793487569199}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: ImageShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,8 +259,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -268,7 +281,7 @@ GameObject:
   - component: {fileID: 4230506334762201089}
   - component: {fileID: 8423097857169225614}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: ImageSightSeeing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,8 +334,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -343,7 +356,7 @@ GameObject:
   - component: {fileID: 1594919533391109255}
   - component: {fileID: 76452040789739935}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: ImageHotel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,8 +409,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -497,7 +510,7 @@ GameObject:
   - component: {fileID: 5316559056193606808}
   - component: {fileID: 5941517672405947481}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: ImageStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,8 +563,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -572,7 +585,7 @@ GameObject:
   - component: {fileID: 2866021956938138316}
   - component: {fileID: 6550382951126274318}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: ImageCafeBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -625,8 +638,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -647,7 +660,7 @@ GameObject:
   - component: {fileID: 7437187964770673598}
   - component: {fileID: 3397763122649519246}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageAirport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -700,8 +713,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -722,7 +735,7 @@ GameObject:
   - component: {fileID: 7457235289985321861}
   - component: {fileID: 6959622652485294937}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: ImageRestaurant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -775,8 +788,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -878,13 +891,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
---- !u!224 &4181876094905416325 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1809339197618910847, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
-  m_PrefabInstance: {fileID: 2527946896950627578}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4181876094383871621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1809339196133464703, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
+  m_PrefabInstance: {fileID: 2527946896950627578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &4181876094905416325 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1809339197618910847, guid: c7a88cc0116fafc4c96dc50b31dac3f3, type: 3}
   m_PrefabInstance: {fileID: 2527946896950627578}
   m_PrefabAsset: {fileID: 0}

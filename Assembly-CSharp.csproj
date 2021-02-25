@@ -58,6 +58,8 @@
     <Compile Include="Assets\Scripts\ScreenObjectScript.cs" />
     <Compile Include="Assets\Scripts\Screen_SO.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
+    <Compile Include="Assets\Scripts\PlaceSelectScript.cs" />
+    <Compile Include="Assets\Scripts\CameraSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

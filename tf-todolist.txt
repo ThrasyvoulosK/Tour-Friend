@@ -209,3 +209,7 @@ See Alexandros' conversation comments for advice on
 -keep 'next buttons' as prefabs
 
 make a script that handles different screen resolutions
+-make also a simple "set everything to original screen ratio"
+--looks tiny on other resolutions eg 1920/1080
+---enlarge it?
+--two videos screen gets messed up video boxes

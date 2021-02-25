@@ -21,8 +21,10 @@ MonoBehaviour:
     The
     one team will be the tourists and the other team the tourfriends'
   Content: {fileID: 0}
-  Image1: {fileID: 0}
-  Image1sprite: {fileID: 21300000, guid: a2762901ff7da804d9becdee692a26cb, type: 3}
+  Imagename: Tourist
+  Imagename2: Tourfriend
   Button1: {fileID: 0}
   Button1text: DONE
   Button2: {fileID: 0}
+  points: 
+  DescriptionImage: {fileID: 0}

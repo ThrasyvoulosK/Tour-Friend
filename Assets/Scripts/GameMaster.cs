@@ -46,7 +46,7 @@ public class GameMaster : MonoBehaviour
 
     public GameObject firstscreen;// = new GameObject();
 
-    ScreenObjectScript screenObject = new ScreenObjectScript();
+    ScreenObjectScript screenObject=new ScreenObjectScript();//
 
     //keep each screen's data here
     public List<Screen_SO> screen_SOs = new List<Screen_SO>();
@@ -61,7 +61,8 @@ public class GameMaster : MonoBehaviour
         //screenObject.createOneImagescreen(screenprefabs[0], words_en[1], images_name[0], words_en[0]);
         //createOneImagescreen(screenprefabs[0], words_en[1], images_name[0], words_en[0]);
         //createOneImagescreen(sgo[current_screen], words_en[1], images_name[0], words_en[0]);
-        createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text);
+        //createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text);
+        createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
     }
 
     // Update is called once per frame
@@ -76,6 +77,10 @@ public class GameMaster : MonoBehaviour
             imagehandler.Add(images_name[i], images[i]);
     }
 
+    /*Screen Object Constructors*/
+
+    //One image and one button screen. 
+    //It's the most common of the app and serves as the basis of the others
     public void createOneImagescreen(GameObject prefab_go, string desc, string img, string button)
     {
         //instantiate its prefab version
@@ -93,7 +98,8 @@ public class GameMaster : MonoBehaviour
         Debug.Log("image to load" + img);
         Debug.Log(words_en[0]);
 
-        image.sprite = imagehandler[img];
+        if(img.Length>=1)
+            image.sprite = imagehandler[img];
 
         newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
@@ -103,6 +109,41 @@ public class GameMaster : MonoBehaviour
         Debug.Log(current_screen);
         ConstructorDecider(button1);       
         
+    }
+
+    public void createTwoImagesscreen(GameObject prefab_go, string desc, string img1,string img2, string button)
+    {
+        //instantiate its prefab version
+        GameObject newgameobject;
+        newgameobject = Instantiate(prefab_go);
+
+        //find the given values
+        Image image1 = newgameobject.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>();
+        Image image2 = newgameobject.transform.GetChild(0).transform.GetChild(3).GetComponent<Image>();
+
+        //add the indicated values
+
+        newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
+
+        /*Debug.Log("description text is: " + newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text);
+        Debug.Log("image to load" + img);
+        Debug.Log(words_en[0]);*/
+
+        if ((img1.Length >= 1)&& (img2.Length >= 1))
+        {
+            image1.sprite = imagehandler[img1];
+            image2.sprite = imagehandler[img2];
+        }
+            
+
+        newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
+
+        //find next in session to construct a new screen
+        Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
+
+        Debug.Log(current_screen);
+        ConstructorDecider(button1);
+
     }
 
     public void createPlaceSelectscreen(GameObject prefab_go, string desc, string img, string button)
@@ -232,7 +273,11 @@ public class GameMaster : MonoBehaviour
 
         if (sgo[current_screen].name.StartsWith("NullScreenGameObject OneImage"))
         {          
-            button.onClick.AddListener(delegate { createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
+            button.onClick.AddListener(delegate { createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text); });
+        }
+        else if (sgo[current_screen].name.StartsWith("NullScreenGameObject TwoImages"))
+        {
+            button.onClick.AddListener(delegate { createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text); });
         }
         else if (sgo[current_screen].name.StartsWith("NullScreenGameObject SelectPlace"))
         {
