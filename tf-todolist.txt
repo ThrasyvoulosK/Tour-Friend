@@ -213,3 +213,7 @@ make a script that handles different screen resolutions
 --looks tiny on other resolutions eg 1920/1080
 ---enlarge it?
 --two videos screen gets messed up video boxes
+
+finish two vidoes constructor
+
+improve video choice, with its SO!

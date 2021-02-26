@@ -22,6 +22,9 @@ public class GameMaster : MonoBehaviour
     //list of videos
     public List<UnityEngine.Video.VideoClip> videos_en = new List<UnityEngine.Video.VideoClip>();
     //list of corresponding words to videos
+    public List<string> videos_en_names = new List<string>();
+
+    public Dictionary<string, UnityEngine.Video.VideoClip> videohandler = new Dictionary<string, UnityEngine.Video.VideoClip>();
 
     //Dictionary Creation
 
@@ -55,13 +58,9 @@ public class GameMaster : MonoBehaviour
     {
         //initialise dictionaries
         ImageDictionaryInitialise();
+        VideoDictionaryInitialise();
 
         //initialise first object
-        //Instantiate(firstscreen);
-        //screenObject.createOneImagescreen(screenprefabs[0], words_en[1], images_name[0], words_en[0]);
-        //createOneImagescreen(screenprefabs[0], words_en[1], images_name[0], words_en[0]);
-        //createOneImagescreen(sgo[current_screen], words_en[1], images_name[0], words_en[0]);
-        //createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text);
         createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
     }
 
@@ -75,6 +74,28 @@ public class GameMaster : MonoBehaviour
     {
         for (int i = 0; i < images.Count; i++)
             imagehandler.Add(images_name[i], images[i]);
+    }
+    void VideoDictionaryInitialise()
+    {
+        for (int i = 0; i < videos_en.Count; i++)
+            videohandler.Add(videos_en_names[i], videos_en[i]);
+    }
+
+    //initialise video choice prefab
+    GameObject InitialiseVideoChoice(GameObject videochoiceprefab, string vid, string desc, string card,string button)
+    {
+        GameObject vidchoice = videochoiceprefab;
+
+        UnityEngine.Video.VideoClip vidclip;
+        //vidclip= vidchoice.transform.Find("RawImage").gameObject.GetComponentInChildren<UnityEngine.Video.VideoClip>(); 
+        vidclip= vidchoice.transform.GetChild(2).transform.GetChild(0).GetComponent<UnityEngine.Video.VideoClip>(); 
+        vidclip= videos_en[0];
+
+        vidchoice.transform.Find("DescriptionText").GetComponentInChildren<Text>().text = desc;
+        vidchoice.transform.Find("Button").GetComponentInChildren<Text>().text = button;
+
+        return vidchoice;
+        //return null;
     }
 
     /*Screen Object Constructors*/
@@ -111,6 +132,7 @@ public class GameMaster : MonoBehaviour
         
     }
 
+    //two images and one button
     public void createTwoImagesscreen(GameObject prefab_go, string desc, string img1,string img2, string button)
     {
         //instantiate its prefab version
@@ -172,7 +194,7 @@ public class GameMaster : MonoBehaviour
         ConstructorDecider(button1);
 
     }
-
+    //one video and one button
     public void createOneVideoscreen(GameObject prefab_go, string desc, string vid, string button)
     {
         //instantiate its prefab version
@@ -205,7 +227,7 @@ public class GameMaster : MonoBehaviour
         ConstructorDecider(button1);
 
     }
-
+    //two videos, with their own buttons
     public void createTwoVideosscreen(GameObject prefab_go, string desc, string img, string button)
     {
         //instantiate its prefab version
@@ -229,6 +251,14 @@ public class GameMaster : MonoBehaviour
         Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
 
         Debug.Log(current_screen);
+
+        //TEST: VideoChoice
+        GameObject vidch1 = newgameobject.transform.Find("Canvas").transform.Find("VideoChoice1").gameObject;
+        GameObject vidch2 = newgameobject.transform.Find("Canvas").transform.Find("VideoChoice2").gameObject;
+        //GameObject vidch1=newgameobject.transform.Find("VideoChoice1").gameObject;
+        InitialiseVideoChoice(vidch1, desc, desc, desc, desc);
+        InitialiseVideoChoice(vidch2, desc, desc, desc, desc);
+
         ConstructorDecider(button1);
 
     }
@@ -266,6 +296,13 @@ public class GameMaster : MonoBehaviour
     public void ConstructorDecider(Button button)
     {
         current_screen++;
+
+        //
+        if (current_screen >= sgo.Count)
+        {
+            Debug.Log("Quitting because we don't have a next screen to show, yet!");
+            Application.Quit();
+        }
 
         if (button == null)
             Debug.Log("null button");

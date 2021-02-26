@@ -10,6 +10,7 @@ public class Screen_SO : ScriptableObject
     public Text Description;
     [TextArea]
     public string description;
+    public string description2;
     public GameObject Content;
     //public Image Image1;
     //public Sprite Image1sprite;
