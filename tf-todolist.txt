@@ -10,13 +10,9 @@ The app keeps data, like points between the two teams.
 
 Things to Add:
 
-~Main Menu
+Main Menu
 
-Common Screen
--'back' button
--description of the screen
--one or two images
--'done' button
+//Common Screen//-'back' button//-description of the screen//-one or two images//-'done' button
 
 Select a place to go screen
 (main screen, that the players revisit after each session)
@@ -160,16 +156,16 @@ Phase Six:
 End of round. Go back to level select, cross out the chosen place and repeat until all places are visited.
 
 all types of screens:
--common screen (description,image,confirmation button)
---one image
+//-common screen (description,image,confirmation button)
+//--one image
 ---one image, two buttons (yes/no) (either award points, or go to a previous screen)
---two images
---video
+//--two images
+//--video
 ---video with two buttons (continue/finish)
 -choose location screen
 -choose two videos 
--points screen
---win/lose variants
+//-points screen
+//--win/lose variants
 -choose phrases (with videos) screen
 note that descriptions are often accompanied by one or two icons, indicating current player (and) a card
 location icon on the top-right/points text on location select
@@ -212,8 +208,44 @@ make a script that handles different screen resolutions
 -make also a simple "set everything to original screen ratio"
 --looks tiny on other resolutions eg 1920/1080
 ---enlarge it?
---two videos screen gets messed up video boxes
+//--two videos screen gets messed up video boxes
 
 finish two vidoes constructor
 
 improve video choice, with its SO!
+
+see Alexandros' feedback on access GameObject children: first use "Find", and when we finish the prefab, we can use "GetChild"
+
+Interactivity:
+-Select Place
+--load place specific data on questions, images etc
+-Select from Two Videos
+--Bring up points award
+---Points++ if correct
+---No points if false
+-
+-End of round
+--go back to place select
+---keep all data
+---mark out visited places
+
+buggy correct/wrong answer
+-handled between gamemaster, videoobjects and pointsscript
+
+menu
+-5 sign languages 
+-4 written languages 
+-start button
+
+clean up this file!
+
+the map is randomised
+
+check dialogues excel
+
+Alexandros suggests:
+-textmeshpro for texts
+-remove 'gameobjects'
+--prefabs should be 'canvas' objects
+---(canvas objets can be handled automatically by the app)
+-target the smallest screen resolution available (for mobile)

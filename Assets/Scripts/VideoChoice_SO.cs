@@ -8,6 +8,7 @@ public class VideoChoice_SO : ScriptableObject
     string video;
     string description;
     string card;
-    //magnifying glass not needed yet? string 
+    //magnifying glass not needed yet? string
+    //true/false determined elsewhere(pointsscript)
     
 }

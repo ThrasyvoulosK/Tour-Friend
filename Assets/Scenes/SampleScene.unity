@@ -166,28 +166,31 @@ MonoBehaviour:
   - Tourfriend
   videos_en:
   - {fileID: 32900000, guid: 1842179188733904a82840cad574d4b9, type: 3}
+  - {fileID: 32900000, guid: f6cabbd910bb33b4b9d2dc6f34b01258, type: 3}
   videos_en_names:
   - Placeholder
+  - PlaceholderRed
   total_points: 0
   sgo:
-  - {fileID: 3334161999345865768, guid: 3b174cd3846009f4b9a6b600651a141f, type: 3}
-  - {fileID: 3334161999345865768, guid: 35c373f6edaf038469c1fcbc92e3d304, type: 3}
-  - {fileID: 3334161999345865768, guid: 35c373f6edaf038469c1fcbc92e3d304, type: 3}
-  - {fileID: 3334161999345865768, guid: 35c373f6edaf038469c1fcbc92e3d304, type: 3}
-  - {fileID: 3334161999345865768, guid: 35c373f6edaf038469c1fcbc92e3d304, type: 3}
+  - {fileID: 8626936094389886684, guid: 5c5ab97ef8220f44cb3b95f93890dcde, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
   - {fileID: 4181876094630310941, guid: 216b341b6a958b24e8406506c2b38af8, type: 3}
-  - {fileID: 7375682165875815826, guid: 10ba39428b5f3e242a01d1d0c5dbe472, type: 3}
-  - {fileID: 3334161999345865768, guid: 35c373f6edaf038469c1fcbc92e3d304, type: 3}
-  - {fileID: 4040973145068613678, guid: 005701158782db541af4aa9129f8b0f7, type: 3}
+  - {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
   - {fileID: 3718453750618139588, guid: 1c6598ed5cc390544b5c11276a93eb55, type: 3}
-  - {fileID: 3718453750618139588, guid: 1c6598ed5cc390544b5c11276a93eb55, type: 3}
-  - {fileID: 3334161999345865768, guid: 35c373f6edaf038469c1fcbc92e3d304, type: 3}
-  - {fileID: 3334161999345865768, guid: 35c373f6edaf038469c1fcbc92e3d304, type: 3}
+  - {fileID: 4181876094630310941, guid: b0b71986a2d142f498e1ae96de8d4fc5, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
   current_screen: 0
   screenprefabs:
-  - {fileID: 3334161999345865768, guid: 35c373f6edaf038469c1fcbc92e3d304, type: 3}
-  - {fileID: 3334161999345865768, guid: 3b174cd3846009f4b9a6b600651a141f, type: 3}
-  - {fileID: 7375682165875815826, guid: 10ba39428b5f3e242a01d1d0c5dbe472, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 8626936094389886684, guid: 5c5ab97ef8220f44cb3b95f93890dcde, type: 3}
+  - {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
   - {fileID: 4181876094630310941, guid: 216b341b6a958b24e8406506c2b38af8, type: 3}
   firstscreen: {fileID: 1809339197361240295, guid: 0f060b40a185d5a488d7dbc1e040f982, type: 3}
   screen_SOs:
@@ -200,10 +203,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 939e89202eaa73f408a4e9bd03d99bd1, type: 2}
   - {fileID: 11400000, guid: 3eee4e25ce7f7d44fbfbfcfa068bbd9f, type: 2}
   - {fileID: 11400000, guid: 506522140c5c93a44a65dad4d28d584f, type: 2}
-  - {fileID: 11400000, guid: 2944b68dff480914e9ff12a27eaa3427, type: 2}
-  - {fileID: 11400000, guid: 0453a7f78bc3b9647b2218b7d47c2133, type: 2}
+  - {fileID: 11400000, guid: 12d91690453e1a64198442d0c17d5b99, type: 2}
+  - {fileID: 11400000, guid: 5dbb0c2b46f73e84fba27f92a13fd5ef, type: 2}
   - {fileID: 11400000, guid: 6a7f3ad30bc87224fabe656865a71ae5, type: 2}
   - {fileID: 11400000, guid: 6a7f3ad30bc87224fabe656865a71ae5, type: 2}
+  correctchoice: 0
 --- !u!4 &266200537
 Transform:
   m_ObjectHideFlags: 0
