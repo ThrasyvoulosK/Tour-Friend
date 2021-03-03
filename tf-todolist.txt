@@ -249,3 +249,29 @@ Alexandros suggests:
 --prefabs should be 'canvas' objects
 ---(canvas objets can be handled automatically by the app)
 -target the smallest screen resolution available (for mobile)
+
+two videos issues:
+-incorrect video assignment: both videos show the same one
+--check its handling on canteen
+-the video that is supposed to be the correct one, shows the wrong answer
+ and vice versa!
+
+ new issues:
+ -place select's green button should be disabled before clicking on airport (like in canteen)
+ -'continue' button on onevideo-twochoices should take us one screen back
+ -constructor for oneimage-twochoices with similar functionality to the above
+ -better handling of screen sequence needed
+ --the game should be notified when a screen has the ability to change its route
+ ---examples include correct/false questions, or replay video etc
+
+ -move pawn screen
+ --keeps previously generated map
+ --(its design is under construction and subject to change)
+ -randomised map:
+ --once in the game, assign all nine of its images in random positions and keep them that way
+ ---make a dictionary(?)
+
+ bug between phrase select-videoselect-imageselect
+ -on video and image s constructors only one button has a constructor
+ --add for the other one, plus reduce currentscreen, since both add one to it
+ --video gets constructed twice on 'continue' (left button, first time)?

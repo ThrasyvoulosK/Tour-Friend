@@ -20,6 +20,7 @@ public class Screen_SO : ScriptableObject
     public Button Button1;
     public string Button1text;
     public Button Button2;
+    public string Button2text;
 
     public string points;
     public Sprite DescriptionImage;
