@@ -275,3 +275,24 @@ two videos issues:
  -on video and image s constructors only one button has a constructor
  --add for the other one, plus reduce currentscreen, since both add one to it
  --video gets constructed twice on 'continue' (left button, first time)?
+
+ placeselect
+ -re-enable raycasts on placeselect images
+ -write code for disabled places (ones that we've already visited)
+
+ map
+ -randomise properly, exclusively from images already existing (ie not multiple randoms of one piture)
+ -keep the map as is when reappearring (don't reinitialise it)
+ -integrate it to the game
+
+rounds repeat themseleves somewhat
+-eg screens 6,7 etc
+-points (in pages 23-24,31-32,37-38,44-45,50-51)
+-give device to tourfriend (13,29,42)
+-give device to tourist (21,34,47)
+rest of screens
+-pawn yes/no(22)
+-two images(25)
+-two videos(26,30,35,39,43,48)
+-one video(28,33,41,46)
+-one image two answers(49)

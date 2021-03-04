@@ -14,12 +14,28 @@ public class PlaceSelectScript : MonoBehaviour
     PointerEventData m_PointerEventData;
     EventSystem m_EventSystem;
 
+    string current_choice;
+    GameMaster gameMaster;
+
+    public GameObject button;
+    public Button bu;
+
     void Start()
     {
         //Fetch the Raycaster from the GameObject (the Canvas)
         m_Raycaster = GetComponent<GraphicRaycaster>();
         //Fetch the Event System from the Scene
         m_EventSystem = GetComponent<EventSystem>();
+
+        //
+        current_choice = null;
+        gameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
+
+        //find the screen's button and disable it 
+        button = gameObject.transform.Find("Button").gameObject;
+        bu = button.GetComponent<Button>();
+        bu.interactable = false;
+        //button.SetActive(false);
     }
     /*
     // Start is called before the first frame update
@@ -55,11 +71,66 @@ public class PlaceSelectScript : MonoBehaviour
             //Raycast using the Graphics Raycaster and mouse click position
             m_Raycaster.Raycast(m_PointerEventData, results);
 
+            //keep a usable string to handle data
+            string placetovisit;
+
             //For every result returned, output the name of the GameObject on the Canvas hit by the Ray
             foreach (RaycastResult result in results)
             {
                 Debug.Log("Hit " + result.gameObject.name);
+
+                if (result.gameObject.name.StartsWith("Image"))
+                {
+                    //remove 'Image' from choice
+                    placetovisit = result.gameObject.name.Substring(5);
+
+                    Debug.Log("placetovisit is: " + placetovisit);
+
+                    //check if it is one of the places we're allowed to go
+                    foreach(string pl in gameMaster.placelist)
+                    {
+                        
+                        if (pl == placetovisit)
+                        {
+                            Debug.Log(placetovisit + " is in the list");
+                            //if (gameMaster.placelistvisited == null)
+                            if (gameMaster.placelistvisited.Count==0)
+                            {
+                                current_choice = placetovisit;
+                                Debug.Log("current choice confirmed");
+                            }
+                            else
+                            {
+                                foreach (string plv in gameMaster.placelistvisited)
+                                {
+                                    if (plv == placetovisit)
+                                        Debug.Log("place already visited");
+                                    else
+                                    {
+                                        Debug.Log("place not visited");
+                                        current_choice = placetovisit;
+                                    }
+                                }
+                            }                            
+                        }
+                        //else if
+                    }
+                }
+            }
+            if (current_choice != null)
+            {
+                Debug.Log("Our current choice to go is: " + current_choice);
+
+                //re-enable the button, now that we have made a choice
+                //button.SetActive(true);
+                bu.interactable = true;
             }
         }
+    }
+
+    //add our new place to the list of visited ones
+    public void addplace()
+    {
+        gameMaster.placelistvisited.Add(current_choice);
     }
 }

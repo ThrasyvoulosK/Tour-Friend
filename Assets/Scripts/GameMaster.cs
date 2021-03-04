@@ -59,6 +59,18 @@ public class GameMaster : MonoBehaviour
 
     //this is the place select screen position, where the game returns to after a succesful round, or a failed answer
     int locationscreenposition;
+    //similarly, the phrase select screen is here
+    int phrasescreenposition;
+
+    //keep our locations in place with this list
+    public List<string> placelist = new List<string>();
+    //list of visited places
+    public List<string> placelistvisited = new List<string>();
+
+    public GameObject map;//= new GameObject();
+    public bool mapinit = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,9 +79,26 @@ public class GameMaster : MonoBehaviour
         VideoDictionaryInitialise();
 
         //initialise first object
-        createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+        //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+
+        //
+        if (Application.isEditor == true)
+        {
+            /*current_screen = 10;
+            createPhraseSelectscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text);*/
+            current_screen = 0;
+            createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+        }
+        else
+        {
+            current_screen = 0;
+            createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+        }
 
         locationscreenposition = 5;
+        phrasescreenposition = 10;
+
+        //map = null;
     }
 
     // Update is called once per frame
@@ -391,18 +420,25 @@ public class GameMaster : MonoBehaviour
         //Debug.Log("video chosen: " + videoClip.name);
 
         //find next in session to construct a new screen
+        //(continue button should send us one screen back)
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
         button1.GetComponentInChildren<Text>().text = button;
-        button1.onClick.AddListener(delegate { set_current_screen(current_screen-1); });
+        //button1.onClick.AddListener(delegate { set_current_screen(current_screen-1); });
+        button1.onClick.AddListener(delegate { OneScreenBack(); });
+        button1.onClick.AddListener(delegate { createPhraseSelectscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
 
         Debug.Log(current_screen);
-        ConstructorDecider(button1);
+        /*ConstructorDecider(button1);*/
         //add the second button
+        //(finish button should take us to the next screen, as usual)
         Button buttontwo = newgameobject.transform.Find("Button2").GetComponent<Button>();
         buttontwo.GetComponentInChildren<Text>().text = button2;
+        ConstructorDecider(buttontwo);
         //
         //buttontwo.onClick.AddListener(delegate { MinusTwo(current_screen); });
         //button1.onClick.AddListener(delegate { set_current_screen(current_screen+1); });
+
+        /*current_screen--;*/
 
     }
     //
@@ -440,11 +476,17 @@ public class GameMaster : MonoBehaviour
         Debug.Log(current_screen);
         ConstructorDecider(button1);
         //add the second button
+        //(the second button here takes us two screens back)
         Button buttontwo = newgameobject.transform.Find("Button2").GetComponent<Button>();
         buttontwo.GetComponentInChildren<Text>().text = button2;
+        buttontwo.onClick.AddListener(delegate { TwoScreensBack(); });
+        buttontwo.onClick.AddListener(delegate { createPhraseSelectscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
+        /*ConstructorDecider(buttontwo);*/
         //
         //buttontwo.onClick.AddListener(delegate { set_current_screen(current_screen+1); });
+        
 
+        /*current_screen--;*/
     }
     //decide on which constructor to call
     public void ConstructorDecider(Button button)
@@ -467,16 +509,18 @@ public class GameMaster : MonoBehaviour
             Debug.Log("null button");
         button.onClick.AddListener(DebugName);
 
-        Debug.Log("calling constructor on " + current_screen +"+-");
+        Debug.Log("calling constructor on " + current_screen );
 
         if (sgo[current_screen].name.StartsWith("Canvas OneImage"))
         {          
             button.onClick.AddListener(delegate { createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text); });
         }
-        else if(sgo[current_screen].name.StartsWith("Canvas OneIm"))
+        else if(sgo[current_screen].name.StartsWith("Canvas OneIm"))//TwoOptions
         {
             //current_screen--;
-            button.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); }); 
+            button.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
+
+            //current_screen--;//
         }
         else if (sgo[current_screen].name.StartsWith("Canvas TwoImages"))
         {
@@ -495,6 +539,8 @@ public class GameMaster : MonoBehaviour
             //current_screen--;
             Debug.Log("onevi");
             button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].description2, images_name[0], screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
+
+            //current_screen--;
         }
         else if (sgo[current_screen].name.StartsWith("Canvas TwoVideos"))
         {
@@ -547,6 +593,15 @@ public class GameMaster : MonoBehaviour
     void set_current_screen(int number)
     {
         current_screen = number;
+    }
+
+    void OneScreenBack()
+    {
+        current_screen = current_screen - 2;
+    }
+    void TwoScreensBack()
+    {
+        current_screen = current_screen - 3;
     }
     public void DebugName()
     {
