@@ -3,19 +3,25 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraSettings
     - GameMaster
+    - MapScript
     - PlaceSelectScript
+    - PointsScript
     - ScreenObjectScript
     - Screen_SO
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -49,6 +55,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 84
@@ -56,31 +64,45 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
-    - Class: 114
-      Script: {instanceID: 11718}
+      Script: {instanceID: 11742}
     - Class: 114
       Script: {instanceID: 11744}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 11872}
     - Class: 114
-      Script: {instanceID: 12108}
+      Script: {instanceID: 11934}
     - Class: 114
-      Script: {instanceID: 12814}
+      Script: {instanceID: 12134}
     - Class: 114
-      Script: {instanceID: 13628}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 14112}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 14406}
+      Script: {instanceID: 12970}
     - Class: 114
-      Script: {instanceID: 14412}
+      Script: {instanceID: 13658}
     - Class: 114
-      Script: {instanceID: 14924}
+      Script: {instanceID: 13758}
     - Class: 114
-      Script: {instanceID: 15044}
+      Script: {instanceID: 13992}
+    - Class: 114
+      Script: {instanceID: 14012}
+    - Class: 114
+      Script: {instanceID: 14144}
+    - Class: 114
+      Script: {instanceID: 14334}
+    - Class: 114
+      Script: {instanceID: 14438}
+    - Class: 114
+      Script: {instanceID: 14444}
+    - Class: 114
+      Script: {instanceID: 14730}
+    - Class: 114
+      Script: {instanceID: 14956}
+    - Class: 114
+      Script: {instanceID: 15076}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -110,16 +132,16 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -146,7 +168,7 @@ ScriptsOnlyBuild:
     className: ScreenObjectScript
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ba2823d4c6930cccc58361147f9cdcfc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlaceSelectScript
@@ -356,6 +378,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 5be53541c8884a95807dbbb97d88b534
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MapScript
+  - hash:
+      serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -386,6 +414,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VideoChoice_SO
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -396,6 +430,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: e7839b7719abe6b1db7449ca0f19a914
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PointsScript
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -464,7 +504,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 562942419de437115a44a86d3c8fb29b
+      Hash: dc7dd6c6740c5441140625aa80bbe627
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Screen_SO
@@ -536,7 +576,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: f96da1419d14e3e2024f00d317d2a425
+      Hash: f719af00581883f21c23d11dd4865f58
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameMaster
@@ -612,13 +652,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VideoChoice_SO
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Unity Projects/Tour Friend/Builds/TourFriendAndroid.apk
+  playerPath: C:/Unity Projects/Tour Friend/Builds/TourFriendAndroidDev.apk

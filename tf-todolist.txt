@@ -296,3 +296,23 @@ rest of screens
 -two videos(26,30,35,39,43,48)
 -one video(28,33,41,46)
 -one image two answers(49)
+
+two options issues:
+-one image two choices
+--fix functioning for both buttons (for choices after phrase select)
+-two videos
+--false answer continues to the next screen
+--correct bugs up next constructor screen
+---videos working 'correctly': 8,17
+//---videos bugging: 20,24,26,29,33
+-last video's 'correct' answer bugs up last two-options picture
+--with false constructor
+--false texts, let alone description
+--red button makes everything disappear!
+--'false' does create it correctly
+
+print screen number
+
+exit button
+
+fix map getting destroyed, instead of kept

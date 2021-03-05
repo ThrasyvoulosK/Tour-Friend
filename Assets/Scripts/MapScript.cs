@@ -8,17 +8,30 @@ public class MapScript : MonoBehaviour
 {
     public List<Sprite> locationsprites = new List<Sprite>();
     public Sprite[] newlocationsprites =  new Sprite[9];
+    GameObject mapobject;
     // Start is called before the first frame update
     void Start()
     {
-        if (GameObject.Find("GameMaster").GetComponent<GameMaster>().mapinit==false)
+        if (GameObject.Find("GameMaster").GetComponent<GameMaster>().mapinit == false|| GameObject.Find("GameMaster").GetComponent<GameMaster>().map == null)
         {
             assignmaplocations();
             GameObject.Find("GameMaster").GetComponent<GameMaster>().map = gameObject;
             GameObject.Find("GameMaster").GetComponent<GameMaster>().mapinit = true;
         }
+        //else if(GameObject.Find("GameMaster").GetComponent<GameMaster>().map==null)
         else
-            Debug.Log("we already have a map");
+        {
+            Debug.Log("we already have a map and we're assigning its values to our current one");
+            mapobject=GameObject.Find("GameMaster").GetComponent<GameMaster>().map;
+
+            for (int i = 1; i <= 9; i++)
+            {
+                //string istr = i.ToString();
+                Sprite mapspr = mapobject.transform.Find("Image" + i.ToString()).GetComponent<Image>().sprite;
+                //locationsprites.Add(mapspr);
+                gameObject.transform.Find("Image" + i.ToString()).GetComponent<Image>().sprite = mapspr;
+            }
+        }
     }
 
     // Update is called once per frame

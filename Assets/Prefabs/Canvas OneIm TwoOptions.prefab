@@ -310,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3359606706807996083, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
       propertyPath: m_Name
       value: Canvas OneIm TwoOptions

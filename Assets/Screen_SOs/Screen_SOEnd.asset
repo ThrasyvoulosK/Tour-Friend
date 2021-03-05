@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Screen_SOEnd
   m_EditorClassIdentifier: 
   Description: {fileID: 0}
-  description: End
+  description: '(This is the end of the round)
+
+    (Continue to location select)'
   description2: 
   Content: {fileID: 0}
   Imagename: 
   Imagename2: 
   Button1: {fileID: 0}
-  Button1text: QUIT
+  Button1text: OK
   Button2: {fileID: 0}
+  Button2text: 
   points: 
   DescriptionImage: {fileID: 0}
