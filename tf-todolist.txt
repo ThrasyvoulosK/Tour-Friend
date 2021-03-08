@@ -316,3 +316,7 @@ print screen number
 exit button
 
 fix map getting destroyed, instead of kept
+
+copy text from SOs to gamemaster's words_en (to preapare for Greek plus more translations)
+
+remove unneeded variables on SOs

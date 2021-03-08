@@ -72,4 +72,10 @@ public class ScreenObjectScript : MonoBehaviour
     {
         return currentscreen++;
     }
+
+    //quit the app with this function
+    public void ExitApp()
+    {
+        Application.Quit();
+    }
 }

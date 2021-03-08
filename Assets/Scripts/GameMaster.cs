@@ -11,7 +11,13 @@ public class GameMaster : MonoBehaviour
     //lists of separate gameobjects are used to collectively create a screen
 
     //a list of words and descriptions used in the game. Originally in English
+    [TextArea]
     public List<string> words_en = new List<string>();
+    [TextArea]
+    public List<string> words_gr = new List<string>();
+
+    //handle translations of text between languages in this dictionary
+    public Dictionary<string, string> texthandler = new Dictionary<string, string>();
 
     //list of images used in game
     public List<Sprite> images = new List<Sprite>();
@@ -22,17 +28,19 @@ public class GameMaster : MonoBehaviour
 
     //list of videos
     public List<UnityEngine.Video.VideoClip> videos_en = new List<UnityEngine.Video.VideoClip>();
+    public List<UnityEngine.Video.VideoClip> videos_gr = new List<UnityEngine.Video.VideoClip>();
     //list of corresponding words to videos
     public List<string> videos_en_names = new List<string>();
 
     public Dictionary<string, UnityEngine.Video.VideoClip> videohandler = new Dictionary<string, UnityEngine.Video.VideoClip>();
+    public Dictionary<string, UnityEngine.Video.VideoClip> videohandler_gr = new Dictionary<string, UnityEngine.Video.VideoClip>();
 
     //Dictionary Creation
 
     //list 
     //dictionary of the two above
 
-    
+    public string language_current = "English";
 
     //keep track of score
     public int total_points = 0;
@@ -87,14 +95,16 @@ public class GameMaster : MonoBehaviour
             createPhraseSelectscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text);*/
 
             current_screen = 0;
-            createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+            //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
             //createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename,  screen_SOs[current_screen].Button1text);
+            GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text); });
         }
         else
         {
             //original
             current_screen = 0;
-            createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+            //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+            GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text); });
         }
 
         locationscreenposition = 5;
@@ -295,6 +305,15 @@ public class GameMaster : MonoBehaviour
         Debug.Log("Called OneVideo constructor at "+current_screen);
         Debug.Log("Called OneVideo constructor with prefab"+prefab_go.name);
         Debug.Log("Called OneVideo constructor with desc"+desc);
+
+        //change video on prefab
+        UnityEngine.Video.VideoClip videoClip;// = prefab_go.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();
+        UnityEngine.Video.VideoPlayer videoPlayer = prefab_go.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
+        /*videoClip = videoPlayer.clip;
+        videoClip = videohandler[vid];*/
+        videoPlayer.clip = videohandler[vid];
+        Debug.Log("video chosen: " + videoPlayer.clip.name);
+
         //instantiate its prefab version
         GameObject newgameobject;
         newgameobject = Instantiate(prefab_go);
@@ -303,9 +322,12 @@ public class GameMaster : MonoBehaviour
 
         //find the given values
         //Image image = newgameobject.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>();
-        //UnityEngine.Video.VideoClip videoClip= newgameobject.transform.GetChild(0).transform.GetChild(5).transform.GetChild(0).GetComponent<UnityEngine.Video.VideoClip>();
-        UnityEngine.Video.VideoClip videoClip= newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();
+        /*UnityEngine.Video.VideoClip videoClip= newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();*/
+        /*videoClip= newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();*/
         //Debug.Log("videoclip object should be " + newgameobject.transform.GetChild(0).transform.GetChild(5).transform.GetChild(0).name);
+        /*UnityEngine.Video.VideoPlayer videoPlayer = newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
+        videoClip = videoPlayer.clip;
+        videoClip = videohandler[vid];*/
 
         //add the indicated values
 
@@ -319,8 +341,9 @@ public class GameMaster : MonoBehaviour
         //newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
         //find video
-        videoClip = videos_en[0];
-        Debug.Log("video chosen: " + videoClip.name);
+        //videoClip = videos_en[0];
+        /*videoClip = videohandler[vid];
+        Debug.Log("video chosen: " + videoClip.name);*/
 
         //find next in session to construct a new screen
         //Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
@@ -610,7 +633,7 @@ public class GameMaster : MonoBehaviour
         }
         else if (sgo[current_screen].name.StartsWith("Canvas OneVideo"))
         {
-            button.onClick.AddListener(delegate { createOneVideoscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });            
+            button.onClick.AddListener(delegate { createOneVideoscreen(sgo[current_screen], screen_SOs[current_screen].description, videos_en_names[1], screen_SOs[current_screen].Button1text); });            
         }
         else if (sgo[current_screen].name.StartsWith("Canvas OneVi"))//TwoOptions
         {
