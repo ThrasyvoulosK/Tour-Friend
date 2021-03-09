@@ -78,6 +78,8 @@ public class GameMaster : MonoBehaviour
     public GameObject map;//= new GameObject();
     public bool mapinit = false;
 
+    public bool checkdelegate=false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -98,6 +100,8 @@ public class GameMaster : MonoBehaviour
             //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
             //createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename,  screen_SOs[current_screen].Button1text);
             GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text); });
+
+            GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { Destroy(GameObject.Find("Canvas Menu")); });
         }
         else
         {
@@ -105,7 +109,10 @@ public class GameMaster : MonoBehaviour
             current_screen = 0;
             //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
             GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text); });
+
+            GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { Destroy(GameObject.Find("Canvas Menu")); });
         }
+        checkdelegate = true;
 
         locationscreenposition = 5;
         phrasescreenposition = 10;
@@ -116,6 +123,13 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(checkdelegate==false)
+        {
+            GameObject.Find("Canvas Menu(Clone)").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text); });
+            GameObject.Find("Canvas Menu(Clone)").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { Destroy(GameObject.Find("Canvas Menu(Clone)")); });
+
+            checkdelegate = true;
+        }
         
     }
 

@@ -15,7 +15,11 @@ public class MapScript : MonoBehaviour
         if (GameObject.Find("GameMaster").GetComponent<GameMaster>().mapinit == false|| GameObject.Find("GameMaster").GetComponent<GameMaster>().map == null)
         {
             assignmaplocations();
-            GameObject.Find("GameMaster").GetComponent<GameMaster>().map = gameObject;
+
+            //keep an instance of our new map available at all times
+            GameObject.Find("GameMaster").GetComponent<GameMaster>().map = Instantiate(gameObject);
+            GameObject.Find("GameMaster").GetComponent<GameMaster>().map.SetActive(false);
+
             GameObject.Find("GameMaster").GetComponent<GameMaster>().mapinit = true;
         }
         //else if(GameObject.Find("GameMaster").GetComponent<GameMaster>().map==null)
@@ -23,6 +27,11 @@ public class MapScript : MonoBehaviour
         {
             Debug.Log("we already have a map and we're assigning its values to our current one");
             mapobject=GameObject.Find("GameMaster").GetComponent<GameMaster>().map;
+            /*if(mapobject==null)
+            {
+                mapobject = Instantiate(mapobject);
+                Debug.Log(mapobject.name);
+            }*/
 
             for (int i = 1; i <= 9; i++)
             {

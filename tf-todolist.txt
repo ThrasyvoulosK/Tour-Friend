@@ -311,12 +311,26 @@ two options issues:
 --red button makes everything disappear!
 --'false' does create it correctly
 
-print screen number
+print screen number?
 
-exit button
+//exit button
 
-fix map getting destroyed, instead of kept
+//fix map getting destroyed, instead of kept
 
 copy text from SOs to gamemaster's words_en (to preapare for Greek plus more translations)
+-check canteen code for proper handling
+videos should work similarly
 
 remove unneeded variables on SOs
+
+different routes keep the same seriies of gameobject prefabs, but change their content on their constructors?
+-eg the 'taxi' option has videos and cards and questions etc just like the 'airport' one
+-the constructors should be able to call different SOs depending on the situation
+
+pawn screen 
+(appears after the select phrase/video screens, and asks from us to move the pawn to the position we believe we were led to )
+-map with hidden locations
+--clicking on one square reveals its location underneath it
+--the pawn sjould be on the last visited location
+---if we have visited multiple places they should be open as well?
+---(use raycasts, instatiate and destroy the proper objects)
