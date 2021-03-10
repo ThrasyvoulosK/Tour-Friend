@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Screen_SO16
   m_EditorClassIdentifier: 
   Description: {fileID: 0}
-  description: "Your are the tourist in the airport\r"
+  description: "You are the tourist in the airport\r"
   description2: 
   Content: {fileID: 0}
   Imagename: Tourist

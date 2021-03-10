@@ -154,9 +154,118 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   words_en:
   - DONE
-  - Welcome to the game of Tourfriend project  Please shape 2 teams. The one team
-    will be the tourists and the other team the tourfriends
-  words_gr: []
+  - 'Welcome to the game of Tourfriend project
+
+
+    Please shape 2 teams.
+
+    The
+    one team will be the tourists and the other team the tourfriends'
+  - 'Give the device (mobile or tablet) to the tourfriends team.
+
+    Tourists should
+    not look the screen until they are guided so by the game'
+  - "See the map below and place the \u201CPlaces cards\u201D on the correct spots\nfacing
+    down so that tourists can not see the places."
+  - 'Turn over only the card of INFO POINT and
+
+    place over it the pawn of the
+    tourist'
+  - 'We are ready to start
+
+    Give the device (mobile or tablet) to the tourists
+    team.'
+  - Select a place to go
+  - SELECT
+  - See the video and try to mimic the movements
+  - What did the tourist ask you?
+  - 'See the map below and select the phrases that you want to tell to the
+
+    tourists
+    in order to guide them to the correct place.'
+  - SEE THE VIDEO
+  - "See the video and try to mimic the movements\r"
+  - Hello
+  - CONTINUE
+  - FINISH
+  - 'Are you sure you have finished giving directions?
+
+'
+  - YES
+  - NO
+  - "Move your pawn according to the directions of the tourfriend\r\nOpen the card.
+    Is it the correct card?\r"
+  - "You are the tourist in the airport\r"
+  - ASK FOR HELP
+  - "Select the help you need \r\n"
+  - I would like to drop my baggage
+  - 'What did the tourist say to you?
+
+'
+  - "Reply to the tourist\r"
+  - "Please put it here. Do you have a backpack or handbag? \r"
+  - "What did the tourfriend say to you?\r"
+  - "Select your reply\r"
+  - "Yes, is the size of my backpack  ok?\r"
+  - "Reply to the tourist and give him the correct card\r"
+  - "Yes you can take your backpack on board. \r"
+  - "Which answer were you given by the tourfriend?\r"
+  - "Was it the correct reply and card?\r"
+  - '(This is the end of the round)
+
+    (Continue to location select)'
+  - OK
+  - Give the device (mobile or tablet) to the tourfriends team.
+  - Give the device (mobile or tablet) to the tourists team.
+  - 'Welldone!
+
+    You win 2 extra points'
+  - "Unfortunately this is wrong\r\nYou don\u2019t win extra points"
+  words_gr:
+  - "\u0395\u039D\u03A4\u0391\u039E\u0395\u0399"
+  - "\u039A\u03B1\u03BB\u03C9\u03C3\u03AE\u03C1\u03B8\u03B1\u03C4\u03B5 \u03C3\u03C4\u03BF
+    Tour Friend\n\n\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE, \u03C3\u03C7\u03B7\u03BC\u03B1\u03C4\u03AF\u03C3\u03C4\u03B5
+    \u03B4\u03C5\u03BF \u03BF\u03BC\u03AC\u03B4\u03B5\u03C2.\n\u0397 \u03BC\u03B9\u03B1
+    \u03B8\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BF\u03B9 Tour Friends \u03BA\u03B1\u03B9
+    \u03B7 \u03AC\u03BB\u03BB\u03B7 \u03BF\u03B9 \u03A4\u03BF\u03C5\u03C1\u03AF\u03C3\u03C4\u03B5\u03C2"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\u0395\u03A0\u0399\u039B\u039F\u0393\u0397"
+  - 
+  - 
+  - 
+  - "\u0394\u0395\u03A3 \u03A4\u039F \u0392\u0399\u039D\u03A4\u0395\u039F"
+  - 
+  - 
+  - "\u03A3\u03A5\u039D\u0395\u03A7\u0395\u0399\u0391"
+  - "\u03A4\u0395\u039B\u039F\u03A3"
+  - 
+  - "\u039D\u0391\u0399"
+  - "\u039F\u03A7\u0399"
+  - 
+  - 
+  - "\u0396\u0397\u03A4\u0391 \u0392\u039F\u0397\u0398\u0395\u0399\u0391"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\u039F\u039A"
+  - 
+  - 
+  - 
+  - 
   images:
   - {fileID: 21300000, guid: a2762901ff7da804d9becdee692a26cb, type: 3}
   - {fileID: 21300000, guid: fd123082d4026c54f86a026ab84fed93, type: 3}
@@ -275,6 +384,7 @@ MonoBehaviour:
   placelistvisited: []
   map: {fileID: 1071033925446103795, guid: d1ab1e6f676febe449142a3230d0dfc4, type: 3}
   mapinit: 0
+  checkdelegate: 0
 --- !u!4 &266200537
 Transform:
   m_ObjectHideFlags: 0

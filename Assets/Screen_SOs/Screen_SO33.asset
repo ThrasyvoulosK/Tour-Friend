@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Screen_SO33
   m_EditorClassIdentifier: 
   Description: {fileID: 0}
-  description: "Which answer you were given by the tourfriend?\r"
+  description: "Which answer were you given by the tourfriend?\r"
   description2: 
   Content: {fileID: 0}
   Imagename: 

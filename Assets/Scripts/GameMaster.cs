@@ -84,7 +84,11 @@ public class GameMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //language assignment test
+        //language_current = "Greek";
+
         //initialise dictionaries
+        LanguageDictionaryInitialise(language_current);
         ImageDictionaryInitialise();
         VideoDictionaryInitialise();
 
@@ -142,6 +146,31 @@ public class GameMaster : MonoBehaviour
     {
         for (int i = 0; i < videos_en.Count; i++)
             videohandler.Add(videos_en_names[i], videos_en[i]);
+    }
+
+    void LanguageDictionaryInitialise(string current_language)
+    {
+        if (current_language == "English")
+            for (int i = 0; i < words_en.Count; i++)
+                texthandler.Add(words_en[i], words_en[i]);
+        else if (current_language == "Greek")
+            for (int i = 0; i < words_en.Count; i++)
+            {
+                texthandler.Add(words_en[i], words_gr[i]);
+            }
+    }
+
+    //assign a string based on the initial one
+    string AssignString(string initialstring)
+    {
+        if (language_current == "English")
+            return initialstring;
+        else if (language_current == "Greek")//test
+            return texthandler[initialstring];
+            //return words_gr[1];
+
+        Debug.Log("there is no assignment for the word/phrase: " + initialstring +" for "+language_current+", yet!");
+        return null;
     }
 
     //initialise video choice prefab
@@ -221,7 +250,10 @@ public class GameMaster : MonoBehaviour
         //newgameobject.transform.Find("Description").GetComponentInChildren<Text>().text = desc;
         TextMeshProUGUI descript = newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>();
         //TextMeshPro descript = newgameobject.transform.Find("Description").GetComponentInChildren<TMPro.TMP_Text>();
-        descript.text = desc;
+
+        /*descript.text = desc;*/
+        descript.text = AssignString(descript.text);
+
         //descript.SetText(desc);
         /*Debug.Log("description text is: " + newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text);
         Debug.Log("image to load" + img);
@@ -241,7 +273,8 @@ public class GameMaster : MonoBehaviour
         //Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
 
-        button1.GetComponentInChildren<Text>().text = button;
+        /*button1.GetComponentInChildren<Text>().text = button;*/
+        button1.GetComponentInChildren<Text>().text = AssignString(button);
 
         //Debug.Log(current_screen);
         ConstructorDecider(button1);
