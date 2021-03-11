@@ -62,6 +62,8 @@ public class GameMaster : MonoBehaviour
 
     //keep each screen's data here
     public List<Screen_SO> screen_SOs = new List<Screen_SO>();
+    //testing route select with this list
+    public List<Screen_SO> screen_SOsAlt = new List<Screen_SO>();
 
     public bool correctchoice=false;
 
@@ -647,6 +649,8 @@ public class GameMaster : MonoBehaviour
         {
             Debug.Log("End of round. Go back to place select");
             current_screen = locationscreenposition;
+            //testing route change
+            //screen_SOs = screen_SOsAlt;
         }
 
             if (button == null)

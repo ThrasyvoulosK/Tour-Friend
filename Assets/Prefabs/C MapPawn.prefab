@@ -658,6 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bu: {fileID: 0}
+  placeimage: {fileID: 0}
 --- !u!1 &8705626452266194809
 GameObject:
   m_ObjectHideFlags: 0

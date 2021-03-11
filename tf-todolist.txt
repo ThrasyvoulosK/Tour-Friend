@@ -330,10 +330,10 @@ different routes keep the same seriies of gameobject prefabs, but change their c
 pawn screen 
 (appears after the select phrase/video screens, and asks from us to move the pawn to the position we believe we were led to )
 -map with hidden locations
---clicking on one square reveals its location underneath it
+//--clicking on one square reveals its location underneath it
 --the pawn sjould be on the last visited location
----if we have visited multiple places they should be open as well?
----(use raycasts, instatiate and destroy the proper objects)
+//---if we have visited multiple places they should be open as well?
+//---(use raycasts, instatiate and destroy the proper objects)
 
 i came up with some solutions :
 -Languages can be handled from within the constructor of each screen, with a function that:
@@ -350,12 +350,20 @@ what to do with pawn
 //--keep this imageObject in a variable
 //--raycast hits another image
 //---enable previously kept, and assign the new one as kept
--later on:
---reveal visited places and info point at start
-eg we have been to the airport, and so we can reveal its location at start
-better check this with the images underneath, so that they are the exact same images of the locations
--
+//-later on:
+//--reveal visited places and info point at start
+//eg we have been to the airport, and so we can reveal its location at start
+//better check this with the images underneath, so that they are the exact same images of the locations
 
-test both map and pawnmap with placeholder images
--as previously stated, we need a randomised map with ALL nine locations
--the pawnmap should, at first, reveal ONLY the tile with the InfoPoint icon beneath it
+//test both map and pawnmap with placeholder images
+//-as previously stated, we need a randomised map with ALL nine locations
+//-the pawnmap should, at first, reveal ONLY the tile with the InfoPoint icon beneath it
+
+place select issues:
+-'disable' images after being selected at the start()
+--make them darker as well?
+-make a more formal constructor for different routes?
+
+replace second map with mappawn
+
+some of the map screens look small

@@ -92,7 +92,7 @@ public class PlaceSelectScript : MonoBehaviour
                         
                         if (pl == placetovisit)
                         {
-                            Debug.Log(placetovisit + " is in the list");
+                            //Debug.Log(placetovisit + " is in the list");
                             //if (gameMaster.placelistvisited == null)
                             if (gameMaster.placelistvisited.Count==0)
                             {
@@ -104,11 +104,16 @@ public class PlaceSelectScript : MonoBehaviour
                                 foreach (string plv in gameMaster.placelistvisited)
                                 {
                                     if (plv == placetovisit)
+                                    { 
                                         Debug.Log("place already visited");
+                                        current_choice = null;
+                                        break;
+                                    }
                                     else
                                     {
                                         Debug.Log("place not visited");
                                         current_choice = placetovisit;
+                                        //break;
                                     }
                                 }
                             }                            

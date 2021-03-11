@@ -62,8 +62,14 @@ public class MapScript : MonoBehaviour
         int rand;
         for (int i = 0; i <= 8; i++)
         {
-            rand = Random.Range(0, 8);
+            rand = Random.Range(0, locationsprites.Count);
             newlocationsprites[i] = locationsprites[rand];
+            if(newlocationsprites[i]==null)
+            {
+                Debug.Log("null map sprite");
+
+            }
+            locationsprites.RemoveAt(rand);
             Debug.Log("random sprite i is: " + i);
 
         }

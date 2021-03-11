@@ -41,8 +41,24 @@ public class PawnScript : MonoBehaviour
         placeimage = null;
 
         //Test: Work in Progress
-        //find the info point and disable it
-        gameObject.transform.Find("HiddenImages").transform.Find( "Image"+ Random.Range(1, 9) + "Pawn").gameObject.SetActive(false);
+        //find the info point and disable it        
+        for(int i=1;i<=9;i++)
+        {
+            if(gameObject.transform.Find("Image"+i).GetComponent<Image>().sprite==gameMaster.imagehandler["InfoPoint"])
+            {
+                gameObject.transform.Find("HiddenImages").transform.Find("Image" + i + "Pawn").gameObject.SetActive(false);
+            }
+            for(int j=0;j<gameMaster.placelistvisited.Count;j++)
+            {
+                /*if (gameMaster.imagehandler.ContainsKey(gameMaster.placelistvisited[j]) == true)
+                    gameObject.transform.Find("HiddenImages").transform.Find("Image" + i + "Pawn").gameObject.SetActive(false);*/
+                if(gameObject.transform.Find("Image" + i).GetComponent<Image>().sprite==gameMaster.imagehandler[gameMaster.placelistvisited[j]])
+                        gameObject.transform.Find("HiddenImages").transform.Find("Image" + i + "Pawn").gameObject.SetActive(false);
+            }
+            //else if(gameMaster.imagehandler[gameMaster.placelist[i-1]]==gameObject.transform.Find("Image"+i))
+            /*else if(gameMaster.imagehandler.ContainsKey(gameMaster.placelistvisited[i - 1])==true)
+                gameObject.transform.Find("HiddenImages").transform.Find("Image" + i + "Pawn").gameObject.SetActive(false);*/
+        }
         //find all the visited places and disable them
         //
     }
