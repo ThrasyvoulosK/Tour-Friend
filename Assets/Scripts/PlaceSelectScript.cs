@@ -36,6 +36,29 @@ public class PlaceSelectScript : MonoBehaviour
         bu = button.GetComponent<Button>();
         bu.interactable = false;
         //button.SetActive(false);
+
+        //initialise visited places
+        //foreach (GameObject game in gameObject.transform)
+        for(int j=0;j<gameObject.transform.childCount;j++)
+        {            
+            GameObject game = gameObject.transform.GetChild(j).gameObject;
+            Debug.Log("placenames initialiser name check: " + game.name);
+            if (game.name.StartsWith("Image"))
+            {
+                if (game.name.Length > 5)
+                {
+                    if ((game.name.Substring(5)) != null)
+                    {
+                        string loc = game.name.Substring(5);
+                        for (int i = 0; i < gameMaster.placelistvisited.Count; i++)
+                        {
+                            if (loc == gameMaster.placelistvisited[i])
+                                game.GetComponent<Image>().color = new Color(0, 0, 0);
+                        }
+                    }
+                }
+            }
+        }
     }
     /*
     // Start is called before the first frame update

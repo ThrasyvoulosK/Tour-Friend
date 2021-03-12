@@ -338,6 +338,9 @@ public class GameMaster : MonoBehaviour
 
         /*image.sprite = imagehandler[img];*/
 
+        //assign points here
+        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "Points: " + total_points.ToString();
+
         //newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
         //find next in session to construct a new screen
@@ -443,35 +446,35 @@ public class GameMaster : MonoBehaviour
         GameObject vidch2 = newgameobject.transform.Find("VideoChoice2").gameObject;
         //GameObject vidch1=newgameobject.transform.Find("VideoChoice1").gameObject;
         InitialiseVideoChoice(vidch1, videos_en_names[0], desc2, desc1, "False");//
-        vidch1.GetComponent<PointsScript>().iscorrect = false;
+        //vidch1.GetComponent<PointsScript>().iscorrect = false;
         InitialiseVideoChoice(vidch2, videos_en_names[1], desc3, desc1, "Correct");//
-        vidch2.GetComponent<PointsScript>().iscorrect = true;
+        //vidch2.GetComponent<PointsScript>().iscorrect = true;
 
         Button button1 = vidch1.transform.Find("Button").gameObject.GetComponent<Button>();
         Button button2 = vidch2.transform.Find("Button").gameObject.GetComponent<Button>();
 
-        button1.onClick.AddListener(delegate { correctchoice = false; });
-        ConstructorDecider(button1);
-        /*ConstructorDecider(button2);
+        //button1.onClick.AddListener(delegate { correctchoice = false; });
+        //ConstructorDecider(button1);
+        ConstructorDecider(button2);
 
-        current_screen--;//TEST: Placeholder, because creating two buttons advances it more than it should*/
+        //current_screen--;//TEST: Placeholder, because creating two buttons advances it more than it should*/
         if(sgo[current_screen].name.EndsWith("Points"))
         {
             Debug.Log("points screen follows this two-video constructor");
             //button1.onClick.AddListener(delegate { correctchoice = false; });
-            button2.onClick.AddListener(delegate { correctchoice = true; });
-            button2.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], "Continue"); });
+            //button2.onClick.AddListener(delegate { correctchoice = true; });
+            button1.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, images_name[0], "Continue"); });
         }
         else if(sgo[current_screen].name.EndsWith("Canvas OneIm TwoOptions"))
         {
             Debug.Log("this two video constructor isn't followed by a points screen");
-            button2.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
+            button1.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
         }
         else if (sgo[current_screen].name.EndsWith("Canvas OneVideo"))
         {
             Debug.Log("after calling two-video constructor we need a OneVideo constructor");
             //button2.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], "Continue"); });
-            button2.onClick.AddListener(delegate { createOneVideoscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].description2, videos_en_names[0], "Continue"); });
+            button1.onClick.AddListener(delegate { createOneVideoscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].description2, videos_en_names[0], "Continue"); });
         }
         else
             Debug.Log("after calling two-video constructor we need a different constructor");
@@ -726,7 +729,7 @@ public class GameMaster : MonoBehaviour
             //if (sgo[current_screen].GetComponentInChildren<PointsScript>().iscorrect == true)
             //if (vidch2.GetComponent<PointsScript>().iscorrect==true)
             //if(gameObject.transform.GetComponent<PointsScript>().iscorrect)
-            if(correctchoice==true)
+            /*if(correctchoice==true)
             {
                 Debug.Log("Correct answer");
                 //button.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
@@ -742,7 +745,11 @@ public class GameMaster : MonoBehaviour
                 Debug.Log("False answer");
                 //button.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
                 button.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, images_name[0], "Continue"); });
-            }
+            }*/
+            Debug.Log("Correct answer Creating");
+            button.onClick.AddListener(delegate { total_points = PlusTwo(total_points); });
+            Debug.Log("Points added two: " + total_points);
+            button.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], "Continue"); });
         }
         else if (sgo[current_screen].name.StartsWith("Canvas SelectPhrases"))
         {
