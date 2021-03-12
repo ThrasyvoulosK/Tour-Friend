@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 0}
   description: "Which answer were you given by the tourfriend?\r"
-  description2: 
+  description2: Yes you can take your backpack on board.
+  description3: Yes you can take your handbag on board.
   Content: {fileID: 0}
   Imagename: 
   Imagename2: 

@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 0}
   description: What did the tourist ask you?
+  description2: "I want to go to the airport\r"
+  description3: "I want to go to the taxi station\r"
   Content: {fileID: 0}
   Imagename: 
   Imagename2: 
   Button1: {fileID: 0}
   Button1text: DONE
   Button2: {fileID: 0}
+  Button2text: 
   points: 
   DescriptionImage: {fileID: 0}

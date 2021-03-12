@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 0}
   description: "Select your reply\r"
-  description2: 
+  description2: "Yes, is the size of my backpack  ok?\r"
+  description3: "Yes, is the size of my handbag  ok?\r"
   Content: {fileID: 0}
   Imagename: 
   Imagename2: 

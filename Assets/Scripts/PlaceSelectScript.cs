@@ -126,8 +126,10 @@ public class PlaceSelectScript : MonoBehaviour
             {
                 Debug.Log("Our current choice to go is: " + current_choice);
 
-                //re-enable the button, now that we have made a choice
-                //button.SetActive(true);
+                //set our current location to the one we selected
+                gameMaster.current_location = current_choice;
+
+                //re-enable the button, now that we have made a choice                
                 bu.interactable = true;
             }
         }

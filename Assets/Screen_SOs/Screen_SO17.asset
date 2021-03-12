@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 0}
   description: "Select the help you need \r\n"
-  description2: 
+  description2: I would like to drop my baggage
+  description3: "Where is the gate of my flight?\r"
   Content: {fileID: 0}
   Imagename: 
   Imagename2: 

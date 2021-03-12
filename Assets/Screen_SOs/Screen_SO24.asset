@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 0}
   description: "What did the tourfriend say to you?\r"
-  description2: 
+  description2: "May I see your Passport or ID and boarding pass, please.\r"
+  description3: Please put it here. Do you have a backpack or handbag?
   Content: {fileID: 0}
   Imagename: 
   Imagename2: 
