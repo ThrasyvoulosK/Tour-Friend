@@ -360,10 +360,16 @@ what to do with pawn
 //-the pawnmap should, at first, reveal ONLY the tile with the InfoPoint icon beneath it
 
 place select issues:
--'disable' images after being selected at the start()
---make them darker as well?
+//-'disable' images after being selected at the start()
+//--make them darker as well?
 -make a more formal constructor for different routes?
 
-replace second map with mappawn
+//replace second map with mappawn
 
 some of the map screens look small
+
+add functionality to the lense button
+-both magnification and shrinking
+
+green rectangles around selection
+-button should add a green rectangle behind it, with an added size to its dimensions (ie +10y, +10x to its original size)

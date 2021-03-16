@@ -190,9 +190,26 @@ public class GameMaster : MonoBehaviour
 
         vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = desc;
         vidchoice.transform.Find("Button").GetComponentInChildren<Text>().text = button;
+        vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener( delegate { InitialiseLense( screenprefabs[9],  vid,  desc,  card,  button); } );
 
         return vidchoice;
         //return null;
+    }
+    //
+    GameObject InitialiseLense(GameObject lenseprefab, string vid, string desc, string card, string button)
+    {
+        Debug.Log("calling lense initialiser");
+        GameObject vidchoice = Instantiate(lenseprefab);
+
+        //call video-choice initialiser, since it has the same functionality more-or-less
+        vidchoice = InitialiseVideoChoice(lenseprefab,  vid,  desc,  card,  button);
+
+        //add functionality to the lense button
+        //vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { Destroy(vidchoice); });
+        //vidchoice.transform.Find("LenseButton").GetComponentInChildren<tmp>().onClick.AddListener(delegate { Destroy(gameObject); });
+        Debug.Log(vidchoice.name);
+        //Destroy(gameObject);
+        return vidchoice;
     }
 
     /*Screen Object Constructors*/
@@ -657,6 +674,12 @@ public class GameMaster : MonoBehaviour
         
 
         /*current_screen--;*/
+    }
+
+    //
+    public void createMagnifiedVideo()
+    {
+
     }
     //decide on which constructor to call
     public void ConstructorDecider(Button button)

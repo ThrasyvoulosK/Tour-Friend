@@ -44,10 +44,22 @@ public class PawnScript : MonoBehaviour
         //find the info point and disable it        
         for(int i=1;i<=9;i++)
         {
-            if(gameObject.transform.Find("Image"+i).GetComponent<Image>().sprite==gameMaster.imagehandler["InfoPoint"])
+            Debug.Log("for loop:" +i);
+
+            Transform gob = gameObject.transform.Find("Image" + i);
+            if (gob==null)
+                return;
+
+            Debug.Log("for loop:" + gameObject.transform.Find("Image" + i).name);
+            Debug.Log("for loop:" + gameMaster.imagehandler["InfoPoint"].name);
+            if (gameObject.transform.Find("Image" + i).GetComponent<Image>().sprite == gameMaster.imagehandler["InfoPoint"])
             {
+
                 gameObject.transform.Find("HiddenImages").transform.Find("Image" + i + "Pawn").gameObject.SetActive(false);
             }
+            else
+                Debug.Log("not");
+
             for(int j=0;j<gameMaster.placelistvisited.Count;j++)
             {
                 /*if (gameMaster.imagehandler.ContainsKey(gameMaster.placelistvisited[j]) == true)
@@ -73,6 +85,12 @@ public class PawnScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //in case this isn't an interactive screen, disable interaction
+        if (gameObject.name.Contains("Obscure"))
+            return;
+        if (GameObject.Find("Canvas MapObscure(Clone)") != null)
+            return;
+
         //Check if the left Mouse button is clicked
         if (Input.GetKey(KeyCode.Mouse0))
         {
