@@ -190,7 +190,16 @@ public class GameMaster : MonoBehaviour
 
         vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = desc;
         vidchoice.transform.Find("Button").GetComponentInChildren<Text>().text = button;
-        vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener( delegate { InitialiseLense( screenprefabs[9],  vid,  desc,  card,  button); } );
+        Debug.Log("video choice text: " + desc);
+        if (vidchoice.name.Contains("Magnified") == false)
+            vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { GameObject lense = Instantiate(screenprefabs[9]); InitialiseLense(lense, vid, desc, card, button); });
+            //vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { InitialiseLense(lense, vid, desc, card, button); });
+        else
+        {
+            Debug.Log("this constructor is called from a magnifying lense");
+            //vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { Destroy(vidchoice); });
+        }
+
 
         return vidchoice;
         //return null;
@@ -198,18 +207,27 @@ public class GameMaster : MonoBehaviour
     //
     GameObject InitialiseLense(GameObject lenseprefab, string vid, string desc, string card, string button)
     {
-        Debug.Log("calling lense initialiser");
-        GameObject vidchoice = Instantiate(lenseprefab);
+        /*Debug.Log("calling lense initialiser");
+        GameObject vidchoice = Instantiate(lenseprefab);*/
 
         //call video-choice initialiser, since it has the same functionality more-or-less
-        vidchoice = InitialiseVideoChoice(lenseprefab,  vid,  desc,  card,  button);
+        lenseprefab = InitialiseVideoChoice(lenseprefab,  vid,  desc,  card,  button);
 
+        Debug.Log("lense text: " + desc);
         //add functionality to the lense button
-        //vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { Destroy(vidchoice); });
+        lenseprefab.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { Destroy(lenseprefab); });
         //vidchoice.transform.Find("LenseButton").GetComponentInChildren<tmp>().onClick.AddListener(delegate { Destroy(gameObject); });
-        Debug.Log(vidchoice.name);
+        //GetComponentInChildren<Button>(). = GameObject.Find("vid").transform.GetComponent<Button>();
+        Button newbutton = lenseprefab.transform.Find("Button").GetComponent<Button>();
+        Debug.Log(newbutton.GetComponentInChildren<Text>().text);
+        Button oldbutton = GameObject.Find("Canvas TwoVideos(Clone)").transform.Find("VideoChoice1").transform.Find("Button").GetComponentInChildren<Button>();
+        //newbutton = oldbutton;
+        newbutton.onClick.AddListener(delegate { Debug.Log("lense green button pressed"); Destroy(lenseprefab);Destroy(GameObject.Find("Canvas TwoVideos(Clone)")); });
+        ButtonDecider(newbutton);
+        //copy
+        Debug.Log(lenseprefab.name);
         //Destroy(gameObject);
-        return vidchoice;
+        return lenseprefab;
     }
 
     /*Screen Object Constructors*/
@@ -378,7 +396,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log("Called OneVideo constructor with desc"+desc);
 
         //change video on prefab
-        UnityEngine.Video.VideoClip videoClip;// = prefab_go.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();
+        //UnityEngine.Video.VideoClip videoClip;// = prefab_go.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();
         UnityEngine.Video.VideoPlayer videoPlayer = prefab_go.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
         /*videoClip = videoPlayer.clip;
         videoClip = videohandler[vid];*/
@@ -475,14 +493,20 @@ public class GameMaster : MonoBehaviour
         ConstructorDecider(button2);
 
         //current_screen--;//TEST: Placeholder, because creating two buttons advances it more than it should*/
-        if(sgo[current_screen].name.EndsWith("Points"))
+        ButtonDecider(button1);
+
+
+        }
+    void ButtonDecider(Button button1)
+    {
+        if (sgo[current_screen].name.EndsWith("Points"))
         {
             Debug.Log("points screen follows this two-video constructor");
             //button1.onClick.AddListener(delegate { correctchoice = false; });
             //button2.onClick.AddListener(delegate { correctchoice = true; });
             button1.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, images_name[0], "Continue"); });
         }
-        else if(sgo[current_screen].name.EndsWith("Canvas OneIm TwoOptions"))
+        else if (sgo[current_screen].name.EndsWith("Canvas OneIm TwoOptions"))
         {
             Debug.Log("this two video constructor isn't followed by a points screen");
             button1.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
@@ -495,9 +519,7 @@ public class GameMaster : MonoBehaviour
         }
         else
             Debug.Log("after calling two-video constructor we need a different constructor");
-
-
-        }
+    }
 
     public void createPointsscreen(GameObject prefab_go, string desc, string img, string button)
     {

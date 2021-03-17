@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\CameraSettings.cs" />
     <Compile Include="Assets\Scripts\PawnScript.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
+    <Compile Include="Assets\SelectPhrasesScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
