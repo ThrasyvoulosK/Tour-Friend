@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SelectPhrasesScript : MonoBehaviour
 {
+    public string chosenphrase;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +42,10 @@ public class SelectPhrasesScript : MonoBehaviour
             if (gameO.transform.GetChild(i).name != buttonobject.name)
                 gameO.transform.GetChild(i).Find("BackgroundImage").GetComponent<Image>().color = new Color(0, 0, 0, 0);
         }
+    }
+
+    public void GetName(GameObject game)
+    {
+        chosenphrase=game.transform.Find("Text").GetComponent<Text>().text;
     }
 }

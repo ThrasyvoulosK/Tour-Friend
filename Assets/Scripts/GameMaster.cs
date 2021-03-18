@@ -84,7 +84,7 @@ public class GameMaster : MonoBehaviour
 
     public bool checkdelegate=false;
 
-
+    public string phrasevideo = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -138,7 +138,11 @@ public class GameMaster : MonoBehaviour
 
             checkdelegate = true;
         }
-        
+
+        if (GameObject.Find("Canvas SelectPhrases(Clone)") == true)
+            phrasevideo = GameObject.Find("Canvas SelectPhrases(Clone)").GetComponent<SelectPhrasesScript>().chosenphrase;
+
+
     }
 
     void ImageDictionaryInitialise()
@@ -191,24 +195,25 @@ public class GameMaster : MonoBehaviour
         vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = desc;
         vidchoice.transform.Find("Button").GetComponentInChildren<Text>().text = button;
         Debug.Log("video choice text: " + desc);
-        if (vidchoice.name.Contains("Magnified") == false)
+        /*if (vidchoice.name.Contains("Magnified") == false)
             vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { GameObject lense = Instantiate(screenprefabs[9]); InitialiseLense(lense, vid, desc, card, button); });
             //vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { InitialiseLense(lense, vid, desc, card, button); });
         else
         {
             Debug.Log("this constructor is called from a magnifying lense");
             //vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { Destroy(vidchoice); });
-        }
-
+        }*/
+        /*Vector3 orig_pos = vidchoice.GetComponent<RectTransform>().position;
+        vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { vidchoice.GetComponent<RectTransform>().localScale=new Vector3(2.25f,2.25f,0); vidchoice.GetComponent<RectTransform>().position =vidchoice.GetComponent<RectTransform>().parent.position; });// new Vector3(0, 0, 0); */
 
         return vidchoice;
         //return null;
     }
     //
-    GameObject InitialiseLense(GameObject lenseprefab, string vid, string desc, string card, string button)
+    /*GameObject InitialiseLense(GameObject lenseprefab, string vid, string desc, string card, string button)
     {
-        /*Debug.Log("calling lense initialiser");
-        GameObject vidchoice = Instantiate(lenseprefab);*/
+        //Debug.Log("calling lense initialiser");
+        //GameObject vidchoice = Instantiate(lenseprefab);
 
         //call video-choice initialiser, since it has the same functionality more-or-less
         lenseprefab = InitialiseVideoChoice(lenseprefab,  vid,  desc,  card,  button);
@@ -228,7 +233,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log(lenseprefab.name);
         //Destroy(gameObject);
         return lenseprefab;
-    }
+    }*/
 
     /*Screen Object Constructors*/
 
@@ -753,13 +758,24 @@ public class GameMaster : MonoBehaviour
         }
         else if (sgo[current_screen].name.StartsWith("Canvas OneVideo"))
         {
+            
+
             button.onClick.AddListener(delegate { createOneVideoscreen(sgo[current_screen], screen_SOs[current_screen].description,screen_SOs[current_screen].description2, videos_en_names[1], screen_SOs[current_screen].Button1text); });            
         }
         else if (sgo[current_screen].name.StartsWith("Canvas OneVi"))//TwoOptions
         {
             //current_screen--;
             Debug.Log("onevi");
-            button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].description2, images_name[0], screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
+            if (current_screen - 1 == phrasescreenposition)
+            {
+                Debug.Log("video called after phrase-select");
+                button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, phrasevideo, images_name[0], screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
+            }
+            else
+            {
+                button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].description2, images_name[0], screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
+            }
+            
 
             //current_screen--;
         }

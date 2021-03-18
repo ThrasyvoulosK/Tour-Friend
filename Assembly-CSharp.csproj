@@ -60,11 +60,12 @@
     <Compile Include="Assets\Scripts\MapScript.cs" />
     <Compile Include="Assets\Scripts\VideoChoice_SO.cs" />
     <Compile Include="Assets\Scripts\PointsScript.cs" />
+    <Compile Include="Assets\SelectPhrasesScript.cs" />
     <Compile Include="Assets\Scripts\Screen_SO.cs" />
     <Compile Include="Assets\Scripts\CameraSettings.cs" />
     <Compile Include="Assets\Scripts\PawnScript.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
-    <Compile Include="Assets\SelectPhrasesScript.cs" />
+    <Compile Include="Assets\LenseScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -570,9 +570,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -585,6 +585,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210701965828536}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210701965828536}
@@ -1092,9 +1104,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1107,6 +1119,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210702161492882}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210702161492882}
@@ -1316,9 +1340,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1331,6 +1355,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210702237297406}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210702237297406}
@@ -1461,9 +1497,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1476,6 +1512,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210702272117376}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210702272117376}
@@ -1839,9 +1887,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1854,6 +1902,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210702496986405}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210702496986405}
@@ -1984,9 +2044,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1999,6 +2059,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210702550505040}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210702550505040}
@@ -2129,9 +2201,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2144,6 +2216,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210702601673473}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210702601673473}
@@ -2274,9 +2358,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2289,6 +2373,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210702684238860}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210702684238860}
@@ -2467,9 +2563,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2482,6 +2578,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210702726664485}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210702726664485}
@@ -2772,9 +2880,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2787,6 +2895,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210703016011296}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210703016011296}
@@ -2917,9 +3037,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2932,6 +3052,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210703095649866}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210703095649866}
@@ -3151,6 +3283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d329b6a4d3ff83438915d6705352d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chosenphrase: 
 --- !u!1 &2956210703631918714
 GameObject:
   m_ObjectHideFlags: 0
@@ -3272,9 +3405,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3287,6 +3420,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210703631918714}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210703631918714}
@@ -3380,7 +3525,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2956210703733442269}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -3411,7 +3556,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2956210703733442270}
   m_OnClick:
     m_PersistentCalls:
@@ -3549,9 +3694,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2956210703733442269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 2956210703733442271}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3564,6 +3709,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6926915574242609079}
         m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
         m_MethodName: GreenOneGreyOthers
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2956210703752649720}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6926915574242609079}
+        m_TargetAssemblyTypeName: SelectPhrasesScript, Assembly-CSharp
+        m_MethodName: GetName
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2956210703752649720}
