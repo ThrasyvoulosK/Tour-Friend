@@ -378,10 +378,10 @@ select phrase screen's next videos
 -on 'constructor decider' a special case should be added, checking on one-video if the previous screen was a phrase-select
 -phrase-select buttons should hold information on which video should be called
 
-try a scale-and-move approach to magnifying lense
--keep somewhere the prefab's parameters
--scale and mmove to the center
--revert to the original
+//try a scale-and-move approach to magnifying lense
+//-keep somewhere the prefab's parameters
+//-scale and mmove to the center
+//-revert to the original
 
 lense
 //-hide second box when zoomed-in
@@ -389,3 +389,9 @@ lense
 -zoomed video should start playing
 --and stop when zoomed out
 --plays video on both choice objects?
+
+back button
+-enable again
+-change approach?
+--keeping the current screen to be re-initiated by pressing the button?
+---somewhat similar to the save map functions

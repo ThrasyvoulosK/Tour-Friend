@@ -1,14 +1,17 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BackButtonScript
     - CameraSettings
     - GameMaster
+    - LenseScript
     - MapScript
     - PawnScript
     - PlaceSelectScript
     - PointsScript
     - ScreenObjectScript
     - Screen_SO
+    - SelectPhrasesScript
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -67,33 +70,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11742}
+    - Class: 114
+      Script: {instanceID: 11744}
+    - Class: 114
       Script: {instanceID: 11746}
     - Class: 114
       Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 11752}
+      Script: {instanceID: 11876}
     - Class: 114
-      Script: {instanceID: 11878}
+      Script: {instanceID: 11938}
     - Class: 114
-      Script: {instanceID: 11940}
+      Script: {instanceID: 12138}
     - Class: 114
-      Script: {instanceID: 12140}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 12846}
+      Script: {instanceID: 12902}
     - Class: 114
-      Script: {instanceID: 12904}
+      Script: {instanceID: 12974}
     - Class: 114
-      Script: {instanceID: 12976}
+      Script: {instanceID: 13662}
     - Class: 114
-      Script: {instanceID: 13664}
+      Script: {instanceID: 13762}
     - Class: 114
-      Script: {instanceID: 13764}
+      Script: {instanceID: 13996}
     - Class: 114
-      Script: {instanceID: 13998}
+      Script: {instanceID: 14016}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14028}
     - Class: 114
       Script: {instanceID: 14150}
     - Class: 114
@@ -105,9 +112,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14784}
     - Class: 114
-      Script: {instanceID: 14962}
+      Script: {instanceID: 14872}
     - Class: 114
-      Script: {instanceID: 15082}
+      Script: {instanceID: 14964}
+    - Class: 114
+      Script: {instanceID: 15084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -153,6 +162,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackButtonScript
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -509,6 +524,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: c688dfa181cf05fed3848bf5236387af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SelectPhrasesScript
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -563,6 +584,12 @@ ScriptsOnlyBuild:
     className: PawnScript
   - hash:
       serializedVersion: 2
+      Hash: 06e2e8d87df099e01923ae67cb29109b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LenseScript
+  - hash:
+      serializedVersion: 2
       Hash: a2612813f45d0ced02c3e4bc9dbea8b4
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -587,7 +614,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 24a62f1fc38efa3ec7557559f918c850
+      Hash: 3b83f72f095feb1b7b81e21e5a53aa63
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameMaster

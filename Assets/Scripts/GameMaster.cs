@@ -270,9 +270,13 @@ public class GameMaster : MonoBehaviour
 
         button1.GetComponentInChildren<Text>().text = button;
 
+        BackButton();
+
         Debug.Log(current_screen);
-        ConstructorDecider(button1);       
-        
+        ConstructorDecider(button1);
+
+
+        //BackButton();
     }
 
     //two images and one button
@@ -320,9 +324,13 @@ public class GameMaster : MonoBehaviour
         /*button1.GetComponentInChildren<Text>().text = button;*/
         button1.GetComponentInChildren<Text>().text = AssignString(button);
 
+        BackButton();
+
         //Debug.Log(current_screen);
         ConstructorDecider(button1);
 
+
+        //BackButton();
     }
     //
     public void createMapscreen(GameObject prefab_go, string desc, string img, string button)
@@ -356,8 +364,12 @@ public class GameMaster : MonoBehaviour
 
         button1.GetComponentInChildren<Text>().text = button;
 
+        BackButton();
+
         Debug.Log(current_screen);
         ConstructorDecider(button1);
+
+        //BackButton();
 
     }
     public void createPlaceSelectscreen(GameObject prefab_go, string desc, string img, string button)
@@ -389,8 +401,12 @@ public class GameMaster : MonoBehaviour
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
         button1.GetComponentInChildren<Text>().text = button;
 
+        BackButton();
+
         Debug.Log(current_screen);
         ConstructorDecider(button1);
+
+        //BackButton();
 
     }
     //one video and one button
@@ -452,6 +468,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log(current_screen);
         ConstructorDecider(button1);
 
+        BackButton();
     }
     //two videos, with their own buttons
     public void createTwoVideosscreen(GameObject prefab_go, string desc1,string desc2,string desc3, string img, string button)
@@ -500,8 +517,8 @@ public class GameMaster : MonoBehaviour
         //current_screen--;//TEST: Placeholder, because creating two buttons advances it more than it should*/
         ButtonDecider(button1);
 
-
-        }
+        BackButton();
+    }
     void ButtonDecider(Button button1)
     {
         if (sgo[current_screen].name.EndsWith("Points"))
@@ -562,6 +579,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log(current_screen);
         ConstructorDecider(button1);
 
+        BackButton();
     }
 
     //
@@ -592,6 +610,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log(current_screen);
         ConstructorDecider(button1);
 
+        BackButton();
     }
 
     //
@@ -642,6 +661,7 @@ public class GameMaster : MonoBehaviour
 
         /*current_screen--;*/
 
+        BackButton();
     }
     //
     public void createOneImageTwoChoicesscreen(GameObject prefab_go, string desc, string img, string button, string button2)
@@ -698,20 +718,25 @@ public class GameMaster : MonoBehaviour
         /*ConstructorDecider(buttontwo);*/
         //
         //buttontwo.onClick.AddListener(delegate { set_current_screen(current_screen+1); });
-        
+
 
         /*current_screen--;*/
+        BackButton();
     }
 
+    /*End of Constructors*/
     //
-    public void createMagnifiedVideo()
+    /*public void createMagnifiedVideo()
     {
 
-    }
+    }*/
     //decide on which constructor to call
     public void ConstructorDecider(Button button)
     {
-        current_screen++;
+        if(button.name!="BackButton")
+            current_screen++;
+        //else            button.onClick.AddListener(delegate            {                current_screen -= 2;            });
+        
 
         //TESTING: Code is temporary
         if (current_screen > sgo.Count)
@@ -822,6 +847,48 @@ public class GameMaster : MonoBehaviour
 
         button.onClick.AddListener(screenObject.DestroyGameObject);
 
+        
+
+    }
+
+    void BackButton()
+    {
+        return;
+        //code for back button
+        Debug.Log("Back Button Code!");
+
+        GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.RemoveAllListeners();
+
+        if (current_screen >= 2)
+        {
+            //GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.RemoveAllListeners();
+            GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.AddListener(delegate
+            {
+                //current_screen -= 2;
+                OneScreenBack();
+                //TwoScreensBack();
+            });
+            ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
+
+            GameObject gb = null;
+            //find current screen object
+            foreach (GameObject gob in screenprefabs)
+            {
+                //gb
+                if ((GameObject.Find(gob.name + "(Clone)")) != null)
+                {
+                    gb = GameObject.Find(gob.name + "(Clone)");
+                    Debug.Log("Will Destroy From Back Button " + gb.name);
+                    GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.AddListener(delegate
+                    {
+                        Destroy(gb);
+                    });
+                    //break;
+                }
+            }
+            
+        }
+        else return;
     }
 
     //math functions

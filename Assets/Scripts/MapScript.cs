@@ -70,7 +70,7 @@ public class MapScript : MonoBehaviour
 
             }
             locationsprites.RemoveAt(rand);
-            Debug.Log("random sprite i is: " + i);
+            //Debug.Log("random sprite i is: " + i);
 
         }
         //finally, reassign them back to the 'images'
