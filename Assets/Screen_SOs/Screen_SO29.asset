@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 0}
   description: "What did the tourist ask you?\r"
-  description2: "Yes, is the size of my backpack ok?\r"
-  description3: "Yes, is the size of my handbag  ok?\r"
+  description2: "Yes, is the size of my <color=#ff00ffff>backpack</color> ok?\r"
+  description3: "Yes, is the size of my <color=#ff00ffff>handbag</color>  ok?\r"
   Content: {fileID: 0}
   Imagename: 
   Imagename2: 

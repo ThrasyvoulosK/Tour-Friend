@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class BackButtonScript : MonoBehaviour
 {
     GameMaster theGameMaster;
+
+    public GameObject currentscreen;
     // Start is called before the first frame update
     void Start()
     {

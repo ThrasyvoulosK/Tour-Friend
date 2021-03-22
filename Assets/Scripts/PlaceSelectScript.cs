@@ -42,7 +42,7 @@ public class PlaceSelectScript : MonoBehaviour
         for(int j=0;j<gameObject.transform.childCount;j++)
         {            
             GameObject game = gameObject.transform.GetChild(j).gameObject;
-            Debug.Log("placenames initialiser name check: " + game.name);
+            //Debug.Log("placenames initialiser name check: " + game.name);
             if (game.name.StartsWith("Image"))
             {
                 if (game.name.Length > 5)
@@ -100,14 +100,14 @@ public class PlaceSelectScript : MonoBehaviour
             //For every result returned, output the name of the GameObject on the Canvas hit by the Ray
             foreach (RaycastResult result in results)
             {
-                Debug.Log("Hit " + result.gameObject.name);
+                //Debug.Log("Hit " + result.gameObject.name);
 
                 if (result.gameObject.name.StartsWith("Image"))
                 {
                     //remove 'Image' from choice
                     placetovisit = result.gameObject.name.Substring(5);
 
-                    Debug.Log("placetovisit is: " + placetovisit);
+                    //Debug.Log("placetovisit is: " + placetovisit);
 
                     //check if it is one of the places we're allowed to go
                     foreach(string pl in gameMaster.placelist)
@@ -120,7 +120,7 @@ public class PlaceSelectScript : MonoBehaviour
                             if (gameMaster.placelistvisited.Count==0)
                             {
                                 current_choice = placetovisit;
-                                Debug.Log("current choice confirmed");
+                                //Debug.Log("current choice confirmed");
                             }
                             else
                             {
@@ -128,13 +128,13 @@ public class PlaceSelectScript : MonoBehaviour
                                 {
                                     if (plv == placetovisit)
                                     { 
-                                        Debug.Log("place already visited");
+                                        //Debug.Log("place already visited");
                                         current_choice = null;
                                         break;
                                     }
                                     else
                                     {
-                                        Debug.Log("place not visited");
+                                        //Debug.Log("place not visited");
                                         current_choice = placetovisit;
                                         //break;
                                     }
@@ -146,11 +146,11 @@ public class PlaceSelectScript : MonoBehaviour
                 }
             }
 
-            Debug.Log("Raycast has hit" + results.Count);
+            //Debug.Log("Raycast has hit" + results.Count);
 
             if (current_choice != null)
             {
-                Debug.Log("Our current choice to go is: " + current_choice);
+                //Debug.Log("Our current choice to go is: " + current_choice);
 
                 //set our current location to the one we selected
                 gameMaster.current_location = current_choice;

@@ -8,7 +8,7 @@ public class CameraSettings : MonoBehaviour
     void Start()
     {
         //
-        Debug.Log("current screen aspect ratio: " + GetComponent<Camera>().aspect);
+        //Debug.Log("current screen aspect ratio: " + GetComponent<Camera>().aspect);
 
         //the lazy way
         //GetComponent<Camera>().aspect = 16f / 9f;

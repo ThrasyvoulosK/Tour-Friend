@@ -17,11 +17,14 @@ MonoBehaviour:
 
     Tourists
     should not look the screen until they are guided so by the game'
+  description2: 
+  description3: 
   Content: {fileID: 0}
   Imagename: Tourfriend
   Imagename2: 
   Button1: {fileID: 0}
   Button1text: DONE
   Button2: {fileID: 0}
+  Button2text: 
   points: 
   DescriptionImage: {fileID: 0}

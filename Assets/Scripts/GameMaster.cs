@@ -85,6 +85,8 @@ public class GameMaster : MonoBehaviour
     public bool checkdelegate=false;
 
     public string phrasevideo = null;
+
+    public GameObject previousScreen = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -309,6 +311,7 @@ public class GameMaster : MonoBehaviour
 
         if ((img1.Length >= 1)&& (img2.Length >= 1))
         {
+            Debug.Log("Given Images: " + img1 + " + " + img2);
             image1.sprite = imagehandler[img1];
             image2.sprite = imagehandler[img2];
         }
@@ -391,7 +394,7 @@ public class GameMaster : MonoBehaviour
         /*image.sprite = imagehandler[img];*/
 
         //assign points here
-        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "Points: " + total_points.ToString();
+        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "Points: <color=#ff0000ff>" + total_points.ToString() + "</color>";
 
         //newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
@@ -412,9 +415,9 @@ public class GameMaster : MonoBehaviour
     //one video and one button
     public void createOneVideoscreen(GameObject prefab_go, string desc,string desc2, string vid, string button)
     {
-        Debug.Log("Called OneVideo constructor at "+current_screen);
+        /*Debug.Log("Called OneVideo constructor at "+current_screen);
         Debug.Log("Called OneVideo constructor with prefab"+prefab_go.name);
-        Debug.Log("Called OneVideo constructor with desc"+desc);
+        Debug.Log("Called OneVideo constructor with desc"+desc);*/
 
         //change video on prefab
         //UnityEngine.Video.VideoClip videoClip;// = prefab_go.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();
@@ -422,13 +425,13 @@ public class GameMaster : MonoBehaviour
         /*videoClip = videoPlayer.clip;
         videoClip = videohandler[vid];*/
         videoPlayer.clip = videohandler[vid];
-        Debug.Log("video chosen: " + videoPlayer.clip.name);
+        //Debug.Log("video chosen: " + videoPlayer.clip.name);
 
         //instantiate its prefab version
         GameObject newgameobject;
         newgameobject = Instantiate(prefab_go);
 
-        Debug.Log("child of video: " + newgameobject.transform.GetChild(3).name);
+        //Debug.Log("child of video: " + newgameobject.transform.GetChild(3).name);
 
         //find the given values
         //Image image = newgameobject.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>();
@@ -501,11 +504,9 @@ public class GameMaster : MonoBehaviour
         //TEST: VideoChoice
         GameObject vidch1 = newgameobject.transform.Find("VideoChoice1").gameObject;
         GameObject vidch2 = newgameobject.transform.Find("VideoChoice2").gameObject;
-        //GameObject vidch1=newgameobject.transform.Find("VideoChoice1").gameObject;
+
         InitialiseVideoChoice(vidch1, videos_en_names[0], desc2, desc1, "False");//
-        //vidch1.GetComponent<PointsScript>().iscorrect = false;
         InitialiseVideoChoice(vidch2, videos_en_names[1], desc3, desc1, "Correct");//
-        //vidch2.GetComponent<PointsScript>().iscorrect = true;
 
         Button button1 = vidch1.transform.Find("Button").gameObject.GetComponent<Button>();
         Button button2 = vidch2.transform.Find("Button").gameObject.GetComponent<Button>();
@@ -558,7 +559,7 @@ public class GameMaster : MonoBehaviour
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
         newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = desc;
         Debug.Log("printing points on screen: " + total_points);
-        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "Points: "+total_points.ToString();
+        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "Points: <color=#ff0000ff>"+total_points.ToString()+"</color>";
 
         /*Debug.Log("description text is: " + newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text);
         Debug.Log("image to load" + img);
@@ -733,10 +734,21 @@ public class GameMaster : MonoBehaviour
     //decide on which constructor to call
     public void ConstructorDecider(Button button)
     {
-        if(button.name!="BackButton")
+        int usedScreen = current_screen;
+
+        if (button.name != "BackButton")
+        {
             current_screen++;
-        //else            button.onClick.AddListener(delegate            {                current_screen -= 2;            });
-        
+            usedScreen++;
+        }
+        else
+        {
+            Debug.Log("Constructor Decider For Back Button!");
+            //button.onClick.AddListener(delegate { current_screen -= 2; });current_screen = current_screen-2;
+            //button.onClick.AddListener(delegate { current_screen = current_screen - 2; });
+            usedScreen = current_screen - 2;
+        }
+
 
         //TESTING: Code is temporary
         if (current_screen > sgo.Count)
@@ -810,28 +822,6 @@ public class GameMaster : MonoBehaviour
         }
         else if (sgo[current_screen].name.StartsWith("Canvas Points"))
         {
-            //GameObject vidch = GameObject.Find("NullScreenGameObject TwoVideos(Clone)");
-            //GameObject vidch2= vidch.transform.Find("Canvas").transform.Find("VideoChoice1").gameObject;
-            //if (sgo[current_screen].GetComponentInChildren<PointsScript>().iscorrect == true)
-            //if (vidch2.GetComponent<PointsScript>().iscorrect==true)
-            //if(gameObject.transform.GetComponent<PointsScript>().iscorrect)
-            /*if(correctchoice==true)
-            {
-                Debug.Log("Correct answer");
-                //button.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
-                button.onClick.AddListener(delegate { total_points=PlusTwo(total_points); });
-                Debug.Log("Points added two: " + total_points);
-                button.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], "Continue"); });                
-
-                //current_screen = locationscreenposition;
-
-            }
-            else
-            {
-                Debug.Log("False answer");
-                //button.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
-                button.onClick.AddListener(delegate { createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, images_name[0], "Continue"); });
-            }*/
             Debug.Log("Correct answer Creating");
             button.onClick.AddListener(delegate { total_points = PlusTwo(total_points); });
             Debug.Log("Points added two: " + total_points);
@@ -845,6 +835,7 @@ public class GameMaster : MonoBehaviour
         else
             Debug.Log("we don't have a constructor for " + sgo[current_screen].name + " yet!");
 
+        //previousScreen = screenObject.gameObject;
         button.onClick.AddListener(screenObject.DestroyGameObject);
 
         
@@ -853,22 +844,23 @@ public class GameMaster : MonoBehaviour
 
     void BackButton()
     {
-        return;
+        //return;
         //code for back button
         Debug.Log("Back Button Code!");
 
         GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.RemoveAllListeners();
+        GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<BackButtonScript>().currentscreen = null;
 
         if (current_screen >= 2)
         {
             //GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.RemoveAllListeners();
-            GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.AddListener(delegate
+            /*GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.AddListener(delegate
             {
                 //current_screen -= 2;
-                OneScreenBack();
+                //OneScreenBack();
                 //TwoScreensBack();
-            });
-            ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
+            });*/
+            //ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
 
             GameObject gb = null;
             //find current screen object
@@ -878,14 +870,46 @@ public class GameMaster : MonoBehaviour
                 if ((GameObject.Find(gob.name + "(Clone)")) != null)
                 {
                     gb = GameObject.Find(gob.name + "(Clone)");
+                    GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<BackButtonScript>().currentscreen = gb;
+
                     Debug.Log("Will Destroy From Back Button " + gb.name);
                     GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.AddListener(delegate
                     {
                         Destroy(gb);
+
+                        //OneScreenBack();
+                        //current_screen = current_screen-2;
+                        //ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());*/
+
+                        //current_screen = 0;
+                        //current_screen = 1;
+                        //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+                        //createTwoImagesscreen(sgo[0], screen_SOs[0].description, screen_SOs[0].Imagename, screen_SOs[0].Button1text, screen_SOs[0].Button2text);
+                        //createTwoImagesscreen(sgo[1], screen_SOs[1].description, screen_SOs[1].Imagename, screen_SOs[1].Button1text, screen_SOs[1].Button2text);
+                        //createOneImagescreen(sgo[0], screen_SOs[0].description, screen_SOs[0].Imagename, screen_SOs[0].Button1text);
+                        //createOneImagescreen(sgo[1], screen_SOs[1].description, screen_SOs[1].Imagename, screen_SOs[1].Button1text);
+                        //createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text);
+
+
+                        //GameObject newgb=Instantiate(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<BackButtonScript>().currentscreen);
+                        //newgb.name.Remove(newgb.name.Length-7);
+
+                        //destroy old
+                        //Destroy(gb);
                     });
-                    //break;
+                    ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
+                    break;
+                }
+                else
+                {
+                    Debug.Log("There is no " + gob.name + " GameObject on Screen!");
+                    //Destroy(GameObject.Find(gob.name + "(Clone)"));
+                    Destroy(GameObject.Find("Canvas SelectPlace(Clone)"));
                 }
             }
+
+            if (GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<BackButtonScript>().currentscreen == null)
+                Debug.Log("Current Screen Could Not Be Saved");
             
         }
         else return;

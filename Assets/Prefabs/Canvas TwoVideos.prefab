@@ -714,6 +714,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3908762025428754637}
     m_Modifications:
+    - target: {fileID: 3633192972050410157, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 65654d7446b4f4e4a9fa794f66843714, type: 2}
     - target: {fileID: 4259382350163120537, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_Color.r
       value: 0.8962264
@@ -750,6 +754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VideoChoice2
       objectReference: {fileID: 0}
+    - target: {fileID: 8905056938906478210, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8400000, guid: 65654d7446b4f4e4a9fa794f66843714, type: 2}
     - target: {fileID: 9034262145505529535, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
