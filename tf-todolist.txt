@@ -391,7 +391,10 @@ lense
 --plays video on both choice objects?
 
 back button
--enable again
--change approach?
---keeping the current screen to be re-initiated by pressing the button?
----somewhat similar to the save map functions
+//-enable again
+//-change approach?
+//--keeping the current screen to be re-initiated by pressing the button?
+//---somewhat similar to the save map functions
+-disable when not needed (eg placeSelect,points,choices etc)
+-fix bugs
+--needs to be pressed twice on some screens
