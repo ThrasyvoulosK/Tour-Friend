@@ -239,8 +239,6 @@ menu
 
 clean up this file!
 
-the map is randomised
-
 check dialogues excel
 
 Alexandros suggests:
@@ -267,23 +265,11 @@ two videos issues:
  -move pawn screen
  --keeps previously generated map
  --(its design is under construction and subject to change)
- -randomised map:
- --once in the game, assign all nine of its images in random positions and keep them that way
- ---make a dictionary(?)
-
- bug between phrase select-videoselect-imageselect
- -on video and image s constructors only one button has a constructor
- --add for the other one, plus reduce currentscreen, since both add one to it
- --video gets constructed twice on 'continue' (left button, first time)?
+ //-randomised map: --once in the game, assign all nine of its images in random positions and keep them that way---make a dictionary(?)
 
  placeselect
- -re-enable raycasts on placeselect images
- -write code for disabled places (ones that we've already visited)
+ -change disabled pictures from black
 
- map
- -randomise properly, exclusively from images already existing (ie not multiple randoms of one piture)
- -keep the map as is when reappearring (don't reinitialise it)
- -integrate it to the game
 
 rounds repeat themseleves somewhat
 -eg screens 6,7 etc
@@ -298,24 +284,10 @@ rest of screens
 -one image two answers(49)
 
 two options issues:
--one image two choices
---fix functioning for both buttons (for choices after phrase select)
--two videos
---false answer continues to the next screen
---correct bugs up next constructor screen
----videos working 'correctly': 8,17
-//---videos bugging: 20,24,26,29,33
--last video's 'correct' answer bugs up last two-options picture
---with false constructor
---false texts, let alone description
---red button makes everything disappear!
---'false' does create it correctly
+-should we keep the video-choice when a player selects what to ask?
+--not needed??
 
 print screen number?
-
-//exit button
-
-//fix map getting destroyed, instead of kept
 
 copy text from SOs to gamemaster's words_en (to preapare for Greek plus more translations)
 -check canteen code for proper handling
@@ -328,12 +300,7 @@ different routes keep the same seriies of gameobject prefabs, but change their c
 -the constructors should be able to call different SOs depending on the situation
 
 pawn screen 
-(appears after the select phrase/video screens, and asks from us to move the pawn to the position we believe we were led to )
--map with hidden locations
-//--clicking on one square reveals its location underneath it
---the pawn sjould be on the last visited location
-//---if we have visited multiple places they should be open as well?
-//---(use raycasts, instatiate and destroy the proper objects)
+-the pawn should be on the last visited location
 
 i came up with some solutions :
 -Languages can be handled from within the constructor of each screen, with a function that:
@@ -344,51 +311,15 @@ i came up with some solutions :
 --eg we already have one (pretty much) for airport actions, we can replace it with one with taxi actions and so on, after we choose our preffered location
 ---(this counts for screens from after location-select. (we should allow its constructor to handle more than one route as well)
 
-what to do with pawn
-//-initial version:
-//--raycast hits blank image and disables it
-//--keep this imageObject in a variable
-//--raycast hits another image
-//---enable previously kept, and assign the new one as kept
-//-later on:
-//--reveal visited places and info point at start
-//eg we have been to the airport, and so we can reveal its location at start
-//better check this with the images underneath, so that they are the exact same images of the locations
-
-//test both map and pawnmap with placeholder images
-//-as previously stated, we need a randomised map with ALL nine locations
-//-the pawnmap should, at first, reveal ONLY the tile with the InfoPoint icon beneath it
-
 place select issues:
-//-'disable' images after being selected at the start()
-//--make them darker as well?
 -make a more formal constructor for different routes?
 
-//replace second map with mappawn
 
-some of the map screens look small
-
-add functionality to the lense button
--both magnification and shrinking
-
-//green rectangles around selection
-//-button should add a green rectangle behind it, with an added size to its dimensions (ie +10y, +10x to its original size)
 
 select phrase screen's next videos
 -on 'constructor decider' a special case should be added, checking on one-video if the previous screen was a phrase-select
 -phrase-select buttons should hold information on which video should be called
 
-//try a scale-and-move approach to magnifying lense
-//-keep somewhere the prefab's parameters
-//-scale and mmove to the center
-//-revert to the original
-
-lense
-//-hide second box when zoomed-in
-//--override canvas
--zoomed video should start playing
---and stop when zoomed out
---plays video on both choice objects?
 
 back button
 //-enable again
@@ -398,3 +329,63 @@ back button
 -disable when not needed (eg placeSelect,points,choices etc)
 -fix bugs
 --needs to be pressed twice on some screens
+-new function
+--like buttonDecider, but with immediate results, instead
+---eg onclick, immediately construct the previous screen
+
+end screen error?
+-back related?
+
+figure out connection between excel and tour-friend app
+-specifically for video questions, 1)selecting 2)keeping and 3)answering correctly
+
+back button and what it needs to do
+-take us to the screen shown immediately before the current one
+-delete current screen
+-reset screen-number
+
+back button should be disabled on these screens(subject to change):
+-main main menu
+-first screen (could go back to menu, perhaps?)
+-points awarding screens (we shouldn't be able to change our answer)
+--after points?
+-place select?(go back to menu?)
+--in most cases, we would have to know the previous route taken by the player
+--also, it's apoint screen, and before it, achoice scene
+to disable:
+-start by enabling it on the onset of the button function
+--check if our current screen is one of the forbidden ones
+---if yes, disable its Button
+
+pawn screen
+//-the pawn should move where clicked
+//-instead of just "vanishing" the gray square above the location
+//--we should change it to the pawn
+//--we should also change it back to a square if it is no longer selected
+-acccomodate with an appropriate colour change?
+
+first video:
+-i would like to go to <place-selected>?(only for taxi/transport)?
+
+changes from graphics templates needed
+-points number changes to a progress bar?
+-we have an actual background on all screens
+-a few extra buttons on videos
+-many different colours for buttons, backgrounds etc
+--backgorund colour changes according to place selected eg restaurant->red, hotel->blue?
+-more phrases to phrase-select
+-coloured text changes to bold
+--signified words are accompanied by an image-card eg 'backpack' (as shown on-screen)
+
+integrate new graphics
+
+back button works flawlessly for the screens leading to place-select
+when clicked on video screen, cannot go back
+-when clicked twice, or more, goes back further
+-might also spawn extra screens
+
+back error on last screen
+
+keep selected video choices and check whether the reactions to them are correct
+-(not correct/false in the beginning, but the subsequent reaction is)
+-eg choose video->-pass-tablet-->"what did they ask you?"

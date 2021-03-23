@@ -73,13 +73,6 @@ public class PawnScript : MonoBehaviour
         //find all the visited places and disable them
         //
     }
-    /*
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    */
 
     // Update is called once per frame
     void Update()
@@ -121,56 +114,22 @@ public class PawnScript : MonoBehaviour
 
                     //if we have a previously disabled item, then enable it now
                     if (placeimage != null)
-                        placeimage.SetActive(true);
+                        //placeimage.SetActive(true);
+                        placeimage.GetComponent<Image>().sprite = gameMaster.imagehandler["Square"];
+
                     //disable the clicked imageObject from showing
                     placeimage = result.gameObject;
-                    placeimage.SetActive(false);
 
-                    //check if it is one of the places we're allowed to go
-                    /*foreach(string pl in gameMaster.placelist)
-                    {
-                        
-                        if (pl == placetovisit)
-                        {
-                            Debug.Log(placetovisit + " is in the list");
-                            //if (gameMaster.placelistvisited == null)
-                            if (gameMaster.placelistvisited.Count==0)
-                            {
-                                current_choice = placetovisit;
-                                Debug.Log("current choice confirmed");
-                            }
-                            else
-                            {
-                                foreach (string plv in gameMaster.placelistvisited)
-                                {
-                                    if (plv == placetovisit)
-                                        Debug.Log("place already visited");
-                                    else
-                                    {
-                                        Debug.Log("place not visited");
-                                        current_choice = placetovisit;
-                                    }
-                                }
-                            }                            
-                        }
-                        //else if
-                    }*/
+
+                    //placeimage.SetActive(false);
+                    placeimage.GetComponent<Image>().sprite = gameMaster.imagehandler["Pawn"];
+
+
                 }
             }
-            /*if (current_choice != null)
-            {
-                Debug.Log("Our current choice to go is: " + current_choice);
-
-                //re-enable the button, now that we have made a choice
-                //button.SetActive(true);
-                bu.interactable = true;
-            }*/
+            
         }
     }
 
-    //add our new place to the list of visited ones
-    /*public void addplace()
-    {
-        gameMaster.placelistvisited.Add(current_choice);
-    }*/
+    
 }

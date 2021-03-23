@@ -279,6 +279,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8d8422d069775f44ca526e8a273d5a5b, type: 3}
   - {fileID: 21300000, guid: 4bdb3d9a7ad6b7e43954ae84e75347a8, type: 3}
   - {fileID: 21300000, guid: af07146797a8ed94a98da6017ecfff4d, type: 3}
+  - {fileID: 21300000, guid: 34ab7473c4b14e344887741e82e50565, type: 3}
   images_name:
   - Square
   - Tourist
@@ -292,6 +293,7 @@ MonoBehaviour:
   - Shop
   - SightSeeing
   - InfoPoint
+  - Pawn
   videos_en:
   - {fileID: 32900000, guid: 1842179188733904a82840cad574d4b9, type: 3}
   - {fileID: 32900000, guid: f6cabbd910bb33b4b9d2dc6f34b01258, type: 3}
@@ -447,6 +449,7 @@ MonoBehaviour:
   mapinit: 0
   checkdelegate: 0
   phrasevideo: 
+  previousScreen: {fileID: 0}
 --- !u!4 &266200537
 Transform:
   m_ObjectHideFlags: 0
