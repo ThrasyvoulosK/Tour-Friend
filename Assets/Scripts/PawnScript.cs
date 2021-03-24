@@ -115,7 +115,7 @@ public class PawnScript : MonoBehaviour
                     //if we have a previously disabled item, then enable it now
                     if (placeimage != null)
                         //placeimage.SetActive(true);
-                        placeimage.GetComponent<Image>().sprite = gameMaster.imagehandler["Square"];
+                        placeimage.GetComponent<Image>().sprite = gameMaster.imagehandler["Places"];
 
                     //disable the clicked imageObject from showing
                     placeimage = result.gameObject;

@@ -55,17 +55,17 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BackButtonScript.cs" />
+    <Compile Include="Assets\Scripts\BackButtonScript.cs" />
     <Compile Include="Assets\Scripts\ScreenObjectScript.cs" />
     <Compile Include="Assets\Scripts\PlaceSelectScript.cs" />
     <Compile Include="Assets\Scripts\MapScript.cs" />
     <Compile Include="Assets\Scripts\VideoChoice_SO.cs" />
     <Compile Include="Assets\Scripts\PointsScript.cs" />
-    <Compile Include="Assets\SelectPhrasesScript.cs" />
+    <Compile Include="Assets\Scripts\SelectPhrasesScript.cs" />
     <Compile Include="Assets\Scripts\Screen_SO.cs" />
     <Compile Include="Assets\Scripts\CameraSettings.cs" />
     <Compile Include="Assets\Scripts\PawnScript.cs" />
-    <Compile Include="Assets\LenseScript.cs" />
+    <Compile Include="Assets\Scripts\LenseScript.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
   </ItemGroup>
   <ItemGroup>

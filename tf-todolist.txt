@@ -233,7 +233,7 @@ buggy correct/wrong answer
 -handled between gamemaster, videoobjects and pointsscript
 
 menu
--5 sign languages 
+-4 sign languages 
 -4 written languages 
 -start button
 
@@ -248,11 +248,11 @@ Alexandros suggests:
 ---(canvas objets can be handled automatically by the app)
 -target the smallest screen resolution available (for mobile)
 
-two videos issues:
--incorrect video assignment: both videos show the same one
---check its handling on canteen
--the video that is supposed to be the correct one, shows the wrong answer
- and vice versa!
+//two videos issues:
+//-incorrect video assignment: both videos show the same one
+//--check its handling on canteen
+//-the video that is supposed to be the correct one, shows the wrong answer
+// and vice versa!
 
  new issues:
  -place select's green button should be disabled before clicking on airport (like in canteen)
@@ -389,3 +389,17 @@ back error on last screen
 keep selected video choices and check whether the reactions to them are correct
 -(not correct/false in the beginning, but the subsequent reaction is)
 -eg choose video->-pass-tablet-->"what did they ask you?"
+
+how tour-freiend excel works
+(also see latest version)
+-after choosing a place
+--first video: "i would like to go to <place-selected>"
+--(places shown on last(?) excel page; )
+--then, choose one of two videos:
+---(each locations has two "cells"; choose one of these two)
+--follow the cell's steps
+---(two different questions, two different answers and so on)
+
+new pdf missing things
+-back button on most screens
+-sound options?

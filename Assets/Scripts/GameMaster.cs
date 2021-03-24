@@ -270,7 +270,7 @@ public class GameMaster : MonoBehaviour
         //Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
 
-        button1.GetComponentInChildren<Text>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
 
         BackButton();
 
@@ -325,7 +325,7 @@ public class GameMaster : MonoBehaviour
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
 
         /*button1.GetComponentInChildren<Text>().text = button;*/
-        button1.GetComponentInChildren<Text>().text = AssignString(button);
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         BackButton();
 
@@ -365,7 +365,7 @@ public class GameMaster : MonoBehaviour
         //Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
 
-        button1.GetComponentInChildren<Text>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
 
         BackButton();
 
@@ -402,7 +402,8 @@ public class GameMaster : MonoBehaviour
         //Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
 
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
-        button1.GetComponentInChildren<Text>().text = button;
+        //button1.GetComponentInChildren<Text>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
 
         BackButton();
 
@@ -466,7 +467,7 @@ public class GameMaster : MonoBehaviour
         //newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
-        button1.GetComponentInChildren<Text>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
 
         BackButton();
 
@@ -654,7 +655,7 @@ public class GameMaster : MonoBehaviour
         //find next in session to construct a new screen
         //(continue button should send us one screen back)
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
-        button1.GetComponentInChildren<Text>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
         //button1.onClick.AddListener(delegate { set_current_screen(current_screen-1); });
         button1.onClick.AddListener(delegate { OneScreenBack(); });
         button1.onClick.AddListener(delegate { createPhraseSelectscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
@@ -664,7 +665,7 @@ public class GameMaster : MonoBehaviour
         //add the second button
         //(finish button should take us to the next screen, as usual)
         Button buttontwo = newgameobject.transform.Find("Button2").GetComponent<Button>();
-        buttontwo.GetComponentInChildren<Text>().text = button2;
+        buttontwo.GetComponentInChildren<TextMeshProUGUI>().text = button2;
         ConstructorDecider(buttontwo);
         //
         //buttontwo.onClick.AddListener(delegate { MinusTwo(current_screen); });

@@ -268,18 +268,19 @@ MonoBehaviour:
   - 
   images:
   - {fileID: 21300000, guid: a2762901ff7da804d9becdee692a26cb, type: 3}
-  - {fileID: 21300000, guid: fd123082d4026c54f86a026ab84fed93, type: 3}
-  - {fileID: 21300000, guid: ddca16357085eb14f9826e6dfe861e45, type: 3}
-  - {fileID: 21300000, guid: 7ac23d46f5c98e041a49a0cebd15257a, type: 3}
-  - {fileID: 21300000, guid: f76442aac74a8e24aa0e5336a2eed31a, type: 3}
-  - {fileID: 21300000, guid: 3f1cc559a49531e4db8af2cf61b56880, type: 3}
-  - {fileID: 21300000, guid: 80374818c52051540abaca555bf6f9d5, type: 3}
-  - {fileID: 21300000, guid: 04d69554e02547c43a36e00e9cd8c14c, type: 3}
-  - {fileID: 21300000, guid: 80f91b9ad068f2045824cbf504ec094a, type: 3}
-  - {fileID: 21300000, guid: 8d8422d069775f44ca526e8a273d5a5b, type: 3}
-  - {fileID: 21300000, guid: 4bdb3d9a7ad6b7e43954ae84e75347a8, type: 3}
-  - {fileID: 21300000, guid: af07146797a8ed94a98da6017ecfff4d, type: 3}
-  - {fileID: 21300000, guid: 34ab7473c4b14e344887741e82e50565, type: 3}
+  - {fileID: 1125346117314250534, guid: 4305c6d6ec2b50b45a72237a3c5e93b2, type: 3}
+  - {fileID: 6807145349646467647, guid: 4305c6d6ec2b50b45a72237a3c5e93b2, type: 3}
+  - {fileID: 834306487858948532, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 6173317980624082326, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: -9154181242736397984, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: -3265821989810450134, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: -3236588161390744864, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: -8267070300915908799, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 4413594032862880238, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 519224644535881245, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 2223291273671611888, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 7539481170631376265, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 8681257693048493236, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
   images_name:
   - Square
   - Tourist
@@ -294,6 +295,7 @@ MonoBehaviour:
   - SightSeeing
   - InfoPoint
   - Pawn
+  - Places
   videos_en:
   - {fileID: 32900000, guid: 1842179188733904a82840cad574d4b9, type: 3}
   - {fileID: 32900000, guid: f6cabbd910bb33b4b9d2dc6f34b01258, type: 3}
@@ -567,8 +569,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 3776536141136273944, guid: cac614d164a714f428dd1aa666a24370, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -777,7 +779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1328094027
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 223cea6a403637f4dab0ee1e097ca340
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7244740000252691453
+    second: Tourfriend_start logo _ buttons_0
+  - first:
+      213: -2060340811927204479
+    second: Tourfriend_start logo _ buttons_1
+  - first:
+      213: -8765334879241643793
+    second: Tourfriend_start logo _ buttons_2
+  - first:
+      213: 6818624587387631734
+    second: Tourfriend_start logo _ buttons_3
+  - first:
+      213: -3561759468891895995
+    second: Tourfriend_start logo _ buttons_4
+  - first:
+      213: 4355787635427730535
+    second: Tourfriend_start logo _ buttons_5
+  - first:
+      213: 5728364537578009613
+    second: Tourfriend_start logo _ buttons_6
+  - first:
+      213: -8173350406086734127
+    second: Tourfriend_start logo _ buttons_7
+  - first:
+      213: 6373477957245299611
+    second: Tourfriend_start logo _ buttons_8
+  - first:
+      213: -1635135322439895745
+    second: Tourfriend_start logo _ buttons_9
+  - first:
+      213: -2015364571752573047
+    second: Tourfriend_start logo _ buttons_10
+  - first:
+      213: -639343126507052576
+    second: Tourfriend_start logo _ buttons_11
+  - first:
+      213: -7488366248969153844
+    second: Tourfriend_start logo _ buttons_12
+  - first:
+      213: -5328473025626206811
+    second: Tourfriend_start logo _ buttons_13
+  - first:
+      213: -2398506017132150586
+    second: Tourfriend_start logo _ buttons_14
+  - first:
+      213: 9010323955976584751
+    second: Tourfriend_start logo _ buttons_15
+  - first:
+      213: 4659394221724274798
+    second: Tourfriend_start logo _ buttons_16
+  - first:
+      213: 5783252319065430096
+    second: Tourfriend_start logo _ buttons_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend_start logo _ buttons_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 927
+        width: 89
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3002d55ac7a8460800000000000000
+      internalID: 7244740000252691453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_start logo _ buttons_1
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 578
+        width: 705
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18dc6dc92f23863e0800000000000000
+      internalID: -2060340811927204479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_start logo _ buttons_11
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 340
+        width: 554
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1a5f650d89027f0800000000000000
+      internalID: -639343126507052576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_start logo _ buttons_12
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 140
+        width: 554
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc25b26529af31890800000000000000
+      internalID: -7488366248969153844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_start logo _ buttons_13
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 147
+        width: 125
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad8c40c3067d06b0800000000000000
+      internalID: -5328473025626206811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_start logo _ buttons_14
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 147
+        width: 125
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c083393c7bc6bed0800000000000000
+      internalID: -2398506017132150586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_start logo _ buttons_15
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 147
+        width: 125
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e3d2336e91b0d70800000000000000
+      internalID: 9010323955976584751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
