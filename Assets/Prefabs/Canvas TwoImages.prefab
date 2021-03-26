@@ -157,6 +157,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 446352681219269780, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3359606705082263030, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
       propertyPath: m_IsActive
       value: 0

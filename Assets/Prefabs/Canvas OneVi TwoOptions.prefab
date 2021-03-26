@@ -365,6 +365,18 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6345828826551092593, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345828826551092593, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+      propertyPath: m_Color.g
+      value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345828826551092593, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+      propertyPath: m_Color.b
+      value: 0.14509805
+      objectReference: {fileID: 0}
     - target: {fileID: 6345828826551092596, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_Name
       value: Button

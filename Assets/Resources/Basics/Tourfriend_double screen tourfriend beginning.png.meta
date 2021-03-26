@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 79ac05eac1cd5d64aa55f96808ae08bc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1446586305468910822
+    second: Tourfriend_double screen tourfriend beginning_0
+  - first:
+      213: 6656972950753335591
+    second: Tourfriend_double screen tourfriend beginning_1
+  - first:
+      213: 6768401674465605942
+    second: Tourfriend_double screen tourfriend beginning_2
+  - first:
+      213: 2849167835382587787
+    second: Tourfriend_double screen tourfriend beginning_3
+  - first:
+      213: 3133980119916096810
+    second: Tourfriend_double screen tourfriend beginning_4
+  - first:
+      213: 8987049101742576270
+    second: Tourfriend_double screen tourfriend beginning_5
+  - first:
+      213: -9135587773265496703
+    second: Tourfriend_double screen tourfriend beginning_6
+  - first:
+      213: -6704018237728536246
+    second: Tourfriend_double screen tourfriend beginning_7
+  - first:
+      213: -1802271807585875217
+    second: Tourfriend_double screen tourfriend beginning_8
+  - first:
+      213: -3210598666718051013
+    second: Tourfriend_double screen tourfriend beginning_9
+  - first:
+      213: -4936868746735723218
+    second: Tourfriend_double screen tourfriend beginning_10
+  - first:
+      213: -3749159886693765167
+    second: Tourfriend_double screen tourfriend beginning_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +109,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_0
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 930
+        width: 75
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec4b6a949e431410800000000000000
+      internalID: 1446586305468910822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 134
+        width: 889
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7295909e0a1526c50800000000000000
+      internalID: 6656972950753335591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_2
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 135
+        width: 888
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6397eaf56713eed50800000000000000
+      internalID: 6768401674465605942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 40
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81a27dfc074a8720800000000000000
+      internalID: 2849167835382587787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 29
+        width: 86
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d2cb480522e7b20800000000000000
+      internalID: 3133980119916096810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_5
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 29
+        width: 279
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e821c58ea8968bc70800000000000000
+      internalID: 8987049101742576270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_6
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 29
+        width: 86
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185bb18925fd73180800000000000000
+      internalID: -9135587773265496703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_7
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 27
+        width: 79
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a494374aeea86f2a0800000000000000
+      internalID: -6704018237728536246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_8
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 41
+        width: 86
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea8420075b0df6e0800000000000000
+      internalID: -1802271807585875217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_9
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 41
+        width: 279
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b358de9e589a173d0800000000000000
+      internalID: -3210598666718051013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_10
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 41
+        width: 86
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dd6101808bc7bb0800000000000000
+      internalID: -4936868746735723218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_double screen tourfriend beginning_11
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 39
+        width: 79
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df697b62fe48fbc0800000000000000
+      internalID: -3749159886693765167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

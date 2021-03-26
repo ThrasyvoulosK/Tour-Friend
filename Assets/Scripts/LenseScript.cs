@@ -9,18 +9,22 @@ public class LenseScript : MonoBehaviour
     bool ison = false;
     bool changed = false;
     public Vector3 orig_pos;
+
+    GameMaster theGameMaster;
+    string backGroundName;
     // Start is called before the first frame update
     void Start()
     {
+        theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
+        backGroundName = "VideoBackground_LightBlue";
+
         Debug.Log("lense start");
         lense = gameObject.transform.Find("LenseButton").gameObject;
         gameObject.GetComponent<Canvas>().overrideSorting=true;
         orig_pos = gameObject.GetComponent<RectTransform>().position;
-        gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { gameObject.GetComponent<RectTransform>().localScale = new Vector3(2.25f, 2.25f, 0);
-            gameObject.GetComponent<RectTransform>().position = gameObject.GetComponent<RectTransform>().parent.position;
-            gameObject.GetComponent<Canvas>().sortingOrder = 1;
-            gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>().Play();
-            ison = true; changed = true; });
+
+        magnify();
+        
     }
 
     // Update is called once per frame
@@ -30,14 +34,17 @@ public class LenseScript : MonoBehaviour
         {
             Debug.Log("lense changed");
             gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.RemoveAllListeners();
-            gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
+            /*gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
             {
+                gameObject.transform.Find("BackgroundImage").GetComponent<Image>().sprite = theGameMaster.imagehandler[backGroundName];
+
                 gameObject.GetComponent<RectTransform>().localScale = new Vector3(1.5f, 1.5f, 0);
                 gameObject.GetComponent<RectTransform>().position = orig_pos;
                 gameObject.GetComponent<Canvas>().sortingOrder=0 ;
                 gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>().Stop();
                 ison = false; changed = true;
-            });
+            });*/
+            shrink();
             changed = false;
             
         }
@@ -46,18 +53,83 @@ public class LenseScript : MonoBehaviour
             
                 Debug.Log("not changed-ison");
                 gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.RemoveAllListeners();
-                gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
-                {
-                    gameObject.GetComponent<RectTransform>().localScale = new Vector3(2.25f, 2.25f, 0);
-                    gameObject.GetComponent<RectTransform>().position = gameObject.GetComponent<RectTransform>().parent.position;
-                    gameObject.GetComponent<Canvas>().sortingOrder = 1;
-                    gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>().Play();
-                    ison = true; changed = true;
-                });
-            changed = false;
+            /*gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
+            {
+                gameObject.transform.Find("BackgroundImage").GetComponent<Image>().sprite = theGameMaster.imagehandler[backGroundName + "Zoom"];
 
+                gameObject.GetComponent<RectTransform>().localScale = new Vector3(2.25f, 2.25f, 0);
+                gameObject.GetComponent<RectTransform>().position = gameObject.GetComponent<RectTransform>().parent.position;
+                gameObject.GetComponent<Canvas>().sortingOrder = 1;
+                gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>().Play();
+                ison = true; changed = true;
+            });*/
+            magnify();
+            changed = false;
             
         }
+
+    }
+
+    public void magnify()
+    {
+        Debug.Log("Magnify Code");
+        gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
+        {
+            gameObject.transform.Find("BackgroundImage").GetComponent<Image>().sprite = theGameMaster.imagehandler[backGroundName + "Zoom"];
+
+            gameObject.GetComponent<RectTransform>().localScale = new Vector3(3f, 3f, 0);
+
+            //resize objects
+
+            gameObject.transform.Find("RawImage").localScale = new Vector3(0.7f, 0.7f);
+            gameObject.transform.Find("RawImage").localPosition += new Vector3(0, -10f);
+
+            gameObject.transform.Find("DescriptionText").localScale = new Vector3(0.7f, 0.7f);
+            gameObject.transform.Find("DescriptionText").localPosition += new Vector3(0, 10f);
+
+            gameObject.transform.Find("NumberImage").localScale = new Vector3(0.6f, 0.6f);
+            gameObject.transform.Find("NumberImage").localPosition += new Vector3(0, 18f);
+            gameObject.transform.Find("Button").localScale = new Vector3(0.6f, 0.6f);
+            gameObject.transform.Find("Button").localPosition += new Vector3(0, 18f);
+            gameObject.transform.Find("LenseButton").localScale = new Vector3(0.6f, 0.6f);
+            gameObject.transform.Find("LenseButton").localPosition += new Vector3(0, 18f);
+
+
+            gameObject.GetComponent<RectTransform>().position = gameObject.GetComponent<RectTransform>().parent.position;
+            gameObject.GetComponent<Canvas>().sortingOrder = 1;
+            gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>().Play();
+            ison = true; changed = true;
+        });
+    }
+
+    public void shrink()
+    {
+        Debug.Log("Shrink Code");
+        gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
+        {
+            gameObject.transform.Find("BackgroundImage").GetComponent<Image>().sprite = theGameMaster.imagehandler[backGroundName];
+
+            gameObject.GetComponent<RectTransform>().localScale = new Vector3(1.5f, 1.5f, 0);
+
+            //resize objects
+            gameObject.transform.Find("RawImage").localScale = new Vector3(1f, 1f);
+            gameObject.transform.Find("RawImage").localPosition += new Vector3(0, 10f);
+
+            gameObject.transform.Find("DescriptionText").localScale = new Vector3(1f, 1f);
+            gameObject.transform.Find("DescriptionText").localPosition += new Vector3(0, -10f);
+
+            gameObject.transform.Find("NumberImage").localScale = new Vector3(1f, 1f);
+            gameObject.transform.Find("NumberImage").localPosition += new Vector3(0, -18f);
+            gameObject.transform.Find("Button").localScale = new Vector3(1f, 1f);
+            gameObject.transform.Find("Button").localPosition += new Vector3(0, -18f);
+            gameObject.transform.Find("LenseButton").localScale = new Vector3(1f, 1f);
+            gameObject.transform.Find("LenseButton").localPosition += new Vector3(0, -18f);
+
+            gameObject.GetComponent<RectTransform>().position = orig_pos;
+            gameObject.GetComponent<Canvas>().sortingOrder = 0;
+            gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>().Stop();
+            ison = false; changed = true;
+        });
 
     }
 }

@@ -379,10 +379,10 @@ changes from graphics templates needed
 
 integrate new graphics
 
-back button works flawlessly for the screens leading to place-select
-when clicked on video screen, cannot go back
--when clicked twice, or more, goes back further
--might also spawn extra screens
+//back button works flawlessly for the screens leading to place-select
+//when clicked on video screen, cannot go back
+//-when clicked twice, or more, goes back further
+//-might also spawn extra screens
 
 back error on last screen
 
@@ -403,3 +403,13 @@ how tour-freiend excel works
 new pdf missing things
 -back button on most screens
 -sound options?
+
+add backgrounds on all screeens
+-all prefabs
+
+add new video backgorunds
+
+check on each screen to see which player is playing (tourist or tourfriend)
+-via a boolean, on SOs?
+
+fill in code for points, to return to place select

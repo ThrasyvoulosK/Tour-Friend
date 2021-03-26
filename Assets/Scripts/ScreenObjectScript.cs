@@ -28,7 +28,12 @@ public class ScreenObjectScript : MonoBehaviour
         if (newgameobject.name == "Canvas Menu(Clone)")
         {
             Debug.Log("assigning new start menu button");
-            newgameobject.transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { gameMaster.createTwoImagesscreen(gameMaster.sgo[gameMaster.current_screen], gameMaster.screen_SOs[gameMaster.current_screen].description, gameMaster.screen_SOs[gameMaster.current_screen].Imagename, gameMaster.screen_SOs[gameMaster.current_screen].Imagename2, gameMaster.screen_SOs[gameMaster.current_screen].Button1text); });
+            newgameobject.transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate 
+            {
+                gameMaster.backB.SetActive(true);//
+                gameMaster.createTwoImagesscreen(gameMaster.sgo[gameMaster.current_screen], gameMaster.screen_SOs[gameMaster.current_screen].description, gameMaster.screen_SOs[gameMaster.current_screen].Imagename, gameMaster.screen_SOs[gameMaster.current_screen].Imagename2, gameMaster.screen_SOs[gameMaster.current_screen].Button1text);
+                
+            });
 
             gameMaster.checkdelegate = false;
         }

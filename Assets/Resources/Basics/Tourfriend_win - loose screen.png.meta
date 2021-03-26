@@ -1,7 +1,250 @@
 fileFormatVersion: 2
 guid: f66cf17ca87e57048a0c5e96cd36b7ad
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8857198591431420141
+    second: Tourfriend_win - loose screen_0
+  - first:
+      213: -6281167677846365651
+    second: Tourfriend_win - loose screen_1
+  - first:
+      213: -3474123131054474181
+    second: Tourfriend_win - loose screen_2
+  - first:
+      213: -5236571345324942234
+    second: Tourfriend_win - loose screen_3
+  - first:
+      213: -2667759864614430771
+    second: Tourfriend_win - loose screen_4
+  - first:
+      213: -8972116571284964486
+    second: Tourfriend_win - loose screen_5
+  - first:
+      213: -4932088961353429348
+    second: Tourfriend_win - loose screen_6
+  - first:
+      213: 7223394704875587826
+    second: Tourfriend_win - loose screen_7
+  - first:
+      213: -8161967480013656435
+    second: Tourfriend_win - loose screen_8
+  - first:
+      213: -7877744435673330652
+    second: Tourfriend_win - loose screen_9
+  - first:
+      213: 6196626895744430904
+    second: Tourfriend_win - loose screen_10
+  - first:
+      213: -6097538642301042691
+    second: Tourfriend_win - loose screen_11
+  - first:
+      213: 536238000156609535
+    second: Tourfriend_win - loose screen_12
+  - first:
+      213: 2398662425529519452
+    second: Tourfriend_win - loose screen_13
+  - first:
+      213: 1638185583557503860
+    second: Tourfriend_win - loose screen_14
+  - first:
+      213: 2115139253983823144
+    second: Tourfriend_win - loose screen_15
+  - first:
+      213: 7296602139214606032
+    second: Tourfriend_win - loose screen_16
+  - first:
+      213: -7993022883976178258
+    second: Tourfriend_win - loose screen_17
+  - first:
+      213: 4268044731974370435
+    second: Tourfriend_win - loose screen_18
+  - first:
+      213: -3322901380857289869
+    second: Tourfriend_win - loose screen_19
+  - first:
+      213: -7379566224084092610
+    second: Tourfriend_win - loose screen_20
+  - first:
+      213: 3432365492535132593
+    second: Tourfriend_win - loose screen_21
+  - first:
+      213: 7759486511032928592
+    second: Tourfriend_win - loose screen_22
+  - first:
+      213: 2919796862272176334
+    second: Tourfriend_win - loose screen_23
+  - first:
+      213: -1676266414531310964
+    second: Tourfriend_win - loose screen_24
+  - first:
+      213: 2059860584205310983
+    second: Tourfriend_win - loose screen_25
+  - first:
+      213: 1337118797741858926
+    second: Tourfriend_win - loose screen_26
+  - first:
+      213: 4299937068184140556
+    second: Tourfriend_win - loose screen_27
+  - first:
+      213: -5696142824643229310
+    second: Tourfriend_win - loose screen_28
+  - first:
+      213: -4380145172406121249
+    second: Tourfriend_win - loose screen_29
+  - first:
+      213: 2903398182401747476
+    second: Tourfriend_win - loose screen_30
+  - first:
+      213: -2863577012657531941
+    second: Tourfriend_win - loose screen_31
+  - first:
+      213: -7932560374539625587
+    second: Tourfriend_win - loose screen_32
+  - first:
+      213: -7493300308781223937
+    second: Tourfriend_win - loose screen_33
+  - first:
+      213: -6552256948934795000
+    second: Tourfriend_win - loose screen_34
+  - first:
+      213: 390510375787807960
+    second: Tourfriend_win - loose screen_35
+  - first:
+      213: 8209381264162791243
+    second: Tourfriend_win - loose screen_36
+  - first:
+      213: -2863091065904953968
+    second: Tourfriend_win - loose screen_37
+  - first:
+      213: 716766964428020937
+    second: Tourfriend_win - loose screen_38
+  - first:
+      213: -1041672569056554650
+    second: Tourfriend_win - loose screen_39
+  - first:
+      213: -5872090703086973336
+    second: Tourfriend_win - loose screen_40
+  - first:
+      213: 1070301827255763970
+    second: Tourfriend_win - loose screen_41
+  - first:
+      213: 1758291371761105820
+    second: Tourfriend_win - loose screen_42
+  - first:
+      213: 1126643795753824565
+    second: Tourfriend_win - loose screen_43
+  - first:
+      213: -3699650662988083496
+    second: Tourfriend_win - loose screen_44
+  - first:
+      213: -7760545478885496422
+    second: Tourfriend_win - loose screen_45
+  - first:
+      213: 4785796576462675085
+    second: Tourfriend_win - loose screen_46
+  - first:
+      213: 7811175668726255606
+    second: Tourfriend_win - loose screen_47
+  - first:
+      213: -9110405469811361690
+    second: Tourfriend_win - loose screen_48
+  - first:
+      213: 4575532446345578636
+    second: Tourfriend_win - loose screen_49
+  - first:
+      213: 3924598961660715091
+    second: Tourfriend_win - loose screen_50
+  - first:
+      213: -5992233427663499218
+    second: Tourfriend_win - loose screen_51
+  - first:
+      213: -628203508237551692
+    second: Tourfriend_win - loose screen_52
+  - first:
+      213: 5531660784552314364
+    second: Tourfriend_win - loose screen_53
+  - first:
+      213: -2009659505051726597
+    second: Tourfriend_win - loose screen_54
+  - first:
+      213: -4723682547474993698
+    second: Tourfriend_win - loose screen_55
+  - first:
+      213: -7577945313130094145
+    second: Tourfriend_win - loose screen_56
+  - first:
+      213: -7836439609765319021
+    second: Tourfriend_win - loose screen_57
+  - first:
+      213: -7403108368655536562
+    second: Tourfriend_win - loose screen_58
+  - first:
+      213: -6699771304602916663
+    second: Tourfriend_win - loose screen_59
+  - first:
+      213: 5944921970875061956
+    second: Tourfriend_win - loose screen_60
+  - first:
+      213: -3147930843274906044
+    second: Tourfriend_win - loose screen_61
+  - first:
+      213: 6486309172637018976
+    second: Tourfriend_win - loose screen_62
+  - first:
+      213: -7805585883453535430
+    second: Tourfriend_win - loose screen_63
+  - first:
+      213: 5309410944511175876
+    second: Tourfriend_win - loose screen_64
+  - first:
+      213: -6364841625368111753
+    second: Tourfriend_win - loose screen_65
+  - first:
+      213: -6474060414193381516
+    second: Tourfriend_win - loose screen_66
+  - first:
+      213: 2539268728801122432
+    second: Tourfriend_win - loose screen_67
+  - first:
+      213: 154177493345595259
+    second: Tourfriend_win - loose screen_68
+  - first:
+      213: -1134627109352624744
+    second: Tourfriend_win - loose screen_69
+  - first:
+      213: -7868025557840914269
+    second: Tourfriend_win - loose screen_70
+  - first:
+      213: -7081533474611976325
+    second: Tourfriend_win - loose screen_71
+  - first:
+      213: -6357591347508199764
+    second: Tourfriend_win - loose screen_72
+  - first:
+      213: -1160154089887336952
+    second: Tourfriend_win - loose screen_73
+  - first:
+      213: 1887862310101921371
+    second: Tourfriend_win - loose screen_74
+  - first:
+      213: 5118823371711656924
+    second: Tourfriend_win - loose screen_75
+  - first:
+      213: -5087776010939567272
+    second: Tourfriend_win - loose screen_76
+  - first:
+      213: 7419998419644638174
+    second: Tourfriend_win - loose screen_77
+  - first:
+      213: -8760636022203072351
+    second: Tourfriend_win - loose screen_78
+  - first:
+      213: -4656911011676345571
+    second: Tourfriend_win - loose screen_79
+  - first:
+      213: 1824000128907881594
+    second: Tourfriend_win - loose screen_80
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +284,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +316,180 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend_win - loose screen_0
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 768
+        width: 638
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de82c5301371bea70800000000000000
+      internalID: 8857198591431420141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_win - loose screen_1
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 742
+        width: 638
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a5d4ba64fc4d8a0800000000000000
+      internalID: -6281167677846365651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_win - loose screen_76
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 376
+        width: 287
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853713b9ca69469b0800000000000000
+      internalID: -5087776010939567272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_win - loose screen_77
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 349
+        width: 287
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3e0e4ff3129f660800000000000000
+      internalID: 7419998419644638174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_win - loose screen_78
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 165
+        width: 384
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0481224f7fb6680800000000000000
+      internalID: -8760636022203072351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_win - loose screen_79
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 137
+        width: 384
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b2d66bb145f5fb0800000000000000
+      internalID: -4656911011676345571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_win - loose screen_80
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 36
+        width: 384
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c22d90476205910800000000000000
+      internalID: 1824000128907881594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

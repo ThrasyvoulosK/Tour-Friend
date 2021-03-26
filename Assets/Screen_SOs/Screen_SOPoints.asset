@@ -15,13 +15,15 @@ MonoBehaviour:
   Description: {fileID: 0}
   description: 'Welldone!
 
-    You win 2 extra points'
+    You win 3 extra points'
   description2: "Unfortunately this is wrong\r\nYou don\u2019t win extra points"
+  description3: 
   Content: {fileID: 0}
   Imagename: 
   Imagename2: 
   Button1: {fileID: 0}
   Button1text: CONTINUE
   Button2: {fileID: 0}
+  Button2text: 
   points: Points
   DescriptionImage: {fileID: 0}
