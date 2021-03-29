@@ -373,7 +373,9 @@ changes from graphics templates needed
 -a few extra buttons on videos
 -many different colours for buttons, backgrounds etc
 --backgorund colour changes according to place selected eg restaurant->red, hotel->blue?
--more phrases to phrase-select
+-phrase select
+--appearance
+--more phrases
 -coloured text changes to bold
 --signified words are accompanied by an image-card eg 'backpack' (as shown on-screen)
 
@@ -400,7 +402,7 @@ how tour-freiend excel works
 --follow the cell's steps
 ---(two different questions, two different answers and so on)
 
-new pdf missing things
+new pdf missing things?
 -back button on most screens
 -sound options?
 
@@ -412,4 +414,64 @@ add new video backgorunds
 check on each screen to see which player is playing (tourist or tourfriend)
 -via a boolean, on SOs?
 
-fill in code for points, to return to place select
+//fill in code for points, to return to place select
+
+add new SOs with data from excel
+
+change sizes on maps
+-change pawn spawning location?
+
+text is coloured either blue or red, depending on whether the player is a tourfriend or a tourist, respectively
+
+phrase select
+//two videos
+one video two options
+back button not clickable due to background
+//video buttons
+ALL CAPS
+
+			   O	PLACE SELECT
+		  /         \
+		 o           o	ASK FOR HELP
+	   /   \      /    \
+	  o     o     o     o	WHAT DID THE TOURIST ASK (CORRECT/FALSE)
+	  |     |     |     |
+	  o     o     o     o	WHAT DID THE TOURFRIEND SAY (CORRECT/FALSE)
+	  |     |     |     |
+	  o     o     o     o	SELECT YOUR REPLY
+	 / \   / \   / \   / \
+	o   o o   o o   o o   o		WHAT DID THE TOURIST ASK (CORRECT/FALSE)
+    |   | |   | |   | |   |
+    o   o o   o o   o o   o	WHICH ANSWER WERE YOU GIVEN? (CORRECT/FALSE)
+
+
+video after place select
+-load one of 8 SOs
+--based on current choice
+-save them to an array?
+-also for the rest of the questions/answers of the excel?
+
+video place select path goes like this
+-i would like to go to <place>
+-what did they ask you (correct/false)
+--i would like <place1>
+--i would like <place2>
+
+"you are the tourist in the <place>" goes like this:
+-select the help you need
+--<help1of2>
+--<help2of2
+-(answer)<help1>or<help2>
+
+reply to the tourist goes like this:
+-reply video shown
+-select reply
+--<reply1>
+--<reply2>
+
+select your reply
+-<reply1of2>/<reply2of2>
+
+reply to the tourist
+-reply video shown
+-<reply1>/<reply2>

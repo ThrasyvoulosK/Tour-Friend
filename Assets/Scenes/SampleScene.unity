@@ -285,6 +285,9 @@ MonoBehaviour:
   - {fileID: -6281167677846365651, guid: f66cf17ca87e57048a0c5e96cd36b7ad, type: 3}
   - {fileID: 6656972950753335591, guid: 79ac05eac1cd5d64aa55f96808ae08bc, type: 3}
   - {fileID: 21300000, guid: e2562ad5e5a7d49409770998b81f7f82, type: 3}
+  - {fileID: -122781978494444354, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: -8074964538566846205, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: 8570055757278993109, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
   images_name:
   - Square
   - Tourist
@@ -304,6 +307,9 @@ MonoBehaviour:
   - Points_Ribbon_Lose
   - VideoBackground_LightBlue
   - VideoBackground_LightBlueZoom
+  - ButtonPlay
+  - ButtonPause
+  - ButtonRepeat
   videos_en:
   - {fileID: 32900000, guid: 1842179188733904a82840cad574d4b9, type: 3}
   - {fileID: 32900000, guid: f6cabbd910bb33b4b9d2dc6f34b01258, type: 3}

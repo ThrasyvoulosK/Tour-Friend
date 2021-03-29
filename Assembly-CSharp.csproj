@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PawnScript.cs" />
     <Compile Include="Assets\Scripts\LenseScript.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
+    <Compile Include="Assets\VideoScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

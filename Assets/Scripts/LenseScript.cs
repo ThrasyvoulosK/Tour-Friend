@@ -91,6 +91,10 @@ public class LenseScript : MonoBehaviour
             gameObject.transform.Find("NumberImage").localPosition += new Vector3(0, 18f);
             gameObject.transform.Find("Button").localScale = new Vector3(0.6f, 0.6f);
             gameObject.transform.Find("Button").localPosition += new Vector3(0, 18f);
+            gameObject.transform.Find("ButtonPlayPause").localScale = new Vector3(0.6f, 0.6f);
+            gameObject.transform.Find("ButtonPlayPause").localPosition += new Vector3(0, 18f);
+            gameObject.transform.Find("ButtonRepeat").localScale = new Vector3(0.6f, 0.6f);
+            gameObject.transform.Find("ButtonRepeat").localPosition += new Vector3(0, 18f);
             gameObject.transform.Find("LenseButton").localScale = new Vector3(0.6f, 0.6f);
             gameObject.transform.Find("LenseButton").localPosition += new Vector3(0, 18f);
 
@@ -122,6 +126,10 @@ public class LenseScript : MonoBehaviour
             gameObject.transform.Find("NumberImage").localPosition += new Vector3(0, -18f);
             gameObject.transform.Find("Button").localScale = new Vector3(1f, 1f);
             gameObject.transform.Find("Button").localPosition += new Vector3(0, -18f);
+            gameObject.transform.Find("ButtonPlayPause").localScale = new Vector3(1f, 1f);
+            gameObject.transform.Find("ButtonPlayPause").localPosition += new Vector3(0, -18f);
+            gameObject.transform.Find("ButtonRepeat").localScale = new Vector3(1f, 1f);
+            gameObject.transform.Find("ButtonRepeat").localPosition += new Vector3(0, -18f);
             gameObject.transform.Find("LenseButton").localScale = new Vector3(1f, 1f);
             gameObject.transform.Find("LenseButton").localPosition += new Vector3(0, -18f);
 
