@@ -446,9 +446,9 @@ ALL CAPS
 
 
 video after place select
--load one of 8 SOs
---based on current choice
--save them to an array?
+//-load one of 8 SOs
+//--based on current choice
+//-save them to an array?
 -also for the rest of the questions/answers of the excel?
 
 video place select path goes like this
@@ -475,3 +475,18 @@ select your reply
 reply to the tourist
 -reply video shown
 -<reply1>/<reply2>
+
+divide screens by player:
+-tourists
+--red buttons
+--red texts
+-tourfriends
+--blue buttons
+--blue texts
+-other screens?
+--blue texts as well?
+
+what did the tourist ask you (after place select)
+-answer between place1 and place2
+-the correct one of the places is the one we chose
+-the other one is assigned randomly

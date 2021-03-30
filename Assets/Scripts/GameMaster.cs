@@ -64,6 +64,10 @@ public class GameMaster : MonoBehaviour
     public List<Screen_SO> screen_SOs = new List<Screen_SO>();
     //testing route select with this list
     public List<Screen_SO> screen_SOsAlt = new List<Screen_SO>();
+    public Screen_SO[] reserveScreenSOs;// = new Screen_SO[];
+
+    //whos playing on each screen
+    public string[] player;
 
     public bool correctchoice=false;
 
@@ -155,6 +159,12 @@ public class GameMaster : MonoBehaviour
 
         if (GameObject.Find("Canvas SelectPhrases(Clone)") == true)
             phrasevideo = GameObject.Find("Canvas SelectPhrases(Clone)").GetComponent<SelectPhrasesScript>().chosenphrase;
+        else if(GameObject.Find("Canvas SelectPlace(Clone)") == true)
+        {
+            current_screen--;
+            GameObject.Find("Canvas SelectPlace(Clone)").transform.Find("Button").GetComponent<Button>().onClick.RemoveAllListeners();
+            ConstructorDecider(GameObject.Find("Canvas SelectPlace(Clone)").transform.Find("Button").GetComponent<Button>());
+        }
 
 
     }
@@ -829,9 +839,41 @@ public class GameMaster : MonoBehaviour
         }
         else if (sgo[usedScreen].name.StartsWith("Canvas OneVideo"))
         {
-            
+            Debug.Log("CALLING ONE VIDEO");
+            //Special Case: The Video after Place-Select
+            //load a video that suits our selection
+            if (usedScreen != locationscreenposition+1)
+            {
+                //Debug.log
+                button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+            }
+            else
+            {
+                Debug.Log("Video after location select");
+                button.onClick.RemoveAllListeners();
+                if(current_location!="Airport")//Airport is our deafault selection
+                {
+                    //button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], reserveScreenSOs[0].description, reserveScreenSOs[0].description2, videos_en_names[1], reserveScreenSOs[0].Button1text); });
+                    //button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], Array.Find, reserveScreenSOs[0].description2, videos_en_names[1], reserveScreenSOs[0].Button1text); });
+                    Screen_SO screen_SO=null;
+                    foreach(Screen_SO sso in reserveScreenSOs)
+                    {
+                        if(sso.name== screen_SOs[usedScreen].name+current_location)
+                        {
+                            screen_SO = sso;
+                            break;
+                        }
 
-            button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], screen_SOs[usedScreen].description,screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });            
+                    }
+                    if(screen_SO!=null)
+                        button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], screen_SO.description, screen_SO.description2, videos_en_names[1], screen_SO.Button1text); });
+
+                    Debug.Log($"We are going to {screen_SO.description2}");
+
+                }
+                else
+                    button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+            }
         }
         else if (sgo[usedScreen].name.StartsWith("Canvas OneVi"))//TwoOptions
         {

@@ -449,6 +449,53 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  reserveScreenSOs:
+  - {fileID: 11400000, guid: 939e89202eaa73f408a4e9bd03d99bd1, type: 2}
+  - {fileID: 11400000, guid: 9238f9bd62671f4458bb1de3b3adc3bd, type: 2}
+  - {fileID: 11400000, guid: 84eebd06d22fa3d49af613374bfa283e, type: 2}
+  - {fileID: 11400000, guid: 06d0f4dbd11b5ab44b1b826e58d0a372, type: 2}
+  - {fileID: 11400000, guid: 50438558f2f412245a5103a10098f8a2, type: 2}
+  - {fileID: 11400000, guid: fa7d32fd25da7ed4f8347a144c21d340, type: 2}
+  - {fileID: 11400000, guid: 108de515f4bc79a4ca68aa6d5f82b783, type: 2}
+  - {fileID: 11400000, guid: 18750e6f8022ff748a15e1264722efca, type: 2}
+  player:
+  - 
+  - Tourfriend
+  - Tourfriend
+  - Tourfriend
+  - Tourist
+  - Tourist
+  - Tourist
+  - Tourfriend
+  - Tourfriend
+  - 
+  - Tourfriend
+  - Tourfriend
+  - Tourfriend
+  - Tourist
+  - Tourist
+  - 
+  - Tourist
+  - Tourist
+  - Tourist
+  - Tourfriend
+  - Tourfriend
+  - 
+  - Tourfriend
+  - Tourist
+  - Tourist
+  - 
+  - Tourist
+  - Tourist
+  - Tourfriend
+  - Tourfriend
+  - 
+  - Tourfriend
+  - Tourist
+  - Tourist
+  - Tourist
+  - 
+  - 
   correctchoice: 0
   placelist:
   - Airport
