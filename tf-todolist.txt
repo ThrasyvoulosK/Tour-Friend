@@ -479,10 +479,10 @@ reply to the tourist
 divide screens by player:
 -tourists
 --red buttons
---red texts
+--red texts(157,28,32)
 -tourfriends
 --blue buttons
---blue texts
+--blue texts(14,80,101)
 -other screens?
 --blue texts as well?
 

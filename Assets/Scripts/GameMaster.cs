@@ -816,7 +816,14 @@ public class GameMaster : MonoBehaviour
 
         if (sgo[usedScreen].name.StartsWith("Canvas OneImage"))
         {          
-            button.onClick.AddListener(delegate { createOneImagescreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text); });
+            button.onClick.AddListener(delegate 
+            { 
+                createOneImagescreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text);
+                //GameObject.Find("Canvas OneImage(Clone)").transform.Find("Button").transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().color = Color.red;// new Color32(157, 28, 32,255);
+                //DO NOT TOUCH! GameObject.Find("Canvas OneImage(Clone)").transform.Find("Description").GetComponent<TextMeshProUGUI>().material.color = Color.white;//new Color(255, 255, 255);
+                //GameObject.Find("Canvas OneImage(Clone)").transform.Find("Description").GetComponent<TextMeshProUGUI>().color = Color.red;
+                //GameObject.Find("Canvas OneImage(Clone)").transform.Find("Description").GetComponent<TextMeshProUGUI>().color = Color.blue;
+            });
         }
         else if(sgo[usedScreen].name.StartsWith("Canvas OneIm"))//TwoOptions
         {
@@ -911,6 +918,9 @@ public class GameMaster : MonoBehaviour
         else
             Debug.Log("we don't have a constructor for " + sgo[usedScreen].name + " yet!");
 
+        //decide colours
+        button.onClick.AddListener(delegate { ColourChanger(); });
+
         //previousScreen = screenObject.gameObject;
         button.onClick.AddListener(screenObject.DestroyGameObject);
 
@@ -990,6 +1000,68 @@ public class GameMaster : MonoBehaviour
             
         }
         else return;
+    }
+
+    //change colours of texts and buttons,depending on the player
+    public void ColourChanger()
+    {
+        int usedScreen = current_screen - 1;
+
+        GameObject currentGameObject = GameObject.Find(sgo[usedScreen].name + "(Clone)");
+        if(currentGameObject!=null)
+        {
+            Debug.Log(sgo[usedScreen].name + "(Clone)");
+        }
+        else
+        {
+            Debug.Log(sgo[usedScreen].name + "(Clone)");
+        }
+
+        GameObject Description = null;
+        if (currentGameObject.transform.Find("Description").gameObject!=null)
+        {
+            Description = currentGameObject.transform.Find("Description").gameObject;
+            if (player[usedScreen] == "Tourist")
+                Description.GetComponent<TextMeshProUGUI>().color = Color.red;
+            else if (player[usedScreen] == "Tourfriend")
+                Description.GetComponent<TextMeshProUGUI>().color = Color.blue;
+        }
+        else
+        {
+            Debug.Log("No such gameobject");
+        }
+
+        Debug.Log(currentGameObject.name);
+        GameObject Button = null;//= currentGameObject.transform.Find("Button").gameObject;
+        if(currentGameObject.transform.Find("Button")!=null)
+        {
+            Button =  currentGameObject.transform.Find("Button").gameObject;
+
+            if (player[usedScreen] == "Tourist")
+                Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.red;
+            else if (player[usedScreen] == "Tourfriend")
+                Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.blue;
+        }
+        else
+        {
+            Debug.Log("No button named Button");
+        }
+        
+
+        return;
+        //video buttons
+        GameObject ButtonPlayPause = null;
+        GameObject ButtonRepeat = null;
+        if(currentGameObject.transform.Find("ButtonPlayPause").gameObject!=null)
+        {
+            ButtonPlayPause = currentGameObject.transform.Find("ButtonPlayPause").gameObject;
+            ButtonRepeat = currentGameObject.transform.Find("ButtonRepeat").gameObject;
+        }
+        else
+        {
+            Debug.Log("No such gameobject");
+        }
+
     }
 
     //math functions

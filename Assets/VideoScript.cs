@@ -17,10 +17,31 @@ public class VideoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (videoPlayer.isPlaying==false)
-            gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPlay"];
+        if (gameMaster.player[gameMaster.current_screen - 1] == "Tourist")
+        {
+            gameObject.transform.Find("ButtonRepeat").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonRepeatTourist"];
+            gameObject.transform.Find("Button").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonTourist"];
+        }
         else
-            gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPause"];
+        {
+            gameObject.transform.Find("ButtonRepeat").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonRepeatTourfriend"];
+            gameObject.transform.Find("Button").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonTourfriend"];
+        }
+
+        if (videoPlayer.isPlaying == false)
+        {
+            if(gameMaster.player[gameMaster.current_screen-1]=="Tourist")
+                gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPlayTourist"];
+            else
+                gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPlayTourfriend"];
+        }
+        else
+        {
+            if (gameMaster.player[gameMaster.current_screen-1] == "Tourist")
+                gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPauseTourist"];
+            else
+                gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPauseTourfriend"];
+        }
 
     }
 
