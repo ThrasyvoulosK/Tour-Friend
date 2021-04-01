@@ -12,19 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO0
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: 'Welcome to the game of Tourfriend project
+  description: 'PLEASE SHAPE 2 TEAMS
 
+    ONE TEAM WILL BE THE TOURISTS
 
-    Please shape 2 teams.
-
-    The
-    one team will be the tourists and the other team the tourfriends'
-  Content: {fileID: 0}
+    AND
+    THE OTHER THE TOURFRIENDS'
+  description2: TOURIST
+  description3: TOUR FRIEND
   Imagename: Tourist
   Imagename2: Tourfriend
-  Button1: {fileID: 0}
   Button1text: DONE
-  Button2: {fileID: 0}
+  Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: 
+  prefab: {fileID: 0}

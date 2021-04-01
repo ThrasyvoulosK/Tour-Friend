@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO22
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: "Reply to the tourist\r"
-  description2: "Please put it here. Do you have a backpack or handbag? \r"
-  Content: {fileID: 0}
+  description: REPLY TO THE TOURIST
+  description2: 'PLEASE PUT IT HERE. DO YOU HAVE
+
+    A BACK PACK OR A HANDBAG?'
+  description3: 
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: DONE
-  Button2: {fileID: 0}
   Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: 
+  prefab: {fileID: 0}

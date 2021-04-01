@@ -490,3 +490,31 @@ what did the tourist ask you (after place select)
 -answer between place1 and place2
 -the correct one of the places is the one we chose
 -the other one is assigned randomly
+
+button texts
+-mostly white
+--brown/orange on (yellow) clicked buttons
+
+handle second buttons
+
+update phrase select
+
+update give to tourist/tourfriend
+
+add 'background'
+update texts
+-tourist and tourfriend give
+-at least one screen isn't capitalised yet
+-X-remove pawn?
+remove correct card?
+add screen after 'play' (beginning of game with 'welcome')
+update butttons to new sprite
+change button texts to white
+update map screen
+-buttons
+-background of buttoms
+-shrunk map
+
+allow other places to be selected on place-select
+
+add all functionality of player-list and prefab-list to SOs-list

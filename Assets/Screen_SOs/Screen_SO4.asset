@@ -12,16 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO4
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: 'We are ready to start
+  description: 'WE ARE READY TO START
 
-    Give the device (mobile or tablet) to
-    the tourists team.'
+    GIVE THE DEVICE TO THE FIRST TOURIST'
+  description2: 
+  description3: 
   Content: {fileID: 0}
   Imagename: Tourist
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: DONE
-  Button2: {fileID: 0}
+  Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}

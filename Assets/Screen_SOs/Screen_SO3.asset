@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO3
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: 'Turn over only the card of INFO POINT and
+  description: 'FLIP ONLY THE CARD OF INFO POINT
 
-    place over it the
-    pawn of the tourist'
+    PLACE THE TOURIST PAWN ON
+    IT.'
+  description2: 
+  description3: 
   Content: {fileID: 0}
-  Image1: {fileID: 0}
-  Image1sprite: {fileID: 21300000, guid: a2762901ff7da804d9becdee692a26cb, type: 3}
-  Button1: {fileID: 0}
+  Imagename: 
+  Imagename2: 
   Button1text: DONE
-  Button2: {fileID: 0}
+  Button2text: 
+  points: 

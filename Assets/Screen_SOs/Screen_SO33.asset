@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO33
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: "Which answer were you given by the tourfriend?\r"
-  description2: Yes you can take your <color=#ff00ffff>backpack</color> on board.
-  description3: Yes you can take your <color=#ff00ffff>handbag</color> on board.
-  Content: {fileID: 0}
+  description: 'WHICH ANSWER YOU WERE GIVEN
+
+    BY THE TOURFRIEND?'
+  description2: 'YES, YOU CAN TAKE
+
+    YOUR <b>BACKPACK</b> ON BOARD'
+  description3: 'YES, YOU CAN TAKE
+
+    YOUR <b>HANDBAG</b> ON BOARD'
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: 
-  Button2: {fileID: 0}
   Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: 
+  prefab: {fileID: 0}

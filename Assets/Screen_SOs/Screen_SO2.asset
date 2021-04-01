@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO2
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: "See the map below and place the \u201CPlaces cards\u201D on the correct
-    spots\nfacing down so that tourists can not see the places."
+  description: "SEE THE MAP. PUT THE \u201CPLACES CARDS\u201D FACING DOWN\r\nON THEIR
+    ALLOTED SPACES ON THE BOARD"
+  description2: 
+  description3: 
   Content: {fileID: 0}
-  Image1: {fileID: 0}
-  Image1sprite: {fileID: 21300000, guid: a2762901ff7da804d9becdee692a26cb, type: 3}
-  Button1: {fileID: 0}
+  Imagename: 
+  Imagename2: 
   Button1text: DONE
-  Button2: {fileID: 0}
+  Button2text: 
+  points: 

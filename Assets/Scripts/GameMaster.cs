@@ -334,6 +334,14 @@ public class GameMaster : MonoBehaviour
             image1.sprite = imagehandler[img1];
             image2.sprite = imagehandler[img2];
         }
+
+        //if descriptions exist, add them
+        if(prefab_go.name.Contains("Desc"))
+        {
+            newgameobject.transform.Find("Image1").GetComponentInChildren<TextMeshProUGUI>().text = screen_SOs[current_screen].description2;
+            newgameobject.transform.Find("Image2").GetComponentInChildren<TextMeshProUGUI>().text = screen_SOs[current_screen].description3;
+        }
+
             
 
         //newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
@@ -406,7 +414,7 @@ public class GameMaster : MonoBehaviour
         /*image.sprite = imagehandler[img];*/
 
         //assign points here
-        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "Points: <color=#ff0000ff>" + total_points.ToString() + "</color>";
+        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "POINTS: <color=#ff0000ff>" + total_points.ToString() + "</color>";
 
         //newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
@@ -539,7 +547,7 @@ public class GameMaster : MonoBehaviour
             //button2.onClick.AddListener(delegate { correctchoice = true; });
             button1.onClick.AddListener(delegate 
             { 
-                createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "Continue");
+                createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "CONTINUE");
                 //current_screen = locationscreenposition;
             });
         }
@@ -572,7 +580,7 @@ public class GameMaster : MonoBehaviour
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
         newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = desc;
         Debug.Log("printing points on screen: " + total_points);
-        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "Points: <color=#ff0000ff>"+total_points.ToString()+"</color>";
+        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "POINTS: <color=#ff0000ff>"+total_points.ToString()+"</color>";
 
         /*Debug.Log("description text is: " + newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text);
         Debug.Log("image to load" + img);
@@ -742,7 +750,7 @@ public class GameMaster : MonoBehaviour
             //'NO' button leads to false answer
             buttontwo.onClick.AddListener(delegate 
             { 
-                createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "Continue");
+                createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "CONTINUE");
                 //current_screen = locationscreenposition;
             });
         }
@@ -772,14 +780,14 @@ public class GameMaster : MonoBehaviour
         }
         else
         {
-            Debug.Log("Constructor Decider For Back Button!");
+            //Debug.Log("Constructor Decider For Back Button!");
             //button.onClick.AddListener(delegate { current_screen -= 2; });current_screen = current_screen-2;
             button.onClick.AddListener(delegate { current_screen = current_screen - 2; });
             usedScreen = current_screen - 1;
 
             GameObject gb = null;
             gb = GameObject.Find(sgo[current_screen].name + "(Clone)");
-            Debug.Log(gb.name + " Will Be Destroyed by BackButton");
+            //Debug.Log(gb.name + " Will Be Destroyed by BackButton");
             //find current screen object
             /*foreach (GameObject gob in screenprefabs)
             {
@@ -905,9 +913,9 @@ public class GameMaster : MonoBehaviour
         }
         else if (sgo[usedScreen].name.StartsWith("Canvas Points"))
         {
-            Debug.Log("Correct answer Creating");
+            //Debug.Log("Correct answer Creating");
             button.onClick.AddListener(delegate { total_points += point_base; });
-            Debug.Log("Points added: " + total_points);
+            //Debug.Log("Points added: " + total_points);
             button.onClick.AddListener(delegate { createPointsscreen(sgo[usedScreen], screen_SOs[usedScreen].description, "Points_Ribbon_Win", "Continue"); });
         }
         else if (sgo[usedScreen].name.StartsWith("Canvas SelectPhrases"))
@@ -948,7 +956,8 @@ public class GameMaster : MonoBehaviour
             });*/
             //ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
 
-            GameObject gb = null;
+            //GameObject gb = null;
+
             //find current screen object
             //foreach (GameObject gob in screenprefabs)
             //{
@@ -1037,10 +1046,10 @@ public class GameMaster : MonoBehaviour
         {
             Button =  currentGameObject.transform.Find("Button").gameObject;
 
-            if (player[usedScreen] == "Tourist")
+            /*if (player[usedScreen] == "Tourist")
                 Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.red;
             else if (player[usedScreen] == "Tourfriend")
-                Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.blue;
+                Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.blue;*/
         }
         else
         {
@@ -1049,7 +1058,9 @@ public class GameMaster : MonoBehaviour
         
 
         return;
-        //video buttons
+
+        //video buttons (handled on VideoScript)
+        /*
         GameObject ButtonPlayPause = null;
         GameObject ButtonRepeat = null;
         if(currentGameObject.transform.Find("ButtonPlayPause").gameObject!=null)
@@ -1060,7 +1071,7 @@ public class GameMaster : MonoBehaviour
         else
         {
             Debug.Log("No such gameobject");
-        }
+        }*/
 
     }
 

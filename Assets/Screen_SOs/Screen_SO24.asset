@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO24
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
   description: "What did the tourfriend say to you?\r"
-  description2: "May I see your Passport or ID and boarding pass, please.\r"
-  description3: Please put it here. Do you have a backpack or handbag?
-  Content: {fileID: 0}
+  description2: 'MAY I SEE YOUR PASSPORT OR ID
+
+    AND BOARDING PASS, PLEASE?'
+  description3: 'PLEASE PUT IT HERE. DO YOU HAVE
+
+    A BACK PACK OR A HANDBAG?'
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: 
-  Button2: {fileID: 0}
   Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: 
+  prefab: {fileID: 0}

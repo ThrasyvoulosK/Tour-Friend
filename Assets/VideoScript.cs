@@ -12,11 +12,7 @@ public class VideoScript : MonoBehaviour
         videoPlayer= gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
         gameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        //decide on repeat button's image
         if (gameMaster.player[gameMaster.current_screen - 1] == "Tourist")
         {
             gameObject.transform.Find("ButtonRepeat").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonRepeatTourist"];
@@ -27,6 +23,13 @@ public class VideoScript : MonoBehaviour
             gameObject.transform.Find("ButtonRepeat").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonRepeatTourfriend"];
             gameObject.transform.Find("Button").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonTourfriend"];
         }
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
 
         if (videoPlayer.isPlaying == false)
         {

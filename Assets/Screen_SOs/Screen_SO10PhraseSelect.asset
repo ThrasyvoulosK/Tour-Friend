@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO10PhraseSelect
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: 'See the map below and select the phrases that you want to tell to
-    the
+  description: 'SEE THE MAP BELOW AND SELECT THE PHRASES
 
-    tourists in order to guide them to the correct place.'
+    THAT YOU WANT TO TELL
+    TO THE TOURISTS
+
+    IN ORDER TO GUIDE THEM TO THE RIGHT PLACE.'
   description2: 
-  Content: {fileID: 0}
+  description3: 
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: SEE THE VIDEO
-  Button2: {fileID: 0}
+  Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: 
+  prefab: {fileID: 0}

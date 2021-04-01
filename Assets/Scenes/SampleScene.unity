@@ -187,9 +187,7 @@ MonoBehaviour:
 
     IN ORDER TO GUIDE THEM TO THE RIGHT PLACE.'
   - SEE THE VIDEO
-  - 'SEE THE VIDEO
-
-    AND TRY TO REPRODUCE THE MOVEMENTS'
+  - see the video
   - Hello
   - CONTINUE GIVING DIRECTIONS
   - FINISH GIVING DIRECTIONS
@@ -219,7 +217,7 @@ MonoBehaviour:
   - SELECT YOUR REPLY
   - 'YES, IS THE SIZE
 
-    OF MY HANDBAG OK?'
+    OF MY <b>HANDBAG</b> OK?'
   - "Reply to the tourist and give him the correct card\r"
   - 'REPLY TO THE TOURIST
 
@@ -256,25 +254,22 @@ MonoBehaviour:
     AND BOARDING PASS, PLEASE?'
   - 'YES, IS THE SIZE
 
-    OF MY BACKPACK OK?'
+    OF MY <b>BACKPACK</b> OK?'
   - 'YES, YOU CAN TAKE
 
-    YOUR BACKPACK ON BOARD'
-  - 'YES, IS THE SIZE
+    YOUR <b>BACKPACK</b> ON BOARD'
+  - "I WANT TO GO TO THE <b>AIRPORT\r</b>"
+  - "I WANT TO GO TO THE <b>CAFE BAR\r\r</b>"
+  - "I WANT TO GO TO THE <b>HOTEL\r\r</b>"
+  - "I WANT TO GO TO THE<b> RESTAURANT\r\r</b>"
+  - "I WANT TO GO <b>SIGHTSEEING\r</b>"
+  - "I WANT TO GO TO THE <b>STATION\r\r</b>"
+  - "I WANT TO GO TO THE <b>TAXI\r\r</b>"
+  - "I WANT TO GO TO THE <b>SHOP\r\r</b>"
+  - 'YES, YOU CAN TAKE
 
-    OF MY BACKPACK OK?'
-  - 'YES, IS THE SIZE
-
-    OF MY BACKPACK OK?'
-  - 'YES, IS THE SIZE
-
-    OF MY BACKPACK OK?'
-  - 'YES, IS THE SIZE
-
-    OF MY BACKPACK OK?'
-  - 'YES, IS THE SIZE
-
-    OF MY BACKPACK OK?'
+    YOUR <b>HANDBAG</b> ON BOARD'
+  - CONTINUE
   words_gr:
   - "\u0395\u039D\u03A4\u0391\u039E\u0395\u0399"
   - "\u039A\u03B1\u03BB\u03C9\u03C3\u03AE\u03C1\u03B8\u03B1\u03C4\u03B5 \u03C3\u03C4\u03BF

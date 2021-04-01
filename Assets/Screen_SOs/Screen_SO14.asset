@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO14
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: "Move your pawn according to the directions of the tourfriend\r\nOpen
-    the card. Is it the correct card?\r"
+  description: 'MOVE YOUR PAWN ACCORDING TO THE DIRECTIONS.
+
+    FLIP THE CARD.
+    IS IT THE RIGHT CARD?'
   description2: 
-  Content: {fileID: 0}
+  description3: 
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: YES
-  Button2: {fileID: 0}
   Button2text: NO
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: 
+  prefab: {fileID: 0}

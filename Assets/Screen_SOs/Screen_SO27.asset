@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO27
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: "See the video and try to mimic the movements\r"
-  description2: "Yes, is the size of my <color=#ff00ffff>backpack</color>  ok?\r"
+  description: 'SEE THE VIDEO
+
+    AND TRY TO REPRODUCE THE MOVEMENTS'
+  description2: 'YES, IS THE SIZE
+
+    OF MY <b>BACKPACK</b> OK?'
   description3: 
-  Content: {fileID: 0}
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: DONE
-  Button2: {fileID: 0}
   Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: 
+  prefab: {fileID: 0}

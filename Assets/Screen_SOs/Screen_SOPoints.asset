@@ -12,18 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SOPoints
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
-  description: 'Welldone!
+  description: 'WELL DONE!
 
-    You win 3 extra points'
-  description2: "Unfortunately this is wrong\r\nYou don\u2019t win extra points"
+    YOU WIN 3 EXTRA POINTS'
+  description2: 'UNFORTUNATELY THIS IS WRONG
+
+    YOU DON''T WIN EXTRA POINTS'
   description3: 
   Content: {fileID: 0}
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: CONTINUE
-  Button2: {fileID: 0}
   Button2text: 
   points: Points
-  DescriptionImage: {fileID: 0}
