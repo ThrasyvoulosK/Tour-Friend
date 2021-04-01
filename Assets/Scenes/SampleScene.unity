@@ -154,62 +154,79 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   words_en:
   - DONE
-  - 'Welcome to the game of Tourfriend project
+  - 'PLEASE SHAPE 2 TEAMS
 
+    ONE TEAM WILL BE THE TOURISTS
 
-    Please shape 2 teams.
+    AND THE OTHER
+    THE TOURFRIENDS'
+  - 'GIVE THE DEVICE TO TOURFRIENDS
 
-    The
-    one team will be the tourists and the other team the tourfriends'
-  - 'Give the device (mobile or tablet) to the tourfriends team.
+    TOURISTS SHOULD NOT LOOK AT THE SCREEN
 
-    Tourists should
-    not look the screen until they are guided so by the game'
-  - "See the map below and place the \u201CPlaces cards\u201D on the correct spots\nfacing
-    down so that tourists can not see the places."
-  - 'Turn over only the card of INFO POINT and
+    UNTIL
+    THEY ARE GUIDED SO BY THE GAME'
+  - "SEE THE MAP. PUT THE \u201CPLACES CARDS\u201D FACING DOWN\r\nON THEIR ALLOTED
+    SPACES ON THE BOARD"
+  - 'FLIP ONLY THE CARD OF INFO POINT
 
-    place over it the pawn of the
-    tourist'
-  - 'We are ready to start
+    PLACE THE TOURIST PAWN ON IT.'
+  - 'WE ARE READY TO START
 
-    Give the device (mobile or tablet) to the tourists
-    team.'
-  - Select a place to go
+    GIVE THE DEVICE TO THE FIRST TOURIST'
+  - SELECT A PLACE TO GO
   - SELECT
-  - See the video and try to mimic the movements
-  - What did the tourist ask you?
-  - 'See the map below and select the phrases that you want to tell to the
+  - 'SEE THE VIDEO
 
-    tourists
-    in order to guide them to the correct place.'
+    AND TRY TO REPRODUCE THE MOVEMENTS'
+  - WHAT DID THE TOURIST ASK YOU?
+  - 'SEE THE MAP BELOW AND SELECT THE PHRASES
+
+    THAT YOU WANT TO TELL TO THE
+    TOURISTS
+
+    IN ORDER TO GUIDE THEM TO THE RIGHT PLACE.'
   - SEE THE VIDEO
-  - "See the video and try to mimic the movements\r"
-  - Hello
-  - CONTINUE
-  - FINISH
-  - 'Are you sure you have finished giving directions?
+  - 'SEE THE VIDEO
 
-'
+    AND TRY TO REPRODUCE THE MOVEMENTS'
+  - Hello
+  - CONTINUE GIVING DIRECTIONS
+  - FINISH GIVING DIRECTIONS
+  - 'ARE YOU SURE
+
+    YOU HAVE FINISHED GIVING DIRECTIONS?'
   - YES
   - NO
-  - "Move your pawn according to the directions of the tourfriend\r\nOpen the card.
-    Is it the correct card?\r"
-  - "You are the tourist in the airport\r"
+  - 'MOVE YOUR PAWN ACCORDING TO THE DIRECTIONS.
+
+    FLIP THE CARD. IS IT THE RIGHT
+    CARD?'
+  - YOU ARE THE TOURIST IN THE AIRPORT
   - ASK FOR HELP
-  - "Select the help you need \r\n"
-  - I would like to drop my baggage
+  - SELECT THE HELP YOU NEED
+  - 'I WOULD LIKE TO
+
+    DROP MY BAGGAGE'
   - 'What did the tourist say to you?
 
 '
-  - "Reply to the tourist\r"
-  - "Please put it here. Do you have a backpack or handbag? \r"
+  - REPLY TO THE TOURIST
+  - 'PLEASE PUT IT HERE. DO YOU HAVE
+
+    A BACK PACK OR A HANDBAG?'
   - "What did the tourfriend say to you?\r"
-  - "Select your reply\r"
-  - "Yes, is the size of my backpack  ok?\r"
+  - SELECT YOUR REPLY
+  - 'YES, IS THE SIZE
+
+    OF MY HANDBAG OK?'
   - "Reply to the tourist and give him the correct card\r"
-  - "Yes you can take your backpack on board. \r"
-  - "Which answer were you given by the tourfriend?\r"
+  - 'REPLY TO THE TOURIST
+
+    AND GIVE HIM THE OBJECT CARD'
+  - 'WHICH ANSWER YOU WERE GIVEN
+
+    BY THE TOURFRIEND?'
   - "Was it the correct reply and card?\r"
   - '(This is the end of the round)
 
@@ -217,10 +234,47 @@ MonoBehaviour:
   - OK
   - Give the device (mobile or tablet) to the tourfriends team.
   - Give the device (mobile or tablet) to the tourists team.
-  - 'Welldone!
+  - 'WELL DONE!
 
-    You win 2 extra points'
-  - "Unfortunately this is wrong\r\nYou don\u2019t win extra points"
+    YOU WIN 3 EXTRA POINTS'
+  - 'UNFORTUNATELY THIS IS WRONG
+
+    YOU DON''T WIN EXTRA POINTS'
+  - 'WELCOME TO THE GAME
+
+    OF TOURFRIEND'
+  - "LET\u2019S PLAY"
+  - GIVE THE DEVICE TO THE FIRST TOURFRIEND
+  - GIVE THE DEVICE TO THE SAME TOURIST
+  - GIVE THE DEVICE TO THE NEXT TOURIST PLAYER
+  - WHERE IS THE GATE OF MY FLIGHT?
+  - 'GIVE THE DEVICE
+
+    TO THE NEXT TOURFRIEND PLAYER'
+  - 'MAY I SEE YOUR PASSPORT OR ID
+
+    AND BOARDING PASS, PLEASE?'
+  - 'YES, IS THE SIZE
+
+    OF MY BACKPACK OK?'
+  - 'YES, YOU CAN TAKE
+
+    YOUR BACKPACK ON BOARD'
+  - 'YES, IS THE SIZE
+
+    OF MY BACKPACK OK?'
+  - 'YES, IS THE SIZE
+
+    OF MY BACKPACK OK?'
+  - 'YES, IS THE SIZE
+
+    OF MY BACKPACK OK?'
+  - 'YES, IS THE SIZE
+
+    OF MY BACKPACK OK?'
+  - 'YES, IS THE SIZE
+
+    OF MY BACKPACK OK?'
   words_gr:
   - "\u0395\u039D\u03A4\u0391\u039E\u0395\u0399"
   - "\u039A\u03B1\u03BB\u03C9\u03C3\u03AE\u03C1\u03B8\u03B1\u03C4\u03B5 \u03C3\u03C4\u03BF
