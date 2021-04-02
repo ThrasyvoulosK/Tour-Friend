@@ -479,10 +479,10 @@ reply to the tourist
 divide screens by player:
 -tourists
 --red buttons
---red texts(157,28,32)
+//--red texts(157,28,32)
 -tourfriends
 --blue buttons
---blue texts(14,80,101)
+//--blue texts(14,80,101)
 -other screens?
 --blue texts as well?
 
@@ -518,3 +518,5 @@ update map screen
 allow other places to be selected on place-select
 
 add all functionality of player-list and prefab-list to SOs-list
+
+add a 'give device to tourist' before 'you are a tourist in the airport'

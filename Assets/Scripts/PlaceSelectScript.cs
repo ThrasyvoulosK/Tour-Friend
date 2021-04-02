@@ -155,13 +155,15 @@ public class PlaceSelectScript : MonoBehaviour
                 //set our current location to the one we selected
                 gameMaster.current_location = current_choice;
 
+                
                 //show green rectangle behind it
-                //GameObject.Find("Image" + current_choice).transform.Find("BackgroundImage").GetComponent<Image>().color += new Color(0, 0, 0, 0.5f) ;
-                GameObject.Find("Image" + current_choice).transform.Find("BackgroundImage").GetComponent<Image>().color = new Color(0, 255, 0, 1f) ;
+                GameObject.Find("Image" + current_choice).transform.Find("BackgroundImage").GetComponent<Image>().color = new Color(255, 255, 255, 1f) ;
+                
 
                 //re-enable the button, now that we have made a choice                
                 bu.interactable = true;
 
+                
                 //change other boxes' colours if needed
                 for (int j = 0; j < gameObject.transform.childCount; j++)
                 {
@@ -179,6 +181,7 @@ public class PlaceSelectScript : MonoBehaviour
                         }
                     }
                 }
+                
 
             }
             

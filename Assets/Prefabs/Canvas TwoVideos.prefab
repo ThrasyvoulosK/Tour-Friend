@@ -758,6 +758,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5922955462932974877, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4637759549500605552, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
+    - target: {fileID: 5922955462932974877, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8368841217941215815, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_Name
       value: VideoChoice1
@@ -953,6 +961,14 @@ PrefabInstance:
     - target: {fileID: 5454279178739029259, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5922955462932974877, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4637759549500605552, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
+    - target: {fileID: 5922955462932974877, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
+      propertyPath: m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8368841217941215815, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_Name

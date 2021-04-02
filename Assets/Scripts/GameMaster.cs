@@ -119,11 +119,10 @@ public class GameMaster : MonoBehaviour
             GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate 
             {
                 backB.SetActive(true);
-                createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
-                
+                //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+                createOneDescriptionScreen(screenprefabs[13], words_en[40], "no");
+                Destroy(GameObject.Find("Canvas Menu")); 
             });
-
-            GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { Destroy(GameObject.Find("Canvas Menu")); });
         }
         else
         {
@@ -133,10 +132,9 @@ public class GameMaster : MonoBehaviour
             GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate 
             {
                 backB.SetActive(true);
-                createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
-                });
-
-            GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { Destroy(GameObject.Find("Canvas Menu")); });
+                //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+                createOneDescriptionScreen(screenprefabs[13], words_en[40], "no");
+                Destroy(GameObject.Find("Canvas Menu")); });
         }
         checkdelegate = true;
 
@@ -151,8 +149,11 @@ public class GameMaster : MonoBehaviour
     {
         if(checkdelegate==false)
         {
-            GameObject.Find("Canvas Menu(Clone)").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text); });
-            GameObject.Find("Canvas Menu(Clone)").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate { Destroy(GameObject.Find("Canvas Menu(Clone)")); });
+            GameObject.Find("Canvas Menu(Clone)").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate {
+                //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+                backB.SetActive(true);
+                createOneDescriptionScreen(screenprefabs[13], words_en[40], "no");
+                Destroy(GameObject.Find("Canvas Menu(Clone)")); });
 
             checkdelegate = true;
         }
@@ -233,34 +234,25 @@ public class GameMaster : MonoBehaviour
         return vidchoice;
         //return null;
     }
-    //
-    /*GameObject InitialiseLense(GameObject lenseprefab, string vid, string desc, string card, string button)
-    {
-        //Debug.Log("calling lense initialiser");
-        //GameObject vidchoice = Instantiate(lenseprefab);
 
-        //call video-choice initialiser, since it has the same functionality more-or-less
-        lenseprefab = InitialiseVideoChoice(lenseprefab,  vid,  desc,  card,  button);
-
-        Debug.Log("lense text: " + desc);
-        //add functionality to the lense button
-        lenseprefab.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { Destroy(lenseprefab); });
-        //vidchoice.transform.Find("LenseButton").GetComponentInChildren<tmp>().onClick.AddListener(delegate { Destroy(gameObject); });
-        //GetComponentInChildren<Button>(). = GameObject.Find("vid").transform.GetComponent<Button>();
-        Button newbutton = lenseprefab.transform.Find("Button").GetComponent<Button>();
-        Debug.Log(newbutton.GetComponentInChildren<Text>().text);
-        Button oldbutton = GameObject.Find("Canvas TwoVideos(Clone)").transform.Find("VideoChoice1").transform.Find("Button").GetComponentInChildren<Button>();
-        //newbutton = oldbutton;
-        newbutton.onClick.AddListener(delegate { Debug.Log("lense green button pressed"); Destroy(lenseprefab);Destroy(GameObject.Find("Canvas TwoVideos(Clone)")); });
-        ButtonDecider(newbutton);
-        //copy
-        Debug.Log(lenseprefab.name);
-        //Destroy(gameObject);
-        return lenseprefab;
-    }*/
 
     /*Screen Object Constructors*/
+    //Just a description and a button
+    public void createOneDescriptionScreen(GameObject prefab_go, string desc, string button)
+    {
+        //instantiate its prefab version
+        GameObject newgameobject;
+        newgameobject = Instantiate(prefab_go);
 
+        //description
+        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = desc;
+
+        newgameobject.transform.Find("Button").GetComponent<Button>().onClick.AddListener(delegate {
+            createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+            backB.SetActive(true);
+            Destroy(newgameobject);
+        });
+    }
     //One image and one button screen. 
     //It's the most common of the app and serves as the basis of the others
     public void createOneImagescreen(GameObject prefab_go, string desc, string img, string button)
@@ -916,7 +908,7 @@ public class GameMaster : MonoBehaviour
             //Debug.Log("Correct answer Creating");
             button.onClick.AddListener(delegate { total_points += point_base; });
             //Debug.Log("Points added: " + total_points);
-            button.onClick.AddListener(delegate { createPointsscreen(sgo[usedScreen], screen_SOs[usedScreen].description, "Points_Ribbon_Win", "Continue"); });
+            button.onClick.AddListener(delegate { createPointsscreen(sgo[usedScreen], screen_SOs[usedScreen].description, "Points_Ribbon_Win", "CONTINUE"); });
         }
         else if (sgo[usedScreen].name.StartsWith("Canvas SelectPhrases"))
         {
@@ -1031,9 +1023,9 @@ public class GameMaster : MonoBehaviour
         {
             Description = currentGameObject.transform.Find("Description").gameObject;
             if (player[usedScreen] == "Tourist")
-                Description.GetComponent<TextMeshProUGUI>().color = Color.red;
+                Description.GetComponent<TextMeshProUGUI>().color = new Color32(157, 28, 32, 255);// Color.red;
             else if (player[usedScreen] == "Tourfriend")
-                Description.GetComponent<TextMeshProUGUI>().color = Color.blue;
+                Description.GetComponent<TextMeshProUGUI>().color = new Color32(14, 80, 101, 255); // Color.blue;
         }
         else
         {
@@ -1045,11 +1037,16 @@ public class GameMaster : MonoBehaviour
         if(currentGameObject.transform.Find("Button")!=null)
         {
             Button =  currentGameObject.transform.Find("Button").gameObject;
+            Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
 
-            /*if (player[usedScreen] == "Tourist")
-                Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.red;
+            if (player[usedScreen] == "Tourist")
+            {
+                Button.GetComponent<Image>().sprite = imagehandler["ButtonTourist"];
+            }
             else if (player[usedScreen] == "Tourfriend")
-                Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.blue;*/
+            {
+                Button.GetComponent<Image>().sprite = imagehandler["ButtonTourfriend"];
+            }
         }
         else
         {

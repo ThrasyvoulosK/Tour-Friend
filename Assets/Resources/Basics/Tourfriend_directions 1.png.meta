@@ -1,0 +1,490 @@
+fileFormatVersion: 2
+guid: 1ec6482607e14c34b9f290210414587c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3140806739717728456
+    second: Tourfriend_directions_0
+  - first:
+      213: 7573481076422619929
+    second: Tourfriend_directions_1
+  - first:
+      213: -2720266801537923106
+    second: Tourfriend_directions_2
+  - first:
+      213: -6557686489656224326
+    second: Tourfriend_directions_3
+  - first:
+      213: 6289091091214504941
+    second: Tourfriend_directions_4
+  - first:
+      213: 7425936272315739160
+    second: Tourfriend_directions_5
+  - first:
+      213: -4087675670006566083
+    second: Tourfriend_directions_6
+  - first:
+      213: -1410529402645239408
+    second: Tourfriend_directions_7
+  - first:
+      213: 215130353329567534
+    second: Tourfriend_directions_8
+  - first:
+      213: -2915812377968368629
+    second: Tourfriend_directions_9
+  - first:
+      213: 6074986806421291811
+    second: Tourfriend_directions_10
+  - first:
+      213: 1060778131497449477
+    second: Tourfriend_directions_11
+  - first:
+      213: -1385960093936999651
+    second: Tourfriend_directions_12
+  - first:
+      213: 6329986500385459401
+    second: Tourfriend_directions_13
+  - first:
+      213: 4846580246134465124
+    second: Tourfriend_directions_14
+  - first:
+      213: -8832635404088401233
+    second: Tourfriend_directions_15
+  - first:
+      213: 1730913836411002792
+    second: Tourfriend_directions_16
+  - first:
+      213: -4877137146480144767
+    second: Tourfriend_directions_17
+  - first:
+      213: 8895165448762648764
+    second: Tourfriend_directions_18
+  - first:
+      213: 3818146682392039199
+    second: Tourfriend_directions_19
+  - first:
+      213: 5350661219532342154
+    second: Tourfriend_directions_20
+  - first:
+      213: -5330054897626616514
+    second: Tourfriend_directions_21
+  - first:
+      213: 811250038115150320
+    second: Tourfriend_directions_22
+  - first:
+      213: -2970464993932625726
+    second: Tourfriend_directions_23
+  - first:
+      213: 4205828957179708306
+    second: Tourfriend_directions_24
+  - first:
+      213: -4877135232200872940
+    second: Tourfriend_directions_25
+  - first:
+      213: 2708275454250743626
+    second: Tourfriend_directions_26
+  - first:
+      213: 6092522096605140690
+    second: Tourfriend_directions_27
+  - first:
+      213: 3731507458712311939
+    second: Tourfriend_directions_28
+  - first:
+      213: -6791082853882907424
+    second: Tourfriend_directions_29
+  - first:
+      213: 338433424940808521
+    second: Tourfriend_directions_30
+  - first:
+      213: 2947468174091712599
+    second: Tourfriend_directions_31
+  - first:
+      213: -7316995067022759285
+    second: Tourfriend_directions_32
+  - first:
+      213: 6824133221586707400
+    second: Tourfriend_directions_33
+  - first:
+      213: 1967413598695766847
+    second: Tourfriend_directions_34
+  - first:
+      213: 6756149902139050606
+    second: Tourfriend_directions 1_0
+  - first:
+      213: 4322755608847391873
+    second: Tourfriend_directions 1_1
+  - first:
+      213: -5183644677489072204
+    second: Tourfriend_directions 1_2
+  - first:
+      213: 745349321373673288
+    second: Tourfriend_directions 1_3
+  - first:
+      213: 3373741328243002320
+    second: Tourfriend_directions 1_4
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend_directions_19
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 356
+        width: 304
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f4050ad28ccf430800000000000000
+      internalID: 3818146682392039199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions_21
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 351
+        width: 247
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d62a97f47d706b0800000000000000
+      internalID: -5330054897626616514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions_22
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 353
+        width: 167
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f920e98c93224b00800000000000000
+      internalID: 811250038115150320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions_23
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 351
+        width: 168
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8b9e283d9c6c6d0800000000000000
+      internalID: -2970464993932625726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions_24
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 352
+        width: 121
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2938fb2372b1e5a30800000000000000
+      internalID: 4205828957179708306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions_25
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 265
+        width: 148
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cef13b85fe05cb0800000000000000
+      internalID: -4877135232200872940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions_34
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 102
+        width: 527
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bb8848e38ad4b10800000000000000
+      internalID: 1967413598695766847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions 1_0
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 857
+        width: 121
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ac9465a8aa2cd50800000000000000
+      internalID: 6756149902139050606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions 1_1
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 859
+        width: 304
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c1d24c2538dfb30800000000000000
+      internalID: 4322755608847391873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions 1_2
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 482
+        width: 148
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b76b6441aeff08b0800000000000000
+      internalID: -5183644677489072204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions 1_3
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 858
+        width: 247
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8476e0e3243085a00800000000000000
+      internalID: 745349321373673288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_directions 1_4
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 858
+        width: 167
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db8af9fcdfe1de20800000000000000
+      internalID: 3373741328243002320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

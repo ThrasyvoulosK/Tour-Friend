@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.UI;
+using TMPro;
 
 public class SelectPhrasesScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class SelectPhrasesScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        return;
         //foreach (GameObject gameO in gameObject.transform)
         GameObject gameO = gameObject.transform.Find("ButtonsRow").gameObject;
         for (int i = 0; i < gameO.transform.childCount; i++)
@@ -29,6 +31,7 @@ public class SelectPhrasesScript : MonoBehaviour
     //draw a green recctangle around one and invisivise all others
     public void GreenOneGreyOthers(GameObject buttonobject)
     {
+        return;
         Debug.Log("phrase script gameobject called: " + buttonobject.name);
         buttonobject.transform.Find("BackgroundImage").GetComponent<Image>().color = new Color(0, 255f, 0, 1f);
 
@@ -46,6 +49,6 @@ public class SelectPhrasesScript : MonoBehaviour
 
     public void GetName(GameObject game)
     {
-        chosenphrase=game.transform.Find("Text").GetComponent<Text>().text;
+        chosenphrase=game.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text;
     }
 }

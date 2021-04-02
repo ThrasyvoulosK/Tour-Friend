@@ -12,17 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO31
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
   description: "Reply to the tourist and give him the correct card\r"
-  description2: "Yes you can take your <color=#ff00ffff>backpack</color> on board.
-    \r"
+  description2: 'YES, YOU CAN TAKE
+
+    YOUR <b>BACKPACK</b> ON BOARD'
   description3: 
-  Content: {fileID: 0}
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: DONE
-  Button2: {fileID: 0}
   Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: 
+  prefab: {fileID: 0}
