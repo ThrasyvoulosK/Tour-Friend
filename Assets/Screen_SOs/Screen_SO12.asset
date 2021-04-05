@@ -22,5 +22,5 @@ MonoBehaviour:
   Button1text: YES
   Button2text: NO
   points: 
-  Player: 
-  prefab: {fileID: 0}
+  Player: Tourfriend
+  prefab: {fileID: 550610383362973524, guid: 563ac34ac0a098b42a5c4d2aa95bdba1, type: 3}

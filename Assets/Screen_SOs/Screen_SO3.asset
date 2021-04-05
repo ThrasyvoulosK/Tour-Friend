@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 'FLIP ONLY THE CARD OF INFO POINT
 
-    PLACE THE TOURIST PAWN ON
-    IT.'
+    PLACE THE TOURIST PAWN ON IT.'
   description2: 
   description3: 
-  Content: {fileID: 0}
   Imagename: 
   Imagename2: 
   Button1text: DONE
   Button2text: 
   points: 
+  Player: Tourfriend
+  prefab: {fileID: 5251514365690250544, guid: 8efdd62d443ae0442bfe7dd55fd533cd, type: 3}

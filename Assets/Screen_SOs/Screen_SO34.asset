@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO34
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
   description: "Was it the correct reply and card?\r"
   description2: 
-  Content: {fileID: 0}
+  description3: 
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: YES
-  Button2: {fileID: 0}
   Button2text: NO
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: Tourist
+  prefab: {fileID: 550610383362973524, guid: 563ac34ac0a098b42a5c4d2aa95bdba1, type: 3}

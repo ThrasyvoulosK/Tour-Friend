@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO6Test
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
   description: testing with this placeholder
   description2: 
-  Content: {fileID: 0}
+  description3: 
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: DONE
-  Button2: {fileID: 0}
   Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: Tourist
+  prefab: {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}

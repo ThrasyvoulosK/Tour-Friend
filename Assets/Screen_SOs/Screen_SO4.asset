@@ -17,9 +17,10 @@ MonoBehaviour:
     GIVE THE DEVICE TO THE FIRST TOURIST'
   description2: 
   description3: 
-  Content: {fileID: 0}
   Imagename: Tourist
   Imagename2: 
   Button1text: DONE
   Button2text: 
   points: 
+  Player: Tourist
+  prefab: {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}

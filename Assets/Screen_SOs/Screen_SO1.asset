@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 'GIVE THE DEVICE TO TOURFRIENDS
 
-    TOURISTS SHOULD NOT LOOK AT
-    THE SCREEN
+    TOURISTS SHOULD NOT LOOK AT THE
+    SCREEN
 
     UNTIL THEY ARE GUIDED SO BY THE GAME'
   description2: 
   description3: 
-  Content: {fileID: 0}
   Imagename: Tourfriend
   Imagename2: 
   Button1text: DONE
   Button2text: 
   points: 
+  Player: Tourfriend
+  prefab: {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}

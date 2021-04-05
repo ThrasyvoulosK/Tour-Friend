@@ -13,7 +13,7 @@ public class VideoScript : MonoBehaviour
         gameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
 
         //decide on repeat button's image
-        if (gameMaster.player[gameMaster.current_screen - 1] == "Tourist")
+        if (gameMaster.screen_SOs[gameMaster.current_screen - 1].Player == "Tourist")
         {
             gameObject.transform.Find("ButtonRepeat").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonRepeatTourist"];
             gameObject.transform.Find("Button").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonTourist"];
@@ -33,14 +33,14 @@ public class VideoScript : MonoBehaviour
 
         if (videoPlayer.isPlaying == false)
         {
-            if(gameMaster.player[gameMaster.current_screen-1]=="Tourist")
+            if(gameMaster.screen_SOs[gameMaster.current_screen - 1].Player == "Tourist")
                 gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPlayTourist"];
             else
                 gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPlayTourfriend"];
         }
         else
         {
-            if (gameMaster.player[gameMaster.current_screen-1] == "Tourist")
+            if (gameMaster.screen_SOs[gameMaster.current_screen - 1].Player == "Tourist")
                 gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPauseTourist"];
             else
                 gameObject.transform.Find("ButtonPlayPause").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonPauseTourfriend"];

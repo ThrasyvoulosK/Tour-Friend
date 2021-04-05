@@ -15,9 +15,10 @@ MonoBehaviour:
   description: SELECT A PLACE TO GO
   description2: 
   description3: 
-  Content: {fileID: 0}
   Imagename: 
   Imagename2: 
   Button1text: SELECT
   Button2text: 
   points: 
+  Player: Tourist
+  prefab: {fileID: 4773252498766698832, guid: e5f4bb0b3160e06418d5f2a6c7f1bec6, type: 3}

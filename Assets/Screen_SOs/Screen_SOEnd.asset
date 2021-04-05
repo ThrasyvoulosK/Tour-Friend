@@ -12,17 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SOEnd
   m_EditorClassIdentifier: 
-  Description: {fileID: 0}
   description: '(This is the end of the round)
 
     (Continue to location select)'
   description2: 
-  Content: {fileID: 0}
+  description3: 
   Imagename: 
   Imagename2: 
-  Button1: {fileID: 0}
   Button1text: OK
-  Button2: {fileID: 0}
   Button2text: 
   points: 
-  DescriptionImage: {fileID: 0}
+  Player: 
+  prefab: {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}

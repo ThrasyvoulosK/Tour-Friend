@@ -22,5 +22,5 @@ MonoBehaviour:
   Button1text: CONTINUE GIVING DIRECTIONS
   Button2text: FINISH GIVING DIRECTIONS
   points: 
-  Player: 
-  prefab: {fileID: 0}
+  Player: Tourfriend
+  prefab: {fileID: 5939764665550102095, guid: 9cc483a1992a4ba48ae8505d8b168578, type: 3}

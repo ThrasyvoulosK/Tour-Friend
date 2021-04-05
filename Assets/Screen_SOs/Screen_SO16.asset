@@ -20,5 +20,5 @@ MonoBehaviour:
   Button1text: ASK FOR HELP
   Button2text: 
   points: 
-  Player: 
-  prefab: {fileID: 0}
+  Player: Tourist
+  prefab: {fileID: 8626936094389886684, guid: 5c5ab97ef8220f44cb3b95f93890dcde, type: 3}

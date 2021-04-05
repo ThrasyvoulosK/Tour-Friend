@@ -26,4 +26,4 @@ MonoBehaviour:
   Button2text: 
   points: 
   Player: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8558149607620697403, guid: 40ee07a22cddcd747b87bc8ecf5fd702, type: 3}

@@ -1,0 +1,467 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6688229611566936505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583260020163969221}
+  - component: {fileID: 5053001173211812680}
+  m_Layer: 0
+  m_Name: GameMaster (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1583260020163969221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688229611566936505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4719161, y: 1.3409452, z: -0.1157947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5053001173211812680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688229611566936505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252debce9301d6e489bc04bc1d1db9d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  words_en:
+  - DONE
+  - 'PLEASE SHAPE 2 TEAMS
+
+    ONE TEAM WILL BE THE TOURISTS
+
+    AND THE OTHER THE
+    TOURFRIENDS'
+  - 'GIVE THE DEVICE TO TOURFRIENDS
+
+    TOURISTS SHOULD NOT LOOK AT THE SCREEN
+
+    UNTIL
+    THEY ARE GUIDED SO BY THE GAME'
+  - "SEE THE MAP. PUT THE \u201CPLACES CARDS\u201D FACING DOWN\r\nON THEIR ALLOTED
+    SPACES ON THE BOARD"
+  - 'FLIP ONLY THE CARD OF INFO POINT
+
+    PLACE THE TOURIST PAWN ON IT.'
+  - 'WE ARE READY TO START
+
+    GIVE THE DEVICE TO THE FIRST TOURIST'
+  - SELECT A PLACE TO GO
+  - SELECT
+  - 'SEE THE VIDEO
+
+    AND TRY TO REPRODUCE THE MOVEMENTS'
+  - WHAT DID THE TOURIST ASK YOU?
+  - 'SEE THE MAP BELOW AND SELECT THE PHRASES
+
+    THAT YOU WANT TO TELL TO THE TOURISTS
+
+    IN
+    ORDER TO GUIDE THEM TO THE RIGHT PLACE.'
+  - SEE THE VIDEO
+  - see the video
+  - Hello
+  - CONTINUE GIVING DIRECTIONS
+  - FINISH GIVING DIRECTIONS
+  - 'ARE YOU SURE
+
+    YOU HAVE FINISHED GIVING DIRECTIONS?'
+  - YES
+  - NO
+  - 'MOVE YOUR PAWN ACCORDING TO THE DIRECTIONS.
+
+    FLIP THE CARD. IS IT THE RIGHT
+    CARD?'
+  - YOU ARE THE TOURIST IN THE AIRPORT
+  - ASK FOR HELP
+  - SELECT THE HELP YOU NEED
+  - 'I WOULD LIKE TO
+
+    DROP MY BAGGAGE'
+  - 'What did the tourist say to you?
+
+'
+  - REPLY TO THE TOURIST
+  - 'PLEASE PUT IT HERE. DO YOU HAVE
+
+    A BACK PACK OR A HANDBAG?'
+  - "What did the tourfriend say to you?\r"
+  - SELECT YOUR REPLY
+  - 'YES, IS THE SIZE
+
+    OF MY <b>HANDBAG</b> OK?'
+  - "Reply to the tourist and give him the correct card\r"
+  - 'REPLY TO THE TOURIST
+
+    AND GIVE HIM THE OBJECT CARD'
+  - 'WHICH ANSWER YOU WERE GIVEN
+
+    BY THE TOURFRIEND?'
+  - "Was it the correct reply and card?\r"
+  - '(This is the end of the round)
+
+    (Continue to location select)'
+  - OK
+  - Give the device (mobile or tablet) to the tourfriends team.
+  - Give the device (mobile or tablet) to the tourists team.
+  - 'WELL DONE!
+
+    YOU WIN 3 EXTRA POINTS'
+  - 'UNFORTUNATELY THIS IS WRONG
+
+    YOU DON''T WIN EXTRA POINTS'
+  - 'WELCOME TO THE GAME
+
+    OF TOURFRIEND'
+  - "LET\u2019S PLAY"
+  - GIVE THE DEVICE TO THE FIRST TOURFRIEND
+  - GIVE THE DEVICE TO THE SAME TOURIST
+  - GIVE THE DEVICE TO THE NEXT TOURIST PLAYER
+  - WHERE IS THE GATE OF MY FLIGHT?
+  - 'GIVE THE DEVICE
+
+    TO THE NEXT TOURFRIEND PLAYER'
+  - 'MAY I SEE YOUR PASSPORT OR ID
+
+    AND BOARDING PASS, PLEASE?'
+  - 'YES, IS THE SIZE
+
+    OF MY <b>BACKPACK</b> OK?'
+  - 'YES, YOU CAN TAKE
+
+    YOUR <b>BACKPACK</b> ON BOARD'
+  - "I WANT TO GO TO THE <b>AIRPORT\r</b>"
+  - "I WANT TO GO TO THE <b>CAFE BAR\r\r</b>"
+  - "I WANT TO GO TO THE <b>HOTEL\r\r</b>"
+  - "I WANT TO GO TO THE<b> RESTAURANT\r\r</b>"
+  - "I WANT TO GO <b>SIGHTSEEING\r</b>"
+  - "I WANT TO GO TO THE <b>STATION\r\r</b>"
+  - "I WANT TO GO TO THE <b>TAXI\r\r</b>"
+  - "I WANT TO GO TO THE <b>SHOP\r\r</b>"
+  - 'YES, YOU CAN TAKE
+
+    YOUR <b>HANDBAG</b> ON BOARD'
+  - CONTINUE
+  words_gr:
+  - "\u0395\u039D\u03A4\u0391\u039E\u0395\u0399"
+  - "\u039A\u03B1\u03BB\u03C9\u03C3\u03AE\u03C1\u03B8\u03B1\u03C4\u03B5 \u03C3\u03C4\u03BF
+    Tour Friend\n\n\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE, \u03C3\u03C7\u03B7\u03BC\u03B1\u03C4\u03AF\u03C3\u03C4\u03B5
+    \u03B4\u03C5\u03BF \u03BF\u03BC\u03AC\u03B4\u03B5\u03C2.\n\u0397 \u03BC\u03B9\u03B1
+    \u03B8\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BF\u03B9 Tour Friends \u03BA\u03B1\u03B9
+    \u03B7 \u03AC\u03BB\u03BB\u03B7 \u03BF\u03B9 \u03A4\u03BF\u03C5\u03C1\u03AF\u03C3\u03C4\u03B5\u03C2"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\u0395\u03A0\u0399\u039B\u039F\u0393\u0397"
+  - 
+  - 
+  - 
+  - "\u0394\u0395\u03A3 \u03A4\u039F \u0392\u0399\u039D\u03A4\u0395\u039F"
+  - 
+  - 
+  - "\u03A3\u03A5\u039D\u0395\u03A7\u0395\u0399\u0391"
+  - "\u03A4\u0395\u039B\u039F\u03A3"
+  - 
+  - "\u039D\u0391\u0399"
+  - "\u039F\u03A7\u0399"
+  - 
+  - 
+  - "\u0396\u0397\u03A4\u0391 \u0392\u039F\u0397\u0398\u0395\u0399\u0391"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\u039F\u039A"
+  - 
+  - 
+  - 
+  - 
+  images:
+  - {fileID: 21300000, guid: a2762901ff7da804d9becdee692a26cb, type: 3}
+  - {fileID: 1125346117314250534, guid: 4305c6d6ec2b50b45a72237a3c5e93b2, type: 3}
+  - {fileID: 6807145349646467647, guid: 4305c6d6ec2b50b45a72237a3c5e93b2, type: 3}
+  - {fileID: 834306487858948532, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 6173317980624082326, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: -9154181242736397984, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: -3265821989810450134, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: -3236588161390744864, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: -8267070300915908799, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 4413594032862880238, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 519224644535881245, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 2223291273671611888, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 7539481170631376265, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 8681257693048493236, guid: 6924069aceb89824aab171682cfb58ae, type: 3}
+  - {fileID: 8857198591431420141, guid: f66cf17ca87e57048a0c5e96cd36b7ad, type: 3}
+  - {fileID: -6281167677846365651, guid: f66cf17ca87e57048a0c5e96cd36b7ad, type: 3}
+  - {fileID: 6656972950753335591, guid: 79ac05eac1cd5d64aa55f96808ae08bc, type: 3}
+  - {fileID: 21300000, guid: e2562ad5e5a7d49409770998b81f7f82, type: 3}
+  - {fileID: -122781978494444354, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: -8074964538566846205, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: 8570055757278993109, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: -5507745657377434686, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: 5468391825510637197, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: -761613974006048989, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: -8108171720715905463, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: -8654293856603184887, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  images_name:
+  - Square
+  - Tourist
+  - Tourfriend
+  - Airport
+  - Taxi
+  - Station
+  - Hotel
+  - Restaurant
+  - CafeBar
+  - Shop
+  - SightSeeing
+  - InfoPoint
+  - Pawn
+  - Places
+  - Points_Ribbon_Win
+  - Points_Ribbon_Lose
+  - VideoBackground_LightBlue
+  - VideoBackground_LightBlueZoom
+  - ButtonPlayTourfriend
+  - ButtonPauseTourfriend
+  - ButtonRepeatTourfriend
+  - ButtonTourist
+  - ButtonTourfriend
+  - ButtonPlayTourist
+  - ButtonPauseTourist
+  - ButtonRepeatTourist
+  videos_en:
+  - {fileID: 32900000, guid: 1842179188733904a82840cad574d4b9, type: 3}
+  - {fileID: 32900000, guid: f6cabbd910bb33b4b9d2dc6f34b01258, type: 3}
+  videos_gr: []
+  videos_en_names:
+  - Placeholder
+  - PlaceholderRed
+  language_current: English
+  total_points: 0
+  sgo:
+  - {fileID: 8558149607620697403, guid: 40ee07a22cddcd747b87bc8ecf5fd702, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 5251514365690250544, guid: c0e5e2e6da2c2e9428852cd6e8bddbff, type: 3}
+  - {fileID: 5251514365690250544, guid: 8efdd62d443ae0442bfe7dd55fd533cd, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 4773252498766698832, guid: e5f4bb0b3160e06418d5f2a6c7f1bec6, type: 3}
+  - {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
+  - {fileID: 4011732601257038363, guid: ef7866569606a704f98ef2518ebb80bb, type: 3}
+  - {fileID: 2956210703625487096, guid: 32443db348bf38142947558e40712fb1, type: 3}
+  - {fileID: 5939764665550102095, guid: 9cc483a1992a4ba48ae8505d8b168578, type: 3}
+  - {fileID: 550610383362973524, guid: 563ac34ac0a098b42a5c4d2aa95bdba1, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 5215008795873550160, guid: dc7b67fd037f1a4449fa9985c3cc959b, type: 3}
+  - {fileID: 4011732601257038363, guid: ef7866569606a704f98ef2518ebb80bb, type: 3}
+  - {fileID: 8626936094389886684, guid: 5c5ab97ef8220f44cb3b95f93890dcde, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
+  - {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
+  - {fileID: 4011732601257038363, guid: ef7866569606a704f98ef2518ebb80bb, type: 3}
+  - {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
+  - {fileID: 4011732601257038363, guid: ef7866569606a704f98ef2518ebb80bb, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
+  - {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
+  - {fileID: 4011732601257038363, guid: ef7866569606a704f98ef2518ebb80bb, type: 3}
+  - {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
+  - {fileID: 550610383362973524, guid: 563ac34ac0a098b42a5c4d2aa95bdba1, type: 3}
+  - {fileID: 4011732601257038363, guid: ef7866569606a704f98ef2518ebb80bb, type: 3}
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  current_screen: 0
+  screenprefabs:
+  - {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+  - {fileID: 8626936094389886684, guid: 5c5ab97ef8220f44cb3b95f93890dcde, type: 3}
+  - {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+  - {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}
+  - {fileID: 4773252498766698832, guid: e5f4bb0b3160e06418d5f2a6c7f1bec6, type: 3}
+  - {fileID: 4011732601257038363, guid: ef7866569606a704f98ef2518ebb80bb, type: 3}
+  - {fileID: 2956210703625487096, guid: 32443db348bf38142947558e40712fb1, type: 3}
+  - {fileID: 5939764665550102095, guid: 9cc483a1992a4ba48ae8505d8b168578, type: 3}
+  - {fileID: 550610383362973524, guid: 563ac34ac0a098b42a5c4d2aa95bdba1, type: 3}
+  - {fileID: 8368841217941215815, guid: 0f26b5a0c21acc64f8669b484b1d671f, type: 3}
+  - {fileID: 5251514365690250544, guid: c0e5e2e6da2c2e9428852cd6e8bddbff, type: 3}
+  - {fileID: 5251514365690250544, guid: 8efdd62d443ae0442bfe7dd55fd533cd, type: 3}
+  - {fileID: 5215008795873550160, guid: dc7b67fd037f1a4449fa9985c3cc959b, type: 3}
+  - {fileID: 3359606706807996094, guid: f9fac0fa1f35d294b95e8227d500265e, type: 3}
+  firstscreen: {fileID: 1809339197361240295, guid: 0f060b40a185d5a488d7dbc1e040f982, type: 3}
+  screen_SOs:
+  - {fileID: 11400000, guid: aa6a83dfdc4edab45b5df94fc431c80f, type: 2}
+  - {fileID: 11400000, guid: 35aa05917a9ad564d9de8608fbe71028, type: 2}
+  - {fileID: 11400000, guid: c00d7ce2e0ef26140b5fae9462fc7479, type: 2}
+  - {fileID: 11400000, guid: 67ea00f044ef6df40902f54a404f7a7f, type: 2}
+  - {fileID: 11400000, guid: 78cac96fe5f92224c912d565550dbc12, type: 2}
+  - {fileID: 11400000, guid: 266fe48d6705a4347b31da3647893fee, type: 2}
+  - {fileID: 11400000, guid: 939e89202eaa73f408a4e9bd03d99bd1, type: 2}
+  - {fileID: 11400000, guid: 923834f57d1f3b64784266dc716085cf, type: 2}
+  - {fileID: 11400000, guid: 506522140c5c93a44a65dad4d28d584f, type: 2}
+  - {fileID: 11400000, guid: 12d91690453e1a64198442d0c17d5b99, type: 2}
+  - {fileID: 11400000, guid: 5dbb0c2b46f73e84fba27f92a13fd5ef, type: 2}
+  - {fileID: 11400000, guid: af2193e1ccff5584dbd6c35942965efc, type: 2}
+  - {fileID: 11400000, guid: 0ddca0c28423eda4c92987f13f0c76ce, type: 2}
+  - {fileID: 11400000, guid: a4a0e658b8fbf4e42a968abaeadf28f5, type: 2}
+  - {fileID: 11400000, guid: 08ed80bf85e89b94c91a1ddc8ad9b3a9, type: 2}
+  - {fileID: 11400000, guid: 12d91690453e1a64198442d0c17d5b99, type: 2}
+  - {fileID: 11400000, guid: f640371df2b9b304d8dea919f0d8a278, type: 2}
+  - {fileID: 11400000, guid: ec990a6c7b15c524b8192719b63826e2, type: 2}
+  - {fileID: 11400000, guid: be449edba3a0c554a9e326d3c269d864, type: 2}
+  - {fileID: 11400000, guid: 0a12210399881b4419693a398f1c1a80, type: 2}
+  - {fileID: 11400000, guid: 956f75f27af7f0f449b814d8c3ed6ca8, type: 2}
+  - {fileID: 11400000, guid: 12d91690453e1a64198442d0c17d5b99, type: 2}
+  - {fileID: 11400000, guid: 372f2856ed9384240bf469f44d1fac06, type: 2}
+  - {fileID: 11400000, guid: a4a0e658b8fbf4e42a968abaeadf28f5, type: 2}
+  - {fileID: 11400000, guid: effe7994c0f610f4fb8a55d8d02f95c8, type: 2}
+  - {fileID: 11400000, guid: 12d91690453e1a64198442d0c17d5b99, type: 2}
+  - {fileID: 11400000, guid: 56f3e024a4e96724c9624726020989fb, type: 2}
+  - {fileID: 11400000, guid: adcb0befe533a7044a2b512947741f38, type: 2}
+  - {fileID: 11400000, guid: 0a12210399881b4419693a398f1c1a80, type: 2}
+  - {fileID: 11400000, guid: d93bc8311a9e62d4db44b95c9e0d51fa, type: 2}
+  - {fileID: 11400000, guid: 12d91690453e1a64198442d0c17d5b99, type: 2}
+  - {fileID: 11400000, guid: 0efd22927cf21774daf734f376f53f65, type: 2}
+  - {fileID: 11400000, guid: a4a0e658b8fbf4e42a968abaeadf28f5, type: 2}
+  - {fileID: 11400000, guid: c66a22214a82816449c4a86fb11b24a0, type: 2}
+  - {fileID: 11400000, guid: 7b5ce91e178f44049ab85d2ec94ce3f5, type: 2}
+  - {fileID: 11400000, guid: 12d91690453e1a64198442d0c17d5b99, type: 2}
+  - {fileID: 11400000, guid: 6a7f3ad30bc87224fabe656865a71ae5, type: 2}
+  screen_SOsAlt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 266fe48d6705a4347b31da3647893fee, type: 2}
+  - {fileID: 11400000, guid: d85238c8a94ddfe4896930a007070414, type: 2}
+  - {fileID: 11400000, guid: 3eee4e25ce7f7d44fbfbfcfa068bbd9f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  reserveScreenSOs:
+  - {fileID: 11400000, guid: 939e89202eaa73f408a4e9bd03d99bd1, type: 2}
+  - {fileID: 11400000, guid: 9238f9bd62671f4458bb1de3b3adc3bd, type: 2}
+  - {fileID: 11400000, guid: 84eebd06d22fa3d49af613374bfa283e, type: 2}
+  - {fileID: 11400000, guid: 06d0f4dbd11b5ab44b1b826e58d0a372, type: 2}
+  - {fileID: 11400000, guid: 50438558f2f412245a5103a10098f8a2, type: 2}
+  - {fileID: 11400000, guid: fa7d32fd25da7ed4f8347a144c21d340, type: 2}
+  - {fileID: 11400000, guid: 108de515f4bc79a4ca68aa6d5f82b783, type: 2}
+  - {fileID: 11400000, guid: 18750e6f8022ff748a15e1264722efca, type: 2}
+  player:
+  - 
+  - Tourfriend
+  - Tourfriend
+  - Tourfriend
+  - Tourist
+  - Tourist
+  - Tourist
+  - Tourfriend
+  - Tourfriend
+  - 
+  - Tourfriend
+  - Tourfriend
+  - Tourfriend
+  - Tourist
+  - Tourist
+  - 
+  - Tourist
+  - Tourist
+  - Tourist
+  - Tourfriend
+  - Tourfriend
+  - 
+  - Tourfriend
+  - Tourist
+  - Tourist
+  - 
+  - Tourist
+  - Tourist
+  - Tourfriend
+  - Tourfriend
+  - 
+  - Tourfriend
+  - Tourist
+  - Tourist
+  - Tourist
+  - 
+  - 
+  correctchoice: 0
+  placelist:
+  - Airport
+  - Taxi
+  - Station
+  - Hotel
+  - Restaurant
+  - CafeBar
+  - Shop
+  - SightSeeing
+  placelistvisited: []
+  current_location: 
+  map: {fileID: 1071033925446103795, guid: d1ab1e6f676febe449142a3230d0dfc4, type: 3}
+  mapinit: 0
+  checkdelegate: 0
+  phrasevideo: 
+  previousScreen: {fileID: 0}
+  backB: {fileID: 0}

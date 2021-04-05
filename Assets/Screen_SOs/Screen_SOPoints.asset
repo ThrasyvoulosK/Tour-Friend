@@ -19,9 +19,10 @@ MonoBehaviour:
 
     YOU DON''T WIN EXTRA POINTS'
   description3: 
-  Content: {fileID: 0}
   Imagename: 
   Imagename2: 
   Button1text: CONTINUE
   Button2text: 
   points: Points
+  Player: 
+  prefab: {fileID: 4011732601257038363, guid: ef7866569606a704f98ef2518ebb80bb, type: 3}

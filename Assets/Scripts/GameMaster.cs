@@ -953,7 +953,7 @@ public class GameMaster : MonoBehaviour
             //find current screen object
             //foreach (GameObject gob in screenprefabs)
             //{
-            GameObject gob = sgo[current_screen - 1];
+            GameObject gob = screen_SOs[current_screen-1].prefab;
                 //gb
                 //if (GameObject.Find(gob.name + "(Clone)") != null)
                 //{
@@ -1008,23 +1008,23 @@ public class GameMaster : MonoBehaviour
     {
         int usedScreen = current_screen - 1;
 
-        GameObject currentGameObject = GameObject.Find(sgo[usedScreen].name + "(Clone)");
+        GameObject currentGameObject = GameObject.Find(screen_SOs[usedScreen].prefab.name + "(Clone)");
         if(currentGameObject!=null)
         {
-            Debug.Log(sgo[usedScreen].name + "(Clone)");
+            Debug.Log(screen_SOs[usedScreen].prefab.name + "(Clone)");
         }
         else
         {
-            Debug.Log(sgo[usedScreen].name + "(Clone)");
+            Debug.Log(screen_SOs[usedScreen].prefab.name + "(Clone)");
         }
 
         GameObject Description = null;
         if (currentGameObject.transform.Find("Description").gameObject!=null)
         {
             Description = currentGameObject.transform.Find("Description").gameObject;
-            if (player[usedScreen] == "Tourist")
+            if (screen_SOs[usedScreen].Player == "Tourist")
                 Description.GetComponent<TextMeshProUGUI>().color = new Color32(157, 28, 32, 255);// Color.red;
-            else if (player[usedScreen] == "Tourfriend")
+            else if (screen_SOs[usedScreen].Player == "Tourfriend")
                 Description.GetComponent<TextMeshProUGUI>().color = new Color32(14, 80, 101, 255); // Color.blue;
         }
         else
@@ -1039,11 +1039,11 @@ public class GameMaster : MonoBehaviour
             Button =  currentGameObject.transform.Find("Button").gameObject;
             Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
 
-            if (player[usedScreen] == "Tourist")
+            if (screen_SOs[usedScreen].Player == "Tourist")
             {
                 Button.GetComponent<Image>().sprite = imagehandler["ButtonTourist"];
             }
-            else if (player[usedScreen] == "Tourfriend")
+            else if (screen_SOs[usedScreen].Player == "Tourfriend")
             {
                 Button.GetComponent<Image>().sprite = imagehandler["ButtonTourfriend"];
             }

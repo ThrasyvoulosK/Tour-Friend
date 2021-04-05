@@ -16,9 +16,10 @@ MonoBehaviour:
     ALLOTED SPACES ON THE BOARD"
   description2: 
   description3: 
-  Content: {fileID: 0}
   Imagename: 
   Imagename2: 
   Button1text: DONE
   Button2text: 
   points: 
+  Player: Tourfriend
+  prefab: {fileID: 5251514365690250544, guid: c0e5e2e6da2c2e9428852cd6e8bddbff, type: 3}

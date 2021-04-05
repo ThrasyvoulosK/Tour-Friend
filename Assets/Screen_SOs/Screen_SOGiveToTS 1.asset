@@ -20,5 +20,5 @@ MonoBehaviour:
   Button1text: DONE
   Button2text: 
   points: 
-  Player: 
-  prefab: {fileID: 0}
+  Player: Tourist
+  prefab: {fileID: 3359606706807996094, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}

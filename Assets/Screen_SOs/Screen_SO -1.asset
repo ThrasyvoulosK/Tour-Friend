@@ -17,9 +17,10 @@ MonoBehaviour:
     OF TOURFRIEND'
   description2: 
   description3: 
-  Content: {fileID: 0}
   Imagename: Tourist
   Imagename2: Tourfriend
   Button1text: DONE
   Button2text: 
   points: 
+  Player: 
+  prefab: {fileID: 3359606706807996094, guid: f9fac0fa1f35d294b95e8227d500265e, type: 3}

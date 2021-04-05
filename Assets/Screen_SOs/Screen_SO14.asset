@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 'MOVE YOUR PAWN ACCORDING TO THE DIRECTIONS.
 
-    FLIP THE CARD.
-    IS IT THE RIGHT CARD?'
+    FLIP THE CARD. IS
+    IT THE RIGHT CARD?'
   description2: 
   description3: 
   Imagename: 
@@ -23,5 +23,5 @@ MonoBehaviour:
   Button1text: YES
   Button2text: NO
   points: 
-  Player: 
-  prefab: {fileID: 0}
+  Player: Tourist
+  prefab: {fileID: 5215008795873550160, guid: dc7b67fd037f1a4449fa9985c3cc959b, type: 3}
