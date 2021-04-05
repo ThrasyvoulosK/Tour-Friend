@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
+  m_Name: Screen_SO16CafeBar
+  m_EditorClassIdentifier: 
+  description: YOU ARE THE TOURIST IN THE CAFE BAR
+  description2: 
+  description3: 
+  Imagename: Tourist
+  Imagename2: CafeBar
+  Button1text: ASK FOR HELP
+  Button2text: 
+  points: 
+  Player: Tourist
+  prefab: {fileID: 8626936094389886684, guid: 5c5ab97ef8220f44cb3b95f93890dcde, type: 3}

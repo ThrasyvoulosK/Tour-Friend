@@ -520,3 +520,12 @@ allow other places to be selected on place-select
 add all functionality of player-list and prefab-list to SOs-list
 
 add a 'give device to tourist' before 'you are a tourist in the airport'
+
+new feedback file on asana
+
+assign videos randomly
+-two vidoes
+--one is the correct
+--the other is random
+-vidoes must be in a random position,between 1 and 2
+--the answer should suit them correctly

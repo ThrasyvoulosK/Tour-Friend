@@ -470,7 +470,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c66a22214a82816449c4a86fb11b24a0, type: 2}
   - {fileID: 11400000, guid: 7b5ce91e178f44049ab85d2ec94ce3f5, type: 2}
   - {fileID: 11400000, guid: 12d91690453e1a64198442d0c17d5b99, type: 2}
-  - {fileID: 11400000, guid: 6a7f3ad30bc87224fabe656865a71ae5, type: 2}
+  - {fileID: 11400000, guid: a73948a404347db4fb8eecd443f8eb78, type: 2}
   screen_SOsAlt:
   - {fileID: 0}
   - {fileID: 0}

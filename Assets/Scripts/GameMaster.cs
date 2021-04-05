@@ -248,7 +248,7 @@ public class GameMaster : MonoBehaviour
         newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = desc;
 
         newgameobject.transform.Find("Button").GetComponent<Button>().onClick.AddListener(delegate {
-            createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
+            createTwoImagesscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
             backB.SetActive(true);
             Destroy(newgameobject);
         });
@@ -514,6 +514,7 @@ public class GameMaster : MonoBehaviour
         BackButton();
 
         //TEST: VideoChoice
+        /*
         GameObject vidch1 = newgameobject.transform.Find("VideoChoice1").gameObject;
         GameObject vidch2 = newgameobject.transform.Find("VideoChoice2").gameObject;
 
@@ -523,35 +524,89 @@ public class GameMaster : MonoBehaviour
         Button button1 = vidch1.transform.Find("Button").gameObject.GetComponent<Button>();
         Button button2 = vidch2.transform.Find("Button").gameObject.GetComponent<Button>();
 
-        //button1.onClick.AddListener(delegate { correctchoice = false; });
-        //ConstructorDecider(button1);
-        ConstructorDecider(button2);
+        ConstructorDecider(button2);//adds 1 to current screen
 
-        //current_screen--;//TEST: Placeholder, because creating two buttons advances it more than it should*/
-        ButtonDecider(button1);
+        ButtonDecider(button1);//doesn't add
+        */
+
+        //GameObject vidch1 = newgameobject.transform.Find("VideoChoice1").gameObject;
+        //GameObject vidch2 = newgameobject.transform.Find("VideoChoice2").gameObject;
+
+        GameObject[] randomVideos = new GameObject[2];
+        //randomVideos[0] = vidch1;
+        //randomVideos[1] = vidch2;
+        int number1 = Random.Range(0, 2);
+        int number2;
+        if (number1 == 0)
+            number2 = 1;
+        else
+        {
+            number2 = 0;
+            number1 = 1;
+        }
+        Debug.Log($"Choosing video numbers {number1} and {number2}");
+
+        randomVideos[number1] = newgameobject.transform.Find("VideoChoice"+(number1+1).ToString()).gameObject;
+        randomVideos[number2] = newgameobject.transform.Find("VideoChoice"+(number2 + 1).ToString()).gameObject;
+
+        //choose a random video to assign on the non-correct choice
+        if(current_screen==locationscreenposition+3)
+        {
+            desc3 = "i want to go" + current_location;
+            if (current_location == "Airport")
+                desc3 = screen_SOs[locationscreenposition+1].description2;
+            else
+            {
+                foreach(Screen_SO sso in reserveScreenSOs)
+                {
+                    if (sso.name.Contains(screen_SOs[locationscreenposition + 1].name) && sso.name.Contains(current_location))
+                        desc3 = sso.description2;
+                }
+            }
+            //desc2= "i want to go" + current_location;
+            do
+                desc2 = reserveScreenSOs[Random.Range(0, 9)].description2;
+            while (desc2 == desc1);
+            Debug.Log("Two Videos Assigned Randomly");
+        }
+        else
+        {
+            Debug.Log("Two Videos Current Screen is: " + current_screen);
+        }
+
+        InitialiseVideoChoice(randomVideos[number1], videos_en_names[0], desc2, desc1, "False");
+        InitialiseVideoChoice(randomVideos[number2], videos_en_names[1], desc3, desc1, "Correct");
+
+        Button button1 = randomVideos[number1].transform.Find("Button").gameObject.GetComponent<Button>();
+        Button button2 = randomVideos[number2].transform.Find("Button").gameObject.GetComponent<Button>();
+
+        ConstructorDecider(button2);//adds 1 to current screen
+
+        ButtonDecider(button1);//doesn't add
+
     }
     void ButtonDecider(Button button1)
     {
-        if (sgo[current_screen].name.EndsWith("Points"))
+        if (screen_SOs[current_screen].prefab.name.EndsWith("Points"))
         {
-            Debug.Log("points screen follows this two-video constructor");
+            //Debug.Log("points screen follows this two-video constructor");
             //button1.onClick.AddListener(delegate { correctchoice = false; });
             //button2.onClick.AddListener(delegate { correctchoice = true; });
             button1.onClick.AddListener(delegate 
             { 
-                createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "CONTINUE");
+                createPointsscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "CONTINUE");
                 //current_screen = locationscreenposition;
             });
         }
-        else if (sgo[current_screen].name.EndsWith("Canvas OneIm TwoOptions"))
+        else if (screen_SOs[current_screen].prefab.name.EndsWith("Canvas OneIm TwoOptions"))
         {
-            Debug.Log("this two video constructor isn't followed by a points screen");
-            button1.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
+            //Debug.Log("this two video constructor isn't followed by a points screen");
+            button1.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text, screen_SOs[current_screen].Button2text); });
         }
-        else if (sgo[current_screen].name.EndsWith("Canvas OneVideo"))
+        else if (screen_SOs[current_screen].prefab.name.EndsWith("Canvas OneVideo"))
         {
-            Debug.Log("after calling two-video constructor we need a OneVideo constructor");
-            button1.onClick.AddListener(delegate { createOneVideoscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].description2, videos_en_names[0], "Continue"); });
+            //Debug.Log("after calling two-video constructor we need a OneVideo constructor");
+            button1.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, screen_SOs[current_screen].description2, videos_en_names[0], "Continue"); });
         }
         else
             Debug.Log("after calling two-video constructor we need a different constructor");
@@ -571,7 +626,7 @@ public class GameMaster : MonoBehaviour
 
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
         newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = desc;
-        Debug.Log("printing points on screen: " + total_points);
+        //Debug.Log("printing points on screen: " + total_points);
         newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "POINTS: <color=#ff0000ff>"+total_points.ToString()+"</color>";
 
         /*Debug.Log("description text is: " + newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text);
@@ -592,7 +647,7 @@ public class GameMaster : MonoBehaviour
 
         button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
 
-        Debug.Log(current_screen);
+        //Debug.Log(current_screen);
 
         //decide on next actions, if won or lost
         if(img=="Points_Ribbon_Win")
@@ -610,7 +665,7 @@ public class GameMaster : MonoBehaviour
     //
     public void createPhraseSelectscreen(GameObject prefab_go, string desc, string img, string button)
     {
-        Debug.Log("Create PhraseSelect Constructor");
+        //Debug.Log("Create PhraseSelect Constructor");
 
         //instantiate its prefab version
         GameObject newgameobject;
@@ -673,9 +728,9 @@ public class GameMaster : MonoBehaviour
         button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
         //button1.onClick.AddListener(delegate { set_current_screen(current_screen-1); });
         button1.onClick.AddListener(delegate { OneScreenBack(); });
-        button1.onClick.AddListener(delegate { createPhraseSelectscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
+        button1.onClick.AddListener(delegate { createPhraseSelectscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
 
-        Debug.Log(current_screen);
+        //Debug.Log(current_screen);
         /*ConstructorDecider(button1);*/
         //add the second button
         //(finish button should take us to the next screen, as usual)
@@ -691,7 +746,7 @@ public class GameMaster : MonoBehaviour
     //
     public void createOneImageTwoChoicesscreen(GameObject prefab_go, string desc, string img, string button, string button2)
     {
-        Debug.Log("coitcs called on " + current_screen);
+        //Debug.Log("coitcs called on " + current_screen);
         //start by creating a one-video screen
         //createOneVideoscreen(prefab_go, desc, vid, button);
         //instantiate its prefab version
@@ -722,27 +777,27 @@ public class GameMaster : MonoBehaviour
         button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
         //button1.onClick.AddListener(delegate { set_current_screen(current_screen - 1); });
 
-        Debug.Log(current_screen);
+        //Debug.Log(current_screen);
         ConstructorDecider(button1);
         //add the second button
         //(the second button here takes us two screens back)
         Button buttontwo = newgameobject.transform.Find("Button2").GetComponent<Button>();
         buttontwo.GetComponentInChildren<TextMeshProUGUI>().text = button2;
-        Debug.Log("buttontwo writes: " + button2);
+        //Debug.Log("buttontwo writes: " + button2);
         //this screen has different functioning when it appears right after phrase-select
         if (phrasescreenposition == (current_screen - 3))
         {
-            Debug.Log("two button image after phrase select");
+            //Debug.Log("two button image after phrase select");
             buttontwo.onClick.AddListener(delegate { TwoScreensBack(); });
-            buttontwo.onClick.AddListener(delegate { createPhraseSelectscreen(sgo[current_screen], screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
+            buttontwo.onClick.AddListener(delegate { createPhraseSelectscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
         }
         else
         {
-            Debug.Log("two button image not after phrase select");
+            //Debug.Log("two button image not after phrase select");
             //'NO' button leads to false answer
             buttontwo.onClick.AddListener(delegate 
             { 
-                createPointsscreen(sgo[current_screen], screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "CONTINUE");
+                createPointsscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "CONTINUE");
                 //current_screen = locationscreenposition;
             });
         }
@@ -778,7 +833,7 @@ public class GameMaster : MonoBehaviour
             usedScreen = current_screen - 1;
 
             GameObject gb = null;
-            gb = GameObject.Find(sgo[current_screen].name + "(Clone)");
+            gb = GameObject.Find(screen_SOs[usedScreen].prefab.name + "(Clone)");
             //Debug.Log(gb.name + " Will Be Destroyed by BackButton");
             //find current screen object
             /*foreach (GameObject gob in screenprefabs)
@@ -814,37 +869,37 @@ public class GameMaster : MonoBehaviour
 
         Debug.Log("calling constructor on " + usedScreen);
 
-        if (sgo[usedScreen].name.StartsWith("Canvas OneImage"))
+        if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneImage"))
         {          
             button.onClick.AddListener(delegate 
             { 
-                createOneImagescreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text);
+                createOneImagescreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text);
                 //GameObject.Find("Canvas OneImage(Clone)").transform.Find("Button").transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().color = Color.red;// new Color32(157, 28, 32,255);
                 //DO NOT TOUCH! GameObject.Find("Canvas OneImage(Clone)").transform.Find("Description").GetComponent<TextMeshProUGUI>().material.color = Color.white;//new Color(255, 255, 255);
                 //GameObject.Find("Canvas OneImage(Clone)").transform.Find("Description").GetComponent<TextMeshProUGUI>().color = Color.red;
                 //GameObject.Find("Canvas OneImage(Clone)").transform.Find("Description").GetComponent<TextMeshProUGUI>().color = Color.blue;
             });
         }
-        else if(sgo[usedScreen].name.StartsWith("Canvas OneIm"))//TwoOptions
+        else if(screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneIm"))//TwoOptions
         {
             //current_screen--;
-            button.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
+            button.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
 
             //current_screen--;//
         }
-        else if (sgo[usedScreen].name.StartsWith("Canvas TwoImages"))
+        else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas TwoImages"))
         {
-            button.onClick.AddListener(delegate { createTwoImagesscreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Imagename2, screen_SOs[usedScreen].Button1text); });
+            button.onClick.AddListener(delegate { createTwoImagesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Imagename2, screen_SOs[usedScreen].Button1text); });
         }
-        else if (sgo[usedScreen].name.StartsWith("Canvas Map"))
+        else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas Map"))
         {
-            button.onClick.AddListener(delegate { createMapscreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text); });
+            button.onClick.AddListener(delegate { createMapscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text); });
         }
-        else if (sgo[usedScreen].name.StartsWith("Canvas SelectPlace"))
+        else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas SelectPlace"))
         {
-            button.onClick.AddListener(delegate { createPlaceSelectscreen(sgo[usedScreen], screen_SOs[usedScreen].description, images_name[0], screen_SOs[usedScreen].Button1text); });
+            button.onClick.AddListener(delegate { createPlaceSelectscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, images_name[0], screen_SOs[usedScreen].Button1text); });
         }
-        else if (sgo[usedScreen].name.StartsWith("Canvas OneVideo"))
+        else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneVideo"))
         {
             Debug.Log("CALLING ONE VIDEO");
             //Special Case: The Video after Place-Select
@@ -852,7 +907,7 @@ public class GameMaster : MonoBehaviour
             if (usedScreen != locationscreenposition+1)
             {
                 //Debug.log
-                button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
             }
             else
             {
@@ -873,50 +928,50 @@ public class GameMaster : MonoBehaviour
 
                     }
                     if(screen_SO!=null)
-                        button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], screen_SO.description, screen_SO.description2, videos_en_names[1], screen_SO.Button1text); });
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SO.description, screen_SO.description2, videos_en_names[1], screen_SO.Button1text); });
 
-                    Debug.Log($"We are going to {screen_SO.description2}");
+                    //Debug.Log($"We are going to {screen_SO.description2}");
 
                 }
                 else
-                    button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                    button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
             }
         }
-        else if (sgo[usedScreen].name.StartsWith("Canvas OneVi"))//TwoOptions
+        else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneVi"))//TwoOptions
         {
             //current_screen--;
-            Debug.Log("onevi");
+            //Debug.Log("onevi");
             if (usedScreen - 1 == phrasescreenposition)
             {
                 Debug.Log("video called after phrase-select");
-                button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(sgo[usedScreen], screen_SOs[usedScreen].description, phrasevideo, images_name[0], screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
+                button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, phrasevideo, images_name[0], screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
             }
             else
             {
-                button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, images_name[0], screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
+                button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, images_name[0], screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
             }
             
 
             //current_screen--;
         }
-        else if (sgo[usedScreen].name.StartsWith("Canvas TwoVideos"))
+        else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas TwoVideos"))
         {
-            button.onClick.AddListener(delegate { createTwoVideosscreen(sgo[usedScreen], screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, screen_SOs[usedScreen].description3, images_name[0], screen_SOs[usedScreen].Button1text); });
+            button.onClick.AddListener(delegate { createTwoVideosscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, screen_SOs[usedScreen].description3, images_name[0], screen_SOs[usedScreen].Button1text); });
         }
-        else if (sgo[usedScreen].name.StartsWith("Canvas Points"))
+        else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas Points"))
         {
             //Debug.Log("Correct answer Creating");
             button.onClick.AddListener(delegate { total_points += point_base; });
             //Debug.Log("Points added: " + total_points);
-            button.onClick.AddListener(delegate { createPointsscreen(sgo[usedScreen], screen_SOs[usedScreen].description, "Points_Ribbon_Win", "CONTINUE"); });
+            button.onClick.AddListener(delegate { createPointsscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, "Points_Ribbon_Win", "CONTINUE"); });
         }
-        else if (sgo[usedScreen].name.StartsWith("Canvas SelectPhrases"))
+        else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas SelectPhrases"))
         {
             Debug.Log("Creating CanvasSelectPhrases");
-            button.onClick.AddListener(delegate { createPhraseSelectscreen(sgo[usedScreen], screen_SOs[usedScreen].description, images_name[0], screen_SOs[usedScreen].Button1text); });
+            button.onClick.AddListener(delegate { createPhraseSelectscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, images_name[0], screen_SOs[usedScreen].Button1text); });
         }
         else
-            Debug.Log("we don't have a constructor for " + sgo[usedScreen].name + " yet!");
+            Debug.Log("we don't have a constructor for " + screen_SOs[usedScreen].prefab.name + " yet!");
 
         //decide colours
         button.onClick.AddListener(delegate { ColourChanger(); });
