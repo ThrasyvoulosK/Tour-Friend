@@ -1,7 +1,106 @@
 fileFormatVersion: 2
 guid: 0a3b3e1e5fc75844ca9c30a8ea662ab2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -9004736340338122096
+    second: Tourfriend airport_tourist there, ask for help_0
+  - first:
+      213: 7175396267764251848
+    second: Tourfriend airport_tourist there, ask for help_1
+  - first:
+      213: -8174704063238640278
+    second: Tourfriend airport_tourist there, ask for help_2
+  - first:
+      213: -5508766891302553540
+    second: Tourfriend airport_tourist there, ask for help_3
+  - first:
+      213: -4552150091927191190
+    second: Tourfriend airport_tourist there, ask for help_4
+  - first:
+      213: 1957826659569597187
+    second: Tourfriend airport_tourist there, ask for help_5
+  - first:
+      213: -5277672535524209847
+    second: Tourfriend airport_tourist there, ask for help_6
+  - first:
+      213: -3066455247698221973
+    second: Tourfriend airport_tourist there, ask for help_7
+  - first:
+      213: 5759926402935444902
+    second: Tourfriend airport_tourist there, ask for help_8
+  - first:
+      213: -3558123193758430821
+    second: Tourfriend airport_tourist there, ask for help_9
+  - first:
+      213: 4998447999070564028
+    second: Tourfriend airport_tourist there, ask for help_10
+  - first:
+      213: 5557777270780657221
+    second: Tourfriend airport_tourist there, ask for help_11
+  - first:
+      213: -3571910355536724041
+    second: Tourfriend airport_tourist there, ask for help_12
+  - first:
+      213: -7199190528192926466
+    second: Tourfriend airport_tourist there, ask for help_13
+  - first:
+      213: 5801745583918326527
+    second: Tourfriend airport_tourist there, ask for help_14
+  - first:
+      213: 6889050400827098510
+    second: Tourfriend airport_tourist there, ask for help_15
+  - first:
+      213: -269280704283098754
+    second: Tourfriend airport_tourist there, ask for help_16
+  - first:
+      213: 6373765868765710179
+    second: Tourfriend airport_tourist there, ask for help_17
+  - first:
+      213: -5953521156409209357
+    second: Tourfriend airport_tourist there, ask for help_18
+  - first:
+      213: -2666558722563269578
+    second: Tourfriend airport_tourist there, ask for help_19
+  - first:
+      213: -2834838660743011516
+    second: Tourfriend airport_tourist there, ask for help_20
+  - first:
+      213: -6619119001385734806
+    second: Tourfriend airport_tourist there, ask for help_21
+  - first:
+      213: 8978096694809750992
+    second: Tourfriend airport_tourist there, ask for help_22
+  - first:
+      213: -4742429472134881163
+    second: Tourfriend airport_tourist there, ask for help_23
+  - first:
+      213: 1510023124085115313
+    second: Tourfriend airport_tourist there, ask for help_24
+  - first:
+      213: 593521642303295815
+    second: Tourfriend airport_tourist there, ask for help_25
+  - first:
+      213: -7086303182069095473
+    second: Tourfriend airport_tourist there, ask for help_26
+  - first:
+      213: -7064507310982697061
+    second: Tourfriend airport_tourist there, ask for help_27
+  - first:
+      213: 5619692816168015620
+    second: Tourfriend airport_tourist there, ask for help_28
+  - first:
+      213: -7474670162891290734
+    second: Tourfriend airport_tourist there, ask for help_29
+  - first:
+      213: -6836368302642906684
+    second: Tourfriend airport_tourist there, ask for help_30
+  - first:
+      213: 6059028589983312970
+    second: Tourfriend airport_tourist there, ask for help_31
+  - first:
+      213: -7427284630215275849
+    second: Tourfriend airport_tourist there, ask for help_32
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +140,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +172,138 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend airport_tourist there, ask for help_0
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 933
+        width: 74
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0926812f100c80380800000000000000
+      internalID: -9004736340338122096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend airport_tourist there, ask for help_29
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 388
+        width: 376
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29747afd613a44890800000000000000
+      internalID: -7474670162891290734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend airport_tourist there, ask for help_30
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 389
+        width: 384
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9ba37df375021a0800000000000000
+      internalID: -6836368302642906684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend airport_tourist there, ask for help_31
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 140
+        width: 557
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c24e5866ef51450800000000000000
+      internalID: 6059028589983312970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend airport_tourist there, ask for help_32
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 14
+        width: 557
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bacc42fafbfce890800000000000000
+      internalID: -7427284630215275849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

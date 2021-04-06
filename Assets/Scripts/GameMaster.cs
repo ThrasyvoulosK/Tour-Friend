@@ -658,8 +658,10 @@ public class GameMaster : MonoBehaviour
         {
             current_screen = locationscreenposition-1;
             current_location = null;
-            //remove last visited screen, so that we can revisit it again
-            placelistvisited.Remove(placelistvisited[placelistvisited.Count - 1]);
+            
+            /* //remove last visited screen, so that we can revisit it again
+            placelistvisited.Remove(placelistvisited[placelistvisited.Count - 1]);*/
+
             ConstructorDecider(button1);
         }
     }

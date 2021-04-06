@@ -15,7 +15,7 @@ MonoBehaviour:
   description: YOU ARE THE TOURIST IN THE TAXI
   description2: 
   description3: 
-  Imagename: Tourist
+  Imagename: HelpTourist
   Imagename2: Taxi
   Button1text: ASK FOR HELP
   Button2text: 

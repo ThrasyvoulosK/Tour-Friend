@@ -15,7 +15,7 @@ MonoBehaviour:
   description: YOU ARE THE TOURIST IN THE STATION
   description2: 
   description3: 
-  Imagename: Tourist
+  Imagename: HelpTourist
   Imagename2: Station
   Button1text: ASK FOR HELP
   Button2text: 

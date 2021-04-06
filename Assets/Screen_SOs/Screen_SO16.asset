@@ -15,8 +15,8 @@ MonoBehaviour:
   description: YOU ARE THE TOURIST IN THE AIRPORT
   description2: 
   description3: 
-  Imagename: Tourist
-  Imagename2: Airport
+  Imagename: HelpTourist
+  Imagename2: HelpAirport
   Button1text: ASK FOR HELP
   Button2text: 
   points: 
