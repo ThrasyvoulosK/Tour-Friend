@@ -565,9 +565,11 @@ public class GameMaster : MonoBehaviour
             }
             //desc2= "i want to go" + current_location;
             do
-                desc2 = reserveScreenSOs[Random.Range(0, 9)].description2;
+            {
+                desc2 = reserveScreenSOs[Random.Range(0, 8)].description2;
+            }
             while (desc2 == desc1);
-            Debug.Log("Two Videos Assigned Randomly");
+            Debug.Log($"Two Videos (${desc1} & ${desc2}) Assigned Randomly");
         }
         else
         {

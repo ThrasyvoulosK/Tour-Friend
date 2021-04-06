@@ -522,6 +522,22 @@ add all functionality of player-list and prefab-list to SOs-list
 add a 'give device to tourist' before 'you are a tourist in the airport'
 
 new feedback file on asana
+//-1 splash
+-2 graphics, letters, sizes, pixels
+-3 as above, same font size between objects, replace back with pause?
+-4 info
+-5
+-6
+-7
+-8
+-9
+-10
+-11
+//-12 welldone
+-13
+-14
+-15
+//-16 End of round
 
 assign videos randomly
 -two vidoes
@@ -529,3 +545,4 @@ assign videos randomly
 --the other is random
 -vidoes must be in a random position,between 1 and 2
 --the answer should suit them correctly
+
