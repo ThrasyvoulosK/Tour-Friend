@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: c5246c273640c974babda9b25b00f9a5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8563276430168491265
+    second: Tourfriend_zoom video tourfriend beginning buttons_0
+  - first:
+      213: 2781536681278929323
+    second: Tourfriend_zoom video tourfriend beginning buttons_1
+  - first:
+      213: -4591670955936598154
+    second: Tourfriend_zoom video tourfriend beginning buttons_2
+  - first:
+      213: -966487584667137417
+    second: Tourfriend_zoom video tourfriend beginning buttons_3
+  - first:
+      213: -3541923226317897989
+    second: Tourfriend_zoom video tourfriend beginning buttons_4
+  - first:
+      213: 8155677503780830912
+    second: Tourfriend_zoom video tourfriend beginning buttons_5
+  - first:
+      213: -1560790411466584193
+    second: Tourfriend_zoom video tourfriend beginning buttons_6
+  - first:
+      213: 8930597108366937301
+    second: Tourfriend_zoom video tourfriend beginning buttons_7
+  - first:
+      213: 1826736286402601060
+    second: Tourfriend_zoom video tourfriend beginning buttons_8
+  - first:
+      213: 1157580053971377731
+    second: Tourfriend_zoom video tourfriend beginning buttons_9
+  - first:
+      213: -7763477246516325614
+    second: Tourfriend_zoom video tourfriend beginning buttons_10
+  - first:
+      213: -8309834778074738664
+    second: Tourfriend_zoom video tourfriend beginning buttons_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +109,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_0
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 831
+        width: 1190
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffaf45af471292980800000000000000
+      internalID: -8563276430168491265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_1
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 723
+        width: 42
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba97959dfd00a9620800000000000000
+      internalID: 2781536681278929323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_2
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 714
+        width: 108
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677bbe1e79b1740c0800000000000000
+      internalID: -4591670955936598154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_3
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 713
+        width: 449
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a071499a85692f0800000000000000
+      internalID: -966487584667137417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_4
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 714
+        width: 108
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfebd91779f88dec0800000000000000
+      internalID: -3541923226317897989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_5
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 715
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce3083aa79ce2170800000000000000
+      internalID: 8155677503780830912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_6
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 361
+        width: 1191
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fc2b3e365f65ae0800000000000000
+      internalID: -1560790411466584193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_7
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 253
+        width: 49
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc8754f0cadfeb70800000000000000
+      internalID: 8930597108366937301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_8
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 243
+        width: 108
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460e75959fed95910800000000000000
+      internalID: 1826736286402601060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_9
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 243
+        width: 449
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e9a0c0dec801010800000000000000
+      internalID: 1157580053971377731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_10
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 243
+        width: 108
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2131193b396924490800000000000000
+      internalID: -7763477246516325614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tourfriend_zoom video tourfriend beginning buttons_11
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 245
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8101ba6fb498dac80800000000000000
+      internalID: -8309834778074738664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

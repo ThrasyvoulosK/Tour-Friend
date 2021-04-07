@@ -16,14 +16,21 @@ public class LenseScript : MonoBehaviour
     void Start()
     {
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
+
         backGroundName = "VideoBackground_LightBlue";
 
         Debug.Log("lense start");
         lense = gameObject.transform.Find("LenseButton").gameObject;
+
         gameObject.GetComponent<Canvas>().overrideSorting=true;
         orig_pos = gameObject.GetComponent<RectTransform>().position;
 
-        magnify();
+        if (gameObject.name.StartsWith("C VideoChoice"))
+            magnify();
+        else if (gameObject.name.StartsWith("Canvas SelectPhrases"))
+            magnifyMap();
+        else
+            magnify();
         
     }
 
@@ -34,36 +41,27 @@ public class LenseScript : MonoBehaviour
         {
             Debug.Log("lense changed");
             gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.RemoveAllListeners();
-            /*gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
-            {
-                gameObject.transform.Find("BackgroundImage").GetComponent<Image>().sprite = theGameMaster.imagehandler[backGroundName];
 
-                gameObject.GetComponent<RectTransform>().localScale = new Vector3(1.5f, 1.5f, 0);
-                gameObject.GetComponent<RectTransform>().position = orig_pos;
-                gameObject.GetComponent<Canvas>().sortingOrder=0 ;
-                gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>().Stop();
-                ison = false; changed = true;
-            });*/
-            shrink();
+            if (gameObject.name.StartsWith("Canvas SelectPhrases"))
+                shrinkMap();
+            else
+                shrink();
+
             changed = false;
             
         }
         else if(changed&&(ison==false)) //if(ison)
         {
-            
-                Debug.Log("not changed-ison");
-                gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.RemoveAllListeners();
-            /*gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
-            {
-                gameObject.transform.Find("BackgroundImage").GetComponent<Image>().sprite = theGameMaster.imagehandler[backGroundName + "Zoom"];
+            Debug.Log("not changed-ison");
+            gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.RemoveAllListeners();
 
-                gameObject.GetComponent<RectTransform>().localScale = new Vector3(2.25f, 2.25f, 0);
-                gameObject.GetComponent<RectTransform>().position = gameObject.GetComponent<RectTransform>().parent.position;
-                gameObject.GetComponent<Canvas>().sortingOrder = 1;
-                gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>().Play();
-                ison = true; changed = true;
-            });*/
-            magnify();
+            if (gameObject.name.StartsWith("C VideoChoice"))
+                magnify();
+            else if (gameObject.name.StartsWith("Canvas SelectPhrases"))
+                magnifyMap();
+            else
+                magnify();
+
             changed = false;
             
         }
@@ -97,6 +95,9 @@ public class LenseScript : MonoBehaviour
             gameObject.transform.Find("ButtonRepeat").localPosition += new Vector3(0, 18f);
             gameObject.transform.Find("LenseButton").localScale = new Vector3(0.6f, 0.6f);
             gameObject.transform.Find("LenseButton").localPosition += new Vector3(0, 18f);
+
+            //change sprite
+            gameObject.transform.Find("LenseButton").GetComponent<Image>().sprite = theGameMaster.imagehandler["LenseMinus"];
 
 
             gameObject.GetComponent<RectTransform>().position = gameObject.GetComponent<RectTransform>().parent.position;
@@ -133,11 +134,52 @@ public class LenseScript : MonoBehaviour
             gameObject.transform.Find("LenseButton").localScale = new Vector3(1f, 1f);
             gameObject.transform.Find("LenseButton").localPosition += new Vector3(0, -18f);
 
+            //change sprite
+            gameObject.transform.Find("LenseButton").GetComponent<Image>().sprite = theGameMaster.imagehandler["LensePlus"];
+
             gameObject.GetComponent<RectTransform>().position = orig_pos;
             gameObject.GetComponent<Canvas>().sortingOrder = 0;
             gameObject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>().Stop();
             ison = false; changed = true;
         });
 
+    }
+
+    public void magnifyMap()
+    {
+        Debug.Log("MagnifyMap Code");
+        gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
+        {
+            gameObject.transform.Find("C Map").localScale = new Vector3(1.3f, 1.3f);
+            gameObject.transform.Find("C Map").localPosition = new Vector3(0, 0);
+
+            //resize objects
+            gameObject.transform.Find("LenseButton").localPosition = new Vector3(150f, -100f);
+
+            //change sprite
+            gameObject.transform.Find("LenseButton").GetComponent<Image>().sprite = theGameMaster.imagehandler["LenseMinus"];
+
+            ison = true; 
+            changed = true;
+        });
+    }
+
+    public void shrinkMap()
+    {
+        Debug.Log("ShrinkMap Code");
+        gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
+        {
+            gameObject.transform.Find("C Map").localScale = new Vector3(0.33f, 0.33f);
+            gameObject.transform.Find("C Map").localPosition = new Vector3(-200, 45);
+
+            //resize objects
+            gameObject.transform.Find("LenseButton").localPosition = new Vector3(-200, 45);
+
+            //change sprite
+            gameObject.transform.Find("LenseButton").GetComponent<Image>().sprite = theGameMaster.imagehandler["ButtonLensePlus"];
+
+            ison = false; 
+            changed = true;
+        });
     }
 }

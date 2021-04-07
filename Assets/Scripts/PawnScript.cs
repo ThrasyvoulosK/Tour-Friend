@@ -16,8 +16,8 @@ public class PawnScript : MonoBehaviour
     string current_choice;
     GameMaster gameMaster;
 
-    public GameObject button;
-    public Button bu;
+    public GameObject[] button;//=new GameObject[2];
+    public Button[] bu;//=new Button[2];
 
     public GameObject placeimage;
 
@@ -32,11 +32,25 @@ public class PawnScript : MonoBehaviour
         current_choice = null;
         gameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
 
-        //find the screen's button and disable it 
-        /*button = gameObject.transform.Find("Button").gameObject;
-        bu = button.GetComponent<Button>();
-        bu.interactable = false;*/
-        //button.SetActive(false);
+        //find the screen's buttons and disable them (if more than one exist)
+        button=new GameObject[2];
+        bu=new Button[2];
+        //if (gameObject.transform.Find("Button2") != null)
+        if (GameObject.Find("Canvas OneIm Map TwoOptions(Clone)") != null)
+        {
+            for (int i = 0; i <= 1; i++)
+            {
+                
+                if (i == 1)
+                    button[i] = GameObject.Find("Canvas OneIm Map TwoOptions(Clone)").transform.Find("Button2").gameObject;
+                else
+                    button[i] = GameObject.Find("Canvas OneIm Map TwoOptions(Clone)").transform.Find("Button").gameObject;
+
+                bu[i] = button[i].GetComponent<Button>();
+                bu[i].interactable = false;
+                //button.SetActive(false);
+            }
+        }
 
         placeimage = null;
 
@@ -72,6 +86,8 @@ public class PawnScript : MonoBehaviour
         }
         //find all the visited places and disable them
         //
+
+        GameObject.Find("Canvas OneIm Map TwoOptions(Clone)");
     }
 
     // Update is called once per frame
@@ -124,7 +140,10 @@ public class PawnScript : MonoBehaviour
                     //placeimage.SetActive(false);
                     placeimage.GetComponent<Image>().sprite = gameMaster.imagehandler["Pawn"];
 
-
+                    //re-allow buttons
+                    if (GameObject.Find("Canvas OneIm Map TwoOptions(Clone)").transform.Find("Button2") != null)
+                        foreach (Button b in bu)
+                            b.interactable = true;
                 }
             }
             
