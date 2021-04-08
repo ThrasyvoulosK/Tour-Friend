@@ -1,7 +1,112 @@
 fileFormatVersion: 2
 guid: 30be52508cbb88a44bf6b617dbf69cb9
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4344256347943134250
+    second: Tourfriend sightseeing_tourist there, ask for help_0
+  - first:
+      213: -8802007383959228806
+    second: Tourfriend sightseeing_tourist there, ask for help_1
+  - first:
+      213: 3448549215248058617
+    second: Tourfriend sightseeing_tourist there, ask for help_2
+  - first:
+      213: -4617575648163507498
+    second: Tourfriend sightseeing_tourist there, ask for help_3
+  - first:
+      213: 5809452649409369677
+    second: Tourfriend sightseeing_tourist there, ask for help_4
+  - first:
+      213: 6102932593795672431
+    second: Tourfriend sightseeing_tourist there, ask for help_5
+  - first:
+      213: -1420783389714897437
+    second: Tourfriend sightseeing_tourist there, ask for help_6
+  - first:
+      213: -6346253367889192712
+    second: Tourfriend sightseeing_tourist there, ask for help_7
+  - first:
+      213: 6792551491556350641
+    second: Tourfriend sightseeing_tourist there, ask for help_8
+  - first:
+      213: -4915961833430069032
+    second: Tourfriend sightseeing_tourist there, ask for help_9
+  - first:
+      213: -4894645720529373853
+    second: Tourfriend sightseeing_tourist there, ask for help_10
+  - first:
+      213: -2191421579867338262
+    second: Tourfriend sightseeing_tourist there, ask for help_11
+  - first:
+      213: 8821354187256893825
+    second: Tourfriend sightseeing_tourist there, ask for help_12
+  - first:
+      213: 8134383738179913059
+    second: Tourfriend sightseeing_tourist there, ask for help_13
+  - first:
+      213: -7591728653257003758
+    second: Tourfriend sightseeing_tourist there, ask for help_14
+  - first:
+      213: 7327159270014395851
+    second: Tourfriend sightseeing_tourist there, ask for help_15
+  - first:
+      213: -8202629058692287479
+    second: Tourfriend sightseeing_tourist there, ask for help_16
+  - first:
+      213: -1014973290578526386
+    second: Tourfriend sightseeing_tourist there, ask for help_17
+  - first:
+      213: 1966526517472354511
+    second: Tourfriend sightseeing_tourist there, ask for help_18
+  - first:
+      213: -2524125181907172280
+    second: Tourfriend sightseeing_tourist there, ask for help_19
+  - first:
+      213: -615110948815910494
+    second: Tourfriend sightseeing_tourist there, ask for help_20
+  - first:
+      213: 1527469979210739091
+    second: Tourfriend sightseeing_tourist there, ask for help_21
+  - first:
+      213: 4048666590709847428
+    second: Tourfriend sightseeing_tourist there, ask for help_22
+  - first:
+      213: -8680513493119587174
+    second: Tourfriend sightseeing_tourist there, ask for help_23
+  - first:
+      213: 3260941576558106969
+    second: Tourfriend sightseeing_tourist there, ask for help_24
+  - first:
+      213: 5899566274676992847
+    second: Tourfriend sightseeing_tourist there, ask for help_25
+  - first:
+      213: 8461144197049472222
+    second: Tourfriend sightseeing_tourist there, ask for help_26
+  - first:
+      213: -4739743960700950505
+    second: Tourfriend sightseeing_tourist there, ask for help_27
+  - first:
+      213: 2542817344567572522
+    second: Tourfriend sightseeing_tourist there, ask for help_28
+  - first:
+      213: 1184713304262119424
+    second: Tourfriend sightseeing_tourist there, ask for help_29
+  - first:
+      213: 5968560820688300625
+    second: Tourfriend sightseeing_tourist there, ask for help_30
+  - first:
+      213: 1491414379021108454
+    second: Tourfriend sightseeing_tourist there, ask for help_31
+  - first:
+      213: 8316986429466454573
+    second: Tourfriend sightseeing_tourist there, ask for help_32
+  - first:
+      213: -8035501164394425388
+    second: Tourfriend sightseeing_tourist there, ask for help_33
+  - first:
+      213: -7506608529708369798
+    second: Tourfriend sightseeing_tourist there, ask for help_34
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +146,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +178,54 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend sightseeing_tourist there, ask for help_0
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 388
+        width: 388
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db1d9f4ed916b3c0800000000000000
+      internalID: -4344256347943134250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

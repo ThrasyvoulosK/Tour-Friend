@@ -24,13 +24,15 @@ public class ProgressBarScript : MonoBehaviour
         currentfill = 0;
         currentfill = GameObject.Find("GameMaster").GetComponent<GameMaster>().total_points;
 
+        GetCurrentFill();
+
         setText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetCurrentFill();
+        //GetCurrentFill();
 
         /*if (gameObject.transform.Find("Button1").gameObject.activeInHierarchy == true && gameObject.transform.Find("Button2").gameObject.activeInHierarchy == true)
             buttonsActive = true;

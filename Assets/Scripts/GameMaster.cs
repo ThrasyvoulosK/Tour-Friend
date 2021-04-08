@@ -874,9 +874,9 @@ public class GameMaster : MonoBehaviour
         Debug.Log("calling constructor on " + usedScreen);
 
         if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneImage"))
-        {          
-            button.onClick.AddListener(delegate 
-            { 
+        {
+            button.onClick.AddListener(delegate
+            {
                 createOneImagescreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text);
                 //GameObject.Find("Canvas OneImage(Clone)").transform.Find("Button").transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().color = Color.red;// new Color32(157, 28, 32,255);
                 //DO NOT TOUCH! GameObject.Find("Canvas OneImage(Clone)").transform.Find("Description").GetComponent<TextMeshProUGUI>().material.color = Color.white;//new Color(255, 255, 255);
@@ -884,16 +884,39 @@ public class GameMaster : MonoBehaviour
                 //GameObject.Find("Canvas OneImage(Clone)").transform.Find("Description").GetComponent<TextMeshProUGUI>().color = Color.blue;
             });
         }
-        else if(screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneIm"))//TwoOptions
+        else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneIm"))//TwoOptions
         {
-            //current_screen--;
             button.onClick.AddListener(delegate { createOneImageTwoChoicesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
-
-            //current_screen--;//
         }
         else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas TwoImages"))
         {
-            button.onClick.AddListener(delegate { createTwoImagesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Imagename2, screen_SOs[usedScreen].Button1text); });
+            if (usedScreen != 16)
+                button.onClick.AddListener(delegate { createTwoImagesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Imagename2, screen_SOs[usedScreen].Button1text); });
+            else//Special Case: "You are a tourist in the: <location>"
+            {
+                Debug.Log("you are a tourist screen");
+                button.onClick.RemoveAllListeners();
+                if (current_location != "Airport")//Airport is our default selection
+                {
+                    Screen_SO screen_SO = null;
+                    foreach (Screen_SO sso in reserveScreenSOs)
+                    {
+                        if (sso.name == screen_SOs[usedScreen].name + current_location)
+                        {
+                            screen_SO = sso;
+                            break;
+                        }
+
+                    }
+                    if (screen_SO != null)
+                        button.onClick.AddListener(delegate { createTwoImagesscreen(screen_SOs[usedScreen].prefab, screen_SO.description, screen_SO.Imagename, screen_SO.Imagename2, screen_SO.Button1text); });
+
+                    //Debug.Log($"We are going to {screen_SO.description2}");
+
+                }
+                else
+                    button.onClick.AddListener(delegate { createTwoImagesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Imagename2, screen_SOs[usedScreen].Button1text); });
+            }
         }
         else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas Map"))
         {
@@ -905,10 +928,10 @@ public class GameMaster : MonoBehaviour
         }
         else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneVideo"))
         {
-            Debug.Log("CALLING ONE VIDEO");
+            //Debug.Log("CALLING ONE VIDEO");
             //Special Case: The Video after Place-Select
             //load a video that suits our selection
-            if (usedScreen != locationscreenposition+1)
+            if (usedScreen != locationscreenposition + 1)
             {
                 //Debug.log
                 button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
@@ -917,21 +940,19 @@ public class GameMaster : MonoBehaviour
             {
                 Debug.Log("Video after location select");
                 button.onClick.RemoveAllListeners();
-                if(current_location!="Airport")//Airport is our deafault selection
+                if (current_location != "Airport")//Airport is our default selection
                 {
-                    //button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], reserveScreenSOs[0].description, reserveScreenSOs[0].description2, videos_en_names[1], reserveScreenSOs[0].Button1text); });
-                    //button.onClick.AddListener(delegate { createOneVideoscreen(sgo[usedScreen], Array.Find, reserveScreenSOs[0].description2, videos_en_names[1], reserveScreenSOs[0].Button1text); });
-                    Screen_SO screen_SO=null;
-                    foreach(Screen_SO sso in reserveScreenSOs)
+                    Screen_SO screen_SO = null;
+                    foreach (Screen_SO sso in reserveScreenSOs)
                     {
-                        if(sso.name== screen_SOs[usedScreen].name+current_location)
+                        if (sso.name == screen_SOs[usedScreen].name + current_location)
                         {
                             screen_SO = sso;
                             break;
                         }
 
                     }
-                    if(screen_SO!=null)
+                    if (screen_SO != null)
                         button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SO.description, screen_SO.description2, videos_en_names[1], screen_SO.Button1text); });
 
                     //Debug.Log($"We are going to {screen_SO.description2}");
@@ -954,7 +975,7 @@ public class GameMaster : MonoBehaviour
             {
                 button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, images_name[0], screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
             }
-            
+
 
             //current_screen--;
         }
