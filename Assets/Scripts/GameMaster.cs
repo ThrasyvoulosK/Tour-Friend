@@ -828,6 +828,13 @@ public class GameMaster : MonoBehaviour
         {
             current_screen++;
             usedScreen++;
+
+            // disable progress bar while showing introductory screens
+            if (current_screen <= locationscreenposition && current_screen > 0)
+            {
+                Debug.Log($"disabling progress bar on {usedScreen - 1} : {screen_SOs[usedScreen - 1].prefab.name}");
+                GameObject.Find(screen_SOs[usedScreen - 1].prefab.name + "(Clone)").transform.Find("ProgressBar").gameObject.SetActive(false);
+            }
         }
         else
         {
@@ -853,12 +860,12 @@ public class GameMaster : MonoBehaviour
 
 
         //TESTING: Code is temporary
-        if (current_screen > sgo.Count)
+        if (current_screen > screen_SOs.Count)
         {
             Debug.Log("Quitting because we don't have a next screen to show, yet!");
             Application.Quit();
         }
-        else if (current_screen == sgo.Count)
+        else if (current_screen == screen_SOs.Count)
         {
             Debug.Log("End of round. Go back to place select");
             current_screen = locationscreenposition;
@@ -866,6 +873,7 @@ public class GameMaster : MonoBehaviour
             //testing route change
             //screen_SOs = screen_SOsAlt;
         }
+        
 
             if (button == null)
             Debug.Log("null button");

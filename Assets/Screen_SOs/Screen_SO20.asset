@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO20
   m_EditorClassIdentifier: 
-  description: 'What did the tourist say to you?
-
-'
+  description: WHAT DID THE TOURIST ASK FOR?
   description2: 'I WOULD LIKE TO
 
     DROP MY BAGGAGE'

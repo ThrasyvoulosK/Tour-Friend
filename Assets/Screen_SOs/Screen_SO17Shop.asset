@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
-  m_Name: Screen_SO16Shop 1
+  m_Name: Screen_SO17Shop
   m_EditorClassIdentifier: 
-  description: YOU ARE THE TOURIST IN THE SHOP
-  description2: 
-  description3: 
-  Imagename: HelpTourist
-  Imagename2: HelpShop
-  Button1text: ASK FOR HELP
+  description: SELECT THE HELP YOU NEED
+  description2: Hello, I would like to book a room.
+  description3: Hello, I have a reservation for today.
+  Imagename: 
+  Imagename2: 
+  Button1text: 
   Button2text: 
   points: 
   Player: Tourist
-  prefab: {fileID: 8626936094389886684, guid: 5c5ab97ef8220f44cb3b95f93890dcde, type: 3}
+  prefab: {fileID: 5411512699761531765, guid: 1504b0f53d46bbc4db8659de3ce20137, type: 3}

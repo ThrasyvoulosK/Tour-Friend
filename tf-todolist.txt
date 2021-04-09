@@ -547,15 +547,15 @@ another new feedback (also with screenshots on asana)
 //-4 fix card positions on maps
 //-5 'give the device' symbols should be at 85%
 //-6 select a place to go spaces
--7 correct graphic for tourist symbol next to titles instructions
--8 remove location icon from all screens!
+//-7 correct graphic for tourist symbol next to titles instructions
+//-8 remove location icon from all screens!
 -9 cahnge background image to 'i want to go to the airport'
 -10 remove gray images and keep buttons analogical to the rest of the box
 -11 purple backgorunds when choosing airport correctly
 //-12 pawn
 //-13 'you are the tourist' symbols
 -14 zoom buttons should be the player's colours. Zoom out sprite should be used
--15 zoom in/out problems in shapes, sizes, colours, etc
+//-15 zoom in/out problems in shapes, sizes, colours, etc
 
 
 assign videos randomly

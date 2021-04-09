@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO24
   m_EditorClassIdentifier: 
-  description: "What did the tourfriend say to you?\r"
+  description: WHAT DID THE TOURFRIEND SAY TO YOU?
   description2: 'MAY I SEE YOUR PASSPORT OR ID
 
     AND BOARDING PASS, PLEASE?'

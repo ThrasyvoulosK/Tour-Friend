@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
   m_Name: Screen_SO31
   m_EditorClassIdentifier: 
-  description: "Reply to the tourist and give him the correct card\r"
+  description: 'REPLY TO THE TOURIST
+
+    AND GIVE HIM THE OBJECT CARD'
   description2: 'YES, YOU CAN TAKE
 
     YOUR <b>BACKPACK</b> ON BOARD'
