@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO17Station
   m_EditorClassIdentifier: 
   description: SELECT THE HELP YOU NEED
-  description2: I would like to go to the city center
-  description3: What time does the next train depart?
+  description2: ' I WOULD LIKE TO GO TO THE CITY CENTER'
+  description3: WHAT TIME DOES THE NEXT TRAIN DEPART?
   Imagename: 
   Imagename2: 
   Button1text: 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO17CafeBar
   m_EditorClassIdentifier: 
   description: SELECT THE HELP YOU NEED
-  description2: What is your specialite?
-  description3: ' I would like to order a coffee please'
+  description2: CAN I SEE THE MENU PLEASE?
+  description3: ' I WOULD LIKE TO ORDER A COFFEE PLEASE'
   Imagename: 
   Imagename2: 
   Button1text: 

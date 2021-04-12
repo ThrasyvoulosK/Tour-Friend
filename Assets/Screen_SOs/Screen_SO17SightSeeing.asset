@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO17SightSeeing
   m_EditorClassIdentifier: 
   description: SELECT THE HELP YOU NEED
-  description2: ' Is there a guided tour?'
-  description3: Hello, can I buy a ticket?
+  description2: IS THERE A GUIDED TOUR?
+  description3: HELLO, CAN I BUY A TICKET?
   Imagename: 
   Imagename2: 
   Button1text: 

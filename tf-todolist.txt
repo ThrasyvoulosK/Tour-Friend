@@ -522,26 +522,16 @@ add all functionality of player-list and prefab-list to SOs-list
 add a 'give device to tourist' before 'you are a tourist in the airport'
 
 new feedback file on asana
-//-1 splash
 -2 graphics, letters, sizes, pixels
 -3 as above, same font size between objects, replace back with pause?
-//-4 info
 -5 menu options
-//-6 maps should be bigger
--7 bar should be everywhere
 -8 correct choices should be assigned randomly and correctly
 //-9 welldone graphics
-//-10 map zoom
-//-11 video after phrase description
 //-12 welldone
 //-13 select the help (avoid numbers)
-//-14 disable losers from playing the same level again!
 -15 cards
-//-16 End of round
 
 another new feedback (also with screenshots on asana)
-(screen 1560x750)
-//-1 back button: too big, wrong position
 -2 button letters should be the size of 'welcome' and centered within its borders
 //-3 'shape two teams' letters should be the size of instruction letters
 //-4 fix card positions on maps
@@ -565,3 +555,25 @@ assign videos randomly
 -vidoes must be in a random position,between 1 and 2
 --the answer should suit them correctly
 
+'select the help you need'
+-route: (depending on location choice)
+-two videos (select one and keep it)
+--show it ('reproduce the movements')
+---select one of two (other player, same videos as before,correct or false depending on previous choice)
+/\
+----'reply' (one video,proper answer to the above)
+-----'what did the tourfriend say' (two videos from the same dialogues in ecxel depending on location, one of them is the correct one based on choice above)
+/\
+------another two choices based on the above 
+-------reproduce choice
+--------select from the two vidoes above(one of them is correct)
+/\
+---------reply(video following the choice)
+----------'which answer were you given'(show the same two choices as the previous ones, but accompany them with the proper cards)
+-----------points screen now shows the card given (if correct)
+
+on screen 20, choosing the same choice as previously should lead to a correct screen
+while choosing differently should lead to the false one
+
+sometimes assigned descriptions on two-videos are the same
+-at least on after-selection-screen

@@ -53,7 +53,11 @@ public class PlaceSelectScript : MonoBehaviour
                         for (int i = 0; i < gameMaster.placelistvisited.Count; i++)
                         {
                             if (loc == gameMaster.placelistvisited[i])
-                                game.GetComponent<Image>().color = new Color(0, 0, 0);
+                            {
+                                game.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                                game.GetComponent<Image>().raycastTarget = false;
+                                game.transform.Find("Foreground").GetComponent<Image>().color = new Color32(255, 255, 255,255);
+                            }
                         }
                     }
                 }
@@ -177,6 +181,7 @@ public class PlaceSelectScript : MonoBehaviour
                                 if (game.name != ("Image" + current_choice))
                                     //GameObject.Find(game.name).transform.Find("BackgroundImage").GetComponent<Image>().color += new Color(0, 0, 0, -0.5f);
                                     GameObject.Find(game.name).transform.Find("BackgroundImage").GetComponent<Image>().color = new Color(0, 0, 0, 0f);
+                                //game.transform.Find("Foreground").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                             }
                         }
                     }

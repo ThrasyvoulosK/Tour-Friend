@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO17Taxi
   m_EditorClassIdentifier: 
   description: SELECT THE HELP YOU NEED
-  description2: I would like to go to the airport
-  description3: ' I would like to go downtown.'
+  description2: I WOULD LIKE TO GO TO THE AIRPORT
+  description3: I WOULD LIKE TO GO DOWNTOWN.
   Imagename: 
   Imagename2: 
   Button1text: 

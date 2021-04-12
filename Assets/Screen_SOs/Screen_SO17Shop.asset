@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO17Shop
   m_EditorClassIdentifier: 
   description: SELECT THE HELP YOU NEED
-  description2: Hello, I would like to book a room.
-  description3: Hello, I have a reservation for today.
+  description2: HOW MUCH DOES THIS COST PLEASE? I WOULD LIKE TO BUY IT.
+  description3: ' I WOULD LIKE TO BUY A SOUVENIR PLEASE'
   Imagename: 
   Imagename2: 
   Button1text: 

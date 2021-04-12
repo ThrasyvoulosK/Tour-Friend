@@ -1066,6 +1066,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7762d302214b9514f84a467985b39d2f, type: 2}
   - {fileID: 11400000, guid: e688813748458cb49b2459a3e833d5fa, type: 2}
   - {fileID: 11400000, guid: d857b0dc973cd9241a9a2d6eb78ec03b, type: 2}
+  - {fileID: 11400000, guid: ec990a6c7b15c524b8192719b63826e2, type: 2}
+  - {fileID: 11400000, guid: 373abae8323970d4dbe9ad77f166ab07, type: 2}
+  - {fileID: 11400000, guid: 44aa4f8873b34fb45a77c0da5c2455cc, type: 2}
+  - {fileID: 11400000, guid: 069eaf589bf8a394f8fedea3ddc17ab2, type: 2}
+  - {fileID: 11400000, guid: 7e8baa43dbe020f41bd94ebce7c98d84, type: 2}
+  - {fileID: 11400000, guid: 1a14666ebdf51cc4796e7f35e23cb9d9, type: 2}
+  - {fileID: 11400000, guid: 62ca32b7e9a7a0d43930059ec08f22a6, type: 2}
+  - {fileID: 11400000, guid: c830748706c62784db9d1cc6444e5b87, type: 2}
   player:
   - 
   - Tourfriend
