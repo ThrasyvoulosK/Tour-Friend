@@ -41,6 +41,7 @@ public class GameMaster : MonoBehaviour
     //dictionary of the two above
 
     public string language_current = "English";
+    public string language_currentSign = "English";
 
     //keep track of score
     public int total_points = 0;
@@ -878,8 +879,9 @@ public class GameMaster : MonoBehaviour
             usedScreen = current_screen - 1;
 
             GameObject gb = null;
-            gb = GameObject.Find(screen_SOs[usedScreen].prefab.name + "(Clone)");
-            //Debug.Log(gb.name + " Will Be Destroyed by BackButton");
+            gb = GameObject.Find(screen_SOs[usedScreen+1].prefab.name + "(Clone)");
+            Debug.Log($"Looking for {screen_SOs[usedScreen+1].prefab.name}");
+            Debug.Log(gb.name + " Will Be Destroyed by BackButton");
             //find current screen object
             /*foreach (GameObject gob in screenprefabs)
             {
@@ -1064,70 +1066,28 @@ public class GameMaster : MonoBehaviour
         GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.RemoveAllListeners();
         GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<BackButtonScript>().currentscreen = null;
 
-        if (current_screen >= 1)
+        int[] backAllowedOn ={3,6,11,18,2 };
+
+        //if (current_screen >= 1)
+        foreach (int b in backAllowedOn)
         {
-            //GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.RemoveAllListeners();
-            /*GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.AddListener(delegate
+            if (current_screen == b)
             {
-                //current_screen -= 2;
-                //OneScreenBack();
-                //TwoScreensBack();
-            });*/
-            //ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
+                //find current screen object
 
-            //GameObject gb = null;
+                GameObject gob = screen_SOs[current_screen - 1].prefab;
 
-            //find current screen object
-            //foreach (GameObject gob in screenprefabs)
-            //{
-            GameObject gob = screen_SOs[current_screen-1].prefab;
-                //gb
-                //if (GameObject.Find(gob.name + "(Clone)") != null)
-                //{
-                    /*gb = GameObject.Find(gob.name + "(Clone)");
-                    GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<BackButtonScript>().currentscreen = gb;
+                ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
 
-                    //Debug.Log("Will Destroy From Back Button " + gb.name);
-                    GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.AddListener(delegate
-                    {
-                        Destroy(gb);
-
-                        //OneScreenBack();
-                        //current_screen = current_screen-2;
-                        //ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
-
-                        //current_screen = 0;
-                        //current_screen = 1;
-                        //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
-                        //createTwoImagesscreen(sgo[0], screen_SOs[0].description, screen_SOs[0].Imagename, screen_SOs[0].Button1text, screen_SOs[0].Button2text);
-                        //createTwoImagesscreen(sgo[1], screen_SOs[1].description, screen_SOs[1].Imagename, screen_SOs[1].Button1text, screen_SOs[1].Button2text);
-                        //createOneImagescreen(sgo[0], screen_SOs[0].description, screen_SOs[0].Imagename, screen_SOs[0].Button1text);
-                        //createOneImagescreen(sgo[1], screen_SOs[1].description, screen_SOs[1].Imagename, screen_SOs[1].Button1text);
-                        //createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text);
-
-
-                        //GameObject newgb=Instantiate(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<BackButtonScript>().currentscreen);
-                        //newgb.name.Remove(newgb.name.Length-7);
-
-                        //destroy old
-                        //Destroy(gb);
-                    });*/
-                    ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
-                    //break;
-                //}
-                /*else
-                {
-                    Debug.Log("There is no " + gob.name + " GameObject on Screen!");
-                    //Destroy(GameObject.Find(gob.name + "(Clone)"));
-                    Destroy(GameObject.Find("Canvas SelectPlace(Clone)"));
-                }*/
-            //}
-
-            /*if (GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<BackButtonScript>().currentscreen == null)
-                Debug.Log("Current Screen Could Not Be Saved");*/
-            
+                GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                return;
+            }
+            else
+            {
+                GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                //return;
+            }
         }
-        else return;
     }
 
     //change colours of texts and buttons,depending on the player

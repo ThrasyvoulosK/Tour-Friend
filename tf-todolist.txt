@@ -12,15 +12,6 @@ Things to Add:
 
 Main Menu
 
-//Common Screen//-'back' button//-description of the screen//-one or two images//-'done' button
-
-Select a place to go screen
-(main screen, that the players revisit after each session)
--many choices for places to choose, as buttons
--points visible
--choose button instead of 'done'
--description and back as before
-
 After Choosing a place (tourist)
 -show video of said action (eg 'i want to go the airport) in sign-language
 -'back' 'done' and description
@@ -39,17 +30,8 @@ Correct guessing/ 'what did the tourist ask you?' (tourfriend)
 ----'zoom out' button replaces 'zoom in' and goes back to the video choice screen
 (-place icon might be a mistake?)
 
-WIP Point Award Screen
-Depending on the above choice:
--correct adds two points
--false doesn't give anything
-
 tourfriend gives directions screen
 tourfrind confirm above (yes/no)
-
-tourist go the the area explained by the tourfriend (yes/no)
-(this is done on the board game; in the app, the tourist clicks whether the instructions got them to the correct place)
--award points
 
 (the tourist is now on the location chosen before, eg the airport)
 
@@ -71,7 +53,7 @@ after choice, the card gets shown to the tourist, asking a yes/no question wheth
 return to the place selection screen and repeat
 -the places already visited are ticked off
 
-Tings to Change:
+Things to Change:
 
 'Image' of screengameobject should rather change to 'Content' Gameobject
 -a more generic form is needed, as it is sometimes more than an image
@@ -515,7 +497,7 @@ update map screen
 -background of buttoms
 -shrunk map
 
-allow other places to be selected on place-select
+//allow other places to be selected on place-select
 
 add all functionality of player-list and prefab-list to SOs-list
 
@@ -526,27 +508,14 @@ new feedback file on asana
 -3 as above, same font size between objects, replace back with pause?
 -5 menu options
 -8 correct choices should be assigned randomly and correctly
-//-9 welldone graphics
 //-12 welldone
-//-13 select the help (avoid numbers)
 -15 cards
 
 another new feedback (also with screenshots on asana)
 -2 button letters should be the size of 'welcome' and centered within its borders
-//-3 'shape two teams' letters should be the size of instruction letters
-//-4 fix card positions on maps
-//-5 'give the device' symbols should be at 85%
-//-6 select a place to go spaces
-//-7 correct graphic for tourist symbol next to titles instructions
-//-8 remove location icon from all screens!
 -9 cahnge background image to 'i want to go to the airport'
 -10 remove gray images and keep buttons analogical to the rest of the box
 -11 purple backgorunds when choosing airport correctly
-//-12 pawn
-//-13 'you are the tourist' symbols
--14 zoom buttons should be the player's colours. Zoom out sprite should be used
-//-15 zoom in/out problems in shapes, sizes, colours, etc
-
 
 assign videos randomly
 -two vidoes
@@ -556,10 +525,10 @@ assign videos randomly
 --the answer should suit them correctly
 
 'select the help you need'
--route: (depending on location choice)
--two videos (select one and keep it)
---show it ('reproduce the movements')
----select one of two (other player, same videos as before,correct or false depending on previous choice)
+//-route: (depending on location choice)
+//-two videos (select one and keep it)
+//--show it ('reproduce the movements')
+//---select one of two (other player, same videos as before,correct or false depending on previous choice)
 /\
 ----'reply' (one video,proper answer to the above)
 -----'what did the tourfriend say' (two videos from the same dialogues in ecxel depending on location, one of them is the correct one based on choice above)
@@ -577,3 +546,15 @@ while choosing differently should lead to the false one
 
 sometimes assigned descriptions on two-videos are the same
 -at least on after-selection-screen
+
+back-button allowed on: 3,6,11,18,27
+//-all menus
+-second map screen ('flip the map[...]')
+-'see the video and try to reproduce[...]'(obsolete?)
+--other 'see the video[...]' screens, after two-video choices
+-late 'select a place to go' screens (mistake?)
+
+//back button problems:
+//-unclickable, unless backround-is-not-raycastable
+//-duplicates screens when clicked
+//--at least on second map screen

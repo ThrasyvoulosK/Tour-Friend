@@ -869,6 +869,10 @@ MonoBehaviour:
   - {fileID: -4344256347943134250, guid: 30be52508cbb88a44bf6b617dbf69cb9, type: 3}
   - {fileID: 6432071687584252416, guid: d765bab844d389f42bd5ef43bb950b04, type: 3}
   - {fileID: 991107803685907096, guid: 4c8bd6a35c6d35f4da9b550bbf623d2d, type: 3}
+  - {fileID: -2497351186573528162, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
+  - {fileID: 2657498057067445793, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
+  - {fileID: 19836431208590111, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
+  - {fileID: 665478884394404295, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
   images_name:
   - Square
   - Tourist
@@ -910,6 +914,10 @@ MonoBehaviour:
   - HelpSightSeeing
   - HelpStation
   - HelpTaxi
+  - MenuGreek
+  - MenuEnglish
+  - MenuFrench
+  - MenuItalian
   videos_en:
   - {fileID: 32900000, guid: 1842179188733904a82840cad574d4b9, type: 3}
   - {fileID: 32900000, guid: f6cabbd910bb33b4b9d2dc6f34b01258, type: 3}
@@ -1130,6 +1138,7 @@ MonoBehaviour:
   phrasevideo: 
   previousScreen: {fileID: 0}
   backB: {fileID: 0}
+  lastChoice: 
 --- !u!4 &266200537
 Transform:
   m_ObjectHideFlags: 0
