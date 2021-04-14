@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: 08da1d0d61d603944a17acf284f4b9a1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2196787579407401777
+    second: Tourfriend bar_double video_0
+  - first:
+      213: -7883145135882705055
+    second: Tourfriend bar_double video_1
+  - first:
+      213: 8721840847456118189
+    second: Tourfriend bar_double video_2
+  - first:
+      213: -3989803183115219921
+    second: Tourfriend bar_double video_3
+  - first:
+      213: -4661731455264223853
+    second: Tourfriend bar_double video_4
+  - first:
+      213: 1953572479203263030
+    second: Tourfriend bar_double video_5
+  - first:
+      213: 6076574507408575550
+    second: Tourfriend bar_double video_6
+  - first:
+      213: 1094619313749395747
+    second: Tourfriend bar_double video_7
+  - first:
+      213: 2563787260169269256
+    second: Tourfriend bar_double video_8
+  - first:
+      213: -5154126449080397965
+    second: Tourfriend bar_double video_9
+  - first:
+      213: 6779174667474016067
+    second: Tourfriend bar_double video_10
+  - first:
+      213: -2410192465740147568
+    second: Tourfriend bar_double video_11
+  - first:
+      213: -1787641517279528169
+    second: Tourfriend bar_double video_12
+  - first:
+      213: 1161166819866388022
+    second: Tourfriend bar_double video_13
+  - first:
+      213: -7746106111788493475
+    second: Tourfriend bar_double video_14
+  - first:
+      213: 228713840978876530
+    second: Tourfriend bar_double video_15
+  - first:
+      213: -4883725721929307937
+    second: Tourfriend bar_double video_16
+  - first:
+      213: 200902815493086321
+    second: Tourfriend bar_double video_17
+  - first:
+      213: -2396815463930786355
+    second: Tourfriend bar_double video_18
+  - first:
+      213: 980486464843063136
+    second: Tourfriend bar_double video_19
+  - first:
+      213: -6944284165027412017
+    second: Tourfriend bar_double video_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +136,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend bar_double video_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 259
+        width: 888
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc7e6ae5517381e0800000000000000
+      internalID: -2196787579407401777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

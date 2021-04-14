@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 3ce601ca7649a804aa037394bee727f3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4196074961832815449
+    second: Tourfriend station_single video_0
+  - first:
+      213: 4101996038874806067
+    second: Tourfriend station_single video_1
+  - first:
+      213: 4737399104586234791
+    second: Tourfriend station_single video_2
+  - first:
+      213: 2030319888643361136
+    second: Tourfriend station_single video_3
+  - first:
+      213: 1168210068867612710
+    second: Tourfriend station_single video_4
+  - first:
+      213: 716489227707261336
+    second: Tourfriend station_single video_5
+  - first:
+      213: 2107762427594630268
+    second: Tourfriend station_single video_6
+  - first:
+      213: 7290017915227256924
+    second: Tourfriend station_single video_7
+  - first:
+      213: 2647785748854792704
+    second: Tourfriend station_single video_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +68,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +100,54 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend station_single video_0
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 210
+        width: 1011
+        height: 804
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a45b01dd0c84c5c0800000000000000
+      internalID: -4196074961832815449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

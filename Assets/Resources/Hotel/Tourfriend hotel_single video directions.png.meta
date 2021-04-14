@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 679a9fa56b3c4d849ad4d749529a7f44
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4822518984674598554
+    second: Tourfriend hotel_single video directions_0
+  - first:
+      213: -2497186391272917766
+    second: Tourfriend hotel_single video directions_1
+  - first:
+      213: 402267591903589030
+    second: Tourfriend hotel_single video directions_2
+  - first:
+      213: 6724126224656520206
+    second: Tourfriend hotel_single video directions_3
+  - first:
+      213: -6512210865407358349
+    second: Tourfriend hotel_single video directions_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +56,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +88,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend hotel_single video directions_0
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 231
+        width: 1012
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661a4e3c888f21db0800000000000000
+      internalID: -4822518984674598554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

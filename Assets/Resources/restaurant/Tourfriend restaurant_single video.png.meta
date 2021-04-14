@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 940b2f4cc5cbae4498e8c866526aad1b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8634042929560710370
+    second: Tourfriend restaurant_single video_0
+  - first:
+      213: -927951772834954664
+    second: Tourfriend restaurant_single video_1
+  - first:
+      213: -7742159947144571575
+    second: Tourfriend restaurant_single video_2
+  - first:
+      213: -1532066513551913297
+    second: Tourfriend restaurant_single video_3
+  - first:
+      213: 7475286013562403322
+    second: Tourfriend restaurant_single video_4
+  - first:
+      213: 516272568457729440
+    second: Tourfriend restaurant_single video_5
+  - first:
+      213: -1043047869027242059
+    second: Tourfriend restaurant_single video_6
+  - first:
+      213: -6032134315181748592
+    second: Tourfriend restaurant_single video_7
+  - first:
+      213: 4836689908736318275
+    second: Tourfriend restaurant_single video_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +68,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +100,54 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend restaurant_single video_0
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 210
+        width: 1011
+        height: 804
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e139f0063b7bd2880800000000000000
+      internalID: -8634042929560710370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

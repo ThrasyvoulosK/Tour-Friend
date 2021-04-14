@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: ee5edc5fdd9cb9c4f8c02276435db406
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4111851734226059156
+    second: Tourfriend sightseeing_double video_0
+  - first:
+      213: -5468095359439952533
+    second: Tourfriend sightseeing_double video_1
+  - first:
+      213: -1244913985426763314
+    second: Tourfriend sightseeing_double video_2
+  - first:
+      213: 3848585845693759093
+    second: Tourfriend sightseeing_double video_3
+  - first:
+      213: -4992583631823193731
+    second: Tourfriend sightseeing_double video_4
+  - first:
+      213: -4340816181682217737
+    second: Tourfriend sightseeing_double video_5
+  - first:
+      213: -5362238821506863902
+    second: Tourfriend sightseeing_double video_6
+  - first:
+      213: -4498139726246738179
+    second: Tourfriend sightseeing_double video_7
+  - first:
+      213: -3212728256506234089
+    second: Tourfriend sightseeing_double video_8
+  - first:
+      213: 5410824266259089586
+    second: Tourfriend sightseeing_double video_9
+  - first:
+      213: -1725384083312814580
+    second: Tourfriend sightseeing_double video_10
+  - first:
+      213: 7059937328780712445
+    second: Tourfriend sightseeing_double video_11
+  - first:
+      213: -6265752328580253841
+    second: Tourfriend sightseeing_double video_12
+  - first:
+      213: 1441170899403954079
+    second: Tourfriend sightseeing_double video_13
+  - first:
+      213: -3865722055490220560
+    second: Tourfriend sightseeing_double video_14
+  - first:
+      213: 8814091970578066662
+    second: Tourfriend sightseeing_double video_15
+  - first:
+      213: 8644672855810603719
+    second: Tourfriend sightseeing_double video_16
+  - first:
+      213: -6894289694043753561
+    second: Tourfriend sightseeing_double video_17
+  - first:
+      213: -4532804395166343470
+    second: Tourfriend sightseeing_double video_18
+  - first:
+      213: 4909289934051761267
+    second: Tourfriend sightseeing_double video_19
+  - first:
+      213: -2137482619792590347
+    second: Tourfriend sightseeing_double video_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +136,54 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend sightseeing_double video_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 259
+        width: 888
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60c16c12a4cfe6c0800000000000000
+      internalID: -4111851734226059156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

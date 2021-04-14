@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: 687627aac03258a4b8b78f5b55e6b4f5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7255231518156772217
+    second: Tourfriend hotel_double video_0
+  - first:
+      213: 5424196766569631471
+    second: Tourfriend hotel_double video_1
+  - first:
+      213: -106403849085237420
+    second: Tourfriend hotel_double video_2
+  - first:
+      213: -6620107106341044706
+    second: Tourfriend hotel_double video_3
+  - first:
+      213: 1256582332030671600
+    second: Tourfriend hotel_double video_4
+  - first:
+      213: -8768466819211299008
+    second: Tourfriend hotel_double video_5
+  - first:
+      213: 6660666035697704097
+    second: Tourfriend hotel_double video_6
+  - first:
+      213: -5670517413099358631
+    second: Tourfriend hotel_double video_7
+  - first:
+      213: 6746432058027445951
+    second: Tourfriend hotel_double video_8
+  - first:
+      213: -8044834043848264699
+    second: Tourfriend hotel_double video_9
+  - first:
+      213: 381426649529473311
+    second: Tourfriend hotel_double video_10
+  - first:
+      213: -9158655250337362167
+    second: Tourfriend hotel_double video_11
+  - first:
+      213: -3499153841466638610
+    second: Tourfriend hotel_double video_12
+  - first:
+      213: 5800911543650835342
+    second: Tourfriend hotel_double video_13
+  - first:
+      213: 4047840125109163144
+    second: Tourfriend hotel_double video_14
+  - first:
+      213: 2105694091585403106
+    second: Tourfriend hotel_double video_15
+  - first:
+      213: -7405939758641557799
+    second: Tourfriend hotel_double video_16
+  - first:
+      213: -1487031576372043310
+    second: Tourfriend hotel_double video_17
+  - first:
+      213: 6716575453595248164
+    second: Tourfriend hotel_double video_18
+  - first:
+      213: 8404145238642560258
+    second: Tourfriend hotel_double video_19
+  - first:
+      213: -1426293761702185515
+    second: Tourfriend hotel_double video_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +136,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend hotel_double video_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 259
+        width: 888
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973d3fa30a2cfa460800000000000000
+      internalID: 7255231518156772217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

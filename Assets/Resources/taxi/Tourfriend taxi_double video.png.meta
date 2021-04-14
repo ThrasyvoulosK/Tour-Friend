@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: ac4ab4c1fac0d2b41a2250d798c4fe1f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3303583301078277046
+    second: Tourfriend taxi_double video_0
+  - first:
+      213: 5271809814678719743
+    second: Tourfriend taxi_double video_1
+  - first:
+      213: -1482902204549484721
+    second: Tourfriend taxi_double video_2
+  - first:
+      213: 8305884566491546482
+    second: Tourfriend taxi_double video_3
+  - first:
+      213: 9053617240493230579
+    second: Tourfriend taxi_double video_4
+  - first:
+      213: 1694571773467382302
+    second: Tourfriend taxi_double video_5
+  - first:
+      213: 5723324519123924637
+    second: Tourfriend taxi_double video_6
+  - first:
+      213: 147633545584859592
+    second: Tourfriend taxi_double video_7
+  - first:
+      213: 2249336529631424676
+    second: Tourfriend taxi_double video_8
+  - first:
+      213: 5343158599790732712
+    second: Tourfriend taxi_double video_9
+  - first:
+      213: -8617743422519139819
+    second: Tourfriend taxi_double video_10
+  - first:
+      213: 5101439688129452130
+    second: Tourfriend taxi_double video_11
+  - first:
+      213: -8116912823102838400
+    second: Tourfriend taxi_double video_12
+  - first:
+      213: 7783063739372573047
+    second: Tourfriend taxi_double video_13
+  - first:
+      213: 7584738251358405802
+    second: Tourfriend taxi_double video_14
+  - first:
+      213: 318365682838184466
+    second: Tourfriend taxi_double video_15
+  - first:
+      213: -1070930562407328475
+    second: Tourfriend taxi_double video_16
+  - first:
+      213: -2029421465634613189
+    second: Tourfriend taxi_double video_17
+  - first:
+      213: 1930485787083101739
+    second: Tourfriend taxi_double video_18
+  - first:
+      213: 5553354946935851651
+    second: Tourfriend taxi_double video_19
+  - first:
+      213: -8314782148004489045
+    second: Tourfriend taxi_double video_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +136,54 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend taxi_double video_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 259
+        width: 888
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbdeaa528fa8dd20800000000000000
+      internalID: 3303583301078277046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

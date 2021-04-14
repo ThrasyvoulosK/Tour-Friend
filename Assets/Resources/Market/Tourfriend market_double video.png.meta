@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: 130668d6e7aa68b4682a32b4c40c6da6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6883941556418078096
+    second: Tourfriend market_double video_0
+  - first:
+      213: -3216803446582045554
+    second: Tourfriend market_double video_1
+  - first:
+      213: -3473994120806486254
+    second: Tourfriend market_double video_2
+  - first:
+      213: 7988039709692261311
+    second: Tourfriend market_double video_3
+  - first:
+      213: 3129129216057749728
+    second: Tourfriend market_double video_4
+  - first:
+      213: 724503539627257447
+    second: Tourfriend market_double video_5
+  - first:
+      213: -2054706017383510813
+    second: Tourfriend market_double video_6
+  - first:
+      213: -1609865024893007574
+    second: Tourfriend market_double video_7
+  - first:
+      213: -5275943635027878072
+    second: Tourfriend market_double video_8
+  - first:
+      213: 8901007765335083287
+    second: Tourfriend market_double video_9
+  - first:
+      213: 316194522697620164
+    second: Tourfriend market_double video_10
+  - first:
+      213: 3723565744972705863
+    second: Tourfriend market_double video_11
+  - first:
+      213: -9184626804820324203
+    second: Tourfriend market_double video_12
+  - first:
+      213: -260290590281872324
+    second: Tourfriend market_double video_13
+  - first:
+      213: -2605110589548164913
+    second: Tourfriend market_double video_14
+  - first:
+      213: 6270362876799647328
+    second: Tourfriend market_double video_15
+  - first:
+      213: 6117406281613726937
+    second: Tourfriend market_double video_16
+  - first:
+      213: 8807478368851231294
+    second: Tourfriend market_double video_17
+  - first:
+      213: -4848410329076400388
+    second: Tourfriend market_double video_18
+  - first:
+      213: -7158144259144935620
+    second: Tourfriend market_double video_19
+  - first:
+      213: 3656082876193871024
+    second: Tourfriend market_double video_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +136,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tourfriend market_double video_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 259
+        width: 888
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a962b80a35770a0800000000000000
+      internalID: -6883941556418078096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

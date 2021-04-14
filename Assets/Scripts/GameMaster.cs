@@ -447,16 +447,10 @@ public class GameMaster : MonoBehaviour
         GameObject newgameobject;
         newgameobject = Instantiate(prefab_go);
 
-        //Debug.Log("child of video: " + newgameobject.transform.GetChild(3).name);
-
         //find the given values
-        //Image image = newgameobject.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>();
-        /*UnityEngine.Video.VideoClip videoClip= newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();*/
-        /*videoClip= newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();*/
-        //Debug.Log("videoclip object should be " + newgameobject.transform.GetChild(0).transform.GetChild(5).transform.GetChild(0).name);
-        /*UnityEngine.Video.VideoPlayer videoPlayer = newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
-        videoClip = videoPlayer.clip;
-        videoClip = videohandler[vid];*/
+
+        //change background
+        newgameobject.transform.Find("VideoBackground").GetComponent<Image>().sprite = imagehandler["VideoBackground"+current_location+"OneVideo"];
 
         //add the indicated values
 
@@ -509,9 +503,12 @@ public class GameMaster : MonoBehaviour
 
         //find images and change them to their proper ones, depending on whether they've been used properly
 
-        /*image.sprite = imagehandler[img];*/
         //assign location icon on top-right of the screen
         newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
+
+        //change backgrounds
+        newgameobject.transform.Find("VideoChoice1").transform.Find("BackgroundImage").GetComponent<Image>().sprite = imagehandler["VideoBackground" + current_location + "TwoVideos"];
+        newgameobject.transform.Find("VideoChoice2").transform.Find("BackgroundImage").GetComponent<Image>().sprite = imagehandler["VideoBackground" + current_location + "TwoVideos"];
 
         //newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
@@ -740,6 +737,9 @@ public class GameMaster : MonoBehaviour
         //instantiate its prefab version
         GameObject newgameobject;
         newgameobject = Instantiate(prefab_go);
+
+        //change background
+        newgameobject.transform.Find("VideoBackground").GetComponent<Image>().sprite = imagehandler["VideoBackground" + current_location + "OneVideoTwoOptions"];
 
         //find the given values
         UnityEngine.Video.VideoClip videoClip = newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();

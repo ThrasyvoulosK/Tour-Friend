@@ -873,6 +873,38 @@ MonoBehaviour:
   - {fileID: 2657498057067445793, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
   - {fileID: 19836431208590111, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
   - {fileID: 665478884394404295, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
+  - {fileID: -1415759885741341215, guid: 10dd2c392ee04214fb5b14fe22bc5014, type: 3}
+  - {fileID: 7851672080853731125, guid: 21a4b53f7a3c24041bbb4e3713421202, type: 3}
+  - {fileID: 665478884394404295, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
+  - {fileID: 665478884394404295, guid: 4212e5468219e9c46b05538f4a2f9f76, type: 3}
+  - {fileID: -3767185059268079890, guid: 0911a90afcb44b944b6b77cde9267fc9, type: 3}
+  - {fileID: 1271572446119117069, guid: a1d53790328bec040889a0c7a3494aa9, type: 3}
+  - {fileID: 3303583301078277046, guid: ac4ab4c1fac0d2b41a2250d798c4fe1f, type: 3}
+  - {fileID: 21300000, guid: 47497110650989747acd31fff50a3d76, type: 3}
+  - {fileID: -467842382805350748, guid: 5836b08911e802349b3857a5ca33d208, type: 3}
+  - {fileID: 5069643876992437072, guid: d60bb46464b7bd544b9c97ee384a2a05, type: 3}
+  - {fileID: -2196787579407401777, guid: 08da1d0d61d603944a17acf284f4b9a1, type: 3}
+  - {fileID: 21300000, guid: 677520d4e93452e479e2546f5449f1b2, type: 3}
+  - {fileID: -6636107860819546839, guid: 8f18ea79b787990478a4cd1edd6fbfd3, type: 3}
+  - {fileID: -4822518984674598554, guid: 679a9fa56b3c4d849ad4d749529a7f44, type: 3}
+  - {fileID: 7255231518156772217, guid: 687627aac03258a4b8b78f5b55e6b4f5, type: 3}
+  - {fileID: 21300000, guid: cfbda5c7cf8ba9f468464735a29ddfea, type: 3}
+  - {fileID: -1412843451799963140, guid: c737442d5135855478bacf66a02a7e48, type: 3}
+  - {fileID: 2495474614646530899, guid: d04801f7eec938040ac5d7b0facc7053, type: 3}
+  - {fileID: -6883941556418078096, guid: 130668d6e7aa68b4682a32b4c40c6da6, type: 3}
+  - {fileID: 21300000, guid: 48622fb73afe9914f930141a1119ed62, type: 3}
+  - {fileID: -8634042929560710370, guid: 940b2f4cc5cbae4498e8c866526aad1b, type: 3}
+  - {fileID: -6721650127612682898, guid: a2115c5e8a562d94c8d053593dcbbab7, type: 3}
+  - {fileID: -958594353041467908, guid: 51fcc8b8517c4b743bab7a9e42b53ccb, type: 3}
+  - {fileID: 21300000, guid: fc109a6fa2eb24c44b1f99e81244f8c3, type: 3}
+  - {fileID: 2653451318218612455, guid: 26ce875aded31e94ebf5cfc9a9fda379, type: 3}
+  - {fileID: -4973390534584724187, guid: 5fea0db1ac18c604a899adabbec57c52, type: 3}
+  - {fileID: -4111851734226059156, guid: ee5edc5fdd9cb9c4f8c02276435db406, type: 3}
+  - {fileID: 21300000, guid: 6be00f45fd34c424f92920e4d743d4b2, type: 3}
+  - {fileID: -4196074961832815449, guid: 3ce601ca7649a804aa037394bee727f3, type: 3}
+  - {fileID: 2470718125603624680, guid: 7a197e0e286ce044a85179288bf57643, type: 3}
+  - {fileID: -4196074961832815449, guid: 3ce601ca7649a804aa037394bee727f3, type: 3}
+  - {fileID: 21300000, guid: 39e15a241b7a8a84caac1811d428a866, type: 3}
   images_name:
   - Square
   - Tourist
@@ -890,8 +922,8 @@ MonoBehaviour:
   - Places
   - Points_Ribbon_Win
   - Points_Ribbon_Lose
-  - VideoBackground_LightBlue
-  - VideoBackground_LightBlueZoom
+  - VideoBackgroundInfoPointTwoVideos
+  - VideoBackgroundInfoPointTwoVideosZoom
   - ButtonPlayTourfriend
   - ButtonPauseTourfriend
   - ButtonRepeatTourfriend
@@ -905,8 +937,8 @@ MonoBehaviour:
   - LenseMinus
   - LensePlus
   - ButtonLensePlus
-  - VideoBackground_Airport
-  - VideoBackground_AirportZoom
+  - VideoBackgroundAirportTwoVideos
+  - VideoBackgroundAirportTwoVideosZoom
   - HelpCafeBar
   - HelpHotel
   - HelpRestaurant
@@ -918,14 +950,50 @@ MonoBehaviour:
   - MenuEnglish
   - MenuFrench
   - MenuItalian
+  - VideoBackgroundAirportOneVideo
+  - VideoBackgroundAirportOneVideoTwoOptions
+  - VideoBackgroundInfoPointOneVideo
+  - VideoBackgroundInfoPointOneVideoTwoOptions
+  - VideoBackgroundTaxiOneVideo
+  - VideoBackgroundTaxiOneVideoTwoOptions
+  - VideoBackgroundTaxiTwoVideos
+  - VideoBackgroundTaxiTwoVideosZoom
+  - VideoBackgroundCafeBarOneVideo
+  - VideoBackgroundCafeBarOneVideoTwoOptions
+  - VideoBackgroundCafeBarTwoVideos
+  - VideoBackgroundCafeBarTwoVideosZoom
+  - VideoBackgroundHotelOneVideo
+  - VideoBackgroundHotelOneVideoTwoOptions
+  - VideoBackgroundHotelTwoVideos
+  - VideoBackgroundHotelTwoVideosZoom
+  - VideoBackgroundShopOneVideo
+  - VideoBackgroundShopOneVideoTwoOptions
+  - VideoBackgroundShopTwoVideos
+  - VideoBackgroundShopTwoVideosZoom
+  - VideoBackgroundRestaurantOneVideo
+  - VideoBackgroundRestaurantOneVideoTwoOptions
+  - VideoBackgroundRestaurantTwoVideos
+  - VideoBackgroundRestaurantTwoVideosZoom
+  - VideoBackgroundSightSeeingOneVideo
+  - VideoBackgroundSightSeeingOneVideoTwoOptions
+  - VideoBackgroundSightSeeingTwoVideos
+  - VideoBackgroundSightSeeingTwoVideosZoom
+  - VideoBackgroundStationOneVideo
+  - VideoBackgroundStationOneVideoTwoOptions
+  - VideoBackgroundStationTwoVideos
+  - VideoBackgroundStationTwoVideosZoom
   videos_en:
   - {fileID: 32900000, guid: 1842179188733904a82840cad574d4b9, type: 3}
   - {fileID: 32900000, guid: f6cabbd910bb33b4b9d2dc6f34b01258, type: 3}
-  videos_gr: []
+  videos_gr:
+  - {fileID: 32900000, guid: 1842179188733904a82840cad574d4b9, type: 3}
+  - {fileID: 32900000, guid: f6cabbd910bb33b4b9d2dc6f34b01258, type: 3}
+  - {fileID: 32900000, guid: 9fea51d106930be4ebfadfa526d4acc1, type: 3}
   videos_en_names:
   - Placeholder
   - PlaceholderRed
   language_current: English
+  language_currentSign: English
   total_points: 0
   sgo:
   - {fileID: 8558149607620697403, guid: 40ee07a22cddcd747b87bc8ecf5fd702, type: 3}
