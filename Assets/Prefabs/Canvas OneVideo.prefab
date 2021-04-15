@@ -161,7 +161,7 @@ VideoPlayer:
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 1b5fe4e49336ce54f8a2eb0b108d83d9, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: f54d4bb475256614fa3ca676665714df, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -1022,8 +1022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 19.29}
-  m_SizeDelta: {x: 229.2, y: 165.24191}
+  m_AnchoredPosition: {x: 0, y: 20}
+  m_SizeDelta: {x: 230, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8134189838727264197
 CanvasRenderer:
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 1b5fe4e49336ce54f8a2eb0b108d83d9, type: 2}
+  m_Texture: {fileID: 8400000, guid: f54d4bb475256614fa3ca676665714df, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0

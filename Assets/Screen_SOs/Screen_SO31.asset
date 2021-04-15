@@ -18,7 +18,9 @@ MonoBehaviour:
   description2: 'YES, YOU CAN TAKE
 
     YOUR <b>BACKPACK</b> ON BOARD'
-  description3: 
+  description3: 'YES, YOU CAN TAKE
+
+    YOUR <b>HANDBAG</b> ON BOARD'
   Imagename: 
   Imagename2: 
   Button1text: DONE

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c0030b1ca10b947873261af967eede, type: 3}
+  m_Name: Screen_SO31CafeBar
+  m_EditorClassIdentifier: 
+  description: 'REPLY TO THE TOURIST
+
+    AND GIVE HIM THE OBJECT CARD'
+  description2: HERE IS THE DRINKS MENU.
+  description3: HERE IS THE DESSERT MENU.
+  Imagename: 
+  Imagename2: 
+  Button1text: DONE
+  Button2text: 
+  points: 
+  Player: Tourfriend
+  prefab: {fileID: 6345828827342396338, guid: 55397b262bc87b244ba509bd9505df08, type: 3}

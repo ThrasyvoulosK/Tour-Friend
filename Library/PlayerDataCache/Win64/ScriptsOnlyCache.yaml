@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - PawnScript
     - PlaceSelectScript
     - PointsScript
+    - ProgressBarScript
     - ScreenObjectScript
     - Screen_SO
     - SelectPhrasesScript
@@ -17,8 +18,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -39,8 +38,6 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-    UnityEditor.UI.dll:
-    - UnityEditor.UI.CanvasScalerEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -48,6 +45,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
@@ -89,39 +87,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11942}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12014}
     - Class: 114
-      Script: {instanceID: 12848}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12668}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 13666}
+      Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 13766}
+      Script: {instanceID: 12980}
     - Class: 114
-      Script: {instanceID: 14000}
+      Script: {instanceID: 13668}
     - Class: 114
-      Script: {instanceID: 14020}
+      Script: {instanceID: 13768}
     - Class: 114
-      Script: {instanceID: 14032}
+      Script: {instanceID: 14002}
     - Class: 114
-      Script: {instanceID: 14154}
+      Script: {instanceID: 14022}
     - Class: 114
-      Script: {instanceID: 14344}
+      Script: {instanceID: 14034}
     - Class: 114
-      Script: {instanceID: 14452}
+      Script: {instanceID: 14156}
     - Class: 114
-      Script: {instanceID: 14738}
+      Script: {instanceID: 14346}
     - Class: 114
-      Script: {instanceID: 14788}
+      Script: {instanceID: 14454}
     - Class: 114
-      Script: {instanceID: 14876}
+      Script: {instanceID: 14740}
     - Class: 114
-      Script: {instanceID: 14968}
+      Script: {instanceID: 14790}
     - Class: 114
-      Script: {instanceID: 15088}
+      Script: {instanceID: 14878}
+    - Class: 114
+      Script: {instanceID: 14970}
+    - Class: 114
+      Script: {instanceID: 15090}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,6 +223,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: fac907b5d121d93e8f69acd051522b47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ProgressBarScript
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -589,7 +597,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 83faae2ce9140fae8b0b55f1147e7b43
+      Hash: 2a98a4587ed38f49d059f770ea6e32cd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PawnScript

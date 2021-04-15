@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: REPLY TO THE TOURIST
   description2: WELCOME, WOULD YOU LIKE A SINGLE OR A DOUBLE ROOM?
-  description3: GOOD MORNING, WELCOME HERE. MAY I HAVE YOUR ID OR PASSPORT PLEASE?
+  description3: WOULD YOU LIKE TO PAY CASH OR CARD?
   Imagename: 
   Imagename2: 
   Button1text: DONE

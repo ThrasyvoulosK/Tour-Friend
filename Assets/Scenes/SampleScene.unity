@@ -988,12 +988,27 @@ MonoBehaviour:
   videos_gr:
   - {fileID: 32900000, guid: 1842179188733904a82840cad574d4b9, type: 3}
   - {fileID: 32900000, guid: f6cabbd910bb33b4b9d2dc6f34b01258, type: 3}
-  - {fileID: 32900000, guid: 9fea51d106930be4ebfadfa526d4acc1, type: 3}
+  - {fileID: 32900000, guid: 3fa51d06a1fff6b47b9108ed0adbef24, type: 3}
+  - {fileID: 32900000, guid: 89b35c95c42c4df4494d8afd872f9bdf, type: 3}
+  - {fileID: 32900000, guid: 2ef89a253f7a6aa459ac0c908c4ab85b, type: 3}
+  - {fileID: 32900000, guid: 66e47e1be2bae424892cc094956d5daa, type: 3}
+  - {fileID: 32900000, guid: ca0bbc3e99080f5419c6f956a8d8e746, type: 3}
+  - {fileID: 32900000, guid: ebeb8bfe85deac4408c67fa82e24efe3, type: 3}
+  - {fileID: 32900000, guid: 83e200a148055ff418c006c5d7a79f0a, type: 3}
+  - {fileID: 32900000, guid: 9c03212041a6e2b4c91979beeb7f6810, type: 3}
   videos_en_names:
   - Placeholder
   - PlaceholderRed
+  - goToAirport
+  - goToCafeBar
+  - goToHotel
+  - goToRestaurant
+  - goToShop
+  - goToSightSeeing
+  - goToStation
+  - goToTaxi
   language_current: English
-  language_currentSign: English
+  language_currentSign: Greek
   total_points: 0
   sgo:
   - {fileID: 8558149607620697403, guid: 40ee07a22cddcd747b87bc8ecf5fd702, type: 3}
@@ -1143,13 +1158,53 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e688813748458cb49b2459a3e833d5fa, type: 2}
   - {fileID: 11400000, guid: d857b0dc973cd9241a9a2d6eb78ec03b, type: 2}
   - {fileID: 11400000, guid: ec990a6c7b15c524b8192719b63826e2, type: 2}
-  - {fileID: 11400000, guid: 373abae8323970d4dbe9ad77f166ab07, type: 2}
   - {fileID: 11400000, guid: 44aa4f8873b34fb45a77c0da5c2455cc, type: 2}
   - {fileID: 11400000, guid: 069eaf589bf8a394f8fedea3ddc17ab2, type: 2}
+  - {fileID: 11400000, guid: 373abae8323970d4dbe9ad77f166ab07, type: 2}
   - {fileID: 11400000, guid: 7e8baa43dbe020f41bd94ebce7c98d84, type: 2}
   - {fileID: 11400000, guid: 1a14666ebdf51cc4796e7f35e23cb9d9, type: 2}
   - {fileID: 11400000, guid: 62ca32b7e9a7a0d43930059ec08f22a6, type: 2}
   - {fileID: 11400000, guid: c830748706c62784db9d1cc6444e5b87, type: 2}
+  - {fileID: 11400000, guid: 372f2856ed9384240bf469f44d1fac06, type: 2}
+  - {fileID: 11400000, guid: 2b3c4bd17a81d1649a3a042ba7916fcb, type: 2}
+  - {fileID: 11400000, guid: 0d2bbaf65f1b2bf49acc692572118aea, type: 2}
+  - {fileID: 11400000, guid: b2f50f1c7d2d3134195165bd040c6548, type: 2}
+  - {fileID: 11400000, guid: 89303136e3d44df4788b3ecf44c05880, type: 2}
+  - {fileID: 11400000, guid: 5a25772af6231c04fbf827aa790f3f9b, type: 2}
+  - {fileID: 11400000, guid: 4b0e35578a572314592b566b60c53f62, type: 2}
+  - {fileID: 11400000, guid: 4ef7fb359e8ab1d47902441a7f69047b, type: 2}
+  - {fileID: 11400000, guid: 56f3e024a4e96724c9624726020989fb, type: 2}
+  - {fileID: 11400000, guid: b900fafcc52a22a43b7a255ad3cf8157, type: 2}
+  - {fileID: 11400000, guid: 7f82fcc3ccba86048ab548f0f622c2a7, type: 2}
+  - {fileID: 11400000, guid: c2491fd5f269fb140a2b04cc9da1e20b, type: 2}
+  - {fileID: 11400000, guid: 66521cffa7296894d9e7f3ceef930943, type: 2}
+  - {fileID: 11400000, guid: ab72d0c8205422a438ca18dc449925c0, type: 2}
+  - {fileID: 11400000, guid: ece00fcaf08f8e24992acbe1699f008c, type: 2}
+  - {fileID: 11400000, guid: 2fc1147cf6a6c4d47a9b17499811ea26, type: 2}
+  - {fileID: 11400000, guid: 32cf01385a96e3748acfaaef0d13104b, type: 2}
+  - {fileID: 11400000, guid: 5e8b04f882a73cb42aaaf01480d856b4, type: 2}
+  - {fileID: 11400000, guid: 30e84b1f63642274fad85c7da3286e61, type: 2}
+  - {fileID: 11400000, guid: 17e3d5c426949f64abbff2b182fd6a88, type: 2}
+  - {fileID: 11400000, guid: f7294dda89050f34e9d93368a79d081c, type: 2}
+  - {fileID: 11400000, guid: 9dd38d0ddd3c0584b9604d85801445a2, type: 2}
+  - {fileID: 11400000, guid: 0b1bd43ce7506de4e82abb49555c0f71, type: 2}
+  - {fileID: 11400000, guid: 88b618fcfdac1004f9ed8695ed9bed16, type: 2}
+  - {fileID: 11400000, guid: 0efd22927cf21774daf734f376f53f65, type: 2}
+  - {fileID: 11400000, guid: 4ef97d06e4170ca4ba6f14a8469798b0, type: 2}
+  - {fileID: 11400000, guid: f313391078e326a4cbd5f45388999e84, type: 2}
+  - {fileID: 11400000, guid: 13c64a7c0919b0d43908b5a8b5f4557e, type: 2}
+  - {fileID: 11400000, guid: 1138751ff6684bf44a5aac877994da01, type: 2}
+  - {fileID: 11400000, guid: 26ab1719536cfab458fcaf4a9190f1bc, type: 2}
+  - {fileID: 11400000, guid: fdbb021b4a883d84fb77d0a5f7c7f98b, type: 2}
+  - {fileID: 11400000, guid: 3f851667156c4ba4e9df57b3481afc73, type: 2}
+  - {fileID: 11400000, guid: 93c61f326cacc544c9e72bfd17f4e292, type: 2}
+  - {fileID: 11400000, guid: 676896a891896854c81c09be407bfe16, type: 2}
+  - {fileID: 11400000, guid: 37bf8228cb48fad44b673985354fe1a1, type: 2}
+  - {fileID: 11400000, guid: caa6208eccebecd47b4ae0552793d8d3, type: 2}
+  - {fileID: 11400000, guid: c1f1870fc3a45b8429e4a8d920f5f8a9, type: 2}
+  - {fileID: 11400000, guid: d81a423d7b70696438e202cf7e918156, type: 2}
+  - {fileID: 11400000, guid: 8d84f9381d9067342b708cc7fae102d9, type: 2}
+  - {fileID: 11400000, guid: 2595ba34dfc0de247aa229c188261acd, type: 2}
   player:
   - 
   - Tourfriend

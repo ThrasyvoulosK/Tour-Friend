@@ -597,6 +597,26 @@ public class GameMaster : MonoBehaviour
                 }
             }
         }
+        else if (current_screen == 24)//'what did the tourfriend say to you'
+        {
+            Debug.Log("select the help you need screen");
+            if (current_location == "Airport")
+            {
+                desc2 = screen_SOs[22].description2;
+                desc3 = screen_SOs[22].description3;
+            }
+            else
+            {
+                foreach (Screen_SO sso in reserveScreenSOs)
+                {
+                    if (sso.name.Contains(screen_SOs[22].name) && sso.name.Contains(current_location))
+                    {
+                        desc2 = sso.description2;
+                        desc3 = sso.description3;
+                    }
+                }
+            }
+        }
         else
         {
             Debug.Log("Two Videos Current Screen is: " + current_screen);
@@ -607,12 +627,36 @@ public class GameMaster : MonoBehaviour
 
         Button button1 = randomVideos[number1].transform.Find("Button").gameObject.GetComponent<Button>();
         Button button2 = randomVideos[number2].transform.Find("Button").gameObject.GetComponent<Button>();
-
+        
         button1.onClick.AddListener(delegate { lastChoice = desc2; });
         button2.onClick.AddListener(delegate { lastChoice = desc3; });
 
-        ConstructorDecider(button2);//adds 1 to current screen
-        ButtonDecider(button1);//doesn't add
+        //handle 'choice' questions here, ie non-correct/false ones
+        if(current_screen!=20)
+        {
+            Debug.Log("Buttons assigned normally");
+            ConstructorDecider(button2);//adds 1 to current screen
+            ButtonDecider(button1);//doesn't add
+        }
+        else if (lastChoice == desc2)
+        {
+            Debug.Log($"Special Choice 1: last choice is {lastChoice}, and desc2 is {desc2}");
+            ConstructorDecider(button1);//adds 1 to current screen
+            ButtonDecider(button2);//doesn't add
+        }
+        else if(lastChoice==desc3)
+        {
+            Debug.Log($"Special Choice 2: last choice is {lastChoice}, and desc2 is {desc3}");
+            ConstructorDecider(button2);//adds 1 to current screen
+            ButtonDecider(button1);//doesn't add
+        }
+        else
+        {
+            Debug.Log("Current screen not 20 and not a choice question etc");
+        }
+
+        /*ConstructorDecider(button2);//adds 1 to current screen
+        ButtonDecider(button1);//doesn't add*/
 
     }
     void ButtonDecider(Button button1)
@@ -980,14 +1024,51 @@ public class GameMaster : MonoBehaviour
                 button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, lastChoice, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
             }*/
             //else if
-            if (usedScreen != locationscreenposition + 1)
+            if (usedScreen != locationscreenposition + 1&&usedScreen!=22)
             {
-                //Debug.log
+                Debug.Log($"video screen typical, screen {usedScreen}");
                 button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
             } 
+            else if(usedScreen==22)
+            {
+                Debug.Log("video screen after two-video choice");
+                button.onClick.RemoveAllListeners();
+                Screen_SO screen_SO = null;
+                string newDesc = null;
+                foreach (Screen_SO sso in reserveScreenSOs)
+                {
+                    if (lastChoice==sso.description2)
+                    {
+                        //we should be in SOs 17
+                        /*foreach(Screen_SO sso2 in reserveScreenSOs)
+                        {
+                            //we should be checking for the appropriate response in So 22
+                            if(sso2.name.StartsWith("Screen_SO22")&& sso2.name.EndsWith(current_location))
+                            {
+
+                            }
+                            else if(screen_SOs[usedScreen].name=="Screen_SO22"&&current_location=="Airport")
+                            {
+
+                            }
+                        }
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, , videos_en_names[1], screen_SOs[usedScreen].Button1text); });*/
+                        int loc=System.Array.IndexOf(reserveScreenSOs, sso);
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description,reserveScreenSOs[loc+8].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                        break;
+                    }
+                    else if(lastChoice == sso.description3)
+                    {
+                        int loc = System.Array.IndexOf(reserveScreenSOs, sso);
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, reserveScreenSOs[loc + 8].description3, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                        break;
+                    }
+                }
+                //Debug.Log($"We are going to {screen_SO.description2}");
+            }
             else
             {
-                Debug.Log("Video after location select");
+                Debug.Log("Video screen after location select");
                 button.onClick.RemoveAllListeners();
                 if (current_location != "Airport")//Airport is our default selection
                 {

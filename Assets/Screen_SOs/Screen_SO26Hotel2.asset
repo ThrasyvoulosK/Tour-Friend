@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO26Hotel2
   m_EditorClassIdentifier: 
   description: SELECT YOUR REPLY
-  description2: SURE, HERE IT IS
-  description3: 
+  description2: CARD, PLEASE.
+  description3: CASH, PLEASE.
   Imagename: 
   Imagename2: 
   Button1text: 

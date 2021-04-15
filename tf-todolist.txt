@@ -558,3 +558,8 @@ back-button allowed on: 3,6,11,18,27
 //-unclickable, unless backround-is-not-raycastable
 //-duplicates screens when clicked
 //--at least on second map screen
+
+videos missing:
+-'how do i get to go sightseeing', other:69
+
+'i want to go to [...]' replace with 'how do i get to [...]'

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: SELECT THE HELP YOU NEED
   description2: HELLO, I WOULD LIKE TO BOOK A ROOM.
-  description3: HELLO, I HAVE A RESERVATION FOR TODAY.
+  description3: ' I WOULD LIKE TO CHECK OUT.'
   Imagename: 
   Imagename2: 
   Button1text: 
