@@ -563,3 +563,7 @@ videos missing:
 -'how do i get to go sightseeing', other:69
 
 'i want to go to [...]' replace with 'how do i get to [...]'
+
+replace code searching for reserve-SOs with a function that replaces current-SOs with reserve-SOs
+
+check cafebar route for errors (confusion with restaurant?)

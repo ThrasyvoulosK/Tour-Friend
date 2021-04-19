@@ -19,7 +19,7 @@ public class LenseScript : MonoBehaviour
 
         backGroundName = "VideoBackground"+theGameMaster.current_location+"TwoVideos";
 
-        Debug.Log("lense start");
+        //Debug.Log("lense start");
         lense = gameObject.transform.Find("LenseButton").gameObject;
 
         gameObject.GetComponent<Canvas>().overrideSorting=true;
@@ -70,7 +70,7 @@ public class LenseScript : MonoBehaviour
 
     public void magnify()
     {
-        Debug.Log("Magnify Code");
+        //Debug.Log("Magnify Code");
         gameObject.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate
         {
             gameObject.transform.Find("BackgroundImage").GetComponent<Image>().sprite = theGameMaster.imagehandler[backGroundName + "Zoom"];

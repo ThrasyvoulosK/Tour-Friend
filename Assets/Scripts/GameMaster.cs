@@ -95,6 +95,7 @@ public class GameMaster : MonoBehaviour
     public GameObject backB;
 
     //keep here the last chosen item from custom questions (ie non correct/false ones)
+    [TextArea]
     public string lastChoice;
 
 
@@ -183,8 +184,18 @@ public class GameMaster : MonoBehaviour
     }
     void VideoDictionaryInitialise()
     {
+        List<UnityEngine.Video.VideoClip> videolist = null;
+        switch(language_currentSign)
+        {
+            case "Greek":
+                videolist = videos_gr;
+                break;
+            default:
+                videolist = videos_en;
+                break;
+        }
         for (int i = 0; i < videos_en.Count; i++)
-            videohandler.Add(videos_en_names[i], videos_en[i]);
+            videohandler.Add(videos_en_names[i], videolist[i]);
     }
 
     void LanguageDictionaryInitialise(string current_language)
@@ -461,7 +472,7 @@ public class GameMaster : MonoBehaviour
         else
             newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = lastChoice;
 
-        if(current_screen==31)
+        if(current_screen==31||current_screen==22)
             lastChoice = newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text;//
 
         //find images and change them to their proper ones, depending on whether they've been used properly
@@ -521,26 +532,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log(current_screen);
 
         BackButton();
-
-        //TEST: VideoChoice
-        /*
-        GameObject vidch1 = newgameobject.transform.Find("VideoChoice1").gameObject;
-        GameObject vidch2 = newgameobject.transform.Find("VideoChoice2").gameObject;
-
-        InitialiseVideoChoice(vidch1, videos_en_names[0], desc2, desc1, "False");//
-        InitialiseVideoChoice(vidch2, videos_en_names[1], desc3, desc1, "Correct");//
-
-        Button button1 = vidch1.transform.Find("Button").gameObject.GetComponent<Button>();
-        Button button2 = vidch2.transform.Find("Button").gameObject.GetComponent<Button>();
-
-        ConstructorDecider(button2);//adds 1 to current screen
-
-        ButtonDecider(button1);//doesn't add
-        */
-
-        //GameObject vidch1 = newgameobject.transform.Find("VideoChoice1").gameObject;
-        //GameObject vidch2 = newgameobject.transform.Find("VideoChoice2").gameObject;
-
+      
         GameObject[] randomVideos = new GameObject[2];
         //randomVideos[0] = vidch1;
         //randomVideos[1] = vidch2;
@@ -577,8 +569,9 @@ public class GameMaster : MonoBehaviour
             {
                 desc2 = reserveScreenSOs[Random.Range(0, 8)].description2;
             }
-            while (desc2 == desc1);
-            Debug.Log($"Two Videos (${desc1} & ${desc2}) Assigned Randomly");
+            while (desc2 == desc3);
+            //Debug.Log($"Two Videos (${desc1} & ${desc2}) Assigned Randomly");
+            Debug.Log($"Description1 (${desc3}), DIFFERENT THAN Description2: ${desc2}");
         }
         else if(current_screen==17||current_screen==20)//'select the help you need
         {
@@ -708,6 +701,8 @@ public class GameMaster : MonoBehaviour
             Debug.Log("Two Videos Current Screen is: " + current_screen);
         }
 
+        Debug.Log($"DESC2: {desc2}, DESC3: {desc3}");
+
         InitialiseVideoChoice(randomVideos[number1], videos_en_names[0], desc2, desc1, "SELECT");//"False"
         InitialiseVideoChoice(randomVideos[number2], videos_en_names[1], desc3, desc1, "SELECT");//"Correct"
 
@@ -759,6 +754,7 @@ public class GameMaster : MonoBehaviour
             button1.onClick.AddListener(delegate 
             { 
                 createPointsscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "CONTINUE");
+                lastChoice = null;
                 //current_screen = locationscreenposition;
             });
         }
@@ -769,9 +765,10 @@ public class GameMaster : MonoBehaviour
         }
         else if (screen_SOs[current_screen].prefab.name.EndsWith("Canvas OneVideo"))
         {
-            //Debug.Log("after calling two-video constructor we need a OneVideo constructor");
+            Debug.Log($"after calling two-video constructor, ON SCREEN {current_screen}, we need a OneVideo constructor");
             button1.onClick.AddListener(delegate { 
-                createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, screen_SOs[current_screen].description2, videos_en_names[0], "Continue");
+                //createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, screen_SOs[current_screen].description2, videos_en_names[0], "Continue");
+                createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, lastChoice, videos_en_names[0], "Continue");
                 //lastChoice = screen_SOs[current_screen].description3;
             });
         }
@@ -867,7 +864,6 @@ public class GameMaster : MonoBehaviour
     {
         Debug.Log("covtcs called on " + current_screen);
         //start by creating a one-video screen
-        //createOneVideoscreen(prefab_go, desc, vid, button);
         //instantiate its prefab version
         GameObject newgameobject;
         newgameobject = Instantiate(prefab_go);
@@ -919,8 +915,6 @@ public class GameMaster : MonoBehaviour
     public void createOneImageTwoChoicesscreen(GameObject prefab_go, string desc, string img, string button, string button2)
     {
         //Debug.Log("coitcs called on " + current_screen);
-        //start by creating a one-video screen
-        //createOneVideoscreen(prefab_go, desc, vid, button);
         //instantiate its prefab version
         GameObject newgameobject;
         newgameobject = Instantiate(prefab_go);
@@ -970,6 +964,7 @@ public class GameMaster : MonoBehaviour
             buttontwo.onClick.AddListener(delegate 
             { 
                 createPointsscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description2, "Points_Ribbon_Lose", "CONTINUE");
+                lastChoice = null;
                 //current_screen = locationscreenposition;
             });
         }
@@ -1109,11 +1104,6 @@ public class GameMaster : MonoBehaviour
             //Debug.Log("CALLING ONE VIDEO");
             //Special Case: The Video after Place-Select
             //load a video that suits our selection
-            /*if (usedScreen == 19)
-            {
-                button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, lastChoice, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
-            }*/
-            //else if
             if (usedScreen != locationscreenposition + 1&&usedScreen!=22&&usedScreen!=27 && usedScreen != 31)
             {
                 Debug.Log($"video screen typical, screen {usedScreen}");
@@ -1146,6 +1136,8 @@ public class GameMaster : MonoBehaviour
             else if(usedScreen==27)
             {
                 button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, lastChoice, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                Debug.Log($"usedScreen {usedScreen}, LastChoice: {lastChoice}");
+                Debug.Log($"compare with default: {screen_SOs[usedScreen].description2} AND {screen_SOs[usedScreen].description3}");
             }
             else if(usedScreen==31)
             {
@@ -1174,18 +1166,21 @@ public class GameMaster : MonoBehaviour
                         if (sso.name == screen_SOs[usedScreen].name + current_location)
                         {
                             screen_SO = sso;
+                            //screen_SOs[usedScreen] = sso;
                             break;
                         }
 
                     }
                     if (screen_SO != null)
-                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SO.description, screen_SO.description2, videos_en_names[1], screen_SO.Button1text); });
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SO.description, screen_SO.description2, videos_en_names[1], screen_SO.Button1text);
+                                                              });
 
                     //Debug.Log($"We are going to {screen_SO.description2}");
 
                 }
                 else
                     button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                //button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
             }
         }
         else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneVi"))//TwoOptions
@@ -1238,7 +1233,7 @@ public class GameMaster : MonoBehaviour
     {
         //return;
         //code for back button
-        Debug.Log("Back Button Code!");
+        //Debug.Log("Back Button Code!");
 
         GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.RemoveAllListeners();
         GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<BackButtonScript>().currentscreen = null;
@@ -1314,7 +1309,7 @@ public class GameMaster : MonoBehaviour
         }
         else
         {
-            Debug.Log("No button named Button");
+            //Debug.Log("No button named Button");
         }
         
 

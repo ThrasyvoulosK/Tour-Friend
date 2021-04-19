@@ -709,7 +709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 208673971831118775, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_fontSize
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 208673971831118775, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_enableAutoSizing
@@ -717,7 +717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 208673971831118775, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_fontSizeBase
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3633192972050410157, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_VideoClip
@@ -933,7 +933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 208673971831118775, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_fontSize
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 208673971831118775, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_enableAutoSizing
@@ -941,7 +941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 208673971831118775, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_fontSizeBase
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3633192972050410157, guid: 580848b8e47b6ad4fa74401c4c768876, type: 3}
       propertyPath: m_TargetTexture

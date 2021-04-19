@@ -19,6 +19,9 @@ public class Screen_SO : ScriptableObject
     //public Sprite Image1sprite;
     public string Imagename;
     public string Imagename2;
+    //
+    public string Video1;
+    public string Video2;
     //public Button Button1;
     public string Button1text;
     //public Button Button2;
