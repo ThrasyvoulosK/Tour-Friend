@@ -104,6 +104,7 @@ public class GameMaster : MonoBehaviour
     {
         //language assignment test
         //language_current = "Greek";
+        language_currentSign = "Greek";
 
         //initialise dictionaries
         LanguageDictionaryInitialise(language_current);
@@ -189,13 +190,19 @@ public class GameMaster : MonoBehaviour
         {
             case "Greek":
                 videolist = videos_gr;
+                //Debug.Log("Greek SignLanguage");
                 break;
             default:
                 videolist = videos_en;
+                //Debug.Log("English SignLanguage");
                 break;
         }
-        for (int i = 0; i < videos_en.Count; i++)
+        for (int i = 0; i < videos_gr.Count; i++) 
+        {
+            //Debug.Log($"Assigning video {videos_en_names[i]}");
             videohandler.Add(videos_en_names[i], videolist[i]);
+        }
+            
     }
 
     void LanguageDictionaryInitialise(string current_language)
@@ -228,11 +235,15 @@ public class GameMaster : MonoBehaviour
     {
         GameObject vidchoice = videochoiceprefab;
 
-        UnityEngine.Video.VideoClip vidclip;
+        /*UnityEngine.Video.VideoClip vidclip;
         vidclip= vidchoice.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();
-        //vidclip= vidchoice.transform.GetChild(2).transform.GetChild(0).GetComponent<UnityEngine.Video.VideoClip>(); 
-        //vidclip= vidchoice.transform.GetChild(2).transform.GetChild(0).GetComponent<UnityEngine.Video.VideoClip>(); 
-        vidclip = videohandler[vid];
+         //vidchoice.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>() = videohandler[vid];
+        //Debug.Log($"Assigning {vidclip.name} with {vid}");
+        Debug.Log($"Assigning vidclip with {vid}");
+        vidclip = videohandler[vid];*/
+
+        UnityEngine.Video.VideoPlayer videoPlayer = videochoiceprefab.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
+        videoPlayer.clip = videohandler[vid];
 
         vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = desc;
         vidchoice.transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = button;
@@ -451,6 +462,7 @@ public class GameMaster : MonoBehaviour
         UnityEngine.Video.VideoPlayer videoPlayer = prefab_go.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
         /*videoClip = videoPlayer.clip;
         videoClip = videohandler[vid];*/
+        Debug.Log("OneVideo Clip to be used: " + vid);
         videoPlayer.clip = videohandler[vid];
         //Debug.Log("video chosen: " + videoPlayer.clip.name);
 
@@ -497,11 +509,11 @@ public class GameMaster : MonoBehaviour
 
         BackButton();
 
-        Debug.Log(current_screen);
+        //Debug.Log(current_screen);
         ConstructorDecider(button1);
     }
     //two videos, with their own buttons
-    public void createTwoVideosscreen(GameObject prefab_go, string desc1,string desc2,string desc3, string img, string button)
+    public void createTwoVideosscreen(GameObject prefab_go, string desc1,string desc2,string desc3, string img1,string img2,string video1,string video2, string button)
     {
         //instantiate its prefab version
         GameObject newgameobject;
@@ -555,19 +567,26 @@ public class GameMaster : MonoBehaviour
         {
             desc3 = "i want to go" + current_location;
             if (current_location == "Airport")
-                desc3 = screen_SOs[locationscreenposition+1].description2;
+            {
+                desc3 = screen_SOs[locationscreenposition + 1].description2;
+                video2 = screen_SOs[locationscreenposition + 1].Video1;
+            }
             else
             {
-                foreach(Screen_SO sso in reserveScreenSOs)
+                foreach (Screen_SO sso in reserveScreenSOs)
                 {
                     if (sso.name.Contains(screen_SOs[locationscreenposition + 1].name) && sso.name.Contains(current_location))
+                    {
                         desc3 = sso.description2;
+                        video2 = sso.Video1;
+                    }
                 }
             }
             //desc2= "i want to go" + current_location;
             do
             {
                 desc2 = reserveScreenSOs[Random.Range(0, 8)].description2;
+                video1 = reserveScreenSOs[Random.Range(0, 8)].Video1;
             }
             while (desc2 == desc3);
             //Debug.Log($"Two Videos (${desc1} & ${desc2}) Assigned Randomly");
@@ -703,8 +722,8 @@ public class GameMaster : MonoBehaviour
 
         Debug.Log($"DESC2: {desc2}, DESC3: {desc3}");
 
-        InitialiseVideoChoice(randomVideos[number1], videos_en_names[0], desc2, desc1, "SELECT");//"False"
-        InitialiseVideoChoice(randomVideos[number2], videos_en_names[1], desc3, desc1, "SELECT");//"Correct"
+        InitialiseVideoChoice(randomVideos[number1], video1, desc2, desc1, "SELECT");//"False"
+        InitialiseVideoChoice(randomVideos[number2], video2, desc3, desc1, "SELECT");//"Correct"
 
         Button button1 = randomVideos[number1].transform.Find("Button").gameObject.GetComponent<Button>();
         Button button2 = randomVideos[number2].transform.Find("Button").gameObject.GetComponent<Button>();
@@ -1044,7 +1063,7 @@ public class GameMaster : MonoBehaviour
             Debug.Log("null button");
         button.onClick.AddListener(DebugName);
 
-        Debug.Log("calling constructor on " + usedScreen);
+        //Debug.Log("calling constructor on " + usedScreen);
 
         if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas OneImage"))
         {
@@ -1172,14 +1191,14 @@ public class GameMaster : MonoBehaviour
 
                     }
                     if (screen_SO != null)
-                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SO.description, screen_SO.description2, videos_en_names[1], screen_SO.Button1text);
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SO.description, screen_SO.description2, screen_SO.Video1, screen_SO.Button1text);
                                                               });
 
                     //Debug.Log($"We are going to {screen_SO.description2}");
 
                 }
                 else
-                    button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                    button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, screen_SOs[usedScreen].Video1, screen_SOs[usedScreen].Button1text); });
                 //button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
             }
         }
@@ -1202,7 +1221,7 @@ public class GameMaster : MonoBehaviour
         }
         else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas TwoVideos"))
         {
-            button.onClick.AddListener(delegate { createTwoVideosscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, screen_SOs[usedScreen].description3, images_name[0], screen_SOs[usedScreen].Button1text); });
+            button.onClick.AddListener(delegate { createTwoVideosscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, screen_SOs[usedScreen].description3, screen_SOs[usedScreen].Imagename, screen_SOs[usedScreen].Imagename2, screen_SOs[usedScreen].Video1, screen_SOs[usedScreen].Video2, screen_SOs[usedScreen].Button1text); });
         }
         else if (screen_SOs[usedScreen].prefab.name.StartsWith("Canvas Points"))
         {
