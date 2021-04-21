@@ -243,6 +243,7 @@ public class GameMaster : MonoBehaviour
         vidclip = videohandler[vid];*/
 
         UnityEngine.Video.VideoPlayer videoPlayer = videochoiceprefab.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
+        Debug.Log($"Video Choice Asked For: {vid}");
         videoPlayer.clip = videohandler[vid];
 
         vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = desc;
@@ -598,7 +599,9 @@ public class GameMaster : MonoBehaviour
             if (current_location == "Airport")
             {
                 desc2 = screen_SOs[17].description2;
+                video1 = screen_SOs[17].Video1;
                 desc3 = screen_SOs[17].description3;
+                video2 = screen_SOs[17].Video2;
             }
             else
             {
@@ -607,7 +610,9 @@ public class GameMaster : MonoBehaviour
                     if (sso.name.Contains(screen_SOs[17].name) && sso.name.Contains(current_location))
                     {
                         desc2 = sso.description2;
+                        video1 = sso.Video1;
                         desc3 = sso.description3;
+                        video2 = sso.Video2;
                     }
                 }
             }
@@ -618,7 +623,9 @@ public class GameMaster : MonoBehaviour
             if (current_location == "Airport")
             {
                 desc2 = screen_SOs[22].description2;
+                video1 = screen_SOs[22].Video1;
                 desc3 = screen_SOs[22].description3;
+                video2 = screen_SOs[22].Video2;
             }
             else
             {
@@ -627,7 +634,9 @@ public class GameMaster : MonoBehaviour
                     if (sso.name.Contains(screen_SOs[22].name) && sso.name.Contains(current_location))
                     {
                         desc2 = sso.description2;
+                        video1 = sso.Video1;
                         desc3 = sso.description3;
+                        video2 = sso.Video2;
                     }
                 }
             }
@@ -640,14 +649,18 @@ public class GameMaster : MonoBehaviour
             if (lastChoice == screen_SOs[22].description2)
             {
                 desc2 = screen_SOs[26].description2;
+                video1 = screen_SOs[26].Video1;
                 desc3 = screen_SOs[26].description3;
+                video2 = screen_SOs[26].Video2;
             }
             //airport choice 2
             else if (lastChoice == screen_SOs[22].description3)
             {
                 index = System.Array.IndexOf(reserveScreenSOs, screen_SOs[26]);
                 desc2 = reserveScreenSOs[index + 1].description2;
+                video1 = reserveScreenSOs[index + 1].Video1;
                 desc3 = reserveScreenSOs[index + 1].description3;
+                video2 = reserveScreenSOs[index + 1].Video2;
             }
             else
             {
@@ -665,7 +678,9 @@ public class GameMaster : MonoBehaviour
                             {
                                 Debug.Log("choosing sso.description2");
                                 desc2 = sso2.description2;
+                                video1 = sso2.Video2;
                                 desc3 = sso2.description3;
+                                video1 = sso2.Video2;
                                 //break;
                             }
                         }
@@ -680,7 +695,9 @@ public class GameMaster : MonoBehaviour
                             {
                                 Debug.Log("choosing sso.description3");
                                 desc2 = sso2.description2;
+                                video1 = sso2.Video1;
                                 desc3 = sso2.description3;
+                                video2 = sso2.Video2;
                                 //break;
                             }
                         }
@@ -697,7 +714,9 @@ public class GameMaster : MonoBehaviour
                 if(lastChoice==sso.description2|| lastChoice == sso.description3)
                 {
                     desc2 = sso.description2;
+                    video1 = sso.Video1;
                     desc3 = sso.description3;
+                    video2 = sso.Video2;
                 }
             }
         }
@@ -711,7 +730,9 @@ public class GameMaster : MonoBehaviour
                 {
                     //Debug.Log(index + 16);
                     desc2 = reserveScreenSOs[index].description2;
+                    video1 = reserveScreenSOs[index].Video1;
                     desc3 = reserveScreenSOs[index].description3;
+                    video2 = reserveScreenSOs[index].Video2;
                 }
             }
         }
@@ -721,6 +742,11 @@ public class GameMaster : MonoBehaviour
         }
 
         Debug.Log($"DESC2: {desc2}, DESC3: {desc3}");
+        if(video1.Length<2||video2.Length<2)
+        {
+            video1 = "PlaceholderRed";
+            video2 = "Placeholder";
+        }
 
         InitialiseVideoChoice(randomVideos[number1], video1, desc2, desc1, "SELECT");//"False"
         InitialiseVideoChoice(randomVideos[number2], video2, desc3, desc1, "SELECT");//"Correct"
@@ -1140,13 +1166,13 @@ public class GameMaster : MonoBehaviour
                     {
                         //we should be in SOs 17
                         int loc=System.Array.IndexOf(reserveScreenSOs, sso);
-                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description,reserveScreenSOs[loc+8].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description,reserveScreenSOs[loc+8].description2, reserveScreenSOs[loc + 8].Video1, screen_SOs[usedScreen].Button1text); });
                         break;
                     }
                     else if(lastChoice == sso.description3)
                     {
                         int loc = System.Array.IndexOf(reserveScreenSOs, sso);
-                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, reserveScreenSOs[loc + 8].description3, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, reserveScreenSOs[loc + 8].description3, reserveScreenSOs[loc + 8].Video2, screen_SOs[usedScreen].Button1text); });
                         break;
                     }
                 }
@@ -1154,9 +1180,22 @@ public class GameMaster : MonoBehaviour
             }
             else if(usedScreen==27)
             {
-                button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, lastChoice, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                /*button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, lastChoice, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
                 Debug.Log($"usedScreen {usedScreen}, LastChoice: {lastChoice}");
-                Debug.Log($"compare with default: {screen_SOs[usedScreen].description2} AND {screen_SOs[usedScreen].description3}");
+                Debug.Log($"compare with default: {screen_SOs[usedScreen].description2} AND {screen_SOs[usedScreen].description3}");*/
+                foreach (Screen_SO sso in reserveScreenSOs)
+                {
+                    if (lastChoice == sso.description2)
+                    {
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, sso.description2, sso.Video1, screen_SOs[usedScreen].Button1text); });
+                        break;
+                    }
+                    else if (lastChoice == sso.description3)
+                    {
+                        button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, sso.description3, sso.Video2, screen_SOs[usedScreen].Button1text); });
+                        break;
+                    }
+                }
             }
             else if(usedScreen==31)
             {
@@ -1166,9 +1205,9 @@ public class GameMaster : MonoBehaviour
                     {
                         int loc = System.Array.IndexOf(reserveScreenSOs, sso);
                         if (lastChoice == sso.description2)
-                            button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, reserveScreenSOs[loc + 16].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                            button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, reserveScreenSOs[loc + 16].description2, reserveScreenSOs[loc + 16].Video1, screen_SOs[usedScreen].Button1text); });
                         else if (lastChoice == sso.description3)
-                            button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, reserveScreenSOs[loc + 16].description3, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
+                            button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, reserveScreenSOs[loc + 16].description3, reserveScreenSOs[loc + 16].Video1, screen_SOs[usedScreen].Button1text); });
                     }
                     
                 }
