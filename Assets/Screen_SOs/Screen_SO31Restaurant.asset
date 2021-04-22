@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: HERE IS THE DRINKS MENU.
-  description3: HERE IS THE DESSERT MENU.
+  description2: THIS IS YOUR TABLE.
+  description3: THIS IS YOUR SEAT.
   Imagename: 
   Imagename2: 
   Video1: Restaurant31_1_1

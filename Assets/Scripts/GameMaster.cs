@@ -351,7 +351,7 @@ public class GameMaster : MonoBehaviour
 
         if ((img1.Length >= 1)&& (img2.Length >= 1))
         {
-            Debug.Log("Given Images: " + img1 + " + " + img2);
+            //Debug.Log("Given Images: " + img1 + " + " + img2);
             image1.sprite = imagehandler[img1];
             image2.sprite = imagehandler[img2];
         }
@@ -463,9 +463,30 @@ public class GameMaster : MonoBehaviour
         UnityEngine.Video.VideoPlayer videoPlayer = prefab_go.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
         /*videoClip = videoPlayer.clip;
         videoClip = videohandler[vid];*/
-        Debug.Log("OneVideo Clip to be used: " + vid);
-        videoPlayer.clip = videohandler[vid];
-        //Debug.Log("video chosen: " + videoPlayer.clip.name);
+        Debug.Log("OneVideo Clip to be used: " + vid+" , on screen "+current_screen);
+        if (current_screen != 18 && current_screen != 27)
+        {
+            videoPlayer.clip = videohandler[vid];
+            Debug.Log($"Current screen is {current_screen} and is different than 18 or 27");
+        }
+        else
+        {
+            Debug.Log(current_screen + "onevideo");
+            foreach (Screen_SO sso in reserveScreenSOs)
+            {
+                //Debug.Log(gameObject.name);
+                if (lastChoice == sso.description2)
+                {
+                    videoPlayer.clip = videohandler[sso.Video1];
+                }
+                else if (lastChoice == sso.description3)
+                {
+                    videoPlayer.clip = videohandler[sso.Video2];
+                }
+                Debug.Log(lastChoice + videoPlayer.clip);
+            }
+        }
+        Debug.Log("video chosen: " + videoPlayer.clip.name);
 
         //instantiate its prefab version
         GameObject newgameobject;
@@ -480,10 +501,12 @@ public class GameMaster : MonoBehaviour
 
         newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text=desc;
 
-        if(current_screen!=18)
-            newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text=desc2;
+        if (current_screen != 18)
+            newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = desc2;
         else
+        {
             newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = lastChoice;
+        }
 
         if(current_screen==31||current_screen==22)
             lastChoice = newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text;//
@@ -673,8 +696,8 @@ public class GameMaster : MonoBehaviour
                         Debug.Log("lastChoice == sso.description2");
                         foreach (Screen_SO sso2 in reserveScreenSOs)
                         {
-                            Debug.Log(sso2.name.StartsWith(screen_SOs[26].name) + " " + sso2.name.Contains(current_location));
-                            if (sso2.name.StartsWith(screen_SOs[26].name) && sso2.name.Contains(current_location))
+                            //Debug.Log(sso2.name.StartsWith(screen_SOs[26].name) + " " + sso2.name.Contains(current_location));
+                            if (sso2.name.StartsWith(screen_SOs[26].name) && sso2.name.Contains(current_location)&&sso2.name.EndsWith("2")==false)
                             {
                                 Debug.Log("choosing sso.description2");
                                 desc2 = sso2.description2;
@@ -781,7 +804,9 @@ public class GameMaster : MonoBehaviour
         {
             Debug.Log("Current screen not 20 and not a choice question etc");
             Debug.Log("Buttons assigned normally");
+            Debug.Log(lastChoice + desc2 + desc3);
             ConstructorDecider(button2);//adds 1 to current screen
+            //button1.onClick.AddListener(delegate { lastChoice = desc2; });
             ButtonDecider(button1);//doesn't add
         }
 
@@ -811,11 +836,42 @@ public class GameMaster : MonoBehaviour
         else if (screen_SOs[current_screen].prefab.name.EndsWith("Canvas OneVideo"))
         {
             Debug.Log($"after calling two-video constructor, ON SCREEN {current_screen}, we need a OneVideo constructor");
-            button1.onClick.AddListener(delegate { 
-                //createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, screen_SOs[current_screen].description2, videos_en_names[0], "Continue");
+            //17 or 26
+            //lastChoice=GameObject.Find("Canvas TwoVideos(Clone)").transform.Find("")
+            //button1.onClick.AddListener(delegate { 
+            //createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, screen_SOs[current_screen].description2, videos_en_names[0], "Continue");
+            /*foreach(Screen_SO sso in reserveScreenSOs)
+            {
+                Debug.Log(gameObject.name);
+                if (lastChoice == sso.description2)
+                {
+                    Debug.Log(lastChoice);
+                    button1.onClick.AddListener(delegate
+                    {
+                        createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, sso.description2, sso.Video1, "Continue");
+                    });
+                    break;
+                }
+                    else if (lastChoice == sso.description3)
+                    {
+                        Debug.Log(lastChoice);
+                    button1.onClick.AddListener(delegate
+                    {
+                        createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, sso.description3, sso.Video2, "Continue");
+                    });
+                        break;
+                    }
+                    else
+                        Debug.Log(lastChoice + "NOT IN SSO");
+                    Debug.Log(lastChoice + sso.description2 + sso.description3);
+                }
+            */
+            button1.onClick.AddListener(delegate
+            {
                 createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, lastChoice, videos_en_names[0], "Continue");
-                //lastChoice = screen_SOs[current_screen].description3;
             });
+                //lastChoice = screen_SOs[current_screen].description3;
+            //});
         }
         else
             Debug.Log("after calling two-video constructor we need a different constructor");
@@ -1054,8 +1110,8 @@ public class GameMaster : MonoBehaviour
 
             GameObject gb = null;
             gb = GameObject.Find(screen_SOs[usedScreen+1].prefab.name + "(Clone)");
-            Debug.Log($"Looking for {screen_SOs[usedScreen+1].prefab.name}");
-            Debug.Log(gb.name + " Will Be Destroyed by BackButton");
+            //Debug.Log($"Looking for {screen_SOs[usedScreen+1].prefab.name}");
+            //Debug.Log(gb.name + " Will Be Destroyed by BackButton");
             //find current screen object
             /*foreach (GameObject gob in screenprefabs)
             {
@@ -1149,7 +1205,7 @@ public class GameMaster : MonoBehaviour
             //Debug.Log("CALLING ONE VIDEO");
             //Special Case: The Video after Place-Select
             //load a video that suits our selection
-            if (usedScreen != locationscreenposition + 1&&usedScreen!=22&&usedScreen!=27 && usedScreen != 31)
+            if (usedScreen != locationscreenposition + 1&&usedScreen!=22 && usedScreen != 31)//&&usedScreen!=27
             {
                 Debug.Log($"video screen typical, screen {usedScreen}");
                 button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, screen_SOs[usedScreen].description2, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
@@ -1178,11 +1234,9 @@ public class GameMaster : MonoBehaviour
                 }
                 //Debug.Log($"We are going to {screen_SO.description2}");
             }
-            else if(usedScreen==27)
+            /*else if(usedScreen==27)
             {
-                /*button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, lastChoice, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
-                Debug.Log($"usedScreen {usedScreen}, LastChoice: {lastChoice}");
-                Debug.Log($"compare with default: {screen_SOs[usedScreen].description2} AND {screen_SOs[usedScreen].description3}");*/
+                //button.onClick.AddListener(delegate { createOneVideoscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, lastChoice, videos_en_names[1], screen_SOs[usedScreen].Button1text); });
                 foreach (Screen_SO sso in reserveScreenSOs)
                 {
                     if (lastChoice == sso.description2)
@@ -1196,7 +1250,7 @@ public class GameMaster : MonoBehaviour
                         break;
                     }
                 }
-            }
+            }*/
             else if(usedScreen==31)
             {
                 foreach(Screen_SO sso in reserveScreenSOs)
@@ -1335,6 +1389,16 @@ public class GameMaster : MonoBehaviour
             Debug.Log(screen_SOs[usedScreen].prefab.name + "(Clone)");
         }*/
 
+        //Define BackGround's image as well
+        GameObject Background = null;
+        if(usedScreen>locationscreenposition)
+        {
+            Background = currentGameObject.transform.Find("Background").gameObject;
+            Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location];
+            if(currentGameObject.name.Contains("TwoVideos"))
+                Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location+"Double"];
+        }
+
         GameObject Description = null;
         if (currentGameObject.transform.Find("Description").gameObject!=null)
         {
@@ -1374,20 +1438,14 @@ public class GameMaster : MonoBehaviour
         return;
 
         //video buttons (handled on VideoScript)
-        /*
-        GameObject ButtonPlayPause = null;
-        GameObject ButtonRepeat = null;
-        if(currentGameObject.transform.Find("ButtonPlayPause").gameObject!=null)
-        {
-            ButtonPlayPause = currentGameObject.transform.Find("ButtonPlayPause").gameObject;
-            ButtonRepeat = currentGameObject.transform.Find("ButtonRepeat").gameObject;
-        }
-        else
-        {
-            Debug.Log("No such gameobject");
-        }*/
 
     }
+
+    //
+    /*public void BackGroundDecider()
+    {
+        GameObject currentGameObject = GameObject.Find(screen_SOs[usedScreen].prefab.name + "(Clone)");
+    }*/
 
     //math functions
     int MinusOne(int number)

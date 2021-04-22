@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO26Restaurant
   m_EditorClassIdentifier: 
   description: SELECT YOUR REPLY
-  description2: YES, THE DRINKS MENU PLEASE.
-  description3: YES, THE DESSERTS MENU PLEASE.
+  description2: YES, A TABLE PLEASE.
+  description3: YES, A SEAT PLEASE.
   Imagename: 
   Imagename2: 
   Video1: Restaurant26_1_1

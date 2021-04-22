@@ -119,14 +119,14 @@ public class PawnScript : MonoBehaviour
             //For every result returned, output the name of the GameObject on the Canvas hit by the Ray
             foreach (RaycastResult result in results)
             {
-                Debug.Log("Hit " + result.gameObject.name);
+                //Debug.Log("Hit " + result.gameObject.name);
 
                 if (result.gameObject.name.StartsWith("Image")&& result.gameObject.name.EndsWith("Pawn"))
                 {
                     //remove 'Image' from choice
                     placechosen = result.gameObject.name;//.Substring(5);
 
-                    Debug.Log("placechosen is: " + placechosen);
+                    //Debug.Log("placechosen is: " + placechosen);
 
                     //if we have a previously disabled item, then enable it now
                     if (placeimage != null)
