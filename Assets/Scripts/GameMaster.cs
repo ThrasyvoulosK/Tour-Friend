@@ -501,7 +501,7 @@ public class GameMaster : MonoBehaviour
 
         newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text=desc;
 
-        if (current_screen != 18)
+        if (current_screen != 18&&current_screen!=27)
             newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = desc2;
         else
         {
@@ -510,6 +510,8 @@ public class GameMaster : MonoBehaviour
 
         if(current_screen==31||current_screen==22)
             lastChoice = newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text;//
+
+        Debug.Log("video text2: " + newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text);
 
         //find images and change them to their proper ones, depending on whether they've been used properly
 

@@ -562,8 +562,8 @@ back-button allowed on: 3,6,11,18,27
 videos missing:
 -'how do i get to go sightseeing', other:69
 -hotel: 'i would like to check out', 19
--station: 'what time does the next train depart?, transports: 11-15
-placeholder videos for CafeBar 'can i see the menu[...]',cafebar-restaurant:7-12
+-χ-station: 'what time does the next train depart?, transports: 11-15
+//placeholder videos for CafeBar 'can i see the menu[...]',cafebar-restaurant:7-12
 
 'i want to go to [...]' replace with 'how do i get to [...]'
 
