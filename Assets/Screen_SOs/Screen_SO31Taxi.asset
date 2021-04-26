@@ -18,8 +18,8 @@ MonoBehaviour:
   description2: PLEASE TAKE MY CARD. YOU WILL ALWAYS BE WELCOME.
   description3: PLEASE TAKE A CARD FROM THIS TOURIST OFFICE. THEY CAN HELP YOU NEXT
     TIME.
-  Imagename: 
-  Imagename2: 
+  Imagename: TaxiCard1
+  Imagename2: TaxiCard2
   Video1: Taxi31_1_1
   Video2: Taxi31_1_2
   Button1text: DONE

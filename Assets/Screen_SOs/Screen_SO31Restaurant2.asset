@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: HERE IS YOUR MEAL AND WATER. ENJOY YOUR MEAL!
   description3: HERE IS YOUR MEAL AND DESSERT. ENJOY YOUR MEAL!
-  Imagename: 
-  Imagename2: 
+  Imagename: RestaurantCard3
+  Imagename2: RestaurantCard4
   Video1: Restaurant31_2_1
   Video2: Restaurant31_2_2
   Button1text: DONE

@@ -19,8 +19,8 @@ MonoBehaviour:
     MUSEUMS, CAFES, RESTAURANTS.
   description3: PLEASE, TAKE THIS GUIDEBOOK. IT HAS INFO ABOUT THEATERS, MUSIC HALLS,
     SHOPS, PARKS, OUTDOOR ACTIVITIES. OPENING HOURS ARE INCLUDED.
-  Imagename: 
-  Imagename2: 
+  Imagename: TaxiCard3
+  Imagename2: TaxiCard4
   Video1: Taxi31_2_1
   Video2: Taxi31_2_2
   Button1text: DONE

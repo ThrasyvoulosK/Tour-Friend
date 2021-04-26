@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: YOU MADE A GOOD CHOICE. HERE YOU ARE.
   description3: YOU MADE A GOOD CHOICE. HERE IS YOUR PRESENT!
-  Imagename: 
-  Imagename2: 
+  Imagename: ShopCard1
+  Imagename2: ShopCard2
   Video1: Shop31_1_1
   Video2: Shop31_1_2
   Button1text: DONE

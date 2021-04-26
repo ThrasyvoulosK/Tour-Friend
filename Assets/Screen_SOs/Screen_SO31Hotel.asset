@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: HERE IS YOUR KEY FOR YOUR SINGLE ROOM. ENJOY YOUR STAY!
   description3: HERE IS YOUR KEY FOR YOUR DOUBLE ROOM. ENJOY YOUR STAY!
-  Imagename: 
-  Imagename2: 
+  Imagename: HotelCard1
+  Imagename2: HotelCard2
   Video1: Hotel31_1_1
   Video2: Hotel31_1_2
   Button1text: DONE

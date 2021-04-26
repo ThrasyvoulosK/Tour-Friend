@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: HERE IS THE DRINKS MENU.
   description3: HERE IS THE DESSERT MENU.
-  Imagename: 
-  Imagename2: 
+  Imagename: CafeBarCard1
+  Imagename2: CafeBarCard2
   Video1: CafeBar31_1_1
   Video2: CafeBar31_1_2
   Button1text: DONE

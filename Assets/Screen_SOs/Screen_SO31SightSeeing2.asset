@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: YOU ARE WELLCOME. HERE IS YOUR DISCOUNT TICKET.
   description3: YOU ARE WELLCOME. HERE IS YOUR TICKET AND PRESENT.
-  Imagename: 
-  Imagename2: 
+  Imagename: SightSeeingCard3
+  Imagename2: SightSeeingCard4
   Video1: SightSeeing31_2_1
   Video2: SightSeeing31_2_2
   Button1text: DONE

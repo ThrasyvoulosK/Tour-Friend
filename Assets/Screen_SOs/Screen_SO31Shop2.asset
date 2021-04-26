@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: PLEASE TAKE A LOOK AT THE SECTION WITH THE TRADITIONAL ITEMS.
   description3: PLEASE TAKE A LOOK AT THE SECTION WITH THE MODERN ITEMS.
-  Imagename: 
-  Imagename2: 
+  Imagename: ShopCard3
+  Imagename2: ShopCard4
   Video1: Shop31_2_1
   Video2: Shop31_2_2
   Button1text: DONE

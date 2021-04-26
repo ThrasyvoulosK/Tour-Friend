@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: THANK YOU. HERE IS YOUR CARD AND RECEIPT
   description3: THANK YOU. HERE IS YOUR CHANGE AND RECEIPT.
-  Imagename: 
-  Imagename2: 
+  Imagename: HotelCard3
+  Imagename2: HotelCard4
   Video1: Hotel31_2_1
   Video2: Hotel31_2_2
   Button1text: DONE

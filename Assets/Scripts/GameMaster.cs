@@ -249,6 +249,12 @@ public class GameMaster : MonoBehaviour
         vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = desc;
         vidchoice.transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = button;
         Debug.Log("video choice text: " + desc);
+
+        if(card.Length>1)
+        {
+            vidchoice.transform.Find("CardImage").GetComponent<Image>().sprite = imagehandler[card];
+            vidchoice.transform.Find("CardImage").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        }
         /*if (vidchoice.name.Contains("Magnified") == false)
             vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { GameObject lense = Instantiate(screenprefabs[9]); InitialiseLense(lense, vid, desc, card, button); });
             //vidchoice.transform.Find("LenseButton").GetComponentInChildren<Button>().onClick.AddListener(delegate { InitialiseLense(lense, vid, desc, card, button); });
@@ -693,7 +699,7 @@ public class GameMaster : MonoBehaviour
                 foreach (Screen_SO sso in reserveScreenSOs)
                 {
                     index = System.Array.IndexOf(reserveScreenSOs, sso);
-                    if (lastChoice == sso.description2)//load so26 +name
+                    if (lastChoice == sso.description2&&lastChoice.Length==sso.description2.Length)//load so26 +name
                     {
                         Debug.Log("lastChoice == sso.description2");
                         foreach (Screen_SO sso2 in reserveScreenSOs)
@@ -701,16 +707,16 @@ public class GameMaster : MonoBehaviour
                             //Debug.Log(sso2.name.StartsWith(screen_SOs[26].name) + " " + sso2.name.Contains(current_location));
                             if (sso2.name.StartsWith(screen_SOs[26].name) && sso2.name.Contains(current_location)&&sso2.name.EndsWith("2")==false)
                             {
-                                Debug.Log("choosing sso.description2");
+                                Debug.Log($"choosing sso.description2: {sso.description2} AND 3: {sso.description3}");
                                 desc2 = sso2.description2;
-                                video1 = sso2.Video2;
+                                video1 = sso2.Video1;
                                 desc3 = sso2.description3;
-                                video1 = sso2.Video2;
+                                video2 = sso2.Video2;
                                 //break;
                             }
                         }
                     }
-                    else if (lastChoice == sso.description3)//load so26+name+1
+                    else if (lastChoice == sso.description3&& lastChoice.Length == sso.description3.Length)//load so26+name+1
                     {
                         Debug.Log("lastChoice == sso.description3");
                         foreach (Screen_SO sso2 in reserveScreenSOs)
@@ -719,6 +725,7 @@ public class GameMaster : MonoBehaviour
                             if (sso2.name.StartsWith(screen_SOs[26].name) && sso2.name.Contains(current_location) && sso2.name.EndsWith("2"))
                             {
                                 Debug.Log("choosing sso.description3");
+                                Debug.Log($"choosing sso.description2: {sso.description2} AND 3: {sso.description3}");
                                 desc2 = sso2.description2;
                                 video1 = sso2.Video1;
                                 desc3 = sso2.description3;
@@ -736,7 +743,7 @@ public class GameMaster : MonoBehaviour
             //int index = 0;
             foreach(Screen_SO sso in reserveScreenSOs)
             {
-                if(lastChoice==sso.description2|| lastChoice == sso.description3)
+                if((lastChoice==sso.description2&& lastChoice.Length == sso.description2.Length) || (lastChoice == sso.description3&& lastChoice.Length == sso.description3.Length))
                 {
                     desc2 = sso.description2;
                     video1 = sso.Video1;
@@ -751,13 +758,15 @@ public class GameMaster : MonoBehaviour
             foreach (Screen_SO sso in reserveScreenSOs)
             {
                 index = System.Array.IndexOf(reserveScreenSOs, sso);
-                if (lastChoice == sso.description2 || lastChoice == sso.description3)
+                if ((lastChoice == sso.description2&& lastChoice.Length == sso.description2.Length) || (lastChoice == sso.description3 && lastChoice.Length == sso.description3.Length))
                 {
                     //Debug.Log(index + 16);
                     desc2 = reserveScreenSOs[index].description2;
                     video1 = reserveScreenSOs[index].Video1;
+                    img1 = reserveScreenSOs[index].Imagename;
                     desc3 = reserveScreenSOs[index].description3;
                     video2 = reserveScreenSOs[index].Video2;
+                    img2 = reserveScreenSOs[index].Imagename2;
                 }
             }
         }
@@ -767,14 +776,15 @@ public class GameMaster : MonoBehaviour
         }
 
         Debug.Log($"DESC2: {desc2}, DESC3: {desc3}");
+        Debug.Log($"VIDEO1: {video1}, VIDEO2: {video2}");
         if(video1.Length<2||video2.Length<2)
         {
             video1 = "PlaceholderRed";
             video2 = "Placeholder";
         }
 
-        InitialiseVideoChoice(randomVideos[number1], video1, desc2, desc1, "SELECT");//"False"
-        InitialiseVideoChoice(randomVideos[number2], video2, desc3, desc1, "SELECT");//"Correct"
+        InitialiseVideoChoice(randomVideos[number1], video1, desc2, img1, "SELECT");//"False"
+        InitialiseVideoChoice(randomVideos[number2], video2, desc3, img2, "SELECT");//"Correct"
 
         Button button1 = randomVideos[number1].transform.Find("Button").gameObject.GetComponent<Button>();
         Button button2 = randomVideos[number2].transform.Find("Button").gameObject.GetComponent<Button>();

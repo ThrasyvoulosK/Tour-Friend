@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: SURE. HERE IS YOUR TRAIN TICKET AND THE ITINERARY.
   description3: SURE. HERE IS YOUR BUS TICKET AND THE ITINERARY.
-  Imagename: 
-  Imagename2: 
+  Imagename: StationCard1
+  Imagename2: StationCard2
   Video1: Station31_1_1
   Video2: Station31_1_2
   Button1text: DONE

@@ -1,0 +1,1654 @@
+fileFormatVersion: 2
+guid: cc4935ee1fa62214d83fab6b5495774f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6497986052670301960
+    second: tourfriend_digital object cards-01_0
+  - first:
+      213: 5436314228942367821
+    second: tourfriend_digital object cards-01_1
+  - first:
+      213: -704099484364587729
+    second: tourfriend_digital object cards-01_2
+  - first:
+      213: 7067928911511228504
+    second: tourfriend_digital object cards-01_3
+  - first:
+      213: 838979973048065888
+    second: tourfriend_digital object cards-01_4
+  - first:
+      213: -8436320920769724876
+    second: tourfriend_digital object cards-01_5
+  - first:
+      213: 5623598481054504464
+    second: tourfriend_digital object cards-01_6
+  - first:
+      213: 1134915662794224288
+    second: tourfriend_digital object cards-01_7
+  - first:
+      213: 8787000634859853818
+    second: tourfriend_digital object cards-01_8
+  - first:
+      213: -7978629276790412
+    second: tourfriend_digital object cards-01_9
+  - first:
+      213: -1508157001296203414
+    second: tourfriend_digital object cards-01_10
+  - first:
+      213: -8150124437878998045
+    second: tourfriend_digital object cards-01_11
+  - first:
+      213: -2310192413611502956
+    second: tourfriend_digital object cards-01_12
+  - first:
+      213: -8596562510310031919
+    second: tourfriend_digital object cards-01_13
+  - first:
+      213: 8060448812506192818
+    second: tourfriend_digital object cards-01_14
+  - first:
+      213: -6472202423445578224
+    second: tourfriend_digital object cards-01_15
+  - first:
+      213: -1664323511307452451
+    second: tourfriend_digital object cards-01_16
+  - first:
+      213: -7292404777873700460
+    second: tourfriend_digital object cards-01_17
+  - first:
+      213: 2861210075894346786
+    second: tourfriend_digital object cards-01_18
+  - first:
+      213: -394637871764618841
+    second: tourfriend_digital object cards-01_19
+  - first:
+      213: -5228018055724950018
+    second: tourfriend_digital object cards-01_20
+  - first:
+      213: 3286341626409350916
+    second: tourfriend_digital object cards-01_21
+  - first:
+      213: 3148779169650383395
+    second: tourfriend_digital object cards-01_22
+  - first:
+      213: -16121200122540930
+    second: tourfriend_digital object cards-01_23
+  - first:
+      213: -7851127551830745191
+    second: tourfriend_digital object cards-01_24
+  - first:
+      213: 865490644085173177
+    second: tourfriend_digital object cards-01_25
+  - first:
+      213: 1831189689381460659
+    second: tourfriend_digital object cards-01_26
+  - first:
+      213: -8637877573982316786
+    second: tourfriend_digital object cards-01_27
+  - first:
+      213: -3542519548368426961
+    second: tourfriend_digital object cards-01_28
+  - first:
+      213: -945418583798964557
+    second: tourfriend_digital object cards-01_29
+  - first:
+      213: -768391553489400127
+    second: tourfriend_digital object cards-01_30
+  - first:
+      213: 7255254831881368484
+    second: tourfriend_digital object cards-01_31
+  - first:
+      213: -1034200757039718002
+    second: tourfriend_digital object cards-01_32
+  - first:
+      213: 8078836257253214372
+    second: tourfriend_digital object cards-01_33
+  - first:
+      213: 7700836814374168764
+    second: tourfriend_digital object cards-01_34
+  - first:
+      213: 3039504492165364961
+    second: tourfriend_digital object cards-01_35
+  - first:
+      213: 2301214732811030669
+    second: tourfriend_digital object cards-01_36
+  - first:
+      213: 1182850282240962264
+    second: tourfriend_digital object cards-01_37
+  - first:
+      213: 2450564465729480562
+    second: tourfriend_digital object cards-01_38
+  - first:
+      213: -626129977093640679
+    second: tourfriend_digital object cards-01_39
+  - first:
+      213: 4124113340780355972
+    second: tourfriend_digital object cards-01_40
+  - first:
+      213: -8011194304011263835
+    second: tourfriend_digital object cards-01_41
+  - first:
+      213: -8914562840053853177
+    second: tourfriend_digital object cards-01_42
+  - first:
+      213: 7190677332453018794
+    second: tourfriend_digital object cards-01_43
+  - first:
+      213: 6425492980816579150
+    second: tourfriend_digital object cards-01_44
+  - first:
+      213: -1986792209746224922
+    second: tourfriend_digital object cards-01_45
+  - first:
+      213: -4262559637298279021
+    second: tourfriend_digital object cards-01_46
+  - first:
+      213: -2468845169907830
+    second: tourfriend_digital object cards-01_47
+  - first:
+      213: 7365211337004186467
+    second: tourfriend_digital object cards-01_48
+  - first:
+      213: 5411283675352898329
+    second: tourfriend_digital object cards-01_49
+  - first:
+      213: -507989249925805325
+    second: tourfriend_digital object cards-01_50
+  - first:
+      213: -5002690052317305926
+    second: tourfriend_digital object cards-01_51
+  - first:
+      213: 7081366963252692940
+    second: tourfriend_digital object cards-01_52
+  - first:
+      213: 8732960303214486596
+    second: tourfriend_digital object cards-01_53
+  - first:
+      213: 5939829354835880402
+    second: tourfriend_digital object cards-01_54
+  - first:
+      213: 8993334402418297325
+    second: tourfriend_digital object cards-01_55
+  - first:
+      213: 5495164642835064744
+    second: tourfriend_digital object cards-01_56
+  - first:
+      213: 1074771732988299931
+    second: tourfriend_digital object cards-01_57
+  - first:
+      213: -312936335371831025
+    second: tourfriend_digital object cards-01_58
+  - first:
+      213: 4968931419679353240
+    second: tourfriend_digital object cards-01_59
+  - first:
+      213: -559287741708491946
+    second: tourfriend_digital object cards-01_60
+  - first:
+      213: 101692680990842051
+    second: tourfriend_digital object cards-01_61
+  - first:
+      213: 2663878297400393510
+    second: tourfriend_digital object cards-01_62
+  - first:
+      213: 2625724324135283224
+    second: tourfriend_digital object cards-01_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1239
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8d427ec1482d5a0800000000000000
+      internalID: -6497986052670301960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1239
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ce2870dfaa17b40800000000000000
+      internalID: 5436314228942367821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1239
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2db9ebdf398a36f0800000000000000
+      internalID: -704099484364587729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_3
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1239
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8501754c5e3561260800000000000000
+      internalID: 7067928911511228504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_4
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1230
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f523327d7a4ab00800000000000000
+      internalID: 838979973048065888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_5
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1230
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ef252f1da2cea80800000000000000
+      internalID: -8436320920769724876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_6
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1230
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0161eaef5090b0e40800000000000000
+      internalID: 5623598481054504464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_7
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1230
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a270e248c700cf00800000000000000
+      internalID: 1134915662794224288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_8
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1072
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af714f99582b1f970800000000000000
+      internalID: 8787000634859853818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_9
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1072
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471992c9a77a3eff0800000000000000
+      internalID: -7978629276790412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_10
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1072
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61b838a233f11be0800000000000000
+      internalID: -1508157001296203414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_11
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1072
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebfdf44101f4ee80800000000000000
+      internalID: -8150124437878998045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_12
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1065
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49252ef5d3c80ffd0800000000000000
+      internalID: -2310192413611502956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_13
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1065
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ddb78381ffd2b880800000000000000
+      internalID: -8596562510310031919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1065
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb96a72d777cdf60800000000000000
+      internalID: 8060448812506192818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_15
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1065
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e9a14ef2e1e26a0800000000000000
+      internalID: -6472202423445578224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_16
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 910
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf303d959227e8e0800000000000000
+      internalID: -1664323511307452451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_17
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 910
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4990a78cd7c2cca90800000000000000
+      internalID: -7292404777873700460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_18
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 909
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2247379976f05b720800000000000000
+      internalID: 2861210075894346786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_19
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 909
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1cd8e42f6f58af0800000000000000
+      internalID: -394637871764618841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_20
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 899
+        width: 130
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd9f2d07495277b0800000000000000
+      internalID: -5228018055724950018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_21
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 899
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40775b42c4e6b9d20800000000000000
+      internalID: 3286341626409350916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_22
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 899
+        width: 130
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a192bc8f5b2bb20800000000000000
+      internalID: 3148779169650383395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_23
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 899
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7cc7599ad9b6cff0800000000000000
+      internalID: -16121200122540930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_24
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 742
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f98d2b6113b0390800000000000000
+      internalID: -7851127551830745191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_25
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 742
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbee1db727d20c00800000000000000
+      internalID: 865490644085173177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_26
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 742
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba90f70251b96910800000000000000
+      internalID: 1831189689381460659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_27
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 742
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e079875ac18102880800000000000000
+      internalID: -8637877573982316786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_28
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 732
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f286f956d3176dec0800000000000000
+      internalID: -3542519548368426961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_29
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 732
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be1c9c9ec231e2f0800000000000000
+      internalID: -945418583798964557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_30
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 732
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce8ad504ff1655f0800000000000000
+      internalID: -768391553489400127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_31
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 732
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3b93164d7dfa460800000000000000
+      internalID: 7255254831881368484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_32
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 577
+        width: 109
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81253214e7c5a1f0800000000000000
+      internalID: -1034200757039718002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_33
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 577
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8cf10c5cacd1070800000000000000
+      internalID: 8078836257253214372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_34
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 577
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8e50a284ededa60800000000000000
+      internalID: 7700836814374168764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_35
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 577
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec78bc4b3d7e2a20800000000000000
+      internalID: 3039504492165364961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_36
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 566
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80d81d6b9e8fef10800000000000000
+      internalID: 2301214732811030669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_37
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 566
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de617f80145a6010800000000000000
+      internalID: 1182850282240962264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_38
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 566
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277200fd567220220800000000000000
+      internalID: 2450564465729480562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_39
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 566
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e2c1c6a1a8f47f0800000000000000
+      internalID: -626129977093640679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_40
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 406
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481a9a2ab3bcb3930800000000000000
+      internalID: 4124113340780355972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_41
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 406
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0a6c2c93582d090800000000000000
+      internalID: -8011194304011263835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_42
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 406
+        width: 109
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70451be045c194480800000000000000
+      internalID: -8914562840053853177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_43
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 406
+        width: 109
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacc05f9fea6ac360800000000000000
+      internalID: 7190677332453018794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_44
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 397
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a865482dfeb2950800000000000000
+      internalID: 6425492980816579150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_45
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 397
+        width: 129
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8109ff20f7d64e0800000000000000
+      internalID: -1986792209746224922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_46
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 397
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d0be8089858d4c0800000000000000
+      internalID: -4262559637298279021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_47
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 397
+        width: 129
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8764a0399a37fff0800000000000000
+      internalID: -2468845169907830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_48
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 240
+        width: 109
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b70dd30bc763660800000000000000
+      internalID: 7365211337004186467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_49
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 240
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b974025ddb81b40800000000000000
+      internalID: 5411283675352898329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_50
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 240
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa8478f77243f8f0800000000000000
+      internalID: -507989249925805325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_51
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 240
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab32f3e17efd29ab0800000000000000
+      internalID: -5002690052317305926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_52
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 227
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc70dd00cb1164260800000000000000
+      internalID: 7081366963252692940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_53
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 227
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444efa66025b13970800000000000000
+      internalID: 8732960303214486596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_54
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 227
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d92e61e3538e6250800000000000000
+      internalID: 5939829354835880402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_55
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 227
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de941728dfdbecc70800000000000000
+      internalID: 8993334402418297325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_56
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 74
+        width: 109
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a76876c02fb24c40800000000000000
+      internalID: 5495164642835064744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_57
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 73
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a066f523b5aee00800000000000000
+      internalID: 1074771732988299931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_58
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 74
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0979dc9f0a38abf0800000000000000
+      internalID: -312936335371831025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_59
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 74
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899e347bcc035f440800000000000000
+      internalID: 4968931419679353240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_60
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 58
+        width: 129
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6532c3c13c20d38f0800000000000000
+      internalID: -559287741708491946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_61
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 58
+        width: 130
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc57be54f8496100800000000000000
+      internalID: 101692680990842051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_62
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 58
+        width: 129
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f3c69923ff7f420800000000000000
+      internalID: 2663878297400393510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tourfriend_digital object cards-01_63
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 58
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81aaf227c52707420800000000000000
+      internalID: 2625724324135283224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
