@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: THIS IS YOUR TABLE.
   description3: THIS IS YOUR SEAT.
-  Imagename: RestaurantCard1
-  Imagename2: RestaurantCard2
+  Imagename: CafeBarCard3
+  Imagename2: CafeBarCard4
   Video1: Restaurant31_1_1
   Video2: Restaurant31_1_2
   Button1text: DONE

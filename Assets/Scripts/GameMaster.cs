@@ -90,6 +90,7 @@ public class GameMaster : MonoBehaviour
     public bool checkdelegate=false;
 
     public string phrasevideo = null;
+    public string videoOfPhrase = null;
 
     public GameObject previousScreen = null;
     public GameObject backB;
@@ -167,8 +168,11 @@ public class GameMaster : MonoBehaviour
         }
 
         if (GameObject.Find("Canvas SelectPhrases(Clone)") == true)
+        {
             phrasevideo = GameObject.Find("Canvas SelectPhrases(Clone)").GetComponent<SelectPhrasesScript>().chosenphrase;
-        else if(GameObject.Find("Canvas SelectPlace(Clone)") == true)
+            videoOfPhrase = GameObject.Find("Canvas SelectPhrases(Clone)").GetComponent<SelectPhrasesScript>().chosenVideo;
+        }
+        else if (GameObject.Find("Canvas SelectPlace(Clone)") == true)
         {
             current_screen--;
             GameObject.Find("Canvas SelectPlace(Clone)").transform.Find("Button").GetComponent<Button>().onClick.RemoveAllListeners();
@@ -565,8 +569,16 @@ public class GameMaster : MonoBehaviour
         newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
 
         //change backgrounds
-        newgameobject.transform.Find("VideoChoice1").transform.Find("BackgroundImage").GetComponent<Image>().sprite = imagehandler["VideoBackground" + current_location + "TwoVideos"];
-        newgameobject.transform.Find("VideoChoice2").transform.Find("BackgroundImage").GetComponent<Image>().sprite = imagehandler["VideoBackground" + current_location + "TwoVideos"];
+        if (current_screen > 15)
+        {
+            newgameobject.transform.Find("VideoChoice1").transform.Find("BackgroundImage").GetComponent<Image>().sprite = imagehandler["VideoBackground" + current_location + "TwoVideos"];
+            newgameobject.transform.Find("VideoChoice2").transform.Find("BackgroundImage").GetComponent<Image>().sprite = imagehandler["VideoBackground" + current_location + "TwoVideos"];
+        }
+        else
+        {
+            newgameobject.transform.Find("VideoChoice1").transform.Find("BackgroundImage").GetComponent<Image>().sprite = imagehandler["VideoBackground" + "InfoPoint" + "TwoVideos"];
+            newgameobject.transform.Find("VideoChoice2").transform.Find("BackgroundImage").GetComponent<Image>().sprite = imagehandler["VideoBackground" + "InfoPoint"  + "TwoVideos"];
+        }
 
         //newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
@@ -977,6 +989,10 @@ public class GameMaster : MonoBehaviour
     {
         Debug.Log("covtcs called on " + current_screen);
         //start by creating a one-video screen
+
+        UnityEngine.Video.VideoPlayer videoPlayer = prefab_go.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoPlayer>();
+        videoPlayer.clip = videohandler[vid];
+
         //instantiate its prefab version
         GameObject newgameobject;
         newgameobject = Instantiate(prefab_go);
@@ -985,14 +1001,15 @@ public class GameMaster : MonoBehaviour
         newgameobject.transform.Find("VideoBackground").GetComponent<Image>().sprite = imagehandler["VideoBackground" + current_location + "OneVideoTwoOptions"];
 
         //find the given values
-        UnityEngine.Video.VideoClip videoClip = newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();
+        //UnityEngine.Video.VideoClip videoClip = newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();
 
         //add the indicated values
         newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = desc;
         newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = desc2;
 
         //find video
-        videoClip = videos_en[0];
+        //videoClip = videos_en[0];
+        //videoClip = videohandler[vid];
         //Debug.Log("video chosen: " + videoClip.name);
 
         //
@@ -1314,7 +1331,7 @@ public class GameMaster : MonoBehaviour
             if (usedScreen - 1 == phrasescreenposition)
             {
                 Debug.Log("video called after phrase-select");
-                button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, phrasevideo, images_name[0], screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
+                button.onClick.AddListener(delegate { createOneVideoTwoChoicesscreen(screen_SOs[usedScreen].prefab, screen_SOs[usedScreen].description, phrasevideo, videoOfPhrase, screen_SOs[usedScreen].Button1text, screen_SOs[usedScreen].Button2text); });
             }
             else
             {
@@ -1376,6 +1393,10 @@ public class GameMaster : MonoBehaviour
                 ConstructorDecider(GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>());
 
                 GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
+                //disable quit button
+                GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(false);
+
                 return;
             }
             else
@@ -1384,6 +1405,7 @@ public class GameMaster : MonoBehaviour
                 //return;
             }
         }
+        GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(true);
     }
 
     //change colours of texts and buttons,depending on the player
@@ -1403,13 +1425,20 @@ public class GameMaster : MonoBehaviour
 
         //Define BackGround's image as well
         GameObject Background = null;
-        if(usedScreen>locationscreenposition)
+        if (usedScreen > locationscreenposition)//if (usedScreen > 15)//
         {
             Background = currentGameObject.transform.Find("Background").gameObject;
             Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location];
             if(currentGameObject.name.Contains("TwoVideos"))
                 Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location+"Double"];
         }
+        /*else
+        {
+            Background = currentGameObject.transform.Find("Background").gameObject;
+            Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location];
+            if (currentGameObject.name.Contains("TwoVideos"))
+                Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location + "Double"];
+        }*/
 
         GameObject Description = null;
         if (currentGameObject.transform.Find("Description").gameObject!=null)
@@ -1425,7 +1454,8 @@ public class GameMaster : MonoBehaviour
             Debug.Log("No such gameobject");
         }
 
-        Debug.Log(currentGameObject.name);
+        //Debug.Log(currentGameObject.name);
+
         GameObject Button = null;//= currentGameObject.transform.Find("Button").gameObject;
         if(currentGameObject.transform.Find("Button")!=null)
         {
@@ -1445,9 +1475,23 @@ public class GameMaster : MonoBehaviour
         {
             //Debug.Log("No button named Button");
         }
-        
 
-        return;
+        //handle players' symbol (appearing center-top-right,next to description)
+        GameObject symbol = null;
+        if (currentGameObject.transform.Find("SymbolImage") != null)
+        {
+            symbol = currentGameObject.transform.Find("SymbolImage").gameObject;
+            if (screen_SOs[usedScreen].Player == "Tourist")
+            {
+                symbol.GetComponent<Image>().sprite = imagehandler["SymbolTourist"];
+            }
+            else if (screen_SOs[usedScreen].Player == "Tourfriend")
+            {
+                symbol.GetComponent<Image>().sprite = imagehandler["SymbolTourfriend"];
+            }
+        }
+
+         return;
 
         //video buttons (handled on VideoScript)
 

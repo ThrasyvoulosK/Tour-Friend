@@ -21,8 +21,8 @@ MonoBehaviour:
   description3: 'YES, YOU CAN TAKE
 
     YOUR <b>HANDBAG</b> ON BOARD'
-  Imagename: AirportCard1
-  Imagename2: AirportCard2
+  Imagename: AirportCard2
+  Imagename2: AirportCard1
   Video1: Airport31_1_1
   Video2: Airport31_1_2
   Button1text: DONE

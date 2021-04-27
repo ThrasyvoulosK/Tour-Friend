@@ -157,7 +157,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4079696961836201484}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 1a5b0828740eb6e46a4bef1cae48c773, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 41594195a851b7c45b27b404263a2ccc, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 480084655721471677}
   - component: {fileID: 6640347115447488298}
   m_Layer: 5
-  m_Name: Image
+  m_Name: SymbolImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

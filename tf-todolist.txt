@@ -562,11 +562,20 @@ back-button allowed on: 3,6,11,18,27
 videos missing:
 -'how do i get to go sightseeing', other:69
 -hotel: 'i would like to check out', 19
--χ-station: 'what time does the next train depart?, transports: 11-15
-//placeholder videos for CafeBar 'can i see the menu[...]',cafebar-restaurant:7-12
+-other:street
 
 'i want to go to [...]' replace with 'how do i get to [...]'
 
 replace code searching for reserve-SOs with a function that replaces current-SOs with reserve-SOs
 
 check cafebar route for errors (confusion with restaurant?)
+-live music show/order a coffee please
+
+players symbols appear in:
+//-place-select
+//-one-video
+//--two options
+//-two-videos
+//-phrase-select
+//-one-image-two-options
+//-two-images

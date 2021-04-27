@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: YOU ARE WELCOME. HERE IS YOUR LUGGAGE.
   description3: YOU ARE WELCOME. THIS IS YOUR WAGON.
-  Imagename: StationCard3
-  Imagename2: StationCard4
+  Imagename: StationCard1
+  Imagename2: StationCard2
   Video1: Station31_2_1
   Video2: Station31_2_2
   Button1text: DONE

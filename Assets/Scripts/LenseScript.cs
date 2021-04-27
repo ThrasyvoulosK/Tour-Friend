@@ -17,7 +17,10 @@ public class LenseScript : MonoBehaviour
     {
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
 
-        backGroundName = "VideoBackground"+theGameMaster.current_location+"TwoVideos";
+        if(theGameMaster.current_screen>15)
+            backGroundName = "VideoBackground"+theGameMaster.current_location+"TwoVideos";
+        else
+            backGroundName = "VideoBackground" + "InfoPoint" + "TwoVideos";
 
         //Debug.Log("lense start");
         lense = gameObject.transform.Find("LenseButton").gameObject;

@@ -8,6 +8,7 @@ using TMPro;
 public class SelectPhrasesScript : MonoBehaviour
 {
     public string chosenphrase;
+    public string chosenVideo;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,5 +51,6 @@ public class SelectPhrasesScript : MonoBehaviour
     public void GetName(GameObject game)
     {
         chosenphrase=game.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text;
+        chosenVideo=game.name;
     }
 }

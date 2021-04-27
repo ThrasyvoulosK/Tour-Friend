@@ -17,8 +17,8 @@ MonoBehaviour:
     AND GIVE HIM THE OBJECT CARD'
   description2: ' I PROPOSE THIS SNACK.'
   description3: I PROPOSE THIS BREAKFAST.
-  Imagename: CafeBarCard3
-  Imagename2: CafeBarCard4
+  Imagename: RestaurantCard1
+  Imagename2: RestaurantCard2
   Video1: CafeBar31_2_1
   Video2: CafeBar31_2_2
   Button1text: DONE
