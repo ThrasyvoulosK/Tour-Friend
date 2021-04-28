@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO22CafeBar
   m_EditorClassIdentifier: 
   description: REPLY TO THE TOURIST
-  description2: HERE IS THE MENU. WOULD YOU LIKE TO ALSO SEE THE DESSERTS OR DRINKS
-    MENU?
+  description2: TONIGHT! TRADITIONAL MUSIC, THEATRE AND DANCE! DO YOU WANT TO RESERVE
+    A TABLE OR SEAT?
   description3: SURE! WOULD YOU ALSO LIKE A SNACK OR A BREAKFAST?
   Imagename: 
   Imagename2: 

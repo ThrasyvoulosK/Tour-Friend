@@ -15,10 +15,10 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: THIS IS YOUR TABLE.
-  description3: THIS IS YOUR SEAT.
-  Imagename: CafeBarCard3
-  Imagename2: CafeBarCard4
+  description2: HERE IS THE DRINKS MENU.
+  description3: HERE IS THE DESSERT MENU.
+  Imagename: CafeBarCard2
+  Imagename2: CafeBarCard1
   Video1: Restaurant31_1_1
   Video2: Restaurant31_1_2
   Button1text: DONE
