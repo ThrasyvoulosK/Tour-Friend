@@ -99,6 +99,8 @@ public class GameMaster : MonoBehaviour
     [TextArea]
     public string lastChoice;
 
+    public string lastCard;
+
 
     // Start is called before the first frame update
     void Start()
@@ -256,6 +258,7 @@ public class GameMaster : MonoBehaviour
 
         if(card.Length>1)
         {
+            Debug.Log("Card Asked");
             vidchoice.transform.Find("CardImage").GetComponent<Image>().sprite = imagehandler[card];
             vidchoice.transform.Find("CardImage").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         }
@@ -801,8 +804,16 @@ public class GameMaster : MonoBehaviour
         Button button1 = randomVideos[number1].transform.Find("Button").gameObject.GetComponent<Button>();
         Button button2 = randomVideos[number2].transform.Find("Button").gameObject.GetComponent<Button>();
         
-        button1.onClick.AddListener(delegate { lastChoice = desc2; });
-        button2.onClick.AddListener(delegate { lastChoice = desc3; });
+        button1.onClick.AddListener(delegate { 
+            lastChoice = desc2;
+            if (current_screen >= 33)
+                lastCard = img1;
+        });
+        button2.onClick.AddListener(delegate { 
+            lastChoice = desc3;
+            if (current_screen >= 33)
+                lastCard = img2;
+        });
 
         Debug.Log(lastChoice+current_screen+desc2+current_screen+desc3+current_screen);
         //handle 'choice' questions here, ie non-correct/false ones
@@ -903,9 +914,23 @@ public class GameMaster : MonoBehaviour
 
     public void createPointsscreen(GameObject prefab_go, string desc, string img, string button)
     {
+        bool end = false;
+
+        //check first if this is our last points screen
+        if (current_screen == 34 && img == "Points_Ribbon_Win")
+            end = true;
+
         //instantiate its prefab version
         GameObject newgameobject;
-        newgameobject = Instantiate(prefab_go);
+
+        if(end!=true)
+            newgameobject = Instantiate(prefab_go);
+        else
+        {
+            //get the correct prefab for the end screen
+            //(coincidentally it's the last one)
+            newgameobject = Instantiate(reserveScreenSOs[reserveScreenSOs.Length-1].prefab);
+        }
 
         //find the given values
         //Image image = newgameobject.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>();
@@ -937,6 +962,13 @@ public class GameMaster : MonoBehaviour
         button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
 
         //Debug.Log(current_screen);
+
+        //special case: last screen, with card included
+        if(end)
+        {
+            newgameobject.transform.Find("CardImage").GetComponent<Image>().sprite=imagehandler[lastCard];
+            newgameobject.transform.Find("Description2").GetComponent<TextMeshProUGUI>().text = reserveScreenSOs[reserveScreenSOs.Length-1].description2;
+        }
 
         //decide on next actions, if won or lost
         if(img=="Points_Ribbon_Win")
@@ -1413,7 +1445,21 @@ public class GameMaster : MonoBehaviour
     {
         int usedScreen = current_screen - 1;
 
-        GameObject currentGameObject = GameObject.Find(screen_SOs[usedScreen].prefab.name + "(Clone)");
+        Debug.Log(usedScreen);
+
+        GameObject currentGameObject;
+
+        if (usedScreen != 34)
+            currentGameObject = GameObject.Find(screen_SOs[usedScreen].prefab.name + "(Clone)");
+        else
+        {
+            Debug.Log("returning at 34");
+            return;
+            currentGameObject = GameObject.Find(reserveScreenSOs[reserveScreenSOs.Length - 1].prefab.name + "(Clone)");
+        }
+
+        Debug.Log(currentGameObject.name + " is our current game object");
+
         /*if(currentGameObject!=null)
         {
             Debug.Log(screen_SOs[usedScreen].prefab.name + "(Clone)");
@@ -1425,12 +1471,15 @@ public class GameMaster : MonoBehaviour
 
         //Define BackGround's image as well
         GameObject Background = null;
-        if (usedScreen > locationscreenposition)//if (usedScreen > 15)//
+        if ( currentGameObject.transform.Find("Background").gameObject != null)//if (usedScreen > 15)//
         {
-            Background = currentGameObject.transform.Find("Background").gameObject;
-            Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location];
-            if(currentGameObject.name.Contains("TwoVideos"))
-                Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location+"Double"];
+            if (usedScreen > 15)
+            {
+                Background = currentGameObject.transform.Find("Background").gameObject;
+                Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location];
+                if (currentGameObject.name.Contains("TwoVideos"))
+                    Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location + "Double"];
+            }
         }
         /*else
         {

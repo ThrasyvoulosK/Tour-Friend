@@ -563,10 +563,10 @@ MonoBehaviour:
   - StationCard2
   - StationCard3
   - StationCard4
-  - StationTaxi1
-  - StationTaxi2
-  - StationTaxi3
-  - StationTaxi4
+  - TaxiCard1
+  - TaxiCard2
+  - TaxiCard3
+  - TaxiCard4
   - SymbolTourist
   - SymbolTourfriend
   videos_en:
@@ -1048,6 +1048,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d81a423d7b70696438e202cf7e918156, type: 2}
   - {fileID: 11400000, guid: 8d84f9381d9067342b708cc7fae102d9, type: 2}
   - {fileID: 11400000, guid: 2595ba34dfc0de247aa229c188261acd, type: 2}
+  - {fileID: 11400000, guid: f35f567bb32d2824ab937eb6c3fca5ec, type: 2}
   player:
   - 
   - Tourfriend
@@ -1106,6 +1107,7 @@ MonoBehaviour:
   previousScreen: {fileID: 0}
   backB: {fileID: 0}
   lastChoice: 
+  lastCard: 
 --- !u!4 &266200537
 Transform:
   m_ObjectHideFlags: 0
