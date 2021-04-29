@@ -903,7 +903,8 @@ public class GameMaster : MonoBehaviour
             */
             button1.onClick.AddListener(delegate
             {
-                createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, lastChoice, videos_en_names[0], "Continue");
+                createOneVideoscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, lastChoice, videos_en_names[0], screen_SOs[current_screen].Button1text);
+                ColourChanger();
             });
                 //lastChoice = screen_SOs[current_screen].description3;
             //});
@@ -939,7 +940,10 @@ public class GameMaster : MonoBehaviour
         //add the indicated values
 
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
-        newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = desc;
+        if(end!=true)
+            newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = desc;
+        else
+            newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = reserveScreenSOs[reserveScreenSOs.Length - 1].description;
         //Debug.Log("printing points on screen: " + total_points);
         newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "POINTS: <color=#ff0000ff>"+total_points.ToString()+"</color>";
 
