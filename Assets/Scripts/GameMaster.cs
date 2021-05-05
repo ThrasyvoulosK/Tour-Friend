@@ -40,7 +40,7 @@ public class GameMaster : MonoBehaviour
     //list 
     //dictionary of the two above
 
-    public string language_current = "English";
+    public string language_current = "Greek";
     public string language_currentSign = "English";
 
     //keep track of score
@@ -106,7 +106,7 @@ public class GameMaster : MonoBehaviour
     void Start()
     {
         //language assignment test
-        //language_current = "Greek";
+        language_current = "Greek";
         language_currentSign = "Greek";
 
         //initialise dictionaries
@@ -131,7 +131,7 @@ public class GameMaster : MonoBehaviour
             {
                 backB.SetActive(true);
                 //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
-                createOneDescriptionScreen(screenprefabs[13], words_en[40], "no");
+                createOneDescriptionScreen(screenprefabs[13], words_en[1], "LET’S PLAY");//words_en[40]
                 Destroy(GameObject.Find("Canvas Menu")); 
             });
         }
@@ -144,7 +144,7 @@ public class GameMaster : MonoBehaviour
             {
                 backB.SetActive(true);
                 //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
-                createOneDescriptionScreen(screenprefabs[13], words_en[40], "no");
+                createOneDescriptionScreen(screenprefabs[13], words_en[1], "LET’S PLAY");
                 Destroy(GameObject.Find("Canvas Menu")); });
         }
         checkdelegate = true;
@@ -163,7 +163,7 @@ public class GameMaster : MonoBehaviour
             GameObject.Find("Canvas Menu(Clone)").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate {
                 //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
                 backB.SetActive(true);
-                createOneDescriptionScreen(screenprefabs[13], words_en[40], "no");
+                createOneDescriptionScreen(screenprefabs[13], words_en[1], "LET’S PLAY");
                 Destroy(GameObject.Find("Canvas Menu(Clone)")); });
 
             checkdelegate = true;
@@ -226,6 +226,8 @@ public class GameMaster : MonoBehaviour
     //assign a string based on the initial one
     string AssignString(string initialstring)
     {
+        Debug.Log($"String Given To Assign: '{initialstring}'");
+        Debug.Log($"String Given To Assign: '{words_en[84]}'");
         if (language_current == "English")
             return initialstring;
         else if (language_current == "Greek")//test
@@ -287,7 +289,10 @@ public class GameMaster : MonoBehaviour
         newgameobject = Instantiate(prefab_go);
 
         //description
-        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = desc;
+        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
+
+        //button
+        newgameobject.transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         newgameobject.transform.Find("Button").GetComponent<Button>().onClick.AddListener(delegate {
             createTwoImagesscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
@@ -311,7 +316,7 @@ public class GameMaster : MonoBehaviour
 
         //description
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
-        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = desc;
+        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
 
         /*Debug.Log("description text is: " + newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text);
         Debug.Log("image to load" + img);
@@ -326,7 +331,7 @@ public class GameMaster : MonoBehaviour
         //Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
 
-        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         BackButton();
 
@@ -406,7 +411,8 @@ public class GameMaster : MonoBehaviour
 
         //description
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
-        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = desc;
+        //newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = desc;
+        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
 
         /*Debug.Log("description text is: " + newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text);
         Debug.Log("image to load" + img);
@@ -421,7 +427,8 @@ public class GameMaster : MonoBehaviour
         //Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
 
-        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
+        //button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         BackButton();
 
@@ -440,7 +447,7 @@ public class GameMaster : MonoBehaviour
 
         //add the indicated values
 
-        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = desc;
+        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
 
         //find images and change them to their proper ones, depending on whether they've been used properly
@@ -456,7 +463,7 @@ public class GameMaster : MonoBehaviour
         //Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
 
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
-        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         BackButton();
 
@@ -544,7 +551,7 @@ public class GameMaster : MonoBehaviour
         //newgameobject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>().text = button;
 
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
-        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         BackButton();
 
@@ -940,10 +947,11 @@ public class GameMaster : MonoBehaviour
         //add the indicated values
 
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
+
         if(end!=true)
-            newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = desc;
+            newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = AssignString(desc);
         else
-            newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = reserveScreenSOs[reserveScreenSOs.Length - 1].description;
+            newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = AssignString(reserveScreenSOs[reserveScreenSOs.Length - 1].description);
         //Debug.Log("printing points on screen: " + total_points);
         newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "POINTS: <color=#ff0000ff>"+total_points.ToString()+"</color>";
 
@@ -963,7 +971,7 @@ public class GameMaster : MonoBehaviour
         //Button button1 = newgameobject.transform.GetChild(0).GetChild(2).GetComponent<Button>();
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
 
-        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         //Debug.Log(current_screen);
 
@@ -971,7 +979,7 @@ public class GameMaster : MonoBehaviour
         if(end)
         {
             newgameobject.transform.Find("CardImage").GetComponent<Image>().sprite=imagehandler[lastCard];
-            newgameobject.transform.Find("Description2").GetComponent<TextMeshProUGUI>().text = reserveScreenSOs[reserveScreenSOs.Length-1].description2;
+            newgameobject.transform.Find("Description2").GetComponent<TextMeshProUGUI>().text = AssignString(reserveScreenSOs[reserveScreenSOs.Length-1].description2);
         }
 
         //decide on next actions, if won or lost
@@ -989,6 +997,11 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    private string AssignText(string desc)
+    {
+        throw new System.NotImplementedException();
+    }
+
     //
     public void createPhraseSelectscreen(GameObject prefab_go, string desc, string img, string button)
     {
@@ -1004,7 +1017,7 @@ public class GameMaster : MonoBehaviour
         //add the indicated values
 
         //description
-        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = desc;
+        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
 
         /*if (img.Length >= 1)
             image.sprite = imagehandler[img];*/
@@ -1014,7 +1027,7 @@ public class GameMaster : MonoBehaviour
         //find next in session to construct a new screen
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
 
-        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         Debug.Log(current_screen);
         ConstructorDecider(button1);
@@ -1093,7 +1106,7 @@ public class GameMaster : MonoBehaviour
 
         //description
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
-        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = desc;
+        newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
 
         /*Debug.Log("description text is: " + newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text);
         Debug.Log("image to load" + img);
@@ -1106,7 +1119,7 @@ public class GameMaster : MonoBehaviour
 
         //find next in session to construct a new screen
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
-        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
         //button1.onClick.AddListener(delegate { set_current_screen(current_screen - 1); });
 
         //Debug.Log(current_screen);
@@ -1114,7 +1127,7 @@ public class GameMaster : MonoBehaviour
         //add the second button
         //(the second button here takes us two screens back)
         Button buttontwo = newgameobject.transform.Find("Button2").GetComponent<Button>();
-        buttontwo.GetComponentInChildren<TextMeshProUGUI>().text = button2;
+        buttontwo.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button2);
         //Debug.Log("buttontwo writes: " + button2);
         //this screen has different functioning when it appears right after phrase-select
         if (phrasescreenposition == (current_screen - 3))
