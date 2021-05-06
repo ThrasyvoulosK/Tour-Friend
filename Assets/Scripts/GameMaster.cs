@@ -106,7 +106,8 @@ public class GameMaster : MonoBehaviour
     void Start()
     {
         //language assignment test
-        language_current = "Greek";
+        //language_current = "Greek";
+        language_current = "English";
         language_currentSign = "Greek";
 
         //initialise dictionaries
@@ -211,14 +212,17 @@ public class GameMaster : MonoBehaviour
             
     }
 
-    void LanguageDictionaryInitialise(string current_language)
+    public void LanguageDictionaryInitialise(string current_language)
     {
+        texthandler.Clear();
         if (current_language == "English")
             for (int i = 0; i < words_en.Count; i++)
                 texthandler.Add(words_en[i], words_en[i]);
         else if (current_language == "Greek")
             for (int i = 0; i < words_en.Count; i++)
             {
+                Debug.Log("English: " + words_en[i]);
+                Debug.Log("Greek: " + words_gr[i]);
                 texthandler.Add(words_en[i], words_gr[i]);
             }
     }
@@ -227,7 +231,6 @@ public class GameMaster : MonoBehaviour
     string AssignString(string initialstring)
     {
         Debug.Log($"String Given To Assign: '{initialstring}'");
-        Debug.Log($"String Given To Assign: '{words_en[84]}'");
         if (language_current == "English")
             return initialstring;
         else if (language_current == "Greek")//test
@@ -254,8 +257,8 @@ public class GameMaster : MonoBehaviour
         Debug.Log($"Video Choice Asked For: {vid}");
         videoPlayer.clip = videohandler[vid];
 
-        vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = desc;
-        vidchoice.transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = button;
+        vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
+        vidchoice.transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
         Debug.Log("video choice text: " + desc);
 
         if(card.Length>1)
@@ -519,17 +522,17 @@ public class GameMaster : MonoBehaviour
 
         //add the indicated values
 
-        newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text=desc;
+        newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text=AssignString(desc);
 
         if (current_screen != 18&&current_screen!=27)
-            newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = desc2;
+            newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = AssignString(desc2);
         else
         {
-            newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = lastChoice;
+            newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = AssignString(lastChoice);
         }
 
-        if(current_screen==31||current_screen==22)
-            lastChoice = newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text;//
+        if (current_screen == 31 || current_screen == 22)
+            lastChoice = newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text; //desc;//
 
         Debug.Log("video text2: " + newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text);
 
@@ -571,7 +574,7 @@ public class GameMaster : MonoBehaviour
         //add the indicated values
 
         //newgameobject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = desc;
-        newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = desc1;
+        newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = AssignString(desc1);
 
         //find images and change them to their proper ones, depending on whether they've been used properly
 
@@ -1053,8 +1056,8 @@ public class GameMaster : MonoBehaviour
         //UnityEngine.Video.VideoClip videoClip = newgameobject.transform.Find("RawImage").transform.Find("Video Player").GetComponent<UnityEngine.Video.VideoClip>();
 
         //add the indicated values
-        newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = desc;
-        newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = desc2;
+        newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = AssignString(desc);
+        newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = AssignString(desc2);
 
         //find video
         //videoClip = videos_en[0];
@@ -1072,7 +1075,7 @@ public class GameMaster : MonoBehaviour
         //find next in session to construct a new screen
         //(continue button should send us one screen back)
         Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
-        button1.GetComponentInChildren<TextMeshProUGUI>().text = button;
+        button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
         //button1.onClick.AddListener(delegate { set_current_screen(current_screen-1); });
         button1.onClick.AddListener(delegate { OneScreenBack(); });
         button1.onClick.AddListener(delegate { createPhraseSelectscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, images_name[0], screen_SOs[current_screen].Button1text); });
@@ -1082,7 +1085,7 @@ public class GameMaster : MonoBehaviour
         //add the second button
         //(finish button should take us to the next screen, as usual)
         Button buttontwo = newgameobject.transform.Find("Button2").GetComponent<Button>();
-        buttontwo.GetComponentInChildren<TextMeshProUGUI>().text = button2;
+        buttontwo.GetComponentInChildren<TextMeshProUGUI>().text = AssignString( button2);
         ConstructorDecider(buttontwo);
         //
         //buttontwo.onClick.AddListener(delegate { MinusTwo(current_screen); });
