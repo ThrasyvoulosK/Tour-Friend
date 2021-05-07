@@ -324,6 +324,7 @@ public class GameMaster : MonoBehaviour
 
         //add the indicated values
         TextMeshProUGUI descript = newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>();
+        descript.text = AssignString(desc);
 
         if ((img1.Length >= 1)&& (img2.Length >= 1))
         {
@@ -335,8 +336,8 @@ public class GameMaster : MonoBehaviour
         //if descriptions exist, add them
         if(prefab_go.name.Contains("Desc"))
         {
-            newgameobject.transform.Find("Image1").GetComponentInChildren<TextMeshProUGUI>().text = screen_SOs[current_screen].description2;
-            newgameobject.transform.Find("Image2").GetComponentInChildren<TextMeshProUGUI>().text = screen_SOs[current_screen].description3;
+            newgameobject.transform.Find("Image1").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(screen_SOs[current_screen].description2);
+            newgameobject.transform.Find("Image2").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(screen_SOs[current_screen].description3);
         }
 
         //find next in session to construct a new screen
