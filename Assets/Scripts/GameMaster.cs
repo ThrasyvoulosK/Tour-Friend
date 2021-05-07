@@ -122,16 +122,10 @@ public class GameMaster : MonoBehaviour
         {
             //debug versions
 
-            /*current_screen = 10;
-            createPhraseSelectscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Button1text);*/
-
             current_screen = 0;
-            //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
-            //createOneImagescreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename,  screen_SOs[current_screen].Button1text);
             GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate 
             {
                 backB.SetActive(true);
-                //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
                 createOneDescriptionScreen(screenprefabs[13], words_en[1], "LET’S PLAY");//words_en[40]
                 Destroy(GameObject.Find("Canvas Menu")); 
             });
@@ -140,11 +134,9 @@ public class GameMaster : MonoBehaviour
         {
             //original
             current_screen = 0;
-            //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
             GameObject.Find("Canvas Menu").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate 
             {
                 backB.SetActive(true);
-                //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
                 createOneDescriptionScreen(screenprefabs[13], words_en[1], "LET’S PLAY");
                 Destroy(GameObject.Find("Canvas Menu")); });
         }
@@ -159,10 +151,10 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //reset start button if needed
         if(checkdelegate==false)
         {
             GameObject.Find("Canvas Menu(Clone)").transform.Find("StartButton").GetComponent<Button>().onClick.AddListener(delegate {
-                //createTwoImagesscreen(sgo[current_screen], screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
                 backB.SetActive(true);
                 createOneDescriptionScreen(screenprefabs[13], words_en[1], "LET’S PLAY");
                 Destroy(GameObject.Find("Canvas Menu(Clone)")); });
@@ -170,6 +162,7 @@ public class GameMaster : MonoBehaviour
             checkdelegate = true;
         }
 
+        //keep selected phrases/locations from multiple buttons here (for phrases and places screens)
         if (GameObject.Find("Canvas SelectPhrases(Clone)") == true)
         {
             phrasevideo = GameObject.Find("Canvas SelectPhrases(Clone)").GetComponent<SelectPhrasesScript>().chosenphrase;
@@ -228,7 +221,7 @@ public class GameMaster : MonoBehaviour
     }
 
     //assign a string based on the initial one
-    string AssignString(string initialstring)
+    public string AssignString(string initialstring)
     {
         Debug.Log($"String Given To Assign: '{initialstring}'");
         if (language_current == "English")
@@ -532,7 +525,20 @@ public class GameMaster : MonoBehaviour
         }
 
         if (current_screen == 31 || current_screen == 22)
-            lastChoice = newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text; //desc;//
+        {
+            //lastChoice = newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text; //desc;//
+            lastChoice = newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text;
+
+            //assign last choice as the English version of it, to avoid errors in language
+            if (language_current != "English")
+            {
+                foreach (string word in words_en)
+                {
+                    if (texthandler[word] == lastChoice)
+                        lastChoice = word;
+                }
+            }
+        }
 
         Debug.Log("video text2: " + newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text);
 
@@ -1057,7 +1063,8 @@ public class GameMaster : MonoBehaviour
 
         //add the indicated values
         newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = AssignString(desc);
-        newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = AssignString(desc2);
+        //newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = AssignString(desc2);
+        newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text = desc2;
 
         //find video
         //videoClip = videos_en[0];
@@ -1422,10 +1429,10 @@ public class GameMaster : MonoBehaviour
 
     }
 
+    //code for back button
     void BackButton()
     {
-        //return;
-        //code for back button
+        //return;        
         //Debug.Log("Back Button Code!");
 
         GameObject.Find("Canvas").transform.Find("BackButton").GetComponent<Button>().onClick.RemoveAllListeners();
@@ -1475,7 +1482,7 @@ public class GameMaster : MonoBehaviour
         {
             Debug.Log("returning at 34");
             return;
-            currentGameObject = GameObject.Find(reserveScreenSOs[reserveScreenSOs.Length - 1].prefab.name + "(Clone)");
+            //currentGameObject = GameObject.Find(reserveScreenSOs[reserveScreenSOs.Length - 1].prefab.name + "(Clone)");
         }
 
         Debug.Log(currentGameObject.name + " is our current game object");
@@ -1501,13 +1508,6 @@ public class GameMaster : MonoBehaviour
                     Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location + "Double"];
             }
         }
-        /*else
-        {
-            Background = currentGameObject.transform.Find("Background").gameObject;
-            Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location];
-            if (currentGameObject.name.Contains("TwoVideos"))
-                Background.GetComponent<Image>().sprite = imagehandler["Background" + current_location + "Double"];
-        }*/
 
         GameObject Description = null;
         if (currentGameObject.transform.Find("Description").gameObject!=null)
@@ -1565,12 +1565,6 @@ public class GameMaster : MonoBehaviour
         //video buttons (handled on VideoScript)
 
     }
-
-    //
-    /*public void BackGroundDecider()
-    {
-        GameObject currentGameObject = GameObject.Find(screen_SOs[usedScreen].prefab.name + "(Clone)");
-    }*/
 
     //math functions
     int MinusOne(int number)
