@@ -15,6 +15,8 @@ public class GameMaster : MonoBehaviour
     public List<string> words_en = new List<string>();
     [TextArea]
     public List<string> words_gr = new List<string>();
+    [TextArea]
+    public List<string> words_fr = new List<string>();
 
     //handle translations of text between languages in this dictionary
     public Dictionary<string, string> texthandler = new Dictionary<string, string>();
@@ -214,11 +216,10 @@ public class GameMaster : MonoBehaviour
                 texthandler.Add(words_en[i], words_en[i]);
         else if (current_language == "Greek")
             for (int i = 0; i < words_en.Count; i++)
-            {
-                /*Debug.Log("English: " + words_en[i]);
-                Debug.Log("Greek: " + words_gr[i]);*/
                 texthandler.Add(words_en[i], words_gr[i]);
-            }
+        else if (current_language == "French")
+            for (int i = 0; i < words_en.Count; i++)
+                texthandler.Add(words_en[i], words_fr[i]);
     }
 
     //assign a string based on the initial one
@@ -227,7 +228,7 @@ public class GameMaster : MonoBehaviour
         //Debug.Log($"String Given To Assign: '{initialstring}'");
         if (language_current == "English")
             return initialstring;
-        else if (language_current == "Greek")
+        else if (language_current == "Greek"||language_current=="French")
             return texthandler[initialstring];
 
         Debug.Log("there is no assignment for the word/phrase: " + initialstring +" for "+language_current+", yet!");
