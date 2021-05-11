@@ -284,6 +284,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3359606705584414840, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+      propertyPath: m_Name
+      value: ContinueButton
+      objectReference: {fileID: 0}
     - target: {fileID: 3359606705584414843, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
       propertyPath: m_RootOrder
       value: 5

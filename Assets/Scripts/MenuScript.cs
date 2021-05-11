@@ -25,15 +25,10 @@ public class MenuScript : MonoBehaviour
         
     }
 
-    public void SetTextEnglish()
+    //(text menu)
+    public void SetText(string languageName)
     {
-        gameMaster.language_current = "English";
-        gameMaster.LanguageDictionaryInitialise(gameMaster.language_current);
-    }
-
-    public void SetTextGreek()
-    {
-        gameMaster.language_current = "Greek";
+        gameMaster.language_current = languageName;
         gameMaster.LanguageDictionaryInitialise(gameMaster.language_current);
     }
 

@@ -7,10 +7,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 284284125097593097, guid: 08dbc1df227be784a958a169d2f60b82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338619416780050346, guid: 08dbc1df227be784a958a169d2f60b82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114239728281049051, guid: 08dbc1df227be784a958a169d2f60b82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2191803948187479142, guid: 08dbc1df227be784a958a169d2f60b82, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4b6d8d00b8751f8419cc923ae11b0b2c, type: 3}
+    - target: {fileID: 2686477424100391951, guid: 08dbc1df227be784a958a169d2f60b82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451041861856236339, guid: 08dbc1df227be784a958a169d2f60b82, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 

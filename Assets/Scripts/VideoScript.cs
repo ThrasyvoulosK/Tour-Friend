@@ -24,6 +24,11 @@ public class VideoScript : MonoBehaviour
             gameObject.transform.Find("Button").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonTourfriend"];
         }
 
+        //thumbnail text
+        videoPlayer.time = 0;
+        videoPlayer.Play();//
+        videoPlayer.Pause();
+
     }
 
     // Update is called once per frame

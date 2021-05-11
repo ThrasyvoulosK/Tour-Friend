@@ -107,6 +107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas MenuSettings RulesHowToPlay
       objectReference: {fileID: 0}
+    - target: {fileID: 6229274148471737012, guid: 08dbc1df227be784a958a169d2f60b82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8456371844034201555, guid: 08dbc1df227be784a958a169d2f60b82, type: 3}
       propertyPath: m_Sprite
       value: 
