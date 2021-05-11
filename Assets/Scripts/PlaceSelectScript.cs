@@ -32,7 +32,7 @@ public class PlaceSelectScript : MonoBehaviour
         gameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
 
         //find the screen's button and disable it 
-        button = gameObject.transform.Find("Button").gameObject;
+        button = gameObject.transform.Find("ContinueButton").gameObject;
         bu = button.GetComponent<Button>();
         bu.interactable = false;
         //button.SetActive(false);

@@ -173,8 +173,8 @@ public class GameMaster : MonoBehaviour
         else if (GameObject.Find("Canvas SelectPlace(Clone)") == true)
         {
             current_screen--;
-            GameObject.Find("Canvas SelectPlace(Clone)").transform.Find("Button").GetComponent<Button>().onClick.RemoveAllListeners();
-            ConstructorDecider(GameObject.Find("Canvas SelectPlace(Clone)").transform.Find("Button").GetComponent<Button>());
+            GameObject.Find("Canvas SelectPlace(Clone)").transform.Find("ContinueButton").GetComponent<Button>().onClick.RemoveAllListeners();
+            ConstructorDecider(GameObject.Find("Canvas SelectPlace(Clone)").transform.Find("ContinueButton").GetComponent<Button>());
         }
 
 
@@ -246,7 +246,7 @@ public class GameMaster : MonoBehaviour
         videoPlayer.clip = videohandler[vid];
 
         vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
-        vidchoice.transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
+        vidchoice.transform.Find("ContinueButton").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
         Debug.Log("video choice text: " + desc);
 
         if(card.Length>1)
@@ -273,9 +273,9 @@ public class GameMaster : MonoBehaviour
         newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
 
         //button
-        newgameobject.transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
+        newgameobject.transform.Find("ContinueButton").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
-        newgameobject.transform.Find("Button").GetComponent<Button>().onClick.AddListener(delegate {
+        newgameobject.transform.Find("ContinueButton").GetComponent<Button>().onClick.AddListener(delegate {
             createTwoImagesscreen(screen_SOs[current_screen].prefab, screen_SOs[current_screen].description, screen_SOs[current_screen].Imagename, screen_SOs[current_screen].Imagename2, screen_SOs[current_screen].Button1text);
             backB.SetActive(true);
             Destroy(newgameobject);
@@ -290,7 +290,7 @@ public class GameMaster : MonoBehaviour
         newgameobject = Instantiate(prefab_go);
 
         //find the given values
-        Image image = newgameobject.transform.Find("Image").GetComponent<Image>();
+        Image image = newgameobject.transform.Find("CentreImage").GetComponent<Image>();
 
         //add the indicated values
 
@@ -300,7 +300,7 @@ public class GameMaster : MonoBehaviour
         if(img.Length>=1)
             image.sprite = imagehandler[img];
         //button
-        Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
+        Button button1 = newgameobject.transform.Find("ContinueButton").GetComponent<Button>();
         button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         //initialise current back-button
@@ -342,7 +342,7 @@ public class GameMaster : MonoBehaviour
         }
 
         //find next in session to construct a new screen
-        Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
+        Button button1 = newgameobject.transform.Find("ContinueButton").GetComponent<Button>();
         button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         BackButton();
@@ -361,7 +361,7 @@ public class GameMaster : MonoBehaviour
         newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
 
         //find next in session to construct a new screen
-        Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
+        Button button1 = newgameobject.transform.Find("ContinueButton").GetComponent<Button>();
         button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         BackButton();
@@ -385,11 +385,11 @@ public class GameMaster : MonoBehaviour
         //(done in its own script (PlaceSelect))
 
         //assign points here
-        newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "POINTS: <color=#ff0000ff>" + total_points.ToString() + "</color>";
+        //newgameobject.transform.Find("PointsText").GetComponent<TextMeshProUGUI>().text = "POINTS: <color=#ff0000ff>" + total_points.ToString() + "</color>";
 
         //find next in session to construct a new screen
 
-        Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
+        Button button1 = newgameobject.transform.Find("ContinueButton").GetComponent<Button>();
         button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         BackButton();
@@ -472,10 +472,10 @@ public class GameMaster : MonoBehaviour
         Debug.Log("video text2: " + newgameobject.transform.Find("VideoDescription").GetComponent<TextMeshProUGUI>().text);
 
         //assign location icon on top-right of the screen
-        newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
+        //newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
 
         //find next in session to construct a new screen
-        Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
+        Button button1 = newgameobject.transform.Find("ContinueButton").GetComponent<Button>();
         button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
         BackButton();
@@ -494,7 +494,7 @@ public class GameMaster : MonoBehaviour
         newgameobject.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = AssignString(desc1);
 
         //assign location icon on top-right of the screen
-        newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
+        //newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
 
         //change backgrounds
         if (current_screen > 15)
@@ -724,8 +724,8 @@ public class GameMaster : MonoBehaviour
         InitialiseVideoChoice(randomVideos[number1], video1, desc2, img1, "SELECT");//"False"
         InitialiseVideoChoice(randomVideos[number2], video2, desc3, img2, "SELECT");//"Correct"
 
-        Button button1 = randomVideos[number1].transform.Find("Button").gameObject.GetComponent<Button>();
-        Button button2 = randomVideos[number2].transform.Find("Button").gameObject.GetComponent<Button>();
+        Button button1 = randomVideos[number1].transform.Find("ContinueButton").gameObject.GetComponent<Button>();
+        Button button2 = randomVideos[number2].transform.Find("ContinueButton").gameObject.GetComponent<Button>();
         
         //assign cards, if we're nearing the end
         button1.onClick.AddListener(delegate { 
@@ -815,7 +815,7 @@ public class GameMaster : MonoBehaviour
 
         //find the given values
         //Image image = newgameobject.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>();
-        Image image = newgameobject.transform.Find("Image").GetComponent<Image>();
+        Image image = newgameobject.transform.Find("CentreImage").GetComponent<Image>();
 
         //add the indicated values
 
@@ -834,12 +834,12 @@ public class GameMaster : MonoBehaviour
 
         image.sprite = imagehandler[img];
         //assign location icon on top-right of the screen
-        newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
+        //newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
 
         BackButton();
 
         //find next in session to construct a new screen
-        Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
+        Button button1 = newgameobject.transform.Find("ContinueButton").GetComponent<Button>();
 
         button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
@@ -887,7 +887,7 @@ public class GameMaster : MonoBehaviour
         BackButton();
 
         //find next in session to construct a new screen
-        Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
+        Button button1 = newgameobject.transform.Find("ContinueButton").GetComponent<Button>();
 
         button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
 
@@ -920,13 +920,13 @@ public class GameMaster : MonoBehaviour
         correctchoice = true;//testing! 
 
         //assign location icon on top-right of the screen
-        newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
+        //newgameobject.transform.Find("LocationIcon").GetComponent<Image>().sprite = imagehandler[current_location];
 
         BackButton();
 
         //find next in session to construct a new screen
         //(continue button should send us one screen back)
-        Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
+        Button button1 = newgameobject.transform.Find("ContinueButton").GetComponent<Button>();
         button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
         //button1.onClick.AddListener(delegate { set_current_screen(current_screen-1); });
         button1.onClick.AddListener(delegate { OneScreenBack(); });
@@ -948,20 +948,24 @@ public class GameMaster : MonoBehaviour
         newgameobject = Instantiate(prefab_go);
 
         //find the given values
-        Image image = newgameobject.transform.Find("Image").GetComponent<Image>();
+        Image image;
+        if (newgameobject.transform.Find("CentreImage") == true)
+            image = newgameobject.transform.Find("CentreImage").GetComponent<Image>();
+        else
+            image = null;
 
         //add the indicated values
 
         //description
         newgameobject.transform.Find("Description").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
 
-        if (img.Length >= 1)
+        if (img.Length >= 1&&image!=null)
             image.sprite = imagehandler[img];
 
         BackButton();
 
         //find next in session to construct a new screen
-        Button button1 = newgameobject.transform.Find("Button").GetComponent<Button>();
+        Button button1 = newgameobject.transform.Find("ContinueButton").GetComponent<Button>();
         button1.GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
         //button1.onClick.AddListener(delegate { set_current_screen(current_screen - 1); });
 
@@ -1314,9 +1318,9 @@ public class GameMaster : MonoBehaviour
         //Debug.Log(currentGameObject.name);
 
         GameObject Button = null;//= currentGameObject.transform.Find("Button").gameObject;
-        if(currentGameObject.transform.Find("Button")!=null)
+        if(currentGameObject.transform.Find("ContinueButton") !=null)
         {
-            Button =  currentGameObject.transform.Find("Button").gameObject;
+            Button =  currentGameObject.transform.Find("ContinueButton").gameObject;
             Button.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
 
             if (screen_SOs[usedScreen].Player == "Tourist")

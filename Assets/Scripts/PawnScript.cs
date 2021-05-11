@@ -44,7 +44,7 @@ public class PawnScript : MonoBehaviour
                 if (i == 1)
                     button[i] = GameObject.Find("Canvas OneIm Map TwoOptions(Clone)").transform.Find("Button2").gameObject;
                 else
-                    button[i] = GameObject.Find("Canvas OneIm Map TwoOptions(Clone)").transform.Find("Button").gameObject;
+                    button[i] = GameObject.Find("Canvas OneIm Map TwoOptions(Clone)").transform.Find("ContinueButton").gameObject;
 
                 bu[i] = button[i].GetComponent<Button>();
                 bu[i].interactable = false;

@@ -22,8 +22,10 @@ MonoBehaviour:
   description3: TOUR FRIEND
   Imagename: Tourist
   Imagename2: Tourfriend
+  Video1: 
+  Video2: 
   Button1text: DONE
   Button2text: 
   points: 
   Player: 
-  prefab: {fileID: 8558149607620697403, guid: 40ee07a22cddcd747b87bc8ecf5fd702, type: 3}
+  prefab: {fileID: 3450346024771845465, guid: 40ee07a22cddcd747b87bc8ecf5fd702, type: 3}

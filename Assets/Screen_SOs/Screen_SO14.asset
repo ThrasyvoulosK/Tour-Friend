@@ -20,8 +20,10 @@ MonoBehaviour:
   description3: 
   Imagename: 
   Imagename2: 
+  Video1: 
+  Video2: 
   Button1text: YES
   Button2text: NO
   points: 
   Player: Tourist
-  prefab: {fileID: 5215008795873550160, guid: dc7b67fd037f1a4449fa9985c3cc959b, type: 3}
+  prefab: {fileID: 7018015150186053306, guid: dc7b67fd037f1a4449fa9985c3cc959b, type: 3}

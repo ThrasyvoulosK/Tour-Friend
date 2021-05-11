@@ -1,84 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4298534896102398565
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5925281525689275241}
-  - component: {fileID: 8391905423470820252}
-  - component: {fileID: 4519796550013319206}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &5925281525689275241
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4298534896102398565}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2148979777583967833}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8391905423470820252
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4298534896102398565}
-  m_CullTransparentMesh: 0
---- !u!114 &4519796550013319206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4298534896102398565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: DONE
 --- !u!1 &6394726630805773570
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +30,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5925281525689275241}
   - {fileID: 4070296229127511988}
   m_Father: {fileID: 5939764665550102080}
   m_RootOrder: 6
@@ -242,7 +162,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2148979777583967833}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -375,16 +295,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3557084019241770396, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3648226988846802917, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4652407428735875360, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 337b96aae276f1e409730519d629e048, type: 3}
+      objectReference: {fileID: 32900000, guid: f091dadfef327b743bda21dbec886f04, type: 3}
+    - target: {fileID: 5573193460211294206, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5784391444739864314, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -395,7 +319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5797096147948625264, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5797096147948625264, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_SizeDelta.x
@@ -423,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 3593877420734939477, guid: 21a4b53f7a3c24041bbb4e3713421202, type: 3}
     - target: {fileID: 6345828826551092596, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: ContinueButton
       objectReference: {fileID: 0}
     - target: {fileID: 6345828826551092599, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -527,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6854197655482688695, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7078748995239438690, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_Name
@@ -539,7 +463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7136562102793178082, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7136562102793178082, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -547,7 +471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621658264238832337, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7621658264238832337, guid: 55397b262bc87b244ba509bd9505df08, type: 3}
       propertyPath: m_SizeDelta.x

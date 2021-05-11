@@ -88,3 +88,8 @@ Library/PlayerDataCache/Android/Data/Managed/Assembly-CSharp.dll
 Library/PlayerDataCache/Android/Data/data.unity3d
 Library/PlayerDataCache/Android/Data/boot.config
 Builds/TourFriendAndroidDev.apk
+Library/PlayerDataCache/Android/Data/sharedassets0.resource
+Library/PlayerDataCache/Win64/Data/sharedassets0.assets.resS
+Library/PlayerDataCache/Win64/Data/sharedassets0.resource
+Library/ArtifactDB
+Builds/TourFriendAndroidDev.apk

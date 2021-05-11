@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 4011732601661641229}
   - component: {fileID: 4011732601661641202}
   m_Layer: 5
-  m_Name: Image
+  m_Name: CentreImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 4011732601856572804}
   - component: {fileID: 4011732601856572805}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ContinueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

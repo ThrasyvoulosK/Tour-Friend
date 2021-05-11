@@ -16,12 +16,12 @@ public class VideoScript : MonoBehaviour
         if (gameMaster.screen_SOs[gameMaster.current_screen - 1].Player == "Tourist")
         {
             gameObject.transform.Find("ButtonRepeat").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonRepeatTourist"];
-            gameObject.transform.Find("Button").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonTourist"];
+            gameObject.transform.Find("ContinueButton").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonTourist"];
         }
         else
         {
             gameObject.transform.Find("ButtonRepeat").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonRepeatTourfriend"];
-            gameObject.transform.Find("Button").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonTourfriend"];
+            gameObject.transform.Find("ContinueButton").GetComponent<Image>().sprite = gameMaster.imagehandler["ButtonTourfriend"];
         }
 
         //thumbnail text
