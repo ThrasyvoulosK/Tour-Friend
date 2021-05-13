@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO26Restaurant2
   m_EditorClassIdentifier: 
   description: SELECT YOUR REPLY
-  description2: YES I WOULD LIKE SOME WATER.
-  description3: YES I WOULD LIKE SOME A DESSERT.
+  description2: YES I WOULD LIKE SOME <b>WATER</b>.
+  description3: YES I WOULD LIKE SOME A <b>DESSERT</b>.
   Imagename: 
   Imagename2: 
   Video1: Restaurant26_2_1

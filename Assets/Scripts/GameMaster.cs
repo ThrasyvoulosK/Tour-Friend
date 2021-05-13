@@ -17,6 +17,8 @@ public class GameMaster : MonoBehaviour
     public List<string> words_gr = new List<string>();
     [TextArea]
     public List<string> words_fr = new List<string>();
+    [TextArea]
+    public List<string> words_it = new List<string>();
 
     //handle translations of text between languages in this dictionary
     public Dictionary<string, string> texthandler = new Dictionary<string, string>();
@@ -31,6 +33,8 @@ public class GameMaster : MonoBehaviour
     //list of videos
     public List<UnityEngine.Video.VideoClip> videos_en = new List<UnityEngine.Video.VideoClip>();
     public List<UnityEngine.Video.VideoClip> videos_gr = new List<UnityEngine.Video.VideoClip>();
+    public List<UnityEngine.Video.VideoClip> videos_fr = new List<UnityEngine.Video.VideoClip>();
+    public List<UnityEngine.Video.VideoClip> videos_it = new List<UnityEngine.Video.VideoClip>();
     //list of corresponding words to videos
     public List<string> videos_en_names = new List<string>();
 
@@ -195,6 +199,12 @@ public class GameMaster : MonoBehaviour
                 videolist = videos_gr;
                 //Debug.Log("Greek SignLanguage");
                 break;
+            case "French":
+                videolist = videos_fr;
+                break;
+            case "Italian":
+                videolist = videos_it;
+                break;
             default:
                 videolist = videos_en;
                 //Debug.Log("English SignLanguage");
@@ -220,6 +230,9 @@ public class GameMaster : MonoBehaviour
         else if (current_language == "French")
             for (int i = 0; i < words_en.Count; i++)
                 texthandler.Add(words_en[i], words_fr[i]);
+        else if (current_language == "Italian")
+            for (int i = 0; i < words_en.Count; i++)
+                texthandler.Add(words_en[i], words_it[i]);
     }
 
     //assign a string based on the initial one
@@ -228,7 +241,7 @@ public class GameMaster : MonoBehaviour
         //Debug.Log($"String Given To Assign: '{initialstring}'");
         if (language_current == "English")
             return initialstring;
-        else if (language_current == "Greek"||language_current=="French")
+        else if (language_current == "Greek"||language_current=="French"||language_current=="Italian")
             return texthandler[initialstring];
 
         Debug.Log("there is no assignment for the word/phrase: " + initialstring +" for "+language_current+", yet!");
@@ -246,6 +259,12 @@ public class GameMaster : MonoBehaviour
         videoPlayer.clip = videohandler[vid];
 
         vidchoice.transform.Find("DescriptionText").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(desc);
+        //handle text box colours
+        if(screen_SOs[current_screen].Player == "Tourist")
+            vidchoice.transform.Find("DescriptionText").GetComponent<TextMeshProUGUI>().color = new Color32(157, 28, 32, 255);
+        else if (screen_SOs[current_screen].Player == "Tourfriend")
+            vidchoice.transform.Find("DescriptionText").GetComponent<TextMeshProUGUI>().color = new Color32(14, 80, 101, 255);
+
         vidchoice.transform.Find("ContinueButton").GetComponentInChildren<TextMeshProUGUI>().text = AssignString(button);
         Debug.Log("video choice text: " + desc);
 
@@ -1352,10 +1371,24 @@ public class GameMaster : MonoBehaviour
             }
         }
 
-         return;
+        //colours of texts within video boxes
+        if(currentGameObject.name.Contains("Video"))
+        {
+            GameObject videoDesc;
+            if(currentGameObject.transform.Find("VideoDescription")!=null)
+            {
+                videoDesc = currentGameObject.transform.Find("VideoDescription").gameObject;
+                if (screen_SOs[usedScreen].Player == "Tourist")
+                    videoDesc.GetComponent<TextMeshProUGUI>().color = new Color32(157, 28, 32, 255);
+                else if (screen_SOs[usedScreen].Player == "Tourfriend")
+                    videoDesc.GetComponent<TextMeshProUGUI>().color = new Color32(14, 80, 101, 255);
+            }
+            //two-videos handled on 
+        }
 
         //video buttons (handled on VideoScript)
 
+        return;        
     }
 
     //math functions

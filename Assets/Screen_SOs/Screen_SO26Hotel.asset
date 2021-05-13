@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO26Hotel
   m_EditorClassIdentifier: 
   description: SELECT YOUR REPLY
-  description2: SINGLE, PLEASE
-  description3: DOUBLE, PLEASE
+  description2: <b>SINGLE</b>, PLEASE
+  description3: <b>DOUBLE</b>, PLEASE
   Imagename: 
   Imagename2: 
   Video1: Hotel26_1_1

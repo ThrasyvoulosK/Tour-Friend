@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO26Hotel2
   m_EditorClassIdentifier: 
   description: SELECT YOUR REPLY
-  description2: CARD, PLEASE.
-  description3: CASH, PLEASE.
+  description2: <b>CARD</b>, PLEASE.
+  description3: <b>CASH</b>, PLEASE.
   Imagename: 
   Imagename2: 
   Video1: Hotel26_2_1

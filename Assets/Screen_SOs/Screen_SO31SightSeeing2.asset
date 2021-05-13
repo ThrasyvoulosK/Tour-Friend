@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: YOU ARE WELLCOME. HERE IS YOUR DISCOUNT TICKET.
-  description3: YOU ARE WELLCOME. HERE IS YOUR TICKET AND PRESENT.
+  description2: YOU ARE WELLCOME. HERE IS YOUR <b>DISCOUNT TICKET</b>.
+  description3: YOU ARE WELLCOME. HERE IS YOUR <b>TICKET AND PRESENT</b>.
   Imagename: SightSeeingCard3
   Imagename2: SightSeeingCard4
   Video1: SightSeeing31_2_1

@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: SURE. HERE IS YOUR TRAIN TICKET AND THE ITINERARY.
-  description3: SURE. HERE IS YOUR BUS TICKET AND THE ITINERARY.
+  description2: SURE. HERE IS YOUR <b>TRAIN TICKET</b> AND THE ITINERARY.
+  description3: SURE. HERE IS YOUR <b>BUS TICKET</b> AND THE ITINERARY.
   Imagename: StationCard3
   Imagename2: StationCard4
   Video1: Station31_1_1

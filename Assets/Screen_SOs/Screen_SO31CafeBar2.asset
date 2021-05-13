@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: ' I PROPOSE THIS SNACK.'
-  description3: I PROPOSE THIS BREAKFAST.
+  description2: ' I PROPOSE THIS <b>SNACK</b>.'
+  description3: I PROPOSE THIS <b>BREAKFAST</b>.
   Imagename: RestaurantCard1
   Imagename2: RestaurantCard2
   Video1: CafeBar31_2_1

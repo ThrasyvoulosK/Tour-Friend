@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: THANK YOU. HERE IS YOUR CARD AND RECEIPT
-  description3: THANK YOU. HERE IS YOUR CHANGE AND RECEIPT.
+  description2: THANK YOU. HERE IS YOUR <b>CARD</b> AND RECEIPT
+  description3: THANK YOU. HERE IS YOUR <b>CHANGE</b> AND RECEIPT.
   Imagename: HotelCard4
   Imagename2: HotelCard3
   Video1: Hotel31_2_1

@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: HERE IS YOUR KEY FOR YOUR SINGLE ROOM. ENJOY YOUR STAY!
-  description3: HERE IS YOUR KEY FOR YOUR DOUBLE ROOM. ENJOY YOUR STAY!
+  description2: HERE IS YOUR KEY FOR YOUR <b>SINGLE ROOM</b>. ENJOY YOUR STAY!
+  description3: HERE IS YOUR KEY FOR YOUR <b>DOUBLE ROOM</b>. ENJOY YOUR STAY!
   Imagename: HotelCard1
   Imagename2: HotelCard2
   Video1: Hotel31_1_1

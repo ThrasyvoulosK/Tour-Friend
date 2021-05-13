@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: THIS IS YOUR TABLE.
-  description3: THIS IS YOUR SEAT.
+  description2: THIS IS YOUR <b>TABLE</b>.
+  description3: THIS IS YOUR <b>SEAT</b>.
   Imagename: CafeBarCard3
   Imagename2: CafeBarCard4
   Video1: CafeBar31_1_1

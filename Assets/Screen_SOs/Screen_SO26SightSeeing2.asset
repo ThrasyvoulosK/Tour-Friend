@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO26SightSeeing2
   m_EditorClassIdentifier: 
   description: SELECT YOUR REPLY
-  description2: THIS IS NICE, I WOULD LIKE THE DISCOUNT. THANK YOU.
-  description3: THIS IS NICE, I WOULD LIKE THE PRESENT. THANK YOU.
+  description2: THIS IS NICE, I WOULD LIKE THE <b>DISCOUNT</b>. THANK YOU.
+  description3: THIS IS NICE, I WOULD LIKE THE <b>PRESENT</b>. THANK YOU.
   Imagename: 
   Imagename2: 
   Video1: SightSeeing26_2_1

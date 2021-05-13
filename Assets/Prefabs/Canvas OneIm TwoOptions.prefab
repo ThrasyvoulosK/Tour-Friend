@@ -377,6 +377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas OneIm TwoOptions
       objectReference: {fileID: 0}
+    - target: {fileID: 6202583194570928221, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 130
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7cd1d5bdaac4ab42aa465e2cbae9cc0, type: 3}
 --- !u!224 &550610383362973531 stripped

@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: YOU ARE WELCOME. HERE IS YOUR LUGGAGE.
-  description3: YOU ARE WELCOME. THIS IS YOUR WAGON.
+  description2: YOU ARE WELCOME. HERE IS YOUR <b>LUGGAGE</b>.
+  description3: YOU ARE WELCOME. THIS IS YOUR <b>WAGON</b>.
   Imagename: StationCard1
   Imagename2: StationCard2
   Video1: Station31_2_1

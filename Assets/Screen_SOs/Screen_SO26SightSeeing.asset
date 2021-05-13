@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Screen_SO26SightSeeing
   m_EditorClassIdentifier: 
   description: SELECT YOUR REPLY
-  description2: A MAP, PLEASE.
-  description3: A GUIDEBOOK, PLEASE.
+  description2: A <b>MAP</b>, PLEASE.
+  description3: A <b>GUIDEBOOK</b>, PLEASE.
   Imagename: 
   Imagename2: 
   Video1: SightSeeing26_1_1

@@ -15,8 +15,9 @@ MonoBehaviour:
   description: 'REPLY TO THE TOURIST
 
     AND GIVE HIM THE OBJECT CARD'
-  description2: HERE IS YOUR MAP. PLEASE ALSO TAKE A FREE MAP OF THE CITY.
-  description3: HERE IS YOUR GUIDEBOOK. PLEASE ALSO TAKE A FREE MAP OF THE CITY.
+  description2: HERE IS YOUR <b>MAP</b>. PLEASE ALSO TAKE A FREE MAP OF THE CITY.
+  description3: HERE IS YOUR <b>GUIDEBOOK</b>. PLEASE ALSO TAKE A FREE MAP OF THE
+    CITY.
   Imagename: SightSeeingCard1
   Imagename2: SightSeeingCard2
   Video1: SightSeeing31_1_1
