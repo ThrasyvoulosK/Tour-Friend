@@ -39,7 +39,7 @@ public class GameMaster : MonoBehaviour
     public List<string> videos_en_names = new List<string>();
 
     public Dictionary<string, UnityEngine.Video.VideoClip> videohandler = new Dictionary<string, UnityEngine.Video.VideoClip>();
-    public Dictionary<string, UnityEngine.Video.VideoClip> videohandler_gr = new Dictionary<string, UnityEngine.Video.VideoClip>();
+    //public Dictionary<string, UnityEngine.Video.VideoClip> videohandler_gr = new Dictionary<string, UnityEngine.Video.VideoClip>();
 
     //Dictionary Creation
 
@@ -55,22 +55,23 @@ public class GameMaster : MonoBehaviour
     int point_base = 3;
 
     //list of sequential screens
-    public List<GameObject> sgo = new List<GameObject>();
+    //public List<GameObject> sgo = new List<GameObject>();
     //keep account of the screen number we are currently in
     public int current_screen = 0;
 
     //llist of prefabs
     public List<GameObject> screenprefabs = new List<GameObject>();
 
-
-    public GameObject firstscreen;// = new GameObject();
+    //public GameObject firstscreen;// = new GameObject();
 
     ScreenObjectScript screenObject=new ScreenObjectScript();//
 
     //keep each screen's data here
     public List<Screen_SO> screen_SOs = new List<Screen_SO>();
     //testing route select with this list
-    public List<Screen_SO> screen_SOsAlt = new List<Screen_SO>();
+    //public List<Screen_SO> screen_SOsAlt = new List<Screen_SO>();
+
+    //SOs of different routes
     public Screen_SO[] reserveScreenSOs;// = new Screen_SO[];
 
     //whos playing on each screen
@@ -192,6 +193,9 @@ public class GameMaster : MonoBehaviour
     }
     void VideoDictionaryInitialise()
     {
+        //before adding or changing videos, make sure the dictionary is empty
+        videohandler.Clear();
+
         List<UnityEngine.Video.VideoClip> videolist = null;
         switch(language_currentSign)
         {
